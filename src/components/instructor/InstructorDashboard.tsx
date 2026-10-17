@@ -83,7 +83,7 @@ export function InstructorDashboard() {
       </div>
 
       <div role="tablist" aria-label="إدارة المواد" className="flex flex-wrap gap-3 mb-6">
-        <button role="tab" aria-selected={tab === 'chapters'} onClick={() => setTab('chapters')} className="rounded-xl border bg-white px-5 py-3">الفصول والاختبارات</button>
+        <button role="tab" aria-selected={tab === 'chapters'} onClick={() => setTab('chapters')} className="rounded-xl border bg-white px-5 py-3">الاختبارات التفاعلية والفصول</button>
         <button role="tab" aria-selected={tab === 'library'} onClick={() => setTab('library')} className="rounded-xl border bg-white px-5 py-3">مكتبة المواد</button>
       </div>
       <CourseCreator onCreated={fetchMyCourses} />
