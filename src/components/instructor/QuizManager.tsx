@@ -5,6 +5,8 @@ import { supabase } from '@/lib/supabase';
 import { Chapter, Quiz, Question } from '@/lib/types';
 import { validateQuiz, validateQuestion } from '@/lib/quiz-validation';
 import { Button } from '@/components/ui/Button';
+import { SourceQuizBuilder } from './SourceQuizBuilder';
+import { ScientificText } from '@/components/content/ScientificText';
 import { Card } from '@/components/ui/Card';
 
 const field = 'w-full border border-gray-300 rounded-xl px-3 py-2 text-gray-900 bg-white';
@@ -105,6 +107,7 @@ export function QuizManager({ chapter, courseTitle, onBack }: { chapter: Chapter
       {error && <p role="alert" className="bg-red-50 text-red-700 rounded-xl p-4">تعذرت العملية: {error}</p>}
       {notice && <p role="status" className="bg-green-50 text-green-800 rounded-xl p-4">{notice}</p>}
       {!selected ? <>
+        <SourceQuizBuilder chapterId={chapter.id} onSaved={loadQuizzes} />
         <Button disabled={busy} onClick={() => { setQuizForm(blankQuiz); setEditingQuiz(null); setShowQuizForm(true); }}>إضافة اختبار جديد</Button>
         {showQuizForm && <Card><form onSubmit={saveQuiz} className="space-y-3">
           <label className="block">عنوان الاختبار<input required className={field} value={quizForm.title} onChange={e => setQuizForm({...quizForm, title:e.target.value})} /></label>
@@ -138,9 +141,9 @@ export function QuizManager({ chapter, courseTitle, onBack }: { chapter: Chapter
           <div className="flex gap-2"><Button type="submit" loading={busy}>حفظ السؤال</Button><Button type="button" variant="secondary" disabled={busy} onClick={() => setShowQuestionForm(false)}>إلغاء</Button></div>
         </form></Card>}
         {loading ? <p role="status">جارٍ تحميل الأسئلة…</p> : !questions.length ? <Card>لم تُضف أسئلة لهذا الاختبار بعد.</Card> : questions.map((q,i) => <Card key={q.id}>
-          <h2 className="font-bold whitespace-pre-wrap">{i+1}. {q.question_text}</h2>
-          <ul className="space-y-1 mt-2">{q.options.map(o => <li key={o.key} className={o.key === q.correct_answer ? 'text-green-700 font-semibold' : ''}>{o.key}: {o.text}{o.key === q.correct_answer ? ' ✓ الإجابة الصحيحة' : ''}</li>)}</ul>
-          {q.explanation && <p className="mt-2 whitespace-pre-wrap">التفسير: {q.explanation}</p>}<p className="text-sm text-gray-500">الدرجة: {q.points}</p>
+          <h2 className="font-bold whitespace-pre-wrap">{i+1}. <ScientificText text={q.question_text}/></h2>
+          <ul className="space-y-1 mt-2">{q.options.map(o => <li key={o.key} className={o.key === q.correct_answer ? 'text-green-700 font-semibold' : ''}>{o.key}: <ScientificText text={o.text}/>{o.key === q.correct_answer ? ' ✓ الإجابة الصحيحة' : ''}</li>)}</ul>
+          {q.explanation && <p className="mt-2 whitespace-pre-wrap">التفسير: <ScientificText text={q.explanation}/></p>}<p className="text-sm text-gray-500">الدرجة: {q.points}</p>
           {!selected.is_active && <div className="flex gap-2 mt-3"><Button size="sm" variant="secondary" disabled={busy} onClick={() => {setEditingQuestion(q.id);setQuestionForm({text:q.question_text,options:q.options.map(o => ({...o})),answer:q.correct_answer,explanation:q.explanation ?? '',points:String(q.points)});setShowQuestionForm(true);}}>تعديل</Button><Button size="sm" variant="danger" disabled={busy} onClick={() => deleteQuestion(q)}>حذف</Button></div>}
         </Card>)}
       </>}

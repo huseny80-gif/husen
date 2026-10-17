@@ -6,7 +6,7 @@ export function validateQuiz(title: string, passScore: number, minutes: number |
 }
 export function validateQuestion(text: string, options: {key: string; text: string}[], answer: string, points: number): string | null {
   if (!text.trim()) return 'أدخل نص السؤال.';
-  if (options.length !== 4 || options.some(o => !o.text.trim())) return 'أكمل الخيارات الأربعة.';
+  if (![2, 4].includes(options.length) || options.some(o => !o.text.trim())) return 'أكمل جميع الخيارات (خياران أو أربعة).';
   if (new Set(options.map(o => o.text.trim())).size !== options.length) return 'يجب أن تكون الخيارات مختلفة.';
   if (!options.some(o => o.key === answer)) return 'اختر الإجابة الصحيحة.';
   if (!Number.isInteger(points) || points < 1) return 'درجة السؤال يجب أن تكون عددًا صحيحًا موجبًا.';

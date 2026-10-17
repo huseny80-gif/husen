@@ -5,6 +5,7 @@
 export type Database = {
   public: {
     Tables: {
+      learning_sources: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
       profiles: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
       grades: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
       courses: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
@@ -17,6 +18,9 @@ export type Database = {
     };
     Views: Record<string, never>;
     Functions: {
+      create_assigned_course: { Args: { p_grade: number; p_title: string }; Returns: string };
+      claim_generation_slot: { Args: Record<string, never>; Returns: undefined };
+      save_source_quiz: { Args: { p_source: string; p_title: string; p_questions: unknown }; Returns: string };
       is_instructor_for_course: { Args: { course_uuid: string }; Returns: boolean };
       is_admin: { Args: Record<string, never>; Returns: boolean };
       get_user_role: { Args: Record<string, never>; Returns: string };

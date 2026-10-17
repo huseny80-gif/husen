@@ -6,6 +6,7 @@ import { Course, Chapter } from '@/lib/types';
 import { Card, CardHeader } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { CourseCreator } from './CourseCreator';
 import { ChapterManager } from './ChapterManager';
 import { BookOpen, ChevronLeft, Plus, GraduationCap } from 'lucide-react';
 
@@ -79,6 +80,7 @@ export function InstructorDashboard() {
         </div>
       </div>
 
+      <CourseCreator onCreated={fetchMyCourses} />
       {/* Stats Bar */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <StatCard label="مواد المرحلة المختارة" value={visibleCourses.length} color="blue" />

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback, useRef } from 'react';
+import { ScientificText } from '@/components/content/ScientificText';
 import { supabase } from '@/lib/supabase';
 import { Quiz, Question, QuizOption, QuizResult, QuestionReview } from '@/lib/types';
 import { Button } from '@/components/ui/Button';
@@ -177,7 +178,7 @@ export function QuizView({ quizId, studentId }: Props) {
 
           {/* Question text */}
           <p className="text-gray-900 font-semibold text-lg leading-relaxed mb-6">
-            {q.question_text}
+            <ScientificText text={q.question_text}/>
           </p>
 
           {/* Options */}
@@ -201,7 +202,7 @@ export function QuizView({ quizId, studentId }: Props) {
                   )}>
                     {opt.key}
                   </span>
-                  <span className="flex-1">{opt.text}</span>
+                  <span className="flex-1"><ScientificText text={opt.text}/></span>
                 </button>
               );
             })}
@@ -330,7 +331,7 @@ function QuestionReviewCard({ review, index }: { review: QuestionReview; index: 
           : <XCircle    className="w-5 h-5 text-red-500   shrink-0 mt-0.5" />}
         <div>
           <span className="text-xs text-gray-400 font-medium">سؤال {index}</span>
-          <p className="font-semibold text-gray-900">{q.question_text}</p>
+          <p className="font-semibold text-gray-900"><ScientificText text={q.question_text}/></p>
         </div>
       </div>
 
@@ -356,7 +357,7 @@ function QuestionReviewCard({ review, index }: { review: QuestionReview; index: 
               )}>
                 {opt.key}
               </span>
-              {opt.text}
+              <ScientificText text={opt.text}/>
               {isCorrectOpt  && <span className="mr-auto text-green-600 text-xs">✓ صحيح</span>}
               {isSelectedOpt && !isCorrectOpt && <span className="mr-auto text-red-600 text-xs">اخترت هذا</span>}
             </div>
@@ -365,12 +366,12 @@ function QuestionReviewCard({ review, index }: { review: QuestionReview; index: 
       </div>
 
       {/* Explanation */}
-      {!is_correct && q.explanation && (
+      {q.explanation && (
         <div className="flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm">
           <Lightbulb className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
           <div>
             <span className="font-semibold text-amber-700">💡 التفسير العلمي: </span>
-            <span className="text-amber-800">{q.explanation}</span>
+            <span className="text-amber-800"><ScientificText text={q.explanation}/></span>
           </div>
         </div>
       )}
