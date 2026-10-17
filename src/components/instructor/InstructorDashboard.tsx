@@ -6,11 +6,13 @@ import { Course, Chapter } from '@/lib/types';
 import { Card, CardHeader } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { CourseLibrary } from './CourseLibrary';
 import { CourseCreator } from './CourseCreator';
 import { ChapterManager } from './ChapterManager';
 import { BookOpen, ChevronLeft, Plus, GraduationCap } from 'lucide-react';
 
 export function InstructorDashboard() {
+  const [tab, setTab] = useState<'chapters' | 'library'>('chapters');
   const [courses, setCourses]           = useState<Course[]>([]);
   const [selectedGrade, setSelectedGrade] = useState('');
   const [selectedCourse, setSelected]   = useState<Course | null>(null);
@@ -80,6 +82,10 @@ export function InstructorDashboard() {
         </div>
       </div>
 
+      <div role="tablist" aria-label="إدارة المواد" className="flex flex-wrap gap-3 mb-6">
+        <button role="tab" aria-selected={tab === 'chapters'} onClick={() => setTab('chapters')} className="rounded-xl border bg-white px-5 py-3">الفصول والاختبارات</button>
+        <button role="tab" aria-selected={tab === 'library'} onClick={() => setTab('library')} className="rounded-xl border bg-white px-5 py-3">مكتبة المواد</button>
+      </div>
       <CourseCreator onCreated={fetchMyCourses} />
       {/* Stats Bar */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -100,6 +106,7 @@ export function InstructorDashboard() {
           : 'اختر مرحلة لعرض موادها الدراسية فقط.'}</p>
       </div>}
 
+      {tab === 'library' ? <CourseLibrary courses={visibleCourses} gradeSelected={!!selectedGrade} /> : <>
       {/* Courses Grid */}
       {courses.length === 0 ? (
         <EmptyState />
@@ -116,6 +123,7 @@ export function InstructorDashboard() {
           ))}
         </div>
       )}
+      </>}
     </div>
   );
 }
