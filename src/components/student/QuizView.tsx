@@ -75,8 +75,14 @@ export function QuizView({ quizId, studentId }: Props) {
     return () => clearTimeout(t);
   }, [timeLeft, phase]);
 
+  // الإجابة تُقفل فور الاختيار ليظهر التصحيح والتفسير مباشرة، وتُحفظ في قاعدة البيانات تلقائياً
   const selectAnswer = (questionId: string, key: string) => {
-    setAnswers(prev => ({ ...prev, [questionId]: key }));
+    if (answers[questionId]) return;
+    const next = { ...answers, [questionId]: key };
+    setAnswers(next);
+    if (attemptId) {
+      supabase.from('student_quiz_attempts').update({ answers: next }).eq('id', attemptId).then(() => {});
+    }
   };
 
   const submitQuiz = useCallback(async () => {
@@ -140,7 +146,7 @@ export function QuizView({ quizId, studentId }: Props) {
           />
         </div>
         <p className="text-xs text-gray-400 mt-1 text-center">
-          {answered} / {questions.length} سؤال تم الإجابة عليه
+          {answered} / {questions.length} سؤال تمت الإجابة عليه
         </p>
       </div>
 
@@ -160,32 +166,66 @@ export function QuizView({ quizId, studentId }: Props) {
             {q.question_text}
           </p>
 
-          {/* Options */}
+          {q.question_type === 'true_false' && (
+            <p className="text-xs font-semibold text-purple-600 mb-3">حدّد: صحيحة أم خاطئة؟</p>
+          )}
+
+          {/* Options — تصحيح فوري: أخضر للصحيح وأحمر للخطأ */}
           <div className="space-y-3">
             {(q.options as QuizOption[]).map(opt => {
-              const selected = answers[q.id] === opt.key;
+              const selectedKey = answers[q.id];
+              const locked      = !!selectedKey;
+              const isCorrect   = opt.key === q.correct_answer;
+              const isChosen    = selectedKey === opt.key;
               return (
                 <button
                   key={opt.key}
                   onClick={() => selectAnswer(q.id, opt.key)}
+                  disabled={locked}
                   className={clsx(
                     'w-full text-right p-4 rounded-xl border-2 transition-all duration-150 flex items-center gap-3',
-                    selected
-                      ? 'border-blue-500 bg-blue-50 text-blue-800'
-                      : 'border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50/50 text-gray-700'
+                    !locked && 'border-gray-200 bg-white hover:border-blue-300 hover:bg-blue-50/50 text-gray-700',
+                    locked && isCorrect && 'border-green-500 bg-green-50 text-green-800 font-semibold',
+                    locked && isChosen && !isCorrect && 'border-red-500 bg-red-50 text-red-800',
+                    locked && !isCorrect && !isChosen && 'border-gray-200 bg-white text-gray-400'
                   )}
                 >
                   <span className={clsx(
                     'w-7 h-7 rounded-full border-2 flex items-center justify-center text-sm font-bold shrink-0',
-                    selected ? 'border-blue-500 bg-blue-500 text-white' : 'border-gray-300 text-gray-500'
+                    !locked && 'border-gray-300 text-gray-500',
+                    locked && isCorrect && 'border-green-500 bg-green-500 text-white',
+                    locked && isChosen && !isCorrect && 'border-red-500 bg-red-500 text-white',
+                    locked && !isCorrect && !isChosen && 'border-gray-200 text-gray-300'
                   )}>
-                    {opt.key}
+                    {locked && isCorrect ? <CheckCircle className="w-4 h-4" /> :
+                     locked && isChosen  ? <XCircle className="w-4 h-4" /> : opt.key}
                   </span>
                   <span className="flex-1">{opt.text}</span>
                 </button>
               );
             })}
           </div>
+
+          {/* تغذية راجعة فورية + التفسير العلمي */}
+          {answers[q.id] && (
+            <div className="mt-4 space-y-2">
+              <p className={clsx(
+                'text-sm font-bold',
+                answers[q.id] === q.correct_answer ? 'text-green-700' : 'text-red-700'
+              )}>
+                {answers[q.id] === q.correct_answer ? '✅ إجابة صحيحة، أحسنت!' : '❌ إجابة خاطئة'}
+              </p>
+              {q.explanation && (
+                <div className="flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm">
+                  <Lightbulb className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-amber-700">💡 التفسير العلمي: </span>
+                    <span className="text-amber-800">{q.explanation}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* Navigation */}
           <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
@@ -215,7 +255,10 @@ export function QuizView({ quizId, studentId }: Props) {
             </div>
 
             {current < questions.length - 1 ? (
-              <Button variant="secondary" size="sm" onClick={() => setCurrent(c => c + 1)}>
+              <Button
+                variant={answers[q.id] ? 'primary' : 'secondary'} size="sm"
+                onClick={() => setCurrent(c => c + 1)}
+              >
                 التالي <ChevronLeft className="w-4 h-4" />
               </Button>
             ) : (
@@ -345,7 +388,7 @@ function QuestionReviewCard({ review, index }: { review: QuestionReview; index: 
       </div>
 
       {/* Explanation */}
-      {!is_correct && q.explanation && (
+      {q.explanation && (
         <div className="flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-xl p-3 text-sm">
           <Lightbulb className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
           <div>

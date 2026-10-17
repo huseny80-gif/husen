@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
 import { Course, Chapter } from '@/lib/types';
 import { Card, CardHeader } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import {
   ChevronRight, Plus, BookOpen, FileText,
-  Lightbulb, Trash2, Edit3, Check, X
+  Lightbulb, Trash2, Edit3, Check, X, Sparkles
 } from 'lucide-react';
 
 interface Props {
@@ -240,6 +241,13 @@ function ChapterRow({
         </div>
         {!isEditing && (
           <div className="flex items-center gap-1 shrink-0">
+            <Link
+              href={`/instructor/chapter/${chapter.id}/quiz`}
+              className="flex items-center gap-1 px-2 py-1 text-xs font-semibold text-purple-600 bg-purple-50 hover:bg-purple-100 rounded-lg transition-colors"
+              title="إدارة اختبارات الفصل وتوليد الأسئلة"
+            >
+              <Sparkles className="w-3.5 h-3.5" /> الاختبارات
+            </Link>
             <button
               onClick={onEditStart}
               className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
