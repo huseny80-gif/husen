@@ -1,17 +1,19 @@
 // توليد أسئلة من نص المادة بخوارزميات محلية (بدون OpenAI أو أي API مدفوع)
 // الاستراتيجيات: تعريف (MCQ) • ملء فراغ (MCQ) • صح/خطأ — وكلها مبنية على جمل النص نفسه.
 
-import type { QuestionDraft, QuizOption } from './types';
+import type { GeneratedQuestion } from './generated-questions';
 import {
   type Token, buildFrequency, hasArabicIndicDigits, isKeywordToken, splitSentences,
   stripDiacritics, toArabicIndicDigits, toWesternDigits, tokenize,
 } from './arabic-text';
 
-export const TRUE_FALSE_OPTIONS: QuizOption[] = [
+type Option = { key: string; text: string };
+
+export const TRUE_FALSE_OPTIONS: Option[] = [
   { key: 'A', text: 'صحيح' },
   { key: 'B', text: 'خطأ' },
 ];
-const KEYS = ['A', 'B', 'C', 'D', 'E', 'F'];
+const KEYS = ['A', 'B', 'C', 'D'];
 const BLANK = '______';
 
 export interface GenerateOptions {
@@ -41,40 +43,30 @@ function shuffle<T>(arr: T[], rng: () => number): T[] {
   return a;
 }
 
-export function newUid(): string {
-  return typeof crypto !== 'undefined' && 'randomUUID' in crypto
-    ? crypto.randomUUID()
-    : `d-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
-}
-
 function buildMcq(
   questionText: string, correct: string, distractors: string[],
   explanation: string, excerpt: string, rng: () => number,
-): QuestionDraft {
+): GeneratedQuestion {
   const texts = shuffle([correct, ...distractors], rng);
   const options = texts.map((text, i) => ({ key: KEYS[i], text }));
   return {
-    uid: newUid(),
-    question_type: 'mcq',
     question_text: questionText,
     options,
     correct_answer: options[texts.indexOf(correct)].key,
     explanation,
-    source_excerpt: excerpt,
-    points: 1,
+    source_page: 1,
+    source_quote: excerpt,
   };
 }
 
-function buildTrueFalse(statement: string, isTrue: boolean, explanation: string, excerpt: string): QuestionDraft {
+function buildTrueFalse(statement: string, isTrue: boolean, explanation: string, excerpt: string): GeneratedQuestion {
   return {
-    uid: newUid(),
-    question_type: 'true_false',
     question_text: statement,
     options: TRUE_FALSE_OPTIONS.map(o => ({ ...o })),
     correct_answer: isTrue ? 'A' : 'B',
     explanation,
-    source_excerpt: excerpt,
-    points: 1,
+    source_page: 1,
+    source_quote: excerpt,
   };
 }
 
@@ -144,7 +136,7 @@ function pickNumberDistractors(value: number, rng: () => number, n = 3): number[
   const raw = isInt
     ? [value + 1, value - 1, value * 2, Math.round(value / 2), value + 10, value + 5, value * 10, value - 5]
     : [value * 2, value / 2, value + 1, value - 1, value * 10, value + 0.5];
-  const uniq = [...new Set(raw.map(v => (isInt ? Math.round(v) : Number(v.toFixed(2)))))]
+  const uniq = Array.from(new Set(raw.map(v => (isInt ? Math.round(v) : Number(v.toFixed(2))))))
     .filter(v => v !== value && v >= 0);
   return shuffle(uniq, rng).slice(0, n);
 }
@@ -153,7 +145,7 @@ const formatNumber = (n: number, arabicIndic: boolean) =>
   arabicIndic ? toArabicIndicDigits(String(n)) : String(n);
 
 // ─── استراتيجيات التوليد ────────────────────────────────────
-function makeDefinitionMcq(sentence: string, ctx: Context, rng: () => number): QuestionDraft | null {
+function makeDefinitionMcq(sentence: string, ctx: Context, rng: () => number): GeneratedQuestion | null {
   const def = parseDefinition(sentence);
   if (!def) return null;
   const others = shuffle(
@@ -169,7 +161,7 @@ function makeDefinitionMcq(sentence: string, ctx: Context, rng: () => number): Q
   );
 }
 
-function makeClozeMcq(sentence: string, ctx: Context, rng: () => number): QuestionDraft | null {
+function makeClozeMcq(sentence: string, ctx: Context, rng: () => number): GeneratedQuestion | null {
   const tokens = tokenize(sentence);
   const sentenceKeys = new Set(tokens.map(t => t.key));
 
@@ -210,7 +202,7 @@ function makeClozeMcq(sentence: string, ctx: Context, rng: () => number): Questi
   return null;
 }
 
-function makeTrueFalse(sentence: string, makeFalse: boolean, ctx: Context, rng: () => number): QuestionDraft | null {
+function makeTrueFalse(sentence: string, makeFalse: boolean, ctx: Context, rng: () => number): GeneratedQuestion | null {
   if (!makeFalse) return buildTrueFalse(sentence, true, cite(sentence), sentence);
 
   const tokens = tokenize(sentence);
@@ -242,7 +234,7 @@ function makeTrueFalse(sentence: string, makeFalse: boolean, ctx: Context, rng: 
 }
 
 // ─── الدالة الرئيسية ────────────────────────────────────────
-export function generateQuestions(text: string, opts: GenerateOptions): QuestionDraft[] {
+export function generateQuestions(text: string, opts: GenerateOptions): GeneratedQuestion[] {
   const sentences = splitSentences(text);
   if (sentences.length === 0) return [];
 
@@ -251,9 +243,10 @@ export function generateQuestions(text: string, opts: GenerateOptions): Question
   const count = Math.max(1, Math.min(opts.count, sentences.length));
   const tfTarget = Math.round(count * Math.min(Math.max(opts.tfRatio, 0), 1));
 
-  const results: QuestionDraft[] = [];
+  const results: GeneratedQuestion[] = [];
   const usedQuestions = new Set<string>();
   let tfDone = 0;
+  const isTF = (q: GeneratedQuestion) => q.options.length === 2;
 
   for (const sentence of shuffle(sentences, rng)) {
     if (results.length >= count) break;
@@ -274,114 +267,10 @@ export function generateQuestions(text: string, opts: GenerateOptions): Question
       if (draft && !usedQuestions.has(draft.question_text)) {
         usedQuestions.add(draft.question_text);
         results.push(draft);
-        if (draft.question_type === 'true_false') tfDone++;
+        if (isTF(draft)) tfDone++;
         break;
       }
     }
   }
   return results;
-}
-
-// ─── إدخال بنك أسئلة جاهز (لصق نص بصيغة بسيطة) ─────────────
-// الصيغة:
-//   س: نص السؤال
-//   أ) خيار   ب) خيار   ج) خيار   د) خيار   (كل خيار في سطر)
-//   الإجابة: ب
-//   التفسير: شرح مختصر
-// وسؤال صح/خطأ: س: العبارة ... ثم  الإجابة: صح  (بدون خيارات)
-const LETTER_KEY: Record<string, string> = {
-  'أ': 'A', 'ا': 'A', 'إ': 'A', 'ب': 'B', 'ج': 'C', 'د': 'D', 'ه': 'E', 'هـ': 'E',
-};
-const Q_RE   = /^\s*(?:س|سؤال|السؤال|Q|Question)\s*\d*\s*[:：.\-)]\s*(.+)$/i;
-const OPT_RE = /^\s*([أاإبجدهـ]|[A-Fa-f])\s*[).:\-،]\s*(.+)$/;
-const ANS_RE = /^\s*(?:الإجابة الصحيحة|الإجابة|الاجابة|الجواب|Answer|Ans)\s*[:：-]\s*(.+)$/i;
-const EXP_RE = /^\s*(?:التفسير|الشرح|التوضيح|Explanation)\s*[:：-]\s*(.+)$/i;
-
-export interface ParseResult {
-  drafts: QuestionDraft[];
-  errors: { index: number; message: string }[];
-}
-
-export function parseQuestionBank(raw: string): ParseResult {
-  const drafts: QuestionDraft[] = [];
-  const errors: ParseResult['errors'] = [];
-
-  type Block = { q: string; options: QuizOption[]; answer: string; exp: string };
-  let cur: Block | null = null;
-  let last: 'q' | 'exp' | 'opt' | null = null;
-  let blockNo = 0;
-
-  const finish = () => {
-    if (!cur) return;
-    const b = cur; cur = null;
-    const draft = blockToDraft(b);
-    if ('error' in draft) errors.push({ index: blockNo, message: draft.error });
-    else drafts.push(draft);
-  };
-
-  for (const line of raw.replace(/\r/g, '').split('\n')) {
-    if (!line.trim() || /^\s*[-=]{3,}\s*$/.test(line)) { last = null; continue; }
-
-    const q = Q_RE.exec(line);
-    if (q) {
-      finish();
-      blockNo++;
-      cur = { q: q[1].trim(), options: [], answer: '', exp: '' };
-      last = 'q';
-      continue;
-    }
-    if (!cur) continue;
-
-    const ans = ANS_RE.exec(line);
-    if (ans) { cur.answer = ans[1].trim(); last = null; continue; }
-    const exp = EXP_RE.exec(line);
-    if (exp) { cur.exp = exp[1].trim(); last = 'exp'; continue; }
-    const opt = OPT_RE.exec(line);
-    if (opt) {
-      const key = LETTER_KEY[opt[1]] ?? opt[1].toUpperCase();
-      cur.options.push({ key, text: opt[2].trim() });
-      last = 'opt';
-      continue;
-    }
-    // سطر متابعة
-    if (last === 'q') cur.q += ' ' + line.trim();
-    else if (last === 'exp') cur.exp += ' ' + line.trim();
-    else if (last === 'opt') cur.options[cur.options.length - 1].text += ' ' + line.trim();
-  }
-  finish();
-  return { drafts, errors };
-}
-
-function blockToDraft(b: { q: string; options: QuizOption[]; answer: string; exp: string }):
-  QuestionDraft | { error: string } {
-  const ansNorm = stripDiacritics(b.answer).trim();
-  const isTrue  = /^(صح|صحيح|صحيحة|true|t)$/i.test(ansNorm);
-  const isFalse = /^(خطأ|خطا|خاطئ|خاطئة|false|f)$/i.test(ansNorm);
-
-  let draft: QuestionDraft;
-  if (b.options.length === 0) {
-    if (!isTrue && !isFalse) return { error: `«${b.q.slice(0, 30)}…»: اكتب الإجابة (صح أو خطأ) أو أضف خيارات` };
-    draft = buildTrueFalse(b.q, isTrue, b.exp, '');
-  } else {
-    const key = LETTER_KEY[ansNorm] ?? ansNorm.toUpperCase();
-    draft = {
-      uid: newUid(), question_type: 'mcq', question_text: b.q,
-      options: b.options, correct_answer: key, explanation: b.exp, points: 1,
-    };
-  }
-  draft.explanation = b.exp;
-  const problems = validateDraft(draft);
-  return problems.length ? { error: `«${b.q.slice(0, 30)}…»: ${problems[0]}` } : draft;
-}
-
-// ─── التحقق من صلاحية السؤال قبل الحفظ ─────────────────────
-export function validateDraft(d: QuestionDraft): string[] {
-  const errors: string[] = [];
-  if (!d.question_text.trim()) errors.push('نص السؤال فارغ');
-  if (d.options.length < 2) errors.push('يجب وجود خيارين على الأقل');
-  if (d.options.some(o => !o.text.trim())) errors.push('يوجد خيار فارغ');
-  const texts = d.options.map(o => o.text.trim());
-  if (new Set(texts).size !== texts.length) errors.push('يوجد خياران متطابقان');
-  if (!d.options.some(o => o.key === d.correct_answer)) errors.push('الإجابة الصحيحة غير موجودة بين الخيارات');
-  return errors;
 }

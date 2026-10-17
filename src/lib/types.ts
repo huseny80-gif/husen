@@ -73,8 +73,6 @@ export interface QuizOption {
   text: string;
 }
 
-export type QuestionType = 'mcq' | 'true_false';
-
 export interface Question {
   id: string;
   quiz_id: string;
@@ -84,22 +82,6 @@ export interface Question {
   explanation: string | null;
   points: number;
   sort_order: number;
-  question_type?: QuestionType;
-  source_content_id?: string | null;
-  source_excerpt?: string | null;
-}
-
-// مسودة سؤال قبل حفظه في قاعدة البيانات (مولَّدة أو مُدخلة يدوياً)
-export interface QuestionDraft {
-  uid: string;                 // معرّف محلي للواجهة
-  dbId?: string;               // معرّف السؤال في قاعدة البيانات (إن كان محفوظاً)
-  question_type: QuestionType;
-  question_text: string;
-  options: QuizOption[];
-  correct_answer: string;
-  explanation: string;
-  source_excerpt?: string;
-  points: number;
 }
 
 export interface Quiz {

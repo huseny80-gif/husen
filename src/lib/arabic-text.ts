@@ -50,7 +50,7 @@ const TOKEN_RE =
 
 export function tokenize(sentence: string): Token[] {
   const tokens: Token[] = [];
-  for (const m of sentence.matchAll(TOKEN_RE)) {
+  for (const m of Array.from(sentence.matchAll(TOKEN_RE))) {
     const text = m[0];
     const isNumber = /^[0-9٠-٩]/.test(text);
     tokens.push({

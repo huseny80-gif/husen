@@ -6,11 +6,15 @@ import { Course, Chapter } from '@/lib/types';
 import { Card, CardHeader } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { CourseLibrary } from './CourseLibrary';
+import { CourseCreator } from './CourseCreator';
 import { ChapterManager } from './ChapterManager';
 import { BookOpen, ChevronLeft, Plus, GraduationCap } from 'lucide-react';
 
 export function InstructorDashboard() {
+  const [tab, setTab] = useState<'chapters' | 'library'>('chapters');
   const [courses, setCourses]           = useState<Course[]>([]);
+  const [selectedGrade, setSelectedGrade] = useState('');
   const [selectedCourse, setSelected]   = useState<Course | null>(null);
   const [loading, setLoading]           = useState(true);
   const [error, setError]               = useState<string | null>(null);
@@ -27,7 +31,7 @@ export function InstructorDashboard() {
       .select(`
         course_id,
         courses (
-          id, title, description, cover_url, is_active, sort_order,
+          id, grade_id, title, description, cover_url, is_active, sort_order,
           grades ( id, name, code )
         )
       `)
@@ -56,6 +60,13 @@ export function InstructorDashboard() {
     );
   }
 
+  const grades = Array.from(new Map(courses.map(course => [course.grade_id, {
+    id: course.grade_id,
+    name: course.grades?.name ?? `المرحلة ${course.grade_id}`,
+  }])).values()).sort((a, b) => a.id - b.id);
+  const visibleCourses = courses.filter(course => String(course.grade_id) === selectedGrade)
+    .sort((a, b) => a.sort_order - b.sort_order || a.title.localeCompare(b.title, 'ar'));
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-6" dir="rtl">
       {/* Header */}
@@ -71,19 +82,39 @@ export function InstructorDashboard() {
         </div>
       </div>
 
+      <div role="tablist" aria-label="إدارة المواد" className="flex flex-wrap gap-3 mb-6">
+        <button role="tab" aria-selected={tab === 'chapters'} onClick={() => setTab('chapters')} className="rounded-xl border bg-white px-5 py-3">الاختبارات التفاعلية والفصول</button>
+        <button role="tab" aria-selected={tab === 'library'} onClick={() => setTab('library')} className="rounded-xl border bg-white px-5 py-3">مكتبة المواد</button>
+      </div>
+      <CourseCreator onCreated={fetchMyCourses} />
       {/* Stats Bar */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-        <StatCard label="المواد المكلف بها" value={courses.length} color="blue" />
+        <StatCard label="مواد المرحلة المختارة" value={visibleCourses.length} color="blue" />
         <StatCard label="المراحل الدراسية"  value={new Set(courses.map(c => c.grade_id)).size} color="purple" />
-        <StatCard label="المواد النشطة"     value={courses.filter(c => c.is_active).length} color="green" />
+        <StatCard label="المواد النشطة في المرحلة" value={visibleCourses.filter(c => c.is_active).length} color="green" />
       </div>
 
+      {courses.length > 0 && <div className="mb-6 rounded-2xl bg-white p-5 shadow-sm">
+        <label htmlFor="grade-selector" className="mb-2 block font-bold text-gray-900">اختر المرحلة الدراسية</label>
+        <select id="grade-selector" value={selectedGrade} onChange={event => setSelectedGrade(event.target.value)}
+          className="min-h-11 w-full rounded-xl border border-gray-300 bg-white px-3 py-2 text-gray-900 sm:max-w-sm focus:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-200">
+          <option value="">حدد المرحلة الدراسية</option>
+          {grades.map(grade => <option key={grade.id} value={String(grade.id)}>{grade.name}</option>)}
+        </select>
+        <p role="status" className="mt-3 text-sm text-gray-600">{selectedGrade
+          ? `${grades.find(grade => String(grade.id) === selectedGrade)?.name}: ${visibleCourses.length} مادة`
+          : 'اختر مرحلة لعرض موادها الدراسية فقط.'}</p>
+      </div>}
+
+      {tab === 'library' ? <CourseLibrary courses={visibleCourses} gradeSelected={!!selectedGrade} /> : <>
       {/* Courses Grid */}
       {courses.length === 0 ? (
         <EmptyState />
+      ) : !selectedGrade ? (
+        <Card className="py-12 text-center text-gray-500">حدد المرحلة الدراسية من القائمة أعلاه لبدء إدارة موادها.</Card>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {courses.map(course => (
+          {visibleCourses.map(course => (
             <CourseCard
               key={course.id}
               course={course}
@@ -92,6 +123,7 @@ export function InstructorDashboard() {
           ))}
         </div>
       )}
+      </>}
     </div>
   );
 }
