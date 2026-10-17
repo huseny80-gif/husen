@@ -64,6 +64,14 @@ export function tokenize(sentence: string): Token[] {
   return tokens;
 }
 
+/** جملة نثرية عربية: أغلب حروفها عربية وفيها رموز قليلة (نستبعد المعادلات والجداول) */
+export function isProse(s: string): boolean {
+  const arabic = (s.match(/[\u0621-\u064A]/g) ?? []).length;
+  const letters = (s.match(/[A-Za-z\u0621-\u064A]/g) ?? []).length;
+  const symbols = (s.match(/[=+\-*\/^∑∆→⇌←↑↓<>\[\]{}|\\_°̊]/g) ?? []).length;
+  return letters > 0 && arabic / letters >= 0.75 && symbols <= Math.max(1, s.length * 0.04);
+}
+
 /** تقسيم النص إلى جمل صالحة لاشتقاق الأسئلة منها */
 export function splitSentences(text: string): string[] {
   return text
@@ -80,7 +88,7 @@ export function splitSentences(text: string): string[] {
     .filter(s => {
       if (s.length < 20 || /[؟?]$/.test(s)) return false;
       const words = s.split(' ').length;
-      return words >= 5 && words <= 40;
+      return words >= 5 && words <= 40 && isProse(s);
     });
 }
 

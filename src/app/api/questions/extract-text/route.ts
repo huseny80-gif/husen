@@ -6,22 +6,10 @@ export const runtime = 'nodejs';
 export const maxDuration = 60;
 
 const MAX_BODY_CHARS = 40000; // حد عمود body في learning_sources
-// الملفات الأصغر من هذا الحد تُنزَّل بطلب واحد (أسرع وأبسط)؛ الأكبر (ملفات المكتبة الضخمة) تُقرأ صفحاتها المطلوبة فقط بطلبات Range
-const FULL_DOWNLOAD_LIMIT = Number(process.env.PDF_FULL_DOWNLOAD_MB ?? 40) * 1024 * 1024;
-
-// ملفات PDF غير الخطّية قد تُقرأ كاملة حتى في وضع Range، فنضع سقفاً ومهلة بدل انتظار طويل ينتهي بفشل
-const MAX_REMOTE_BYTES = 200 * 1024 * 1024;
+// الملف يُنزَّل كاملًا (لازم لإصلاح خرائط الحروف العربية داخله). نحدّ الحجم حفاظًا على ذاكرة ووقت الخادم.
+const MAX_FILE_BYTES = 80 * 1024 * 1024;
 const EXTRACT_TIMEOUT_MS = 50_000;
 
-async function remoteSize(url: string): Promise<number> {
-  const res = await fetch(url, { headers: { Range: 'bytes=0-0' } });
-  const total = res.headers.get('content-range')?.match(/\/(\d+)$/)?.[1];
-  await res.body?.cancel();
-  return total ? Number(total) : Number(res.headers.get('content-length') ?? 0);
-}
-
-// استخراج نص صفحات من PDF (مكتبة المادة أو ملف PDF مرفوع للفصل) — بدون أي خدمة خارجية.
-// الصلاحيات تُفرض بحساب المستخدم نفسه (RLS) وبفحص مدرب المادة.
 export async function POST(req: NextRequest) {
   try {
     const token = req.headers.get('authorization')?.match(/^Bearer (.+)$/)?.[1];
@@ -64,26 +52,21 @@ export async function POST(req: NextRequest) {
 
     let result;
     try {
-      const size = await remoteSize(signed.signedUrl);
-      if (size > MAX_REMOTE_BYTES) {
-        return NextResponse.json({
-          error: 'الملف كبير جدًا للاستخراج المباشر. ارفع الفصل المطلوب فقط كملف PDF في «ملفات الفصل» (حتى 25 ميغابايت) ثم استخرج منه.',
-        }, { status: 413 });
-      }
       const run = async () => {
-        if (size > 0 && size <= FULL_DOWNLOAD_LIMIT) {
-          const file = await fetch(signed.signedUrl);
-          if (!file.ok) throw new Error('download');
-          return extractPdfPages(new Uint8Array(await file.arrayBuffer()), start, end);
-        }
-        return extractPdfPages({ url: signed.signedUrl }, start, end);
+        const file = await fetch(signed.signedUrl);
+        if (!file.ok) throw new Error('download');
+        const declared = Number(file.headers.get('content-length') ?? 0);
+        if (declared > MAX_FILE_BYTES) { await file.body?.cancel(); throw new Error('الملف كبير جدًا (أكثر من 80 ميغابايت) للاستخراج المباشر. ارفع الفصل المطلوب فقط كملف PDF في «ملفات الفصل» ثم استخرج منه.'); }
+        const bytes = new Uint8Array(await file.arrayBuffer());
+        if (bytes.length > MAX_FILE_BYTES) throw new Error('الملف كبير جدًا (أكثر من 80 ميغابايت) للاستخراج المباشر. ارفع الفصل المطلوب فقط كملف PDF في «ملفات الفصل» ثم استخرج منه.');
+        return extractPdfPages(bytes, start, end);
       };
       result = await Promise.race([
         run(),
         new Promise<never>((_, reject) => setTimeout(() => reject(new Error('انتهت مهلة الاستخراج. اختر صفحات أقل أو ارفع الفصل كملف أصغر في «ملفات الفصل».')), EXTRACT_TIMEOUT_MS)),
       ]);
     } catch (e) {
-      const known = e instanceof Error && /صفحة|نطاق|مهلة/.test(e.message);
+      const known = e instanceof Error && /صفحة|نطاق|مهلة|كبير جدًا/.test(e.message);
       return NextResponse.json(
         { error: known ? (e as Error).message : 'تعذرت قراءة ملف PDF (قد يكون محميًا بكلمة مرور أو تالفًا).' },
         { status: 400 },

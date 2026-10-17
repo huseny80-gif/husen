@@ -2,6 +2,7 @@
 // يعمل مع ملفات PDF التي تحتوي نصاً قابلاً للتحديد؛ الملفات المصورة (صور ممسوحة) لا نص فيها.
 
 import { getDocumentProxy } from 'unpdf';
+import { PDFDict, PDFDocument, PDFName, PDFRawStream, decodePDFRawStream } from 'pdf-lib';
 
 export const MAX_PAGES_PER_EXTRACT = 10;
 export const PAGE_MARKER = (n: number) => `[صفحة ${n}]`;
@@ -40,7 +41,7 @@ export function reflow(lines: string[]): string {
   return out.join('\n');
 }
 
-interface TextItem { str: string; dir?: string; hasEOL?: boolean; transform?: number[] }
+interface TextItem { str: string; dir?: string; hasEOL?: boolean; transform?: number[]; height?: number }
 
 /** تجميع العناصر في أسطر بحسب الإحداثي الرأسي مع الإبقاء على ترتيبها البصري */
 function groupLines(items: TextItem[]): TextItem[][] {
@@ -49,7 +50,9 @@ function groupLines(items: TextItem[]): TextItem[][] {
   let lastY: number | null = null;
   for (const it of items) {
     const y = it.transform?.[5] ?? null;
-    if (cur.length && lastY !== null && y !== null && Math.abs(y - lastY) > 2) { lines.push(cur); cur = []; }
+    // عتبة نسبية لارتفاع الخط حتى لا تنفصل الأدلّة والأسس (H₂O، x²) عن سطرها
+    const tolerance = Math.max(2, (it.height || 10) * 0.45);
+    if (cur.length && lastY !== null && y !== null && Math.abs(y - lastY) > tolerance) { lines.push(cur); cur = []; }
     cur.push(it);
     if (y !== null) lastY = y;
     if (it.hasEOL) { lines.push(cur); cur = []; lastY = null; }
@@ -105,30 +108,78 @@ export function visualToLogical(line: string): string {
 // في النص العربي السليم تبدأ كلمات كثيرة بـ«ال»؛ في النص المعكوس تظهر «لا» في نهايات الكلمات بدلاً منها
 const arabicQuality = (text: string) => (text.match(/(^|\s)ال(?=[\u0621-\u064A])/g) ?? []).length;
 
-// ثلاث قراءات محتملة للصفحة؛ نختار الأقرب إلى عربية سليمة (كلمات تبدأ بـ«ال»)
-function pageText(lines: TextItem[][]): string {
-  const candidates = [
-    reflow(lines.map(joinAsIs)),
-    reflow(lines.map(joinLogical)),
-    reflow(lines.map(l => visualToLogical(joinAsIs(l)))),
-  ];
-  return candidates.reduce((best, c) => (arabicQuality(c) > arabicQuality(best) ? c : best));
+const arabicRatio = (s: string) => {
+  const arabic = (s.match(ARABIC_CHAR) ?? []).length;
+  const latin = (s.match(/[A-Za-z]/g) ?? []).length;
+  return arabic + latin === 0 ? 0 : arabic / (arabic + latin);
+};
+
+/** القراءة بحسب الموضع: الأسطر العربية تُقرأ من اليمين لليسار مهما كان ترتيب العناصر في الملف */
+function joinByPosition(line: TextItem[]): string {
+  const asIs = joinAsIs(line);
+  if (arabicRatio(asIs) < 0.5) return asIs;
+  const sorted = line
+    .map((it, i) => ({ it, i }))
+    .sort((a, b) => (a.it.transform?.[4] ?? 0) - (b.it.transform?.[4] ?? 0) || a.i - b.i)
+    .map(x => x.it);
+  return joinLogical(sorted);
 }
 
-/** بيانات الملف مباشرة، أو رابط يدعم Range فتُقرأ الصفحات المطلوبة فقط (مهم لملفات المكتبة الكبيرة) */
-export type PdfSource = Uint8Array | { url: string };
+function pageText(lines: TextItem[][]): string {
+  const byPosition = reflow(lines.map(joinByPosition));
+  // قراءة عكس الحروف لملفات تخزّن السطر كله بترتيب بصري؛ لا نعتمدها إلا إذا تفوّقت بوضوح (ليس بضجيج العدّ)
+  const reversedChars = reflow(lines.map(l => visualToLogical(joinAsIs(l))));
+  return arabicQuality(reversedChars) > arabicQuality(byPosition) * 1.15 ? reversedChars : byPosition;
+}
+
+// ─── إصلاح حروف الربط (ligatures) العربية ─────────────────────
+// كثير من كتب PDF (خطوط مثل AlBayan) تُعرّف في ToUnicode أن حرف الربط الواحد «لخ» أو «لا» أو «ين»… يقابل عدة أحرف
+// بترتيبها المنطقي، لكن pdf.js يعكس ترتيب الحروف داخل المقطع العربي كله بما فيها داخل الرابط الواحد، فيخرج «اخلاليا»
+// بدل «الخلايا». نعكس هذه الخرائط داخل الملف نفسه قبل الاستخراج فيعود الترتيب صحيحاً بلا تخمين لغوي.
+const LIGATURE_DST = /<([0-9A-Fa-f]{2,8})>(\s*)<((?:[0-9A-Fa-f]{4}){2,})>/g;
+const ARABIC_LETTERS_ONLY = /^[\u0621-\u064A\u0671-\u06D3]{2,}$/;
+const hexToStr = (hex: string) => (hex.match(/.{4}/g) ?? []).map(h => String.fromCharCode(parseInt(h, 16))).join('');
+const strToHex = (s: string) => Array.from(s).map(c => c.charCodeAt(0).toString(16).toUpperCase().padStart(4, '0')).join('');
+
+export function reverseLigatureMappings(cmap: string): string | null {
+  let changed = false;
+  const out = cmap.replace(LIGATURE_DST, (match, src: string, ws: string, dst: string) => {
+    const text = hexToStr(dst);
+    if (!ARABIC_LETTERS_ONLY.test(text)) return match; // نترك علامات التشكيل والحروف اللاتينية (fi) كما هي
+    changed = true;
+    return `<${src}>${ws}<${strToHex(Array.from(text).reverse().join(''))}>`;
+  });
+  return changed ? out : null;
+}
+
+/** يعيد بايتات الملف بعد إصلاح خرائط ToUnicode، أو الملف نفسه إن لم يلزم/تعذّر الإصلاح */
+export async function fixLigatureOrder(data: Uint8Array): Promise<Uint8Array> {
+  try {
+    const doc = await PDFDocument.load(data, { updateMetadata: false });
+    let patched = 0;
+    for (const [, obj] of doc.context.enumerateIndirectObjects()) {
+      if (!(obj instanceof PDFDict)) continue;
+      const stream = obj.lookup(PDFName.of('ToUnicode'));
+      if (!(stream instanceof PDFRawStream)) continue;
+      const cmap = new TextDecoder('latin1').decode(decodePDFRawStream(stream).decode());
+      const fixed = reverseLigatureMappings(cmap);
+      if (!fixed) continue;
+      obj.set(PDFName.of('ToUnicode'), doc.context.register(doc.context.flateStream(fixed)));
+      patched++;
+    }
+    return patched ? await doc.save() : data;
+  } catch {
+    return data;
+  }
+}
 
 export async function extractPdfPages(
-  source: PdfSource, start: number, end: number,
+  data: Uint8Array, start: number, end: number,
 ): Promise<ExtractedPages> {
   if (!Number.isInteger(start) || !Number.isInteger(end) || start < 1 || end < start || end - start >= MAX_PAGES_PER_EXTRACT) {
     throw new Error(`اختر نطاقاً من 1 إلى ${MAX_PAGES_PER_EXTRACT} صفحات.`);
   }
-  const pdf = source instanceof Uint8Array
-    ? await getDocumentProxy(source)
-    : await getDocumentProxy(undefined as unknown as Uint8Array, {
-        url: source.url, disableAutoFetch: true, disableStream: true, rangeChunkSize: 131072,
-      });
+  const pdf = await getDocumentProxy(await fixLigatureOrder(data));
   try {
     if (end > pdf.numPages) throw new Error(`الملف يحتوي ${pdf.numPages} صفحة فقط.`);
     const pages: ExtractedPages['pages'] = [];
