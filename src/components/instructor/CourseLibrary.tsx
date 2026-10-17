@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import { Upload } from 'tus-js-client';
 import { Course } from '@/lib/types';
 
 type Entry = { id: string; title: string; storage_path: string };
@@ -28,13 +29,34 @@ export function CourseLibrary({ courses, gradeSelected }: { courses: Course[]; g
   async function save(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (busy || !file || !validCourse || !title.trim()) return;
-    if (!file.name.toLowerCase().endsWith('.pdf') || file.size > 25 * 1024 * 1024 || file.size === 0) { setMessage('اختر ملف PDF غير فارغ بحجم أقصى 25 ميغابايت.'); return; }
+    if (!file.name.toLowerCase().endsWith('.pdf') || file.size > 2 * 1024 * 1024 * 1024 || file.size === 0) { setMessage('اختر ملف PDF غير فارغ بحجم أقصى 2 جيجابايت.'); return; }
     const form = event.currentTarget;
     setBusy(true); setMessage('جارٍ رفع الكتاب، أبقِ الصفحة مفتوحة…');
     const path = `${validCourse}/${crypto.randomUUID()}.pdf`;
     try {
-      const { error: uploadError } = await supabase.storage.from('course-library').upload(path, file, { contentType: 'application/pdf', upsert: false });
-      if (uploadError) throw uploadError;
+      const endpoint = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL!);
+      if (endpoint.hostname.endsWith('.supabase.co')) endpoint.hostname = endpoint.hostname.replace('.supabase.co', '.storage.supabase.co');
+      endpoint.pathname = '/storage/v1/upload/resumable';
+      await new Promise<void>((resolve, reject) => {
+        const upload = new Upload(file, {
+          endpoint: endpoint.toString(),
+          chunkSize: 6 * 1024 * 1024,
+          retryDelays: [0, 3000, 5000, 10000, 20000],
+          uploadDataDuringCreation: true,
+          removeFingerprintOnSuccess: true,
+          storeFingerprintForResuming: false,
+          metadata: { bucketName: 'course-library', objectName: path, contentType: 'application/pdf', cacheControl: '3600' },
+          onBeforeRequest: async request => {
+            const { data: { session }, error } = await supabase.auth.getSession();
+            if (error || !session) throw new Error('انتهت جلسة الدخول. سجل الدخول مجددًا.');
+            request.setHeader('authorization', `Bearer ${session.access_token}`);
+          },
+          onProgress: (sent, total) => setMessage(`جارٍ رفع الكتاب: ${Math.floor(sent / total * 100)}٪ — أبقِ الصفحة مفتوحة.`),
+          onError: () => reject(new Error('تعذر رفع الملف بعد إعادة المحاولة. تحقق من الاتصال وحد التخزين في Supabase.')),
+          onSuccess: () => resolve(),
+        });
+        upload.start();
+      });
       const { error } = await supabase.from('course_library').insert({ course_id: validCourse, title: title.trim(), storage_path: path }).select('id').single();
       if (error) throw error;
       setTitle(''); setFile(null); form.reset(); setRefresh(n => n + 1);
@@ -58,7 +80,7 @@ export function CourseLibrary({ courses, gradeSelected }: { courses: Course[]; g
       {validCourse && <>
         <form onSubmit={save} className="space-y-3 my-5">
           <label className="block">عنوان الكتاب<input required maxLength={200} disabled={busy} value={title} onChange={e => setTitle(e.target.value)} className="block w-full border rounded-xl p-3" /></label>
-          <label className="block">ملف PDF — حتى 25 ميغابايت<input required disabled={busy} type="file" accept="application/pdf,.pdf" onChange={e => setFile(e.target.files?.[0] ?? null)} className="block max-w-full my-2" /></label>
+          <label className="block">ملف PDF — حتى 2 جيجابايت<input required disabled={busy} type="file" accept="application/pdf,.pdf" onChange={e => setFile(e.target.files?.[0] ?? null)} className="block max-w-full my-2" /></label>
           <button disabled={busy} className="rounded-xl bg-blue-600 text-white px-5 py-3 disabled:opacity-50">{busy ? 'جارٍ الحفظ…' : 'حفظ الكتاب في المنصة'}</button>
         </form>
         <h3 className="font-bold my-3">الكتب المحفوظة</h3>
