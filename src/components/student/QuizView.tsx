@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Quiz, Question, QuizOption, QuizResult, QuestionReview } from '@/lib/types';
 import { Button } from '@/components/ui/Button';
@@ -27,18 +27,22 @@ export function QuizView({ quizId, studentId }: Props) {
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult]         = useState<QuizResult | null>(null);
   const [timeLeft, setTimeLeft]     = useState<number | null>(null);
+  const [errorMessage, setErrorMessage] = useState('');
+  const submitLock = useRef(false);
   const [attemptId, setAttemptId]   = useState<string | null>(null);
 
   // Fetch quiz + create attempt
   useEffect(() => {
+    let cancelled = false;
     async function init() {
+      try {
       const { data: quizData, error: qErr } = await supabase
         .from('quizzes')
         .select('*')
         .eq('id', quizId)
         .single();
 
-      if (qErr || !quizData) { setPhase('error'); return; }
+      if (qErr || !quizData) throw new Error(qErr?.message ?? 'الاختبار غير متاح.');
 
       const { data: qsData, error: qsErr } = await supabase
         .from('questions')
@@ -46,7 +50,8 @@ export function QuizView({ quizId, studentId }: Props) {
         .eq('quiz_id', quizId)
         .order('sort_order', { ascending: true });
 
-      if (qsErr || !qsData?.length) { setPhase('error'); return; }
+      if (qsErr || !qsData?.length) throw new Error(qsErr?.message ?? 'لا توجد أسئلة لهذا الاختبار.');
+      if (cancelled) return;
 
       setQuiz(quizData as unknown as Quiz);
       setQuestions(qsData as unknown as Question[]);
@@ -55,33 +60,36 @@ export function QuizView({ quizId, studentId }: Props) {
       }
 
       // Create attempt record
-      const { data: attempt } = await supabase
+      const { data: attempt, error: attemptError } = await supabase
         .from('student_quiz_attempts')
         .insert({ student_id: studentId, quiz_id: quizId, answers: {}, total_points: qsData.reduce((s, q: any) => s + q.points, 0) })
         .select('id')
         .single();
-      if (attempt) setAttemptId((attempt as any).id);
+      if (attemptError || !attempt) throw new Error('تعذر بدء المحاولة: ' + (attemptError?.message ?? 'لم يتم إنشاء سجل المحاولة.'));
+      if (cancelled) return;
+      setAttemptId((attempt as any).id);
 
       setPhase('taking');
+      } catch (error) {
+        if (!cancelled) { setErrorMessage((error as Error).message); setPhase('error'); }
+      }
     }
     init();
+    return () => { cancelled = true; };
   }, [quizId, studentId]);
 
-  // Timer countdown
-  useEffect(() => {
-    if (phase !== 'taking' || timeLeft === null) return;
-    if (timeLeft <= 0) { submitQuiz(); return; }
-    const t = setTimeout(() => setTimeLeft(s => (s ?? 1) - 1), 1000);
-    return () => clearTimeout(t);
-  }, [timeLeft, phase]);
-
   const selectAnswer = (questionId: string, key: string) => {
+    if (submitting || timeLeft === 0) return;
     setAnswers(prev => ({ ...prev, [questionId]: key }));
   };
 
   const submitQuiz = useCallback(async () => {
-    if (submitting || !quiz || phase !== 'taking') return;
+    if (submitLock.current || !quiz || phase !== 'taking') return;
+    if (!attemptId) { setErrorMessage('لا يوجد سجل للمحاولة. أعد فتح الاختبار.'); return; }
+    submitLock.current = true;
     setSubmitting(true);
+    setErrorMessage('');
+    try {
 
     // Calculate score
     let score = 0;
@@ -96,14 +104,15 @@ export function QuizView({ quizId, studentId }: Props) {
     const passed      = percentage >= quiz.pass_score;
 
     // Save to DB
-    if (attemptId) {
-      await supabase.from('student_quiz_attempts').update({
+    {
+      const { data: saved, error: saveError } = await supabase.from('student_quiz_attempts').update({
         answers,
         score,
         percentage,
         passed,
         submitted_at: new Date().toISOString(),
-      }).eq('id', attemptId);
+      }).eq('id', attemptId).eq('student_id', studentId).is('submitted_at', null).select('id').single();
+      if (saveError || !saved) throw new Error(saveError?.message ?? 'لم يتم تحديث سجل المحاولة.');
     }
 
     setResult({ attempt_id: attemptId ?? '', score, total_points: totalPoints, percentage, passed,
@@ -112,12 +121,22 @@ export function QuizView({ quizId, studentId }: Props) {
       questions_review: reviews,
     });
     setPhase('result');
-    setSubmitting(false);
-  }, [answers, questions, quiz, attemptId, submitting, phase]);
+    } catch (error) {
+      setErrorMessage('لم يتم تأكيد حفظ النتيجة: ' + (error as Error).message + ' — إجاباتك باقية في هذه الصفحة. أعد محاولة الإرسال أو افحص سجل التقدم قبل إغلاق الصفحة.');
+    } finally { submitLock.current = false; setSubmitting(false); }
+  }, [answers, questions, quiz, attemptId, studentId, phase]);
+
+  // Timer countdown
+  useEffect(() => {
+    if (phase !== 'taking' || timeLeft === null || submitting || errorMessage) return;
+    if (timeLeft <= 0) { submitQuiz(); return; }
+    const t = setTimeout(() => setTimeLeft(s => (s ?? 1) - 1), 1000);
+    return () => clearTimeout(t);
+  }, [timeLeft, phase, submitting, errorMessage, submitQuiz]);
 
   // ─── Render ──────────────────────────────────────────────
   if (phase === 'loading') return <QuizSkeleton />;
-  if (phase === 'error')   return <ErrorState />;
+  if (phase === 'error')   return <ErrorState message={errorMessage} />;
   if (phase === 'result' && result) return <ResultView result={result} quiz={quiz!} onRetry={() => window.location.reload()} />;
 
   const q         = questions[current];
@@ -126,6 +145,7 @@ export function QuizView({ quizId, studentId }: Props) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 flex flex-col p-4" dir="rtl">
+      {errorMessage && <div role="alert" className="max-w-2xl mx-auto w-full mb-4 rounded-xl bg-red-50 text-red-700 p-4"><p>{errorMessage}</p><Button variant="secondary" className="mt-2" onClick={submitQuiz} loading={submitting}>إعادة محاولة حفظ النتيجة</Button><a href="/student/progress" target="_blank" rel="noreferrer" className="block mt-2 underline">فتح سجل التقدم في نافذة أخرى</a></div>}
       {/* Top Bar */}
       <div className="max-w-2xl mx-auto w-full mb-4">
         <div className="flex items-center justify-between mb-2">
@@ -385,12 +405,13 @@ function QuizSkeleton() {
   );
 }
 
-function ErrorState() {
+function ErrorState({ message }: { message: string }) {
   return (
     <div className="min-h-screen flex items-center justify-center" dir="rtl">
       <Card className="text-center py-10">
         <XCircle className="w-12 h-12 text-red-400 mx-auto mb-3" />
-        <p className="text-gray-600">حدث خطأ أثناء تحميل الاختبار</p>
+        <p className="text-gray-600">{message || 'حدث خطأ أثناء تحميل الاختبار'}</p>
+        <Button className="mt-4" onClick={() => window.location.reload()}>إعادة المحاولة</Button>
       </Card>
     </div>
   );

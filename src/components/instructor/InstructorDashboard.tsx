@@ -27,7 +27,7 @@ export function InstructorDashboard() {
       .select(`
         course_id,
         courses (
-          id, title, description, cover_url, is_active, sort_order,
+          id, grade_id, title, description, cover_url, is_active, sort_order,
           grades ( id, name, code )
         )
       `)
