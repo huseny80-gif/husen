@@ -12,7 +12,7 @@ import { ChapterManager } from './ChapterManager';
 import { BookOpen, ChevronLeft, Plus, GraduationCap } from 'lucide-react';
 
 export function InstructorDashboard() {
-  const [tab, setTab] = useState<'chapters' | 'library'>('chapters');
+  const [tab, setTab] = useState<'chapters' | 'library'>('library');
   const [courses, setCourses]           = useState<Course[]>([]);
   const [selectedGrade, setSelectedGrade] = useState('');
   const [selectedCourse, setSelected]   = useState<Course | null>(null);
