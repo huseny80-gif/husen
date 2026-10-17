@@ -233,8 +233,26 @@ function makeTrueFalse(sentence: string, makeFalse: boolean, ctx: Context, rng: 
   return buildTrueFalse(falseStatement, false, `العبارة الصحيحة: «${sentence}»`, sentence);
 }
 
+// ─── مراجع الصفحات ──────────────────────────────────────────
+// النص المستخرج من PDF يحمل علامات «[صفحة N]»؛ نربط كل جملة برقم صفحتها ونحذف العلامات من نص السياق
+const PAGE_SPLIT_RE = /^\[صفحة (\d+)\][ \t]*$/m;
+
+function indexPages(text: string) {
+  const pageOf = new Map<string, number>();
+  const parts = text.split(PAGE_SPLIT_RE); // [قبل, رقم, نص, رقم, نص, …]
+  let firstPage = 1;
+  for (let i = 1; i < parts.length; i += 2) {
+    const page = Number(parts[i]);
+    if (i === 1) firstPage = page;
+    for (const sentence of splitSentences(parts[i + 1])) if (!pageOf.has(sentence)) pageOf.set(sentence, page);
+  }
+  const clean = parts.length > 1 ? parts.filter((_, i) => i === 0 || i % 2 === 0).join('\n') : text;
+  return { clean, pageOf, firstPage };
+}
+
 // ─── الدالة الرئيسية ────────────────────────────────────────
-export function generateQuestions(text: string, opts: GenerateOptions): GeneratedQuestion[] {
+export function generateQuestions(rawText: string, opts: GenerateOptions): GeneratedQuestion[] {
+  const { clean: text, pageOf, firstPage } = indexPages(rawText);
   const sentences = splitSentences(text);
   if (sentences.length === 0) return [];
 
@@ -266,6 +284,7 @@ export function generateQuestions(text: string, opts: GenerateOptions): Generate
       const draft = attempt();
       if (draft && !usedQuestions.has(draft.question_text)) {
         usedQuestions.add(draft.question_text);
+        draft.source_page = pageOf.get(sentence) ?? firstPage;
         results.push(draft);
         if (isTF(draft)) tfDone++;
         break;

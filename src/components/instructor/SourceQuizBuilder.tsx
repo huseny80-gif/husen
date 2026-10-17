@@ -6,6 +6,7 @@ import {GeneratedQuestion} from '@/lib/generated-questions';
 import {ScientificText} from '@/components/content/ScientificText';
 import {Button} from '@/components/ui/Button';
 import {Card} from '@/components/ui/Card';
+import {PdfTextExtractor} from './PdfTextExtractor';
 interface Source {id:string;title:string;body:string|null;storage_path:string|null}
 const field='block w-full rounded-xl border border-gray-300 bg-white p-2 text-gray-900';
 export function SourceQuizBuilder({chapterId,onSaved}:{chapterId:string;onSaved:()=>void}) {
@@ -23,7 +24,7 @@ export function SourceQuizBuilder({chapterId,onSaved}:{chapterId:string;onSaved:
  async function openSource(source:Source){if(!source.storage_path)return;setError('');const {data,error}=await supabase.storage.from('learning-sources').createSignedUrl(source.storage_path,300);if(error){setError(error.message);return;}window.open(data.signedUrl,'_blank','noopener,noreferrer');}
  async function generate(){setBusy(true);setError('');setDraft(null);setReviewed(false);setNotice('');try{
   const selected=sources.find(item=>item.id===sourceId);
-  if(!selected?.body)throw new Error('التوليد المحلي يحتاج مصدرًا نصيًا محفوظًا. انسخ نص الفصل من كتابك واحفظه كمصدر؛ ملفات PDF المصورة تحتاج استخراج النص أولًا.');
+  if(!selected?.body)throw new Error('هذا المصدر ملف PDF. استخرج نص صفحاته أولًا من «استخراج نص من ملف PDF» ثم ولّد الأسئلة من المصدر النصي الناتج.');
   const questions=generateLocalQuestions(selected.body,count);
   setDraft({sourceId,questions});
   if(questions.length<count)setNotice(`أمكن إنشاء ${questions.length} أسئلة فقط من النص المتاح دون اختلاق محتوى إضافي.`);
@@ -40,6 +41,7 @@ export function SourceQuizBuilder({chapterId,onSaved}:{chapterId:string;onSaved:
  <label className="block">أو نص الدرس<textarea disabled={!!file} maxLength={40000} rows={5} className={field} value={body} onChange={e=>setBody(e.target.value)}/></label>
  <p className="text-sm text-gray-600">للمعادلات استخدم {'\\( x^2 \\)'} وللتفاعلات {'\\( \\ce{CH4 + 2O2 -> CO2 + 2H2O} \\)'}. رفع PDF يحفظه في مساحة خاصة بالمدرب.</p>
  <Button type="submit" loading={busy}>حفظ المحتوى</Button></form></details>
+ <PdfTextExtractor chapterId={chapterId} onSaved={async(id)=>{await load();setSourceId(id);setDraft(null);setError('');setNotice('حُفظ النص المستخرج كمصدر نصي. اضغط «إنشاء اختبار من نص المادة» لتوليد الأسئلة من صفحاته.');}}/>
  <label className="block">المصدر<select className={field} value={sourceId} disabled={busy} onChange={e=>{setSourceId(e.target.value);setDraft(null);setStart(1);setEnd(1);}}><option value="">اختر مصدرًا محفوظًا</option>{sources.map(s=><option key={s.id} value={s.id}>{s.title}</option>)}</select></label>
  {source?.storage_path&&<Button variant="secondary" onClick={()=>openSource(source)}>فتح PDF للتحقق من الصفحات</Button>}
  {source?.body&&<Card><ScientificText text={source.body}/></Card>}
