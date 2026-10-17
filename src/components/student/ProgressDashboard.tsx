@@ -12,11 +12,16 @@ interface Props { studentId: string; }
 
 export function ProgressDashboard({ studentId }: Props) {
   const [attempts, setAttempts] = useState<StudentQuizAttempt[]>([]);
+  const [error, setError] = useState('');
+  const [retry, setRetry] = useState(0);
   const [loading, setLoading]   = useState(true);
 
   useEffect(() => {
+    let cancelled = false;
     async function fetch() {
-      const { data } = await supabase
+      setLoading(true); setError('');
+      try {
+      const { data, error } = await supabase
         .from('student_quiz_attempts')
         .select(`
           *,
@@ -32,11 +37,15 @@ export function ProgressDashboard({ studentId }: Props) {
         .eq('student_id', studentId)
         .not('submitted_at', 'is', null)
         .order('submitted_at', { ascending: false });
-      setAttempts((data ?? []) as unknown as StudentQuizAttempt[]);
-      setLoading(false);
+      if (error) throw error;
+      if (!cancelled) setAttempts((data ?? []) as unknown as StudentQuizAttempt[]);
+      } catch (error) {
+        if (!cancelled) setError((error as Error).message);
+      } finally { if (!cancelled) setLoading(false); }
     }
     fetch();
-  }, [studentId]);
+    return () => { cancelled = true; };
+  }, [studentId, retry]);
 
   // ─── Stats ──────────────────────────────────────────────
   const totalAttempts = attempts.length;
@@ -49,6 +58,7 @@ export function ProgressDashboard({ studentId }: Props) {
     : 0;
 
   if (loading) return <Skeleton />;
+  if (error) return <div dir="rtl" className="p-6"><Card><p role="alert" className="text-red-700">تعذر تحميل سجل التقدم: {error}</p><button className="mt-4 rounded-xl bg-blue-600 text-white px-4 py-2" onClick={() => setRetry(v => v + 1)}>إعادة المحاولة</button></Card></div>;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 p-6" dir="rtl">
