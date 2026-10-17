@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import { QuizManager } from './QuizManager';
 import { Course, Chapter } from '@/lib/types';
 import { Card, CardHeader } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -16,6 +17,8 @@ interface Props {
 }
 
 export function ChapterManager({ course, onBack }: Props) {
+  const [selectedChapter, setSelectedChapter] = useState<Chapter | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [chapters, setChapters]         = useState<Chapter[]>([]);
   const [loading, setLoading]           = useState(true);
   const [addingChapter, setAdding]      = useState(false);
@@ -31,12 +34,14 @@ export function ChapterManager({ course, onBack }: Props) {
 
   async function fetchChapters() {
     setLoading(true);
-    const { data } = await supabase
+    setError(null);
+    const { data, error } = await supabase
       .from('chapters')
       .select('*, contents(*), quizzes(id, title)')
       .eq('course_id', course.id)
       .order('sort_order', { ascending: true });
-    setChapters((data ?? []) as Chapter[]);
+    if (error) setError('تعذر تحميل الفصول: ' + error.message);
+    else setChapters((data ?? []) as unknown as Chapter[]);
     setLoading(false);
   }
 
@@ -50,6 +55,7 @@ export function ChapterManager({ course, onBack }: Props) {
       description: newDesc.trim() || null,
       sort_order: maxOrder + 1,
     });
+    if (error) setError('تعذر حفظ الفصل: ' + error.message);
     if (!error) {
       setNewTitle('');
       setNewDesc('');
@@ -61,7 +67,8 @@ export function ChapterManager({ course, onBack }: Props) {
 
   async function deleteChapter(id: string) {
     if (!confirm('هل أنت متأكد من حذف هذا الفصل؟')) return;
-    await supabase.from('chapters').delete().eq('id', id);
+    const { data, error } = await supabase.from('chapters').delete().eq('id', id).select('id');
+    if (error || !data?.length) { setError(error?.message ?? 'لم يتم حذف الفصل. تحقق من الصلاحيات.'); return; }
     setChapters(prev => prev.filter(c => c.id !== id));
   }
 
@@ -71,11 +78,14 @@ export function ChapterManager({ course, onBack }: Props) {
       .from('chapters')
       .update({ title: editTitle.trim() })
       .eq('id', id);
+    if (error) setError('تعذر تعديل الفصل: ' + error.message);
     if (!error) {
       setChapters(prev => prev.map(c => c.id === id ? { ...c, title: editTitle } : c));
       setEditingId(null);
     }
   }
+
+  if (selectedChapter) return <QuizManager chapter={selectedChapter} courseTitle={course.title} onBack={() => { setSelectedChapter(null); fetchChapters(); }} />;
 
   const grade = (course as any).grades;
 
@@ -105,6 +115,7 @@ export function ChapterManager({ course, onBack }: Props) {
         </Button>
       </div>
 
+      {error && <p role="alert" className="mb-4 rounded-xl bg-red-50 p-4 text-red-700">{error}</p>}
       {/* Add Chapter Form */}
       {addingChapter && (
         <Card className="mb-5 border-2 border-blue-200 bg-blue-50">
@@ -161,6 +172,7 @@ export function ChapterManager({ course, onBack }: Props) {
               onEditSave={() => saveEdit(chapter.id)}
               onEditCancel={() => setEditingId(null)}
               onDelete={() => deleteChapter(chapter.id)}
+              onManageQuizzes={() => setSelectedChapter(chapter)}
             />
           ))}
         </div>
@@ -180,11 +192,12 @@ interface ChapterRowProps {
   onEditSave: () => void;
   onEditCancel: () => void;
   onDelete: () => void;
+  onManageQuizzes: () => void;
 }
 
 function ChapterRow({
   chapter, index, isEditing, editTitle,
-  onEditStart, onEditChange, onEditSave, onEditCancel, onDelete
+  onEditStart, onEditChange, onEditSave, onEditCancel, onDelete, onManageQuizzes
 }: ChapterRowProps) {
   const contents = (chapter.contents as any[]) ?? [];
   const quizzes  = (chapter.quizzes  as any[]) ?? [];
@@ -257,6 +270,7 @@ function ChapterRow({
           </div>
         )}
       </div>
+      <Button className="mt-4" size="sm" onClick={onManageQuizzes}>إدارة الاختبارات والأسئلة</Button>
     </Card>
   );
 }
