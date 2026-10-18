@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>القرآن الكريم والتربية الإسلامية — السادس الإعدادي</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#050d1a;--bg2:#0a2230;--tq:#14b8a6;--tq2:#0f766e;--gold:#d4af37;--gold2:#f3d97a}
+*{font-family:'Cairo','Tajawal',sans-serif}
+body{min-height:100vh;color:#e6f1f5;background:radial-gradient(1200px 600px at 80% -10%,#0f4a52 0%,transparent 60%),radial-gradient(900px 500px at 0% 100%,#0b2f4a 0%,transparent 55%),linear-gradient(160deg,var(--bg1),var(--bg2))}
+.glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:1.25rem;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.gold{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{background:linear-gradient(135deg,var(--tq),var(--tq2));color:#fff;font-weight:700;border-radius:.9rem;padding:.7rem 1.3rem;transition:.2s;border:1px solid rgba(255,255,255,.18)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,184,166,.35)}
+.btn-gold{background:linear-gradient(135deg,#b8901f,var(--gold));color:#1a1405}
+.btn-ghost{background:rgba(255,255,255,.08)}
+.opt{width:100%;text-align:right;padding:.9rem 1.1rem;border-radius:.9rem;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.14);transition:.2s;display:flex;gap:.75rem;align-items:center}
+.opt:not(:disabled):hover{border-color:var(--tq);background:rgba(20,184,166,.12)}
+.opt.ok{background:rgba(34,197,94,.22);border-color:#22c55e}
+.opt.bad{background:rgba(239,68,68,.22);border-color:#ef4444}
+.k{width:2rem;height:2rem;border-radius:.6rem;background:rgba(212,175,55,.18);color:var(--gold2);display:grid;place-items:center;font-weight:800;flex:none}
+.bar{height:.55rem;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--tq),var(--gold));transition:width .4s}
+.fade{animation:f .35s ease}@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body class="p-4 md:p-8">
+<div id="app" class="max-w-3xl mx-auto"></div>
+<script>
+const DATA = [{"chapter": 1, "title": "الوحدة الأولى: البقرة والكهف والنهي عن الغضب", "questions": [{"t": "mcq", "q": "بماذا أمر الله المؤمنين أن يستعينوا في آية «يا أيها الذين آمنوا استعينوا…» (البقرة 153)؟", "o": ["بالصبر والصلاة", "بالمال والجاه", "بالعدد والعدة", "بالكثرة"], "e": "أمرهم أن يطلبوا العون من الله بالصبر والصلاة.", "p": 0}, {"t": "mcq", "q": "من يُقتل في سبيل الله فهو بحسب الآية:", "o": ["حيّ عند ربه يُرزق", "ميت لا يشعر", "مفقود", "مغفور له فقط في الآخرة"], "e": "«بل أحياء عند ربهم يرزقون ولكن لا تشعرون».", "p": 0}, {"t": "tf", "q": "الصفا والمروة من شعائر الله.", "a": true, "e": "وعلى الحاج والمعتمر أن يطوّف بهما.", "p": 0}, {"t": "mcq", "q": "كم مكث أصحاب الكهف نياماً بحسب الدرس؟", "o": ["ثلاثمئة سنة وتسع", "مئة سنة", "أربعين سنة", "سبع سنين"], "e": "ذكر الدرس أن الفتية فُقدوا قبل ثلاثمئة سنة وتسع.", "p": 0}, {"t": "mcq", "q": "لماذا استغرب البائع عندما دفع الفتى ثمن الطعام؟", "o": ["لأن النقود قديمة من عهد بعيد فظنه وجد كنزاً", "لأنه لم يدفع شيئاً", "لأن الطعام نفد", "لأنه عرفه"], "e": "أخذ يقلب النقود مذهولاً ويظن أن الفتى عثر على كنز.", "p": 0}, {"t": "mcq", "q": "من الملك الظالم الذي فرّ منه الفتية بإيمانهم؟", "o": ["دقيانوس", "فرعون", "النمرود", "هيرودس"], "e": "ذكر الدرس الملك دقيانوس.", "p": 0}, {"t": "mcq", "q": "من قال: «الغضب مفتاح كل شر»؟", "o": ["الإمام الصادق (ع)", "الإمام علي (ع)", "الإمام الحسين (ع)", "لقمان"], "e": "ورد عن الإمام الصادق (ع).", "p": 0}, {"t": "mcq", "q": "ما الذي ورد في علاج الغضب؟", "o": ["الوضوء", "الصراخ", "الانتقام", "التهديد"], "e": "من العلاج: الاستعاذة بالله، الوضوء، تغيير الحالة، السكوت، كظم الغيظ.", "p": 0}, {"t": "tf", "q": "الغضب الممدوح هو الذي يكون لله ودفاعاً عن العقيدة.", "a": true, "e": "أما الغضب المذموم فيبعث على الفحش والضرب والقتل.", "p": 0}, {"t": "mcq", "q": "كم مرة كرر النبي (ص) «لا تغضب» لمن طلب الوصية؟", "o": ["ثلاثاً", "مرة واحدة", "خمساً", "سبعاً"], "e": "كرر الوصية ثلاثاً.", "p": 0}]}, {"chapter": 2, "title": "الوحدة الثانية: مريم والناجون يوم القيامة", "questions": [{"t": "mcq", "q": "من أبو السيدة مريم (ع)؟", "o": ["عمران", "زكريا", "يوسف", "يحيى"], "e": "أبوها عمران إمام قومه، وأمها حنة.", "p": 0}, {"t": "mcq", "q": "من تولى كفالة مريم بعد الاقتراع؟", "o": ["زكريا (ع)", "عمران", "يوسف النجار", "أحد الأحبار"], "e": "خرج سهم زكريا فتولى رعايتها.", "p": 0}, {"t": "mcq", "q": "ماذا كان يجد زكريا عند مريم في المحراب؟", "o": ["فاكهة الصيف في الشتاء وفاكهة الشتاء في الصيف", "كتباً", "ذهباً", "لا شيء"], "e": "وكانت تقول: هو من عند الله إن الله يرزق من يشاء بغير حساب.", "p": 0}, {"t": "mcq", "q": "أولى معجزات عيسى (ع):", "o": ["تكلمه في المهد", "إحياء الموتى", "إبراء الأكمه", "نزول المائدة"], "e": "تكلم في المهد مدافعاً عن أمه.", "p": 0}, {"t": "mcq", "q": "أول ما قاله عيسى (ع) في المهد:", "o": ["إني عبد الله", "أنا ابن الله", "أنا سيد البشر", "أنا الملك"], "e": "ذكر العبودية أولاً: أعلى مقام يصله الإنسان.", "p": 0}, {"t": "mcq", "q": "ما معنى «جبار» في الدرس؟", "o": ["من يعتقد أن له كل الحق على الناس ويظلمهم", "الكريم", "القوي المحسن", "العالم"], "e": "الجبار من يتكبر ويضرب الناس إذا غضب.", "p": 0}, {"t": "mcq", "q": "أول السبعة الذين يظلهم الله في ظله يوم لا ظل إلا ظله:", "o": ["إمام عادل", "شاب نشأ في عبادة الله", "رجل ذكر الله خالياً", "رجل تصدق فأخفى"], "e": "بدأ الحديث بـ«إمام عادل».", "p": 0}, {"t": "tf", "q": "من السبعة: رجل دعته امرأة ذات حسن وجمال فقال: إني أخاف الله.", "a": true, "e": "من نصّ الحديث الشريف.", "p": 0}, {"t": "mcq", "q": "في قصة الصحابي الفقير بدأ عمله بـ:", "o": ["قطع الحطب وبيعه", "التجارة بالأقمشة", "الرعي", "سؤال الناس"], "e": "استعار معولاً وقطع الحطب وباعه حتى أيسر.", "p": 0}, {"t": "mcq", "q": "القاعدة في حديث النبي (ص) للصحابي:", "o": ["من سألنا أعطيناه ومن استغنى أغناه الله", "السؤال أولى من العمل", "المال أساس السعادة", "الفقر عيب"], "e": "الحث على العمل والعفاف.", "p": 0}]}, {"chapter": 3, "title": "الوحدة الثالثة: معاني ألفاظ سورة النساء", "questions": [{"t": "mcq", "q": "«نِحلة» في آية الصدقات (النساء) تعني:", "o": ["عطية", "غنيمة", "قرض", "ميراث"], "e": "آتوا النساء صدقاتهن نحلة: عطية.", "p": 0}, {"t": "mcq", "q": "«صدقاتهن» تعني:", "o": ["مهورهن", "ميراثهن", "زكاتهن", "هداياهن للناس"], "e": "الصدقات هي المهور.", "p": 0}, {"t": "mcq", "q": "«هنيئاً مريئاً» تعني:", "o": ["حلالاً لا تبعة فيه", "حراماً", "مكروهاً", "مشتبهاً به"], "e": "أي حلالاً طيباً لا إثم فيه.", "p": 0}, {"t": "mcq", "q": "«السفهاء» في الآية:", "o": ["ضعاف العقول المبذرون لأموالهم", "العلماء", "الأغنياء", "الأيتام الصغار"], "e": "لا تؤتوا السفهاء أموالكم.", "p": 0}, {"t": "mcq", "q": "«وابتلوا اليتامى» تعني:", "o": ["اختبروا عقولهم", "عاقبوهم", "ابتعدوا عنهم", "علموهم حرفة"], "e": "اختبروا رشدهم قبل تسليم أموالهم.", "p": 0}, {"t": "mcq", "q": "«إنه كان حُوباً كبيراً» أي:", "o": ["إثماً عظيماً", "ربحاً كبيراً", "خسارة قليلة", "أمراً مباحاً"], "e": "أكل أموال اليتامى إثم عظيم.", "p": 0}, {"t": "mcq", "q": "«حواء» في عبارة «خلق منها زوجها» تعني:", "o": ["زوج آدم", "أم مريم", "امرأة نوح", "ابنة عمران"], "e": "من نفس واحدة خلق منها زوجها وبث منهما رجالاً كثيراً ونساء.", "p": 0}]}, {"chapter": 4, "title": "الوحدتان الرابعة والخامسة: التسامح والقناعة (دروس مختارة)", "questions": [{"t": "mcq", "q": "عكس التسامح هو:", "o": ["التعصب", "الحلم", "الكرم", "الصبر"], "e": "التسامح يعني غياب العنف والتعصب.", "p": 0}, {"t": "mcq", "q": "ماذا قال النبي (ص) في حجة الوداع؟", "o": ["لا ترجعوا بعدي كفاراً يضرب بعضكم رقاب بعض", "أكثروا من المال", "لا تصوموا", "لا تسافروا"], "e": "تحذير من الاقتتال.", "p": 0}, {"t": "mcq", "q": "ما الغنى عند بعض الحكماء كما في الدرس؟", "o": ["قلة تمنيك ورضاك بما يكفيك", "كثرة المال", "كثرة الأولاد", "علو المنصب"], "e": "«قلة تمنيك، ورضاك بما يكفيك».", "p": 0}, {"t": "mcq", "q": "العز في ... والذل في ...", "o": ["القناعة / الطمع", "الغنى / الفقر", "القوة / الضعف", "السفر / الإقامة"], "e": "القانع لا يحتاج الناس فيبقى عزيزاً.", "p": 0}, {"t": "mcq", "q": "«شرف المؤمن قيامه بالليل وعزّه ...»", "o": ["استغناؤه عن الناس", "كثرة ماله", "قوة بدنه", "كثرة أصحابه"], "e": "من الحديث الشريف.", "p": 0}, {"t": "mcq", "q": "كم أمراً يُسأل عنه العبد قبل أن تزول قدماه؟", "o": ["أربعة: عمره وعلمه وماله وجسمه", "اثنان فقط", "ثلاثة", "سبعة"], "e": "عن عمره فيم أفناه، وعلمه فيم فعل، وماله من أين اكتسبه وفيم أنفقه، وجسمه فيم أبلاه.", "p": 0}, {"t": "mcq", "q": "إذا رأى أحدكم من فوقه في المال فلينظر:", "o": ["إلى من هو دونه", "إلى من هو أغنى", "إلى الأسواق", "إلى أبنائه"], "e": "من الحث على القناعة وعدم النظر إلى من هو فوقك.", "p": 0}]}];
+const $=s=>document.querySelector(s), app=$('#app');
+const KEY='isl-v1';
+const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}};
+const save=(id,v)=>{try{const d=load();if(!d[id]||d[id].pct<v.pct)d[id]=v;localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const KEYS=['أ','ب','ج','د'];
+let st=null,timer=null;
+
+function home(){
+  clearInterval(timer);const sc=load();
+  app.innerHTML=`<header class="text-center mb-8 fade"><div class="text-5xl mb-2"><i class="fa-solid fa-book-quran gold"></i></div>
+  <h1 class="text-3xl md:text-4xl font-extrabold gold">القرآن الكريم والتربية الإسلامية — السادس الإعدادي</h1>
+  <p class="text-slate-300 mt-2">اختبارات تفاعلية مع تغذية راجعة فورية وتفسير لكل سؤال</p></header>
+  <div class="grid gap-4 md:grid-cols-2">${DATA.map((c,i)=>{const s=sc[i];return `<button onclick="start(${i})" class="glass p-5 text-right fade hover:-translate-y-1 transition">
+   <div class="flex items-center justify-between mb-2"><span class="text-xs px-2 py-1 rounded-full bg-teal-500/20 text-teal-200">${c.questions.length} سؤالاً</span>
+   ${s?`<span class="text-sm gold font-bold"><i class="fa-solid fa-trophy"></i> ${s.pct}%</span>`:'<span class="text-xs text-slate-400">لم يُحلّ بعد</span>'}</div>
+   <div class="font-bold text-lg">${esc(c.title)}</div></button>`}).join('')}</div>`;
+}
+function start(i){
+  const c=DATA[i];
+  const qs=shuffle(c.questions).map(q=>q.t==='mcq'?{...q,opts:shuffle(q.o.map((t,j)=>({t,ok:j===0})))}:{...q,opts:[{t:'صحيحة',ok:q.a},{t:'خاطئة',ok:!q.a}]});
+  st={i,qs,n:0,score:0,wrong:[],left:qs.length*45,answered:false};
+  clearInterval(timer);timer=setInterval(()=>{st.left--;const t=$('#tm');if(t)t.textContent=fmt(st.left);if(st.left<=0){clearInterval(timer);finish()}},1000);
+  render();
+}
+const fmt=s=>`${String(Math.max(0,s)/60|0).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
+function render(){
+  const q=st.qs[st.n],tot=st.qs.length;
+  app.innerHTML=`<div class="fade">
+  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> الرئيسية</button>
+   <span class="glass px-3 py-1"><i class="fa-regular fa-clock text-teal-300"></i> <b id="tm">${fmt(st.left)}</b></span>
+   <span class="gold font-bold">${st.n+1} / ${tot}</span></div>
+  <div class="bar mb-5"><i style="width:${st.n/tot*100}%"></i></div>
+  <div class="glass p-5 md:p-7">
+   ${q.t==='tf'?'<span class="text-xs px-2 py-1 rounded-full bg-amber-400/15 text-amber-200">حدّد: صحيحة أم خاطئة؟</span>':''}
+   <h2 class="text-xl md:text-2xl font-bold my-3 leading-relaxed">${esc(q.q)}</h2>
+   <div id="opts" class="grid gap-3 mt-4">${q.opts.map((o,j)=>`<button class="opt" onclick="pick(${j})"><span class="k">${KEYS[j]}</span><span>${esc(o.t)}</span></button>`).join('')}</div>
+   <div id="fb" class="mt-5"></div></div></div>`;
+  st.answered=false;
+}
+function pick(j){
+  if(st.answered)return;st.answered=true;
+  const q=st.qs[st.n],good=q.opts[j].ok,btns=[...document.querySelectorAll('.opt')];
+  btns.forEach((b,k)=>{b.disabled=true;if(q.opts[k].ok)b.classList.add('ok');else if(k===j)b.classList.add('bad')});
+  if(good)st.score++;else st.wrong.push({q,chosen:q.opts[j].t});
+  const last=st.n===st.qs.length-1;
+  $('#fb').innerHTML=`<div class="rounded-xl p-4 fade ${good?'bg-green-500/15 border border-green-500/40':'bg-red-500/15 border border-red-500/40'}">
+   <div class="font-bold mb-1">${good?'✅ إجابة صحيحة، أحسنت!':'❌ إجابة خاطئة'}</div>
+   <div class="text-slate-100 leading-relaxed">💡 ${esc(q.e)}</div>
+   ${q.p?`<div class="text-xs text-amber-200/90 mt-2">صفحة ${q.p}</div>`:''}</div>
+   <button class="btn mt-4 w-full" onclick="${last?'finish()':'next()'}">${last?'عرض النتيجة <i class="fa-solid fa-flag-checkered"></i>':'السؤال التالي <i class="fa-solid fa-arrow-left"></i>'}</button>`;
+}
+function next(){st.n++;render()}
+function finish(){
+  clearInterval(timer);const tot=st.qs.length,pct=Math.round(st.score/tot*100);
+  save(st.i,{pct,score:st.score,total:tot,date:new Date().toLocaleDateString('ar-IQ')});
+  const msg=pct>=90?['🏆 ممتاز! أنت بطل المادة','سجل شارة التميّز الذهبية']:pct>=75?['🌟 جيد جداً، استمر','اقتربت من القمة']:pct>=50?['👍 جيد، يمكنك التحسّن','راجع أخطاءك وأعد المحاولة']:['💪 لا تيأس','راجع الدرس ثم أعد الاختبار'];
+  const badges=[pct>=50&&['fa-medal','ناجح'],pct>=75&&['fa-star','متفوق'],pct===100&&['fa-crown','علامة كاملة'],st.left>st.qs.length*20&&['fa-bolt','سريع']].filter(Boolean);
+  app.innerHTML=`<div class="glass p-6 md:p-8 text-center fade">
+   <div class="relative w-40 h-40 mx-auto my-4"><svg viewBox="0 0 36 36" class="w-40 h-40 -rotate-90"><circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="3"/>
+   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-dasharray="${pct} 100"/></svg>
+   <div class="absolute inset-0 grid place-items-center text-4xl font-extrabold gold">${pct}%</div></div>
+   <h2 class="text-2xl font-extrabold">${msg[0]}</h2><p class="text-slate-300 mt-1">${msg[1]} — ${st.score} من ${tot}</p>
+   <div class="flex flex-wrap gap-2 justify-center my-4">${badges.map(b=>`<span class="px-3 py-1 rounded-full bg-amber-400/15 text-amber-200 text-sm"><i class="fa-solid ${b[0]}"></i> ${b[1]}</span>`).join('')}</div>
+   <div class="flex flex-wrap gap-3 justify-center mt-4">
+    <button class="btn" onclick="start(${st.i})"><i class="fa-solid fa-rotate-right"></i> إعادة الاختبار</button>
+    ${st.wrong.length?`<button class="btn btn-gold" onclick="review()"><i class="fa-solid fa-magnifying-glass"></i> مراجعة الأخطاء (${st.wrong.length})</button>`:''}
+    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> الرئيسية</button></div></div>`;
+}
+function review(){
+  app.innerHTML=`<div class="fade"><button onclick="finish()" class="text-slate-300 mb-3"><i class="fa-solid fa-arrow-right"></i> رجوع للنتيجة</button>
+  <div class="grid gap-4">${st.wrong.map(w=>`<div class="glass p-5"><div class="font-bold mb-2">${esc(w.q.q)}</div>
+   <div class="text-red-300">❌ إجابتك: ${esc(w.chosen)}</div>
+   <div class="text-green-300">✅ الصحيحة: ${esc(w.q.opts.find(o=>o.ok).t)}</div>
+   <div class="mt-2 text-slate-100">💡 ${esc(w.q.e)}</div></div>`).join('')}</div></div>`;
+}
+home();
+</script>
+</body>
+</html>
