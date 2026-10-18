@@ -44,7 +44,7 @@ const SUBJECTS=[
 {f:'biology-prep',t:'الأحياء',i:'fa-dna',n:13,k:'bio-v1'},
 {f:'english-prep',t:'اللغة الإنجليزية',i:'fa-language',n:10,k:'en-v1'},
 {f:'arabic2-prep',t:'اللغة العربية — الجزء الثاني (السادس الإعدادي)',i:'fa-book-open',n:37,k:'ar2-v1'},
-{f:'islamic-prep',t:'القرآن الكريم والتربية الإسلامية (السادس الإعدادي)',i:'fa-book-quran',n:34,k:'isl-v1'}];
+{f:'islamic-prep',t:'القرآن الكريم والتربية الإسلامية (السادس الإعدادي)',i:'fa-book-quran',n:51,k:'isl-v1'}];
 const best=k=>{try{const d=JSON.parse(localStorage.getItem(k))||{};const v=Object.values(d).map(x=>x.pct);return v.length?Math.max(...v):null}catch(e){return null}};
 document.getElementById('nSub').textContent=SUBJECTS.length;
 document.getElementById('nQ').textContent=SUBJECTS.reduce((a,s)=>a+s.n,0);
