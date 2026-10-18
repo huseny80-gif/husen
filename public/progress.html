@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سجل التقدم</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;font-family:'Cairo','Tajawal',sans-serif}
+body{margin:0;min-height:100vh;color:#e6f1f5;padding:24px 16px;background:radial-gradient(1200px 600px at 80% -10%,#0f4a52,transparent 60%),linear-gradient(160deg,#050d1a,#0a2230)}
+main{max-width:900px;margin:0 auto}
+h1{font-size:1.8rem;margin:.3rem 0 4px;color:#f3d97a}
+.sub{color:#b7c9d1;margin:0 0 18px}
+.box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:1.1rem;padding:18px;margin-bottom:16px;backdrop-filter:blur(14px)}
+.box h2{margin:0 0 12px;font-size:1.1rem;color:#d4af37}
+.row{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid rgba(255,255,255,.08)}
+.row:first-of-type{border-top:0}
+.row a{color:inherit;text-decoration:none;flex:1}
+.bar{flex:0 0 38%;height:10px;border-radius:9px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#14b8a6,#d4af37)}
+.pct{width:56px;text-align:left;font-weight:700}
+.none{color:#8aa3ad}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.stat{text-align:center;padding:14px;border-radius:1rem;background:rgba(20,184,166,.12);border:1px solid rgba(20,184,166,.3)}
+.stat b{display:block;font-size:1.7rem;color:#f3d97a}
+.acct{display:inline-flex;gap:8px;align-items:center;margin:4px 6px 0 0;padding:10px 18px;border-radius:99px;text-decoration:none;color:#06222b;background:linear-gradient(90deg,#d4af37,#f3d97a);font-weight:800}
+@media(max-width:560px){.bar{flex-basis:28%}}
+</style>
+</head>
+<body>
+<script src="catalog.js"></script><script src="nav.js"></script>
+<main>
+<h1><i class="fa-solid fa-chart-line"></i> سجل التقدم</h1>
+<p class="sub">نتائج الاختبارات التفاعلية وإنجاز دروس المناهج المحفوظة على هذا الجهاز.</p>
+<div class="stats" id="stats"></div>
+<div id="out"></div>
+<div class="box"><h2>سجل الحساب</h2>
+<p class="none">لحفظ تقدّمك في حسابك ومتابعة المدرب له، سجّل الدخول.</p>
+<a class="acct" href="/student/progress"><i class="fa-solid fa-user-graduate"></i> سجل تقدّم الحساب</a>
+<a class="acct" href="/login"><i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول</a></div>
+</main>
+<script>
+function ls(k){try{return JSON.parse(localStorage.getItem(k)||'null')}catch(e){return null}}
+const C=window.CATALOG;let done=0,sum=0,tot=0;
+let html=C.grades.map(g=>{
+ const qs=C.quizzes.filter(q=>q.g===g.g);if(!qs.length)return '';
+ return `<div class="box"><h2>${g.name}</h2>`+qs.map(q=>{
+  const d=ls(q.k)||{},ids=Object.keys(d),pc=ids.map(i=>+d[i].pct||0),
+  best=pc.length?Math.round(pc.reduce((a,b)=>a+b,0)/pc.length):null;
+  tot++;if(best!==null){done++;sum+=best}
+  return `<div class="row"><a href="quizzes/${q.f}.html"><i class="fa-solid ${q.i||'fa-book'}"></i> ${q.t}</a>`+
+   (best===null?'<span class="none">لم يبدأ</span>':`<div class="bar"><i style="width:${best}%"></i></div><span class="pct">${best}%</span>`)+`</div>`}).join('')+`</div>`}).join('');
+const st=Object.values(ls('studio-v1-scores')||{});
+if(st.length){const av=Math.round(st.reduce((a,v)=>a+(+v.pct||0),0)/st.length);html+=`<div class="box"><h2>استوديو المواد والاختبارات</h2><div class="row"><a href="studio.html#scores"><i class="fa-solid fa-wand-magic-sparkles"></i> ${st.length} اختباراً مُنجَزاً</a><div class="bar"><i style="width:${av}%"></i></div><span class="pct">${av}%</span></div></div>`}
+const cur=ls('curr6-v1')||{},cn=Object.values(cur).filter(Boolean).length;
+html+=`<div class="box"><h2>مكتبة المناهج — الصف السادس</h2><div class="row"><a href="curriculum.html?g=6"><i class="fa-solid fa-book-open-reader"></i> دروس تمت دراستها</a><span class="pct">${cn}</span></div></div>`;
+document.getElementById('out').innerHTML=html;
+document.getElementById('stats').innerHTML=
+ `<div class="stat"><b>${done}/${tot}</b>اختبارات بدأتها</div><div class="stat"><b>${done?Math.round(sum/done):0}%</b>متوسط النتائج</div><div class="stat"><b>${cn}</b>دروس مكتملة</div>`;
+</script>
+</body>
+</html>

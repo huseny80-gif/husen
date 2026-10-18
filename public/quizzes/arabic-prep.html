@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اللغة العربية — النحو والإملاء</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#050d1a;--bg2:#0a2230;--tq:#14b8a6;--tq2:#0f766e;--gold:#d4af37;--gold2:#f3d97a}
+*{font-family:'Cairo','Tajawal',sans-serif}
+body{min-height:100vh;color:#e6f1f5;background:radial-gradient(1200px 600px at 80% -10%,#0f4a52 0%,transparent 60%),radial-gradient(900px 500px at 0% 100%,#0b2f4a 0%,transparent 55%),linear-gradient(160deg,var(--bg1),var(--bg2))}
+.glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:1.25rem;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+.gold{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{background:linear-gradient(135deg,var(--tq),var(--tq2));color:#fff;font-weight:700;border-radius:.9rem;padding:.7rem 1.3rem;transition:.2s;border:1px solid rgba(255,255,255,.18)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(20,184,166,.35)}
+.btn-gold{background:linear-gradient(135deg,#b8901f,var(--gold));color:#1a1405}
+.btn-ghost{background:rgba(255,255,255,.08)}
+.opt{width:100%;text-align:right;padding:.9rem 1.1rem;border-radius:.9rem;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.14);transition:.2s;display:flex;gap:.75rem;align-items:center}
+.opt:not(:disabled):hover{border-color:var(--tq);background:rgba(20,184,166,.12)}
+.opt.ok{background:rgba(34,197,94,.22);border-color:#22c55e}
+.opt.bad{background:rgba(239,68,68,.22);border-color:#ef4444}
+.k{width:2rem;height:2rem;border-radius:.6rem;background:rgba(212,175,55,.18);color:var(--gold2);display:grid;place-items:center;font-weight:800;flex:none}
+.bar{height:.55rem;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--tq),var(--gold));transition:width .4s}
+.fade{animation:f .35s ease}@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body class="p-4 md:p-8">
+<script src="../catalog.js"></script><script src="../nav.js"></script>
+<div id="app" class="max-w-3xl mx-auto"></div>
+<script>
+const DATA = [{"chapter": 1, "title": "الوحدة الأولى: الجملة الاسمية", "questions": [{"t": "mcq", "q": "المبتدأ في الجملة الاسمية يكون في الأصل:", "o": ["مرفوعاً", "منصوباً", "مجروراً", "مجزوماً"], "e": "المبتدأ والخبر مرفوعان.", "p": 0}, {"t": "mcq", "q": "أعرب كلمة «مجتهدٌ» في: الطالبُ مجتهدٌ", "o": ["خبر مرفوع بالضمة", "مبتدأ مرفوع", "فاعل مرفوع", "مفعول به"], "e": "«الطالب» مبتدأ و«مجتهد» خبره.", "p": 0}, {"t": "tf", "q": "تدخل «كان» وأخواتها على الجملة الاسمية فترفع المبتدأ وتنصب الخبر.", "a": true, "e": "يسمى المبتدأ اسمها المرفوع والخبر خبرها المنصوب.", "p": 0}, {"t": "mcq", "q": "في «كان الجوُّ جميلاً» كلمة «جميلاً» هي:", "o": ["خبر كان منصوب", "حال", "تمييز", "نعت"], "e": "خبر كان منصوب بالفتحة.", "p": 0}, {"t": "mcq", "q": "تنصب «إنّ» وأخواتها:", "o": ["المبتدأ ويسمى اسمها", "الخبر فقط", "الفعل", "الفاعل"], "e": "إنّ تنصب المبتدأ (اسمها) وترفع الخبر (خبرها).", "p": 0}]}, {"chapter": 2, "title": "الوحدة الثانية: الجملة الفعلية", "questions": [{"t": "mcq", "q": "الفاعل يكون دائماً:", "o": ["مرفوعاً", "منصوباً", "مجروراً", "مجزوماً"], "e": "الفاعل مرفوع.", "p": 0}, {"t": "mcq", "q": "أعرب «الدرسَ» في: كتب الطالبُ الدرسَ", "o": ["مفعول به منصوب", "فاعل مرفوع", "مبتدأ", "خبر"], "e": "وقع عليه فعل الكتابة فهو مفعول به.", "p": 0}, {"t": "tf", "q": "الفعل الماضي يبنى على الفتح في الأصل.", "a": true, "e": "مثل كتبَ وذهبَ.", "p": 0}, {"t": "mcq", "q": "الفعل المضارع المسبوق بـ«لن» يكون:", "o": ["منصوباً", "مرفوعاً", "مجزوماً", "مبنياً دائماً"], "e": "لن من أدوات نصب المضارع.", "p": 0}, {"t": "mcq", "q": "الفعل المضارع المسبوق بـ«لم» يكون:", "o": ["مجزوماً", "منصوباً", "مرفوعاً", "مجروراً"], "e": "لم أداة جزم.", "p": 0}]}, {"chapter": 3, "title": "الوحدة الثالثة: الإملاء", "questions": [{"t": "mcq", "q": "الصواب إملائياً:", "o": ["مسؤول", "مسئول", "مسوول", "مسأول"], "e": "تُكتب «مسؤول» على الواو لأن الهمزة مضمومة بعد ضم.", "p": 0}, {"t": "tf", "q": "تُكتب التاء المربوطة في آخر الاسم المؤنث مثل «مدرسة».", "a": true, "e": "التاء المربوطة تكون في آخر الأسماء المفردة المؤنثة.", "p": 0}, {"t": "mcq", "q": "الهمزة في «سَأَلَ» تكتب على:", "o": ["الألف", "الواو", "الياء", "السطر"], "e": "همزة مفتوحة بعد فتح فتكتب على الألف.", "p": 0}, {"t": "mcq", "q": "اللام الشمسية تُنطق ولا تُكتب في:", "o": ["الشمس", "القمر", "الكتاب", "البيت"], "e": "الشين حرف شمسي فتُدغم اللام في «الشمس».", "p": 0}]}];
+const $=s=>document.querySelector(s), app=$('#app');
+const KEY='ar-v1';
+const load=()=>{try{return JSON.parse(localStorage.getItem(KEY))||{}}catch(e){return {}}};
+const save=(id,v)=>{try{const d=load();if(!d[id]||d[id].pct<v.pct)d[id]=v;localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const KEYS=['أ','ب','ج','د'];
+let st=null,timer=null;
+
+function home(){
+  clearInterval(timer);const sc=load();
+  app.innerHTML=`<header class="text-center mb-8 fade"><div class="text-5xl mb-2"><i class="fa-solid fa-book-quran gold"></i></div>
+  <h1 class="text-3xl md:text-4xl font-extrabold gold">اللغة العربية — النحو والإملاء</h1>
+  <p class="text-slate-300 mt-2">اختبارات تفاعلية مع تغذية راجعة فورية وتفسير لكل سؤال</p></header>
+  <div class="grid gap-4 md:grid-cols-2">${DATA.map((c,i)=>{const s=sc[i];return `<button onclick="start(${i})" class="glass p-5 text-right fade hover:-translate-y-1 transition">
+   <div class="flex items-center justify-between mb-2"><span class="text-xs px-2 py-1 rounded-full bg-teal-500/20 text-teal-200">${c.questions.length} سؤالاً</span>
+   ${s?`<span class="text-sm gold font-bold"><i class="fa-solid fa-trophy"></i> ${s.pct}%</span>`:'<span class="text-xs text-slate-400">لم يُحلّ بعد</span>'}</div>
+   <div class="font-bold text-lg">${esc(c.title)}</div></button>`}).join('')}</div>`;
+}
+function start(i){
+  const c=DATA[i];
+  const qs=shuffle(c.questions).map(q=>q.t==='mcq'?{...q,opts:shuffle(q.o.map((t,j)=>({t,ok:j===0})))}:{...q,opts:[{t:'صحيحة',ok:q.a},{t:'خاطئة',ok:!q.a}]});
+  st={i,qs,n:0,score:0,wrong:[],left:qs.length*45,answered:false};
+  clearInterval(timer);timer=setInterval(()=>{st.left--;const t=$('#tm');if(t)t.textContent=fmt(st.left);if(st.left<=0){clearInterval(timer);finish()}},1000);
+  render();
+}
+const fmt=s=>`${String(Math.max(0,s)/60|0).padStart(2,'0')}:${String(Math.max(0,s)%60).padStart(2,'0')}`;
+function render(){
+  const q=st.qs[st.n],tot=st.qs.length;
+  app.innerHTML=`<div class="fade">
+  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button>
+   <span class="glass px-3 py-1"><i class="fa-regular fa-clock text-teal-300"></i> <b id="tm">${fmt(st.left)}</b></span>
+   <span class="gold font-bold">${st.n+1} / ${tot}</span></div>
+  <div class="bar mb-5"><i style="width:${st.n/tot*100}%"></i></div>
+  <div class="glass p-5 md:p-7">
+   ${q.t==='tf'?'<span class="text-xs px-2 py-1 rounded-full bg-amber-400/15 text-amber-200">حدّد: صحيحة أم خاطئة؟</span>':''}
+   <h2 class="text-xl md:text-2xl font-bold my-3 leading-relaxed">${esc(q.q)}</h2>
+   <div id="opts" class="grid gap-3 mt-4">${q.opts.map((o,j)=>`<button class="opt" onclick="pick(${j})"><span class="k">${KEYS[j]}</span><span>${esc(o.t)}</span></button>`).join('')}</div>
+   <div id="fb" class="mt-5"></div></div></div>`;
+  st.answered=false;
+}
+function pick(j){
+  if(st.answered)return;st.answered=true;
+  const q=st.qs[st.n],good=q.opts[j].ok,btns=[...document.querySelectorAll('.opt')];
+  btns.forEach((b,k)=>{b.disabled=true;if(q.opts[k].ok)b.classList.add('ok');else if(k===j)b.classList.add('bad')});
+  if(good)st.score++;else st.wrong.push({q,chosen:q.opts[j].t});
+  const last=st.n===st.qs.length-1;
+  $('#fb').innerHTML=`<div class="rounded-xl p-4 fade ${good?'bg-green-500/15 border border-green-500/40':'bg-red-500/15 border border-red-500/40'}">
+   <div class="font-bold mb-1">${good?'✅ إجابة صحيحة، أحسنت!':'❌ إجابة خاطئة'}</div>
+   <div class="text-slate-100 leading-relaxed">💡 ${esc(q.e)}</div>
+   ${q.p?`<div class="text-xs text-amber-200/90 mt-2">صفحة ${q.p}</div>`:''}</div>
+   <button class="btn mt-4 w-full" onclick="${last?'finish()':'next()'}">${last?'عرض النتيجة <i class="fa-solid fa-flag-checkered"></i>':'السؤال التالي <i class="fa-solid fa-arrow-left"></i>'}</button>`;
+}
+function next(){st.n++;render()}
+function finish(){
+  clearInterval(timer);const tot=st.qs.length,pct=Math.round(st.score/tot*100);
+  save(st.i,{pct,score:st.score,total:tot,date:new Date().toLocaleDateString('ar-IQ')});
+  const msg=pct>=90?['🏆 ممتاز! أنت بطل المادة','سجل شارة التميّز الذهبية']:pct>=75?['🌟 جيد جداً، استمر','اقتربت من القمة']:pct>=50?['👍 جيد، يمكنك التحسّن','راجع أخطاءك وأعد المحاولة']:['💪 لا تيأس','راجع الدرس ثم أعد الاختبار'];
+  const badges=[pct>=50&&['fa-medal','ناجح'],pct>=75&&['fa-star','متفوق'],pct===100&&['fa-crown','علامة كاملة'],st.left>st.qs.length*20&&['fa-bolt','سريع']].filter(Boolean);
+  app.innerHTML=`<div class="glass p-6 md:p-8 text-center fade">
+   <div class="relative w-40 h-40 mx-auto my-4"><svg viewBox="0 0 36 36" class="w-40 h-40 -rotate-90"><circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="3"/>
+   <circle cx="18" cy="18" r="15.9" fill="none" stroke="#14b8a6" stroke-width="3" stroke-linecap="round" stroke-dasharray="${pct} 100"/></svg>
+   <div class="absolute inset-0 grid place-items-center text-4xl font-extrabold gold">${pct}%</div></div>
+   <h2 class="text-2xl font-extrabold">${msg[0]}</h2><p class="text-slate-300 mt-1">${msg[1]} — ${st.score} من ${tot}</p>
+   <div class="flex flex-wrap gap-2 justify-center my-4">${badges.map(b=>`<span class="px-3 py-1 rounded-full bg-amber-400/15 text-amber-200 text-sm"><i class="fa-solid ${b[0]}"></i> ${b[1]}</span>`).join('')}</div>
+   <div class="flex flex-wrap gap-3 justify-center mt-4">
+    <button class="btn" onclick="start(${st.i})"><i class="fa-solid fa-rotate-right"></i> إعادة الاختبار</button>
+    ${st.wrong.length?`<button class="btn btn-gold" onclick="review()"><i class="fa-solid fa-magnifying-glass"></i> مراجعة الأخطاء (${st.wrong.length})</button>`:''}
+    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button></div></div>`;
+}
+function review(){
+  app.innerHTML=`<div class="fade"><button onclick="finish()" class="text-slate-300 mb-3"><i class="fa-solid fa-arrow-right"></i> رجوع للنتيجة</button>
+  <div class="grid gap-4">${st.wrong.map(w=>`<div class="glass p-5"><div class="font-bold mb-2">${esc(w.q.q)}</div>
+   <div class="text-red-300">❌ إجابتك: ${esc(w.chosen)}</div>
+   <div class="text-green-300">✅ الصحيحة: ${esc(w.q.opts.find(o=>o.ok).t)}</div>
+   <div class="mt-2 text-slate-100">💡 ${esc(w.q.e)}</div></div>`).join('')}</div></div>`;
+}
+home();
+</script>
+</body>
+</html>
