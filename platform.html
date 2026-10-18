@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المنصة التعليمية — المرحلة الإعدادية</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--tq:#14b8a6;--gold:#d4af37;--gold2:#f3d97a}
+*{box-sizing:border-box;font-family:'Cairo','Tajawal',sans-serif}
+body{margin:0;min-height:100vh;color:#e6f1f5;padding:24px 16px;background:radial-gradient(1200px 600px at 80% -10%,#0f4a52,transparent 60%),radial-gradient(900px 500px at 0 100%,#0b2f4a,transparent 55%),linear-gradient(160deg,#050d1a,#0a2230)}
+main{max-width:980px;margin:0 auto}
+h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:800;margin:.3rem 0;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{text-align:center;margin-bottom:28px}.hero p{color:#b7c9d1;margin:.3rem 0}
+.hero i.big{font-size:3rem;color:var(--gold)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+a.card{display:block;text-decoration:none;color:inherit;padding:24px;border-radius:1.25rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,.35);transition:.2s;text-align:center}
+a.card:hover{transform:translateY(-4px);border-color:var(--tq)}
+.ic{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;color:var(--gold2);background:rgba(20,184,166,.18);margin:0 auto 12px}
+.card h2{margin:0 0 6px;font-size:1.25rem}.meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:.85rem;color:#9fb6bf;margin-top:10px}
+.chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:4px 12px}
+.soon{opacity:.8}.sec{margin:34px 0 14px;font-size:1.2rem;color:var(--gold2)}.d{color:#9fb6bf;font-size:.9rem;margin:6px 0 0}
+footer{text-align:center;color:#7f98a2;font-size:.85rem;margin-top:34px}
+</style>
+</head>
+<body>
+<script src="catalog.js"></script><script src="nav.js"></script>
+<main>
+<div class="hero"><i class="fa-solid fa-graduation-cap big"></i>
+<h1>المنصة التعليمية للمرحلة الإعدادية</h1>
+<p>اختر صفّك لتصل إلى مكتبة المناهج والاختبارات التفاعلية</p></div>
+<div class="grid" id="g"></div>
+<h2 class="sec">أدوات المنصة</h2>
+<div class="grid tools">
+<a class="card" href="studio.html"><div class="ic"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h2>استوديو المواد والاختبارات</h2><p class="d">أضف موادك ودروسك وملفاتك، واحصل على اختبارات متنوعة تتحدّث تلقائياً مع القلم الرقمي</p></a>
+<a class="card" href="progress.html"><div class="ic"><i class="fa-solid fa-chart-line"></i></div><h2>سجل التقدم</h2><p class="d">نتائجك في الاختبارات التفاعلية ونسبة إنجاز الدروس</p></a>
+<a class="card" href="unavailable.html"><div class="ic"><i class="fa-solid fa-user-graduate"></i></div><h2>سجل الحساب</h2><p class="d">تقدّمك المحفوظ في حسابك (يتطلب تسجيل الدخول)</p></a>
+<a class="card" href="unavailable.html"><div class="ic"><i class="fa-solid fa-user-shield"></i></div><h2>دخول المدرب</h2><p class="d">لوحة المدرب: إدارة الاختبارات ومتابعة الطلبة</p></a>
+</div>
+<footer>إعداد: المهندس حسين ياسين حسن</footer>
+</main>
+<script>
+const C=window.CATALOG;
+document.getElementById('g').innerHTML=C.grades.map(x=>{
+ const qs=C.quizzes.filter(q=>q.g===x.g),n=qs.reduce((a,q)=>a+q.n,0),lib=C.libraryGrades.includes(x.g);
+ return `<a class="card ${qs.length||lib?'':'soon'}" href="grade.html?g=${x.g}"><div class="ic"><i class="fa-solid ${x.icon}"></i></div><h2>${x.name}</h2>
+ <div class="meta">${lib?'<span class="chip"><i class="fa-solid fa-book-open-reader"></i> مكتبة المناهج</span>':''}${qs.length?`<span class="chip"><i class="fa-solid fa-circle-question"></i> ${qs.length} مواد · ${n} سؤالاً</span>`:'<span class="chip">قريباً</span>'}</div></a>`}).join('');
+</script>
+</body>
+</html>
