@@ -51,6 +51,8 @@ let html=C.grades.map(g=>{
   tot++;if(best!==null){done++;sum+=best}
   return `<div class="row"><a href="quizzes/${q.f}.html"><i class="fa-solid ${q.i||'fa-book'}"></i> ${q.t}</a>`+
    (best===null?'<span class="none">لم يبدأ</span>':`<div class="bar"><i style="width:${best}%"></i></div><span class="pct">${best}%</span>`)+`</div>`}).join('')+`</div>`}).join('');
+const st=Object.values(ls('studio-v1-scores')||{});
+if(st.length){const av=Math.round(st.reduce((a,v)=>a+(+v.pct||0),0)/st.length);html+=`<div class="box"><h2>استوديو المواد والاختبارات</h2><div class="row"><a href="studio.html#scores"><i class="fa-solid fa-wand-magic-sparkles"></i> ${st.length} اختباراً مُنجَزاً</a><div class="bar"><i style="width:${av}%"></i></div><span class="pct">${av}%</span></div></div>`}
 const cur=ls('curr6-v1')||{},cn=Object.values(cur).filter(Boolean).length;
 html+=`<div class="box"><h2>مكتبة المناهج — الصف السادس</h2><div class="row"><a href="curriculum.html?g=6"><i class="fa-solid fa-book-open-reader"></i> دروس تمت دراستها</a><span class="pct">${cn}</span></div></div>`;
 document.getElementById('out').innerHTML=html;
