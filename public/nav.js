@@ -18,7 +18,8 @@
   '<span class="nv-r">'+(isHome?'':'<a href="'+home+'"><i class="fa-solid fa-house"></i> الرئيسية</a>')+
   '<a href="'+root+'progress.html"><i class="fa-solid fa-chart-line"></i> سجل التقدم</a>'+
   '<a href="'+root+'login"><i class="fa-solid fa-user-shield"></i> دخول المدرب</a></span>';
- function mount(){document.body.insertBefore(bar,document.body.firstChild);var b=document.getElementById('navback');
+ function gh(){if(!/github\.io$/.test(location.hostname))return;[].forEach.call(document.querySelectorAll('a'),function(a){var h=a.getAttribute('href')||'';if(h==='/login'||h==='/student/progress'||/(^|\/)login$/.test(h))a.setAttribute('href',base+'unavailable.html')})}
+ function mount(){document.body.insertBefore(bar,document.body.firstChild);gh();setTimeout(gh,300);var b=document.getElementById('navback');
   if(b)b.onclick=function(){var same=document.referrer&&document.referrer.indexOf(location.origin)===0;if(history.length>1&&same)history.back();else location.href=fallback;};}
  if(document.body)mount();else document.addEventListener('DOMContentLoaded',mount);
 })();
