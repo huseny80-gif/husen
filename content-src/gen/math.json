@@ -1,0 +1,2080 @@
+[
+ {
+  "c": 1,
+  "l": 1,
+  "t": "def",
+  "q": "عرّف الوحدة التخيلية i، ثم اكتب قيمة i^2 وقيمة i^3.",
+  "a": "الوحدة التخيلية i هي العدد الذي مربعه -1 أي i^2=-1 (i=sqrt(-1))، ومنه i^3=-i.",
+  "k": [
+   "مربعه",
+   "-1",
+   "i^2",
+   "تخيلية"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 1,
+  "t": "fill",
+  "q": "قيمة i^{4n} تساوي ____ ، وقيمة i^{4n+2} تساوي ____ حيث n عدد صحيح.",
+  "a": [
+   "1",
+   "-1"
+  ],
+  "e": "i^{4n}=1 و i^{4n+2}=i^2=-1"
+ },
+ {
+  "c": 1,
+  "l": 1,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمة i^{2023} بأبسط صورة.",
+  "a": [
+   "-i",
+   "-1i",
+   "0-i"
+  ],
+  "sol": "2023 = 4*505 + 3 ومنه i^{2023}=i^3=-i."
+ },
+ {
+  "c": 1,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد ناتج (2+3i)(1-2i) بالصيغة a+bi.",
+  "a": [
+   "8-i",
+   "8-1i",
+   "8+-i"
+  ],
+  "sol": "2-4i+3i-6i^2 = 2-i+6 = 8-i."
+ },
+ {
+  "c": 1,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "اكتب {5+i/2-i} بالصيغة a+bi.",
+  "a": [
+   "9/5+7/5i",
+   "{9/5}+{7/5}i",
+   "1.8+1.4i",
+   "(9+7i)/5",
+   "9/5+(7/5)i"
+  ],
+  "sol": "نضرب البسط والمقام بمرافق المقام (2+i): {(5+i)(2+i)/5} = {10+5i+2i+i^2/5} = {9+7i/5} = {9/5}+{7/5}i."
+ },
+ {
+  "c": 1,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمتي x و y الحقيقيتين اللتين تحققان: (2x-1)+(y+3)i = 5-2i",
+  "a": [
+   "x=3,y=-5",
+   "3,-5",
+   "(3,-5)",
+   "x=3 y=-5",
+   "x=3;y=-5"
+  ],
+  "sol": "تساوي الجزأين الحقيقيين: 2x-1=5 ومنه x=3. تساوي الجزأين التخيليين: y+3=-2 ومنه y=-5."
+ },
+ {
+  "c": 1,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "إذا كان z = {3-i/2+i} فجد مرافق z ( z̄ ) بالصيغة a+bi.",
+  "a": [
+   "1+i",
+   "1+1i"
+  ],
+  "sol": "z = {(3-i)(2-i)/5} = {6-3i-2i+i^2/5} = {5-5i/5} = 1-i ، إذن مرافقه 1+i."
+ },
+ {
+  "c": 1,
+  "l": 3,
+  "t": "enum",
+  "q": "عدّد خواص مرافق العدد المركب (أربع خواص على الأقل).",
+  "a": [
+   "مرافق المجموع يساوي مجموع المرافقين",
+   "مرافق حاصل الضرب يساوي حاصل ضرب المرافقين",
+   "z مضروباً في مرافقه يساوي |z|^2 (عدد حقيقي غير سالب)",
+   "z + مرافقه = 2 Re(z) و z - مرافقه = 2i Im(z)",
+   "مرافق مرافق z يساوي z",
+   "z حقيقي إذا وفقط إذا z يساوي مرافقه"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 3,
+  "t": "why",
+  "q": "علّل: مجموع عدد مركب ومرافقه عدد حقيقي دائماً.",
+  "a": "لأن (a+bi)+(a-bi)=2a وهو عدد حقيقي، إذ يلغي الجزآن التخيليان bi و -bi بعضهما.",
+  "k": [
+   "2a",
+   "حقيقي",
+   "التخيلي",
+   "يلغي"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الجذرين التربيعيين للعدد المركب 3+4i.",
+  "a": [
+   "2+i,-2-i",
+   "+-(2+i)",
+   "2+i و -2-i",
+   "±(2+i)",
+   "2+i,-(2+i)",
+   "(2+i),(-2-i)"
+  ],
+  "sol": "نفرض (x+yi)^2=3+4i : x^2-y^2=3 و 2xy=4. بحل المعادلتين x=2,y=1 أو x=-2,y=-1. الجذران: +-(2+i)."
+ },
+ {
+  "c": 1,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "حل المعادلة z^2-2z+5=0 في مجموعة الأعداد المركبة C.",
+  "a": [
+   "1+2i,1-2i",
+   "1+-2i",
+   "1±2i",
+   "1-2i,1+2i",
+   "z=1+2i,z=1-2i"
+  ],
+  "sol": "z = {2+-sqrt(4-20)/2} = {2+-4i/2} = 1+-2i."
+ },
+ {
+  "c": 1,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "حل المعادلة z^2-(3+i)z+(2+2i)=0 في C.",
+  "a": [
+   "2,1+i",
+   "1+i,2",
+   "z=2,z=1+i",
+   "2 و 1+i"
+  ],
+  "sol": "المميز Delta=(3+i)^2-4(2+2i)=9+6i-1-8-8i=-2i وجذره التربيعي +-(1-i) لأن (1-i)^2=-2i. إذن z={(3+i)+-(1-i)/2} ومنه z=2 أو z=1+i."
+ },
+ {
+  "c": 1,
+  "l": 6,
+  "t": "enum",
+  "q": "عدّد خواص الجذور التكعيبية للواحد الصحيح (1 , ω , ω^2).",
+  "a": [
+   "الجذور هي 1 و ω={-1+sqrt(3)i/2} و ω^2={-1-sqrt(3)i/2}",
+   "ω^3=1",
+   "1+ω+ω^2=0",
+   "ω^2 هو مرافق ω ويساوي {1/ω}",
+   "ω^{3n}=1 و ω^{3n+1}=ω و ω^{3n+2}=ω^2"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "إذا كان ω أحد الجذور التكعيبية المركبة للواحد الصحيح، فجد قيمة ω^{100}+ω^{200}+ω^{300}.",
+  "a": [
+   "0"
+  ],
+  "sol": "100=3*33+1 ومنه ω^{100}=ω ، 200=3*66+2 ومنه ω^{200}=ω^2 ، ω^{300}=1. المجموع = ω+ω^2+1 = 0.",
+  "num": 0
+ },
+ {
+  "c": 1,
+  "l": 7,
+  "t": "draw",
+  "q": "مثّل العدد المركب z = 3+2i على مستوي أرغاند، ثم مثّل مرافقه z̄ والعدد -z، وأشِّر على كل منها.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"129.1\" y1=\"234.0\" x2=\"129.1\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"152.2\" y1=\"234.0\" x2=\"152.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"198.4\" y1=\"234.0\" x2=\"198.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"221.6\" y1=\"234.0\" x2=\"221.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"267.8\" y1=\"234.0\" x2=\"267.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"290.9\" y1=\"234.0\" x2=\"290.9\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"210.9\" x2=\"314.0\" y2=\"210.9\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"187.8\" x2=\"314.0\" y2=\"187.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"314.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"141.6\" x2=\"314.0\" y2=\"141.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"118.4\" x2=\"314.0\" y2=\"118.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"95.3\" x2=\"314.0\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"72.2\" x2=\"314.0\" y2=\"72.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"49.1\" x2=\"314.0\" y2=\"49.1\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"141.6\" x2=\"318.0\" y2=\"141.6\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"198.4\" y1=\"234.0\" x2=\"198.4\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,141.6 316.0,137.6 316.0,145.6\" fill=\"#e6f1f5\"/><polygon points=\"198.4,16.0 194.4,24.0 202.4,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"157.6\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"206.4\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"129.1\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"152.2\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"175.3\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"221.6\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"244.7\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"267.8\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"290.9\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"193.4\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"193.4\" y=\"214.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"193.4\" y=\"191.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"193.4\" y=\"168.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"193.4\" y=\"121.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"193.4\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"193.4\" y=\"75.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"193.4\" y=\"52.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"193.4\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"193.4\" y=\"154.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "رسم النقطة (3,2) للعدد z، والنقطة (3,-2) لمرافقه (انعكاس حول المحور الحقيقي)، والنقطة (-3,-2) للعدد -z (انعكاس حول نقطة الأصل)، مع كتابة اسم كل نقطة.",
+  "k": [
+   "(3,2)",
+   "(3,-2)",
+   "(-3,-2)",
+   "المحور الحقيقي"
+  ],
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"129.1\" y1=\"234.0\" x2=\"129.1\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"152.2\" y1=\"234.0\" x2=\"152.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"198.4\" y1=\"234.0\" x2=\"198.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"221.6\" y1=\"234.0\" x2=\"221.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"267.8\" y1=\"234.0\" x2=\"267.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"290.9\" y1=\"234.0\" x2=\"290.9\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"210.9\" x2=\"314.0\" y2=\"210.9\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"187.8\" x2=\"314.0\" y2=\"187.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"314.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"141.6\" x2=\"314.0\" y2=\"141.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"118.4\" x2=\"314.0\" y2=\"118.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"95.3\" x2=\"314.0\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"72.2\" x2=\"314.0\" y2=\"72.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"49.1\" x2=\"314.0\" y2=\"49.1\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"141.6\" x2=\"318.0\" y2=\"141.6\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"198.4\" y1=\"234.0\" x2=\"198.4\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,141.6 316.0,137.6 316.0,145.6\" fill=\"#e6f1f5\"/><polygon points=\"198.4,16.0 194.4,24.0 202.4,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"157.6\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"206.4\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"129.1\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"152.2\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"175.3\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"221.6\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"244.7\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"267.8\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"290.9\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"155.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"193.4\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"193.4\" y=\"214.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"193.4\" y=\"191.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"193.4\" y=\"168.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"193.4\" y=\"121.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"193.4\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"193.4\" y=\"75.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"193.4\" y=\"52.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"193.4\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"193.4\" y=\"154.6\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><circle cx=\"267.8\" cy=\"95.3\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"267.8\" cy=\"187.8\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"129.1\" cy=\"187.8\" r=\"4\" fill=\"#f3d97a\"/><line x1=\"198.4\" y1=\"141.6\" x2=\"267.8\" y2=\"95.3\" stroke=\"#2dd4bf\" stroke-width=\"2\"/><line x1=\"267.8\" y1=\"95.3\" x2=\"267.8\" y2=\"187.8\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><text x=\"275.8\" y=\"89.3\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">z</text><text x=\"275.8\" y=\"201.8\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">z̄</text><text x=\"111.1\" y=\"201.8\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">-z</text></svg>"
+ },
+ {
+  "c": 1,
+  "l": 7,
+  "t": "draw",
+  "q": "مثّل العددين z1 = 2+i و z2 = 1+3i على مستوي أرغاند ثم أوجد هندسياً (بقاعدة متوازي الأضلاع) تمثيل المجموع z1+z2 واكتب قيمته.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"279.3\" y1=\"234.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"199.3\" x2=\"314.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"314.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"314.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"95.3\" x2=\"314.0\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"60.7\" x2=\"314.0\" y2=\"60.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"199.3\" x2=\"318.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,199.3 316.0,195.3 316.0,203.3\" fill=\"#e6f1f5\"/><polygon points=\"140.7,16.0 136.7,24.0 144.7,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"148.7\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"175.3\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"244.7\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"279.3\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"135.7\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"135.7\" y=\"168.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"135.7\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"135.7\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"135.7\" y=\"64.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"135.7\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"135.7\" y=\"212.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "النقطتان (2,1) و (1,3) ورسم متوازي أضلاع أضلاعه من نقطة الأصل نحو z1 و z2، وقطره من الأصل يمثل z1+z2 = 3+4i عند النقطة (3,4).",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"279.3\" y1=\"234.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"199.3\" x2=\"314.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"314.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"314.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"95.3\" x2=\"314.0\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"60.7\" x2=\"314.0\" y2=\"60.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"199.3\" x2=\"318.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,199.3 316.0,195.3 316.0,203.3\" fill=\"#e6f1f5\"/><polygon points=\"140.7,16.0 136.7,24.0 144.7,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"148.7\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"175.3\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"244.7\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"279.3\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"135.7\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"135.7\" y=\"168.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"135.7\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"135.7\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"135.7\" y=\"64.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"135.7\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"135.7\" y=\"212.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><line x1=\"140.7\" y1=\"199.3\" x2=\"210.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"140.7\" y1=\"199.3\" x2=\"175.3\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"164.7\" x2=\"244.7\" y2=\"60.7\" stroke=\"#2dd4bf\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><line x1=\"175.3\" y1=\"95.3\" x2=\"244.7\" y2=\"60.7\" stroke=\"#2dd4bf\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><line x1=\"140.7\" y1=\"199.3\" x2=\"244.7\" y2=\"60.7\" stroke=\"#f3d97a\" stroke-width=\"2.5\"/><circle cx=\"210.0\" cy=\"164.7\" r=\"4\" fill=\"#f3d97a\"/><text x=\"218.0\" y=\"158.7\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">z1</text><circle cx=\"175.3\" cy=\"95.3\" r=\"4\" fill=\"#f3d97a\"/><text x=\"183.3\" y=\"89.3\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">z2</text><circle cx=\"244.7\" cy=\"60.7\" r=\"4\" fill=\"#f3d97a\"/><text x=\"252.7\" y=\"54.7\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">z1+z2</text></svg>",
+  "k": [
+   "(3,4)",
+   "3+4i",
+   "متوازي الأضلاع"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 7,
+  "t": "label",
+  "q": "اكتب اسم كل جزء مؤشَّر عليه بالرقم في تمثيل العدد المركب z = a+bi على مستوي أرغاند.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"88.7\" y1=\"199.3\" x2=\"335.3\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"123.3\" y1=\"234.0\" x2=\"123.3\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"341.3,199.3 333.3,195.3 333.3,203.3\" fill=\"#e6f1f5\"/><polygon points=\"123.3,16.0 119.3,24.0 127.3,24.0\" fill=\"#e6f1f5\"/><text x=\"337.3\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"131.3\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><line x1=\"123.3\" y1=\"199.3\" x2=\"262.0\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-width=\"2.5\"/><circle cx=\"262.0\" cy=\"95.3\" r=\"4\" fill=\"#f3d97a\"/><line x1=\"262.0\" y1=\"95.3\" x2=\"262.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"262.0\" y1=\"95.3\" x2=\"123.3\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><path d=\"M 164.9 199.3 A 41.6 41.6 0 0 0 156.6 174.4\" fill=\"none\" stroke=\"#f3d97a\" stroke-width=\"2\"/><text x=\"270.0\" y=\"87.3\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">z = a + bi</text><circle cx=\"310.5\" cy=\"218.4\" r=\"9\" fill=\"#f3d97a\"/><text x=\"310.5\" y=\"222.9\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><circle cx=\"102.5\" cy=\"46.8\" r=\"9\" fill=\"#f3d97a\"/><text x=\"102.5\" y=\"51.3\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><circle cx=\"246.0\" cy=\"81.3\" r=\"9\" fill=\"#f3d97a\"/><text x=\"246.0\" y=\"85.8\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><circle cx=\"178.7\" cy=\"141.3\" r=\"9\" fill=\"#f3d97a\"/><text x=\"178.7\" y=\"145.8\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><circle cx=\"192.3\" cy=\"179.3\" r=\"9\" fill=\"#f3d97a\"/><text x=\"192.3\" y=\"183.8\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text></svg>",
+  "labels": [
+   {
+    "n": 1,
+    "a": "المحور الحقيقي",
+    "k": [
+     "محور الأعداد الحقيقية",
+     "محور x"
+    ]
+   },
+   {
+    "n": 2,
+    "a": "المحور التخيلي",
+    "k": [
+     "محور الأعداد التخيلية",
+     "محور y"
+    ]
+   },
+   {
+    "n": 3,
+    "a": "النقطة z",
+    "k": [
+     "صورة العدد المركب",
+     "النقطة (a,b)"
+    ]
+   },
+   {
+    "n": 4,
+    "a": "المقياس",
+    "k": [
+     "معيار العدد المركب",
+     "|z|",
+     "طول المتجه"
+    ]
+   },
+   {
+    "n": 5,
+    "a": "السعة",
+    "k": [
+     "الزاوية",
+     "الزاوية θ",
+     "سعة العدد المركب",
+     "الزاوية القطبية",
+     "θ"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 1,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "اكتب العدد المركب z = 1+i بالصيغة القطبية r(cos θ + i sin θ).",
+  "a": [
+   "sqrt(2)(cos 45deg+i sin 45deg)",
+   "sqrt(2)(cos(pi/4)+i sin(pi/4))",
+   "sqrt(2)(cos pi/4+i sin pi/4)",
+   "r=sqrt(2),θ=45deg",
+   "sqrt(2)(cos45+i sin45)",
+   "sqrt(2)cis45"
+  ],
+  "sol": "r = sqrt(1+1) = sqrt(2) ، tan θ = {1/1} = 1 والنقطة (1,1) في الربع الأول إذن θ = 45deg (pi/4). الصيغة: sqrt(2)(cos 45deg + i sin 45deg)."
+ },
+ {
+  "c": 1,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد سعة (argument) العدد المركب -1+sqrt(3) i بالدرجات (0 <= θ < 360).",
+  "a": [
+   "120",
+   "120deg",
+   "2pi/3",
+   "{2pi/3}"
+  ],
+  "sol": "r=2 ، tan α = sqrt(3) فالزاوية المرجعية 60deg والنقطة (-1,sqrt(3)) في الربع الثاني: θ = 180deg-60deg = 120deg.",
+  "num": 120
+ },
+ {
+  "c": 1,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد مقياس العدد المركب z = {3+4i/1-i}.",
+  "a": [
+   "5/sqrt(2)",
+   "{5/sqrt(2)}",
+   "{5sqrt(2)/2}",
+   "5sqrt(2)/2",
+   "sqrt(25/2)",
+   "3.5355"
+  ],
+  "sol": "|z| = {|3+4i|/|1-i|} = {5/sqrt(2)} = {5sqrt(2)/2} ≈ 3.5355.",
+  "num": 3.5355,
+  "tol": 0.005
+ },
+ {
+  "c": 1,
+  "l": 9,
+  "t": "calc",
+  "kind": "math",
+  "q": "باستخدام مبرهنة ديمواڤر جد قيمة (1+i)^8.",
+  "a": [
+   "16",
+   "16+0i"
+  ],
+  "sol": "1+i = sqrt(2)(cos 45deg + i sin 45deg) ومنه (1+i)^8 = (sqrt(2))^8 (cos 360deg + i sin 360deg) = 16*(1+0) = 16.",
+  "num": 16
+ },
+ {
+  "c": 1,
+  "l": 9,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمة (1+sqrt(3) i)^6.",
+  "a": [
+   "64",
+   "64+0i"
+  ],
+  "sol": "1+sqrt(3)i = 2(cos 60deg + i sin 60deg) ومنه الناتج 2^6 (cos 360deg + i sin 360deg) = 64.",
+  "num": 64
+ },
+ {
+  "c": 1,
+  "l": 9,
+  "t": "def",
+  "q": "اكتب نص مبرهنة ديمواڤر.",
+  "a": "لكل عدد صحيح n: (cos θ + i sin θ)^n = cos nθ + i sin nθ.",
+  "k": [
+   "cos nθ",
+   "sin nθ",
+   "(cos θ + i sin θ)^n",
+   "n"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 9,
+  "t": "mcq",
+  "q": "سعة العدد المركب z = -2i هي:",
+  "o": [
+   "270deg",
+   "90deg",
+   "0deg",
+   "180deg"
+  ],
+  "e": "العدد -2i يقع على الجزء السالب من المحور التخيلي فسعته 270deg ومقياسه 2."
+ },
+ {
+  "c": 2,
+  "l": 1,
+  "t": "def",
+  "q": "عرّف القطع المخروطي بدلالة البؤرة والدليل والاختلاف المركزي e.",
+  "a": "القطع المخروطي هو مجموعة النقاط في المستوي التي نسبة بعد كل منها عن نقطة ثابتة (البؤرة) إلى بعدها عن مستقيم ثابت (الدليل) تساوي عدداً ثابتاً e هو الاختلاف المركزي.",
+  "k": [
+   "بؤرة",
+   "دليل",
+   "النسبة",
+   "الاختلاف المركزي",
+   "e"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "def",
+  "q": "عرّف القطع المكافئ.",
+  "a": "هو مجموعة نقاط المستوي التي يكون بعد كل نقطة منها عن نقطة ثابتة (البؤرة) مساوياً لبعدها عن مستقيم ثابت (الدليل) لا يمر بالبؤرة.",
+  "k": [
+   "نقطة ثابتة",
+   "البؤرة",
+   "مستقيم ثابت",
+   "الدليل",
+   "البعد"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد إحداثيي البؤرة ومعادلة الدليل للقطع المكافئ y^2 = 12x.",
+  "a": [
+   "(3,0),x=-3",
+   "البؤرة (3,0) والدليل x=-3",
+   "(3,0) , x=-3",
+   "focus (3,0) x=-3",
+   "(3,0) و x=-3"
+  ],
+  "sol": "y^2=4px ومنه 4p=12 و p=3. البؤرة (p,0)=(3,0) والدليل x=-p أي x=-3."
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد معادلة دليل القطع المكافئ x^2 = -8y.",
+  "a": [
+   "y=2",
+   "2=y"
+  ],
+  "sol": "x^2=-4py مع 4p=8 فـ p=2. البؤرة (0,-2) والدليل y=p أي y=2."
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد معادلة القطع المكافئ الذي رأسه نقطة الأصل وبؤرته (0,5).",
+  "a": [
+   "x^2=20y",
+   "20y=x^2",
+   "x^2 = 20 y",
+   "y={x^2/20}",
+   "y=x^2/20"
+  ],
+  "sol": "البؤرة على محور الصادات فالمعادلة x^2=4py مع p=5 ومنه x^2=20y."
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد معادلة القطع المكافئ الذي رأسه نقطة الأصل وقطعه ينفتح نحو اليمين ويمر بالنقطة (2,4).",
+  "a": [
+   "y^2=8x",
+   "8x=y^2",
+   "y^2 = 8 x",
+   "x={y^2/8}",
+   "x=y^2/8"
+  ],
+  "sol": "y^2=4px : 16=4p(2) ومنه 4p=8 فتكون y^2=8x."
+ },
+ {
+  "c": 2,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد رأس وبؤرة القطع المكافئ (y-2)^2 = 8(x+1). اكتب البؤرة.",
+  "a": [
+   "(1,2)",
+   "1,2"
+  ],
+  "sol": "المعادلة بالصيغة (y-k)^2=4p(x-h) : h=-1 ، k=2 ، 4p=8 ومنه p=2. الرأس (-1,2) والبؤرة (h+p,k)=(1,2)."
+ },
+ {
+  "c": 2,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "حوّل المعادلة x^2-4x-8y+12=0 إلى الصيغة القياسية للقطع المكافئ واكتب إحداثيي بؤرته.",
+  "a": [
+   "(2,3)",
+   "2,3"
+  ],
+  "sol": "x^2-4x+4 = 8y-12+4 ومنه (x-2)^2 = 8(y-1). الرأس (2,1) و 4p=8 ، p=2 ، البؤرة (2,1+2)=(2,3)."
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "draw",
+  "q": "ارسم منحني القطع المكافئ y^2 = 8x مبيناً رأسه وبؤرته ودليله.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"147.6\" y1=\"234.0\" x2=\"147.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"189.2\" y1=\"234.0\" x2=\"189.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"230.8\" y1=\"234.0\" x2=\"230.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"251.6\" y1=\"234.0\" x2=\"251.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"272.4\" y1=\"234.0\" x2=\"272.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"293.2\" y1=\"234.0\" x2=\"293.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"213.2\" x2=\"314.0\" y2=\"213.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"192.4\" x2=\"314.0\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"171.6\" x2=\"314.0\" y2=\"171.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"150.8\" x2=\"314.0\" y2=\"150.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"314.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"109.2\" x2=\"314.0\" y2=\"109.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"88.4\" x2=\"314.0\" y2=\"88.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"67.6\" x2=\"314.0\" y2=\"67.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"46.8\" x2=\"314.0\" y2=\"46.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"318.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,130.0 316.0,126.0 316.0,134.0\" fill=\"#e6f1f5\"/><polygon points=\"168.4,16.0 164.4,24.0 172.4,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"176.4\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"126.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"147.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"189.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"230.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"251.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"272.4\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"293.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text><text x=\"314.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">7</text><text x=\"163.4\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"163.4\" y=\"216.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"163.4\" y=\"195.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"163.4\" y=\"175.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"163.4\" y=\"154.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"163.4\" y=\"112.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"163.4\" y=\"91.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"163.4\" y=\"71.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"163.4\" y=\"50.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"163.4\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"163.4\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "رأس عند (0,0) وبؤرة F(2,0) ودليل المستقيم x=-2، والقطع ينفتح نحو اليمين ومتناظر حول المحور x ويمر بالنقطتين (2,4) و (2,-4).",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"147.6\" y1=\"234.0\" x2=\"147.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"189.2\" y1=\"234.0\" x2=\"189.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"230.8\" y1=\"234.0\" x2=\"230.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"251.6\" y1=\"234.0\" x2=\"251.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"272.4\" y1=\"234.0\" x2=\"272.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"293.2\" y1=\"234.0\" x2=\"293.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"213.2\" x2=\"314.0\" y2=\"213.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"192.4\" x2=\"314.0\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"171.6\" x2=\"314.0\" y2=\"171.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"150.8\" x2=\"314.0\" y2=\"150.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"314.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"109.2\" x2=\"314.0\" y2=\"109.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"88.4\" x2=\"314.0\" y2=\"88.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"67.6\" x2=\"314.0\" y2=\"67.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"46.8\" x2=\"314.0\" y2=\"46.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"318.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,130.0 316.0,126.0 316.0,134.0\" fill=\"#e6f1f5\"/><polygon points=\"168.4,16.0 164.4,24.0 172.4,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"176.4\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"126.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"147.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"189.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"230.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"251.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"272.4\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"293.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text><text x=\"314.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">7</text><text x=\"163.4\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"163.4\" y=\"216.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"163.4\" y=\"195.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"163.4\" y=\"175.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"163.4\" y=\"154.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"163.4\" y=\"112.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"163.4\" y=\"91.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"163.4\" y=\"71.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"163.4\" y=\"50.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"163.4\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"163.4\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"168.4,130.0 169.5,116.7 170.5,111.2 171.6,107.0 172.6,103.5 173.7,100.3 174.7,97.5 175.8,94.9 176.9,92.5 177.9,90.2 179.0,88.1 180.0,86.0 181.1,84.1 182.1,82.2 183.2,80.4 184.3,78.6 185.3,76.9 186.4,75.3 187.4,73.7 188.5,72.2 189.5,70.7 190.6,69.2 191.7,67.8 192.7,66.4 193.8,65.0 194.8,63.7 195.9,62.4 196.9,61.1 198.0,59.8 199.1,58.6 200.1,57.3 201.2,56.1 202.2,55.0 203.3,53.8 204.3,52.7 205.4,51.5 206.5,50.4 207.5,49.3 208.6,48.2 209.6,47.2 210.7,46.1 211.8,45.1 212.8,44.0 213.9,43.0 214.9,42.0 216.0,41.0 217.0,40.0 218.1,39.1 219.2,38.1 220.2,37.2 221.3,36.2 222.3,35.3 223.4,34.4 224.4,33.4 225.5,32.5 226.6,31.6 227.6,30.7 228.7,29.9 229.7,29.0 230.8,28.1 231.8,27.3 232.9,26.4 234.0,25.6 235.0,24.7 236.1,23.9 237.1,23.1 238.2,22.2 239.2,21.4 240.3,20.6 241.4,19.8\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polyline points=\"168.4,130.0 169.5,143.3 170.5,148.8 171.6,153.0 172.6,156.5 173.7,159.7 174.7,162.5 175.8,165.1 176.9,167.5 177.9,169.8 179.0,171.9 180.0,174.0 181.1,175.9 182.1,177.8 183.2,179.6 184.3,181.4 185.3,183.1 186.4,184.7 187.4,186.3 188.5,187.8 189.5,189.3 190.6,190.8 191.7,192.2 192.7,193.6 193.8,195.0 194.8,196.3 195.9,197.6 196.9,198.9 198.0,200.2 199.1,201.4 200.1,202.7 201.2,203.9 202.2,205.0 203.3,206.2 204.3,207.3 205.4,208.5 206.5,209.6 207.5,210.7 208.6,211.8 209.6,212.8 210.7,213.9 211.8,214.9 212.8,216.0 213.9,217.0 214.9,218.0 216.0,219.0 217.0,220.0 218.1,220.9 219.2,221.9 220.2,222.8 221.3,223.8 222.3,224.7 223.4,225.6 224.4,226.6 225.5,227.5 226.6,228.4 227.6,229.3 228.7,230.1 229.7,231.0 230.8,231.9 231.8,232.7 232.9,233.6 234.0,234.4 235.0,235.3 236.1,236.1 237.1,236.9 238.2,237.8 239.2,238.6 240.3,239.4 241.4,240.2\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"26.0\" stroke=\"#f3d97a\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><circle cx=\"210.0\" cy=\"130.0\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"168.4\" cy=\"130.0\" r=\"3\" fill=\"#e6f1f5\"/><text x=\"214.0\" y=\"121.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">F(2,0)</text><text x=\"132.8\" y=\"42.6\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">x=-2</text><text x=\"156.4\" y=\"144.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">O</text></svg>",
+  "k": [
+   "(2,0)",
+   "x=-2",
+   "رأس",
+   "ينفتح",
+   "اليمين"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "label",
+  "q": "اكتب اسم كل جزء مؤشَّر عليه بالرقم في شكل القطع المكافئ المجاور.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"130.0\" x2=\"318.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,130.0 316.0,126.0 316.0,134.0\" fill=\"#e6f1f5\"/><polygon points=\"168.4,16.0 164.4,24.0 172.4,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"176.4\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><polyline points=\"168.4,130.0 169.5,120.3 170.7,116.3 171.8,113.2 172.9,110.6 174.0,108.4 175.2,106.3 176.3,104.4 177.4,102.6 178.5,101.0 179.7,99.4 180.8,97.9 181.9,96.5 183.0,95.1 184.2,93.8 185.3,92.5 186.4,91.3 187.6,90.1 188.7,88.9 189.8,87.8 190.9,86.7 192.1,85.6 193.2,84.6 194.3,83.6 195.4,82.6 196.6,81.6 197.7,80.6 198.8,79.7 199.9,78.8 201.1,77.9 202.2,77.0 203.3,76.1 204.5,75.2 205.6,74.4 206.7,73.5 207.8,72.7 209.0,71.9 210.1,71.1 211.2,70.3 212.3,69.5 213.5,68.8 214.6,68.0 215.7,67.3 216.8,66.5 218.0,65.8 219.1,65.1 220.2,64.3 221.4,63.6 222.5,62.9 223.6,62.2 224.7,61.5 225.9,60.9 227.0,60.2 228.1,59.5 229.2,58.9 230.4,58.2 231.5,57.5 232.6,56.9 233.7,56.3 234.9,55.6 236.0,55.0 237.1,54.4 238.3,53.8 239.4,53.2 240.5,52.5 241.6,51.9 242.8,51.3 243.9,50.8 245.0,50.2 246.1,49.6 247.3,49.0 248.4,48.4 249.5,47.8 250.6,47.3 251.8,46.7 252.9,46.2 254.0,45.6 255.2,45.0 256.3,44.5 257.4,43.9 258.5,43.4 259.7,42.9 260.8,42.3 261.9,41.8 263.0,41.3 264.2,40.7 265.3,40.2 266.4,39.7 267.5,39.2 268.7,38.7 269.8,38.1 270.9,37.6 272.1,37.1 273.2,36.6 274.3,36.1 275.4,35.6 276.6,35.1 277.7,34.6 278.8,34.2 279.9,33.7 281.1,33.2 282.2,32.7 283.3,32.2 284.4,31.7 285.6,31.3 286.7,30.8 287.8,30.3 289.0,29.8 290.1,29.4 291.2,28.9 292.3,28.5 293.5,28.0 294.6,27.5 295.7,27.1 296.8,26.6 298.0,26.2 299.1,25.7 300.2,25.3 301.3,24.8 302.5,24.4 303.6,23.9\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polyline points=\"168.4,130.0 169.5,139.7 170.7,143.7 171.8,146.8 172.9,149.4 174.0,151.6 175.2,153.7 176.3,155.6 177.4,157.4 178.5,159.0 179.7,160.6 180.8,162.1 181.9,163.5 183.0,164.9 184.2,166.2 185.3,167.5 186.4,168.7 187.6,169.9 188.7,171.1 189.8,172.2 190.9,173.3 192.1,174.4 193.2,175.4 194.3,176.4 195.4,177.4 196.6,178.4 197.7,179.4 198.8,180.3 199.9,181.2 201.1,182.1 202.2,183.0 203.3,183.9 204.5,184.8 205.6,185.6 206.7,186.5 207.8,187.3 209.0,188.1 210.1,188.9 211.2,189.7 212.3,190.5 213.5,191.2 214.6,192.0 215.7,192.7 216.8,193.5 218.0,194.2 219.1,194.9 220.2,195.7 221.4,196.4 222.5,197.1 223.6,197.8 224.7,198.5 225.9,199.1 227.0,199.8 228.1,200.5 229.2,201.1 230.4,201.8 231.5,202.5 232.6,203.1 233.7,203.7 234.9,204.4 236.0,205.0 237.1,205.6 238.3,206.2 239.4,206.8 240.5,207.5 241.6,208.1 242.8,208.7 243.9,209.2 245.0,209.8 246.1,210.4 247.3,211.0 248.4,211.6 249.5,212.2 250.6,212.7 251.8,213.3 252.9,213.8 254.0,214.4 255.2,215.0 256.3,215.5 257.4,216.1 258.5,216.6 259.7,217.1 260.8,217.7 261.9,218.2 263.0,218.7 264.2,219.3 265.3,219.8 266.4,220.3 267.5,220.8 268.7,221.3 269.8,221.9 270.9,222.4 272.1,222.9 273.2,223.4 274.3,223.9 275.4,224.4 276.6,224.9 277.7,225.4 278.8,225.8 279.9,226.3 281.1,226.8 282.2,227.3 283.3,227.8 284.4,228.3 285.6,228.7 286.7,229.2 287.8,229.7 289.0,230.2 290.1,230.6 291.2,231.1 292.3,231.5 293.5,232.0 294.6,232.5 295.7,232.9 296.8,233.4 298.0,233.8 299.1,234.3 300.2,234.7 301.3,235.2 302.5,235.6 303.6,236.1\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><line x1=\"147.6\" y1=\"234.0\" x2=\"147.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><circle cx=\"189.2\" cy=\"130.0\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"168.4\" cy=\"130.0\" r=\"3\" fill=\"#e6f1f5\"/><circle cx=\"189.2\" cy=\"112.0\" r=\"9\" fill=\"#f3d97a\"/><text x=\"189.2\" y=\"116.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><circle cx=\"154.4\" cy=\"148.0\" r=\"9\" fill=\"#f3d97a\"/><text x=\"154.4\" y=\"152.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><circle cx=\"131.6\" cy=\"51.0\" r=\"9\" fill=\"#f3d97a\"/><text x=\"131.6\" y=\"55.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><circle cx=\"280.7\" cy=\"114.0\" r=\"9\" fill=\"#f3d97a\"/><text x=\"280.7\" y=\"118.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"147.6\" y1=\"130.0\" x2=\"297.4\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" stroke-dasharray=\"2 3\"/></svg>",
+  "labels": [
+   {
+    "n": 1,
+    "a": "البؤرة",
+    "k": [
+     "بؤرة القطع"
+    ]
+   },
+   {
+    "n": 2,
+    "a": "الرأس",
+    "k": [
+     "رأس القطع",
+     "نقطة الرأس"
+    ]
+   },
+   {
+    "n": 3,
+    "a": "الدليل",
+    "k": [
+     "دليل القطع",
+     "المستقيم الدليل"
+    ]
+   },
+   {
+    "n": 4,
+    "a": "محور التناظر",
+    "k": [
+     "محور القطع",
+     "المحور",
+     "محور التماثل"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "def",
+  "q": "عرّف القطع الناقص.",
+  "a": "هو مجموعة نقاط المستوي التي مجموع بعدي كل نقطة منها عن نقطتين ثابتتين (البؤرتين) يساوي مقداراً ثابتاً (2a) أكبر من المسافة بين البؤرتين.",
+  "k": [
+   "مجموع",
+   "بعدي",
+   "بؤرتين",
+   "ثابت",
+   "2a"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "للقطع الناقص {x^2/25}+{y^2/9}=1 جد الاختلاف المركزي e.",
+  "a": [
+   "{4/5}",
+   "4/5",
+   "0.8"
+  ],
+  "sol": "a^2=25 ، b^2=9 ، c^2=a^2-b^2=16 ومنه c=4 و e={c/a}={4/5}=0.8.",
+  "num": 0.8
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد طول المحور الأكبر للقطع الناقص 9x^2+25y^2=225.",
+  "a": [
+   "10"
+  ],
+  "sol": "بالقسمة على 225 : {x^2/25}+{y^2/9}=1 ومنه a=5 وطول المحور الأكبر 2a = 10.",
+  "num": 10
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد معادلة القطع الناقص الذي بؤرتاه (+-3,0) وطول محوره الأكبر 10 ومركزه نقطة الأصل.",
+  "a": [
+   "{x^2/25}+{y^2/16}=1",
+   "x^2/25+y^2/16=1",
+   "16x^2+25y^2=400",
+   "{x^2/25}+{y^2/16}=1"
+  ],
+  "sol": "2a=10 ومنه a=5 ، c=3 ، b^2=a^2-c^2=25-9=16. المعادلة {x^2/25}+{y^2/16}=1."
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد معادلة القطع الناقص الذي رأساه (0,+-5) وبؤرتاه (0,+-3) ومركزه نقطة الأصل.",
+  "a": [
+   "{x^2/16}+{y^2/25}=1",
+   "x^2/16+y^2/25=1",
+   "25x^2+16y^2=400"
+  ],
+  "sol": "المحور الأكبر على محور الصادات: a=5 ، c=3 ومنه b^2=16. المعادلة {x^2/16}+{y^2/25}=1."
+ },
+ {
+  "c": 2,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "للقطع الناقص {(x-1)^2/16}+{(y+2)^2/9}=1 جد المسافة بين البؤرتين.",
+  "a": [
+   "2sqrt(7)",
+   "2*sqrt(7)",
+   "5.2915",
+   "sqrt(28)"
+  ],
+  "sol": "a^2=16 ، b^2=9 ، c^2=7 ومنه c=sqrt(7). البؤرتان (1+-sqrt(7),-2) والمسافة بينهما 2c = 2sqrt(7) ≈ 5.2915.",
+  "num": 5.2915,
+  "tol": 0.002
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "draw",
+  "q": "ارسم منحني القطع الناقص {x^2/16}+{y^2/9}=1 وأشِّر على رأسيه وبؤرتيه.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"80.0\" y1=\"234.0\" x2=\"80.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"234.0\" x2=\"132.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"158.0\" y1=\"234.0\" x2=\"158.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"184.0\" y1=\"234.0\" x2=\"184.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"236.0\" y1=\"234.0\" x2=\"236.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"234.0\" x2=\"262.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"288.0\" y1=\"234.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"340.0\" y1=\"234.0\" x2=\"340.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"234.0\" x2=\"340.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"208.0\" x2=\"340.0\" y2=\"208.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"182.0\" x2=\"340.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"156.0\" x2=\"340.0\" y2=\"156.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"130.0\" x2=\"340.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"104.0\" x2=\"340.0\" y2=\"104.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"78.0\" x2=\"340.0\" y2=\"78.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"52.0\" x2=\"340.0\" y2=\"52.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"26.0\" x2=\"340.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"130.0\" x2=\"344.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"350.0,130.0 342.0,126.0 342.0,134.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"346.0\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"80.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"106.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"132.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"158.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"184.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"236.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"262.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"288.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"314.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"340.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"205.0\" y=\"211.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"205.0\" y=\"185.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"159.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"107.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"81.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"55.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "قطع ناقص مركزه الأصل، رأساه (4,0) و (-4,0) وطرفا المحور الأصغر (0,3) و (0,-3) وبؤرتاه (+-sqrt(7),0) أي (2.65,0) و (-2.65,0).",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"80.0\" y1=\"234.0\" x2=\"80.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"234.0\" x2=\"132.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"158.0\" y1=\"234.0\" x2=\"158.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"184.0\" y1=\"234.0\" x2=\"184.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"236.0\" y1=\"234.0\" x2=\"236.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"234.0\" x2=\"262.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"288.0\" y1=\"234.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"340.0\" y1=\"234.0\" x2=\"340.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"234.0\" x2=\"340.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"208.0\" x2=\"340.0\" y2=\"208.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"182.0\" x2=\"340.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"156.0\" x2=\"340.0\" y2=\"156.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"130.0\" x2=\"340.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"104.0\" x2=\"340.0\" y2=\"104.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"78.0\" x2=\"340.0\" y2=\"78.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"52.0\" x2=\"340.0\" y2=\"52.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"26.0\" x2=\"340.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"130.0\" x2=\"344.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"350.0,130.0 342.0,126.0 342.0,134.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"346.0\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"80.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"106.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"132.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"158.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"184.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"236.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"262.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"288.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"314.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"340.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"205.0\" y=\"211.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"205.0\" y=\"185.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"159.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"107.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"81.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"55.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"314.0,130.0 313.8,125.1 313.2,120.2 312.2,115.4 310.7,110.6 308.9,105.9 306.7,101.3 304.1,96.8 301.1,92.4 297.8,88.2 294.1,84.2 290.1,80.3 285.8,76.6 281.2,73.1 276.3,69.9 271.1,66.9 265.7,64.1 260.1,61.6 254.3,59.4 248.3,57.5 242.1,55.8 235.9,54.5 229.5,53.4 223.0,52.6 216.5,52.2 210.0,52.0 203.5,52.2 197.0,52.6 190.5,53.4 184.1,54.5 177.9,55.8 171.7,57.5 165.7,59.4 159.9,61.6 154.3,64.1 148.9,66.9 143.7,69.9 138.8,73.1 134.2,76.6 129.9,80.3 125.9,84.2 122.2,88.2 118.9,92.4 115.9,96.8 113.3,101.3 111.1,105.9 109.3,110.6 107.8,115.4 106.8,120.2 106.2,125.1 106.0,130.0 106.2,134.9 106.8,139.8 107.8,144.6 109.3,149.4 111.1,154.1 113.3,158.7 115.9,163.2 118.9,167.6 122.2,171.8 125.9,175.8 129.9,179.7 134.2,183.4 138.8,186.9 143.7,190.1 148.9,193.1 154.3,195.9 159.9,198.4 165.7,200.6 171.7,202.5 177.9,204.2 184.1,205.5 190.5,206.6 197.0,207.4 203.5,207.8 210.0,208.0 216.5,207.8 223.0,207.4 229.5,206.6 235.9,205.5 242.1,204.2 248.3,202.5 254.3,200.6 260.1,198.4 265.7,195.9 271.1,193.1 276.3,190.1 281.2,186.9 285.8,183.4 290.1,179.7 294.1,175.8 297.8,171.8 301.1,167.6 304.1,163.2 306.7,158.7 308.9,154.1 310.7,149.4 312.2,144.6 313.2,139.8 313.8,134.9 314.0,130.0\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><circle cx=\"278.8\" cy=\"130.0\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"141.2\" cy=\"130.0\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"314.0\" cy=\"130.0\" r=\"3\" fill=\"#e6f1f5\"/><circle cx=\"106.0\" cy=\"130.0\" r=\"3\" fill=\"#e6f1f5\"/><circle cx=\"210.0\" cy=\"52.0\" r=\"3\" fill=\"#e6f1f5\"/><circle cx=\"210.0\" cy=\"208.0\" r=\"3\" fill=\"#e6f1f5\"/><text x=\"274.8\" y=\"120.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">F2</text><text x=\"133.2\" y=\"120.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">F1</text></svg>",
+  "k": [
+   "(4,0)",
+   "(-4,0)",
+   "sqrt(7)",
+   "(0,3)",
+   "بؤرتين"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "def",
+  "q": "عرّف القطع الزائد.",
+  "a": "هو مجموعة نقاط المستوي التي يكون القيمة المطلقة للفرق بين بعدي كل نقطة منها عن نقطتين ثابتتين (البؤرتين) مقداراً ثابتاً (2a) أصغر من المسافة بين البؤرتين.",
+  "k": [
+   "الفرق",
+   "القيمة المطلقة",
+   "بؤرتين",
+   "ثابت",
+   "2a"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "fill",
+  "q": "في القطع الزائد العلاقة بين a و b و c هي c^2 = ____ ، وفي القطع الناقص c^2 = ____ .",
+  "a": [
+   "a^2+b^2",
+   "a^2-b^2"
+  ],
+  "e": "القطع الزائد c^2=a^2+b^2 ، القطع الناقص c^2=a^2-b^2."
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "للقطع الزائد {x^2/9}-{y^2/16}=1 جد الاختلاف المركزي e.",
+  "a": [
+   "{5/3}",
+   "5/3",
+   "1.6667",
+   "1.667"
+  ],
+  "sol": "a^2=9 ، b^2=16 ومنه c^2=25 و c=5. e={c/a}={5/3}≈1.667.",
+  "num": 1.6667,
+  "tol": 0.002
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد معادلتي خطي التقارب للقطع الزائد {x^2/9}-{y^2/16}=1.",
+  "a": [
+   "y=+-{4/3}x",
+   "y=±{4/3}x",
+   "y=+-4x/3",
+   "y=±4x/3",
+   "y={4/3}x,y=-{4/3}x",
+   "y=4/3x,y=-4/3x"
+  ],
+  "sol": "خطا التقارب y=+-{b/a}x حيث a=3 ، b=4 ومنه y=+-{4/3}x."
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد معادلة القطع الزائد الذي بؤرتاه (+-5,0) ورأساه (+-3,0) ومركزه نقطة الأصل.",
+  "a": [
+   "{x^2/9}-{y^2/16}=1",
+   "x^2/9-y^2/16=1",
+   "16x^2-9y^2=144"
+  ],
+  "sol": "c=5 ، a=3 ، b^2=c^2-a^2=16. المعادلة {x^2/9}-{y^2/16}=1."
+ },
+ {
+  "c": 2,
+  "l": 7,
+  "t": "calc",
+  "kind": "math",
+  "q": "للقطع الزائد {(x-2)^2/4}-{(y+1)^2/5}=1 جد إحداثيي بؤرتيه.",
+  "a": [
+   "(5,-1),(-1,-1)",
+   "(5,-1),(-1,-1)",
+   "(5,-1) و (-1,-1)",
+   "(-1,-1),(5,-1)"
+  ],
+  "sol": "المركز (2,-1) ، a^2=4 ، b^2=5 ومنه c^2=9 و c=3. البؤرتان (2+-3,-1) أي (5,-1) و (-1,-1)."
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "draw",
+  "q": "ارسم القطع الزائد {x^2/4}-{y^2/9}=1 مبيناً رأسيه وبؤرتيه وخطي التقارب.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"85.2\" y1=\"234.0\" x2=\"85.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"147.6\" y1=\"234.0\" x2=\"147.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"189.2\" y1=\"234.0\" x2=\"189.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"230.8\" y1=\"234.0\" x2=\"230.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"251.6\" y1=\"234.0\" x2=\"251.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"272.4\" y1=\"234.0\" x2=\"272.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"293.2\" y1=\"234.0\" x2=\"293.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"334.8\" y1=\"234.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"234.0\" x2=\"334.8\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"213.2\" x2=\"334.8\" y2=\"213.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"192.4\" x2=\"334.8\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"171.6\" x2=\"334.8\" y2=\"171.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"150.8\" x2=\"334.8\" y2=\"150.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"130.0\" x2=\"334.8\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"109.2\" x2=\"334.8\" y2=\"109.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"88.4\" x2=\"334.8\" y2=\"88.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"67.6\" x2=\"334.8\" y2=\"67.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"46.8\" x2=\"334.8\" y2=\"46.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"26.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"130.0\" x2=\"338.8\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"344.8,130.0 336.8,126.0 336.8,134.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"340.8\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"85.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-6</text><text x=\"106.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"126.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"147.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"168.4\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"189.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"230.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"251.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"272.4\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"293.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"334.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"205.0\" y=\"216.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"205.0\" y=\"195.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"205.0\" y=\"175.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"154.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"112.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"91.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"71.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"50.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"205.0\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "فرعان أحدهما يمين والآخر يسار، الرأسان (+-2,0) والبؤرتان (+-sqrt(13),0) أي (+-3.61,0)، وخطا التقارب y=+-{3/2}x يقتربان منه الفرعان دون أن يقطعاهما.",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"85.2\" y1=\"234.0\" x2=\"85.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"147.6\" y1=\"234.0\" x2=\"147.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"189.2\" y1=\"234.0\" x2=\"189.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"230.8\" y1=\"234.0\" x2=\"230.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"251.6\" y1=\"234.0\" x2=\"251.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"272.4\" y1=\"234.0\" x2=\"272.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"293.2\" y1=\"234.0\" x2=\"293.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"334.8\" y1=\"234.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"234.0\" x2=\"334.8\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"213.2\" x2=\"334.8\" y2=\"213.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"192.4\" x2=\"334.8\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"171.6\" x2=\"334.8\" y2=\"171.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"150.8\" x2=\"334.8\" y2=\"150.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"130.0\" x2=\"334.8\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"109.2\" x2=\"334.8\" y2=\"109.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"88.4\" x2=\"334.8\" y2=\"88.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"67.6\" x2=\"334.8\" y2=\"67.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"46.8\" x2=\"334.8\" y2=\"46.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"26.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"130.0\" x2=\"338.8\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"344.8,130.0 336.8,126.0 336.8,134.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"340.8\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"85.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-6</text><text x=\"106.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"126.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"147.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"168.4\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"189.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"230.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"251.6\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"272.4\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"293.2\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"334.8\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-5</text><text x=\"205.0\" y=\"216.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"205.0\" y=\"195.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"205.0\" y=\"175.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"154.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"112.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"91.9\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"71.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"50.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"205.0\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"251.6,130.0 252.4,117.6 253.2,112.4 254.0,108.3 254.8,104.9 255.7,101.8 256.5,98.9 257.3,96.3 258.1,93.8 258.9,91.4 259.7,89.2 260.5,87.0 261.3,84.9 262.1,82.8 263.0,80.8 263.8,78.9 264.6,77.0 265.4,75.1 266.2,73.3 267.0,71.5 267.8,69.8 268.6,68.0 269.4,66.3 270.3,64.6 271.1,62.9 271.9,61.3 272.7,59.6 273.5,58.0 274.3,56.4 275.1,54.8 275.9,53.3 276.7,51.7 277.6,50.2 278.4,48.6 279.2,47.1 280.0,45.6 280.8,44.1 281.6,42.6 282.4,41.1 283.2,39.6 284.0,38.1 284.9,36.6 285.7,35.2 286.5,33.7 287.3,32.3 288.1,30.8 288.9,29.4 289.7,28.0 290.5,26.6 291.3,25.1 292.2,23.7 293.0,22.3 293.8,20.9\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polyline points=\"251.6,130.0 252.4,142.4 253.2,147.6 254.0,151.7 254.8,155.1 255.7,158.2 256.5,161.1 257.3,163.7 258.1,166.2 258.9,168.6 259.7,170.8 260.5,173.0 261.3,175.1 262.1,177.2 263.0,179.2 263.8,181.1 264.6,183.0 265.4,184.9 266.2,186.7 267.0,188.5 267.8,190.2 268.6,192.0 269.4,193.7 270.3,195.4 271.1,197.1 271.9,198.7 272.7,200.4 273.5,202.0 274.3,203.6 275.1,205.2 275.9,206.7 276.7,208.3 277.6,209.8 278.4,211.4 279.2,212.9 280.0,214.4 280.8,215.9 281.6,217.4 282.4,218.9 283.2,220.4 284.0,221.9 284.9,223.4 285.7,224.8 286.5,226.3 287.3,227.7 288.1,229.2 288.9,230.6 289.7,232.0 290.5,233.4 291.3,234.9 292.2,236.3 293.0,237.7 293.8,239.1\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polyline points=\"126.2,20.9 127.0,22.3 127.8,23.7 128.7,25.1 129.5,26.6 130.3,28.0 131.1,29.4 131.9,30.8 132.7,32.3 133.5,33.7 134.3,35.2 135.1,36.6 136.0,38.1 136.8,39.6 137.6,41.1 138.4,42.6 139.2,44.1 140.0,45.6 140.8,47.1 141.6,48.6 142.4,50.2 143.3,51.7 144.1,53.3 144.9,54.8 145.7,56.4 146.5,58.0 147.3,59.6 148.1,61.3 148.9,62.9 149.7,64.6 150.6,66.3 151.4,68.0 152.2,69.8 153.0,71.5 153.8,73.3 154.6,75.1 155.4,77.0 156.2,78.9 157.0,80.8 157.9,82.8 158.7,84.9 159.5,87.0 160.3,89.2 161.1,91.4 161.9,93.8 162.7,96.3 163.5,98.9 164.3,101.8 165.2,104.9 166.0,108.3 166.8,112.4 167.6,117.6 168.4,130.0\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polyline points=\"126.2,239.1 127.0,237.7 127.8,236.3 128.7,234.9 129.5,233.4 130.3,232.0 131.1,230.6 131.9,229.2 132.7,227.7 133.5,226.3 134.3,224.8 135.1,223.4 136.0,221.9 136.8,220.4 137.6,218.9 138.4,217.4 139.2,215.9 140.0,214.4 140.8,212.9 141.6,211.4 142.4,209.8 143.3,208.3 144.1,206.7 144.9,205.2 145.7,203.6 146.5,202.0 147.3,200.4 148.1,198.7 148.9,197.1 149.7,195.4 150.6,193.7 151.4,192.0 152.2,190.2 153.0,188.5 153.8,186.7 154.6,184.9 155.4,183.0 156.2,181.1 157.0,179.2 157.9,177.2 158.7,175.1 159.5,173.0 160.3,170.8 161.1,168.6 161.9,166.2 162.7,163.7 163.5,161.1 164.3,158.2 165.2,155.1 166.0,151.7 166.8,147.6 167.6,142.4 168.4,130.0\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><line x1=\"141.4\" y1=\"233.0\" x2=\"278.6\" y2=\"27.0\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"6 4\"/><line x1=\"141.4\" y1=\"27.0\" x2=\"278.6\" y2=\"233.0\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"6 4\"/><circle cx=\"251.6\" cy=\"130.0\" r=\"3\" fill=\"#e6f1f5\"/><circle cx=\"168.4\" cy=\"130.0\" r=\"3\" fill=\"#e6f1f5\"/><circle cx=\"285.0\" cy=\"130.0\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"135.0\" cy=\"130.0\" r=\"4\" fill=\"#f3d97a\"/></svg>",
+  "k": [
+   "(2,0)",
+   "(-2,0)",
+   "sqrt(13)",
+   "خطي التقارب",
+   "فرعان"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 1,
+  "t": "calc",
+  "kind": "math",
+  "q": "يتمدد سطح دائري بحيث يزداد نصف قطره بمعدل 2 cm/s. جد معدل تزايد مساحته عندما r = 5 cm (بدلالة pi أو عددياً).",
+  "a": [
+   "20pi",
+   "20*pi",
+   "62.83",
+   "62.832"
+  ],
+  "sol": "A=pi r^2 ومنه {dA/dt}=2 pi r {dr/dt} = 2 pi (5)(2) = 20pi ≈ 62.83 cm^2/s.",
+  "num": 62.832,
+  "tol": 0.002
+ },
+ {
+  "c": 3,
+  "l": 1,
+  "t": "calc",
+  "kind": "math",
+  "q": "كرة يتزايد نصف قطرها بمعدل 0.5 cm/s. جد معدل تزايد حجمها (V = {4/3} pi r^3) عندما r = 3 cm.",
+  "a": [
+   "18pi",
+   "18*pi",
+   "56.55",
+   "56.549"
+  ],
+  "sol": "{dV/dt}=4 pi r^2 {dr/dt} = 4 pi (9)(0.5) = 18pi ≈ 56.55 cm^3/s.",
+  "num": 56.549,
+  "tol": 0.002
+ },
+ {
+  "c": 3,
+  "l": 1,
+  "t": "calc",
+  "kind": "math",
+  "q": "سُلّم طوله 5 m يستند بطرفه العلوي على حائط رأسي، وينزلق طرفه السفلي مبتعداً عن الحائط بمعدل 1.5 m/s. جد معدل تغيّر ارتفاع الطرف العلوي (بإشارته) عندما يكون الطرف السفلي على بُعد 3 m عن الحائط.",
+  "a": [
+   "-1.125",
+   "-9/8",
+   "-{9/8}"
+  ],
+  "sol": "x^2+y^2=25 ومنه x{dx/dt}+y{dy/dt}=0. عند x=3 يكون y=4 : 3(1.5)+4{dy/dt}=0 ومنه {dy/dt}=-{4.5/4}=-1.125 m/s (ينخفض).",
+  "num": -1.125
+ },
+ {
+  "c": 3,
+  "l": 2,
+  "t": "def",
+  "q": "اكتب نص مبرهنة رول.",
+  "a": "إذا كانت f مستمرة على [a,b] وقابلة للاشتقاق على (a,b) وكان f(a)=f(b) فإنه يوجد على الأقل عدد c في (a,b) بحيث f'(c)=0.",
+  "k": [
+   "مستمرة",
+   "قابلة للاشتقاق",
+   "f(a)=f(b)",
+   "f'(c)=0"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "تحقق من شروط مبرهنة رول للدالة f(x)=x^2-4x+3 على [1,3] ثم جد قيمة c التي تحقق المبرهنة.",
+  "a": [
+   "2",
+   "c=2"
+  ],
+  "sol": "كثيرة حدود فهي مستمرة وقابلة للاشتقاق ، f(1)=0=f(3). f'(x)=2x-4=0 ومنه c=2 وهي في (1,3).",
+  "num": 2
+ },
+ {
+  "c": 3,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمة c التي تحققها مبرهنة القيمة المتوسطة للدالة f(x)=x^3 على [0,2].",
+  "a": [
+   "{2/sqrt(3)}",
+   "2/sqrt(3)",
+   "{2sqrt(3)/3}",
+   "2sqrt(3)/3",
+   "1.1547",
+   "1.155"
+  ],
+  "sol": "{f(2)-f(0)/2-0}={8/2}=4 و f'(c)=3c^2=4 ومنه c=sqrt({4/3})={2/sqrt(3)}≈1.155 وهي في (0,2).",
+  "num": 1.1547,
+  "tol": 0.002
+ },
+ {
+  "c": 3,
+  "l": 2,
+  "t": "tf",
+  "q": "تنطبق مبرهنة رول على الدالة f(x)=|x| في الفترة [-1,1].",
+  "a": false,
+  "e": "f(-1)=f(1) لكن الدالة غير قابلة للاشتقاق عند x=0 داخل الفترة، فشرط الاشتقاق غير متحقق."
+ },
+ {
+  "c": 3,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد النقاط الحرجة للدالة f(x)=x^3-3x^2-9x+5.",
+  "a": [
+   "x=-1,x=3",
+   "-1,3",
+   "-1 و 3",
+   "3,-1",
+   "x=-1 , x=3"
+  ],
+  "sol": "f'(x)=3x^2-6x-9=3(x-3)(x+1)=0 ومنه x=-1 أو x=3."
+ },
+ {
+  "c": 3,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد فترة التناقص للدالة f(x)=x^3-3x^2-9x+5.",
+  "a": [
+   "(-1,3)",
+   "]-1,3[",
+   "-1<x<3",
+   "[-1,3]"
+  ],
+  "sol": "f'(x)=3(x-3)(x+1) سالبة عندما -1<x<3 فالدالة متناقصة على (-1,3) ومتزايدة على (-inf,-1) و (3,inf)."
+ },
+ {
+  "c": 3,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد القيمة العظمى المحلية للدالة f(x)=x^3-3x^2-9x+5.",
+  "a": [
+   "10"
+  ],
+  "sol": "عند x=-1: f(-1)=-1-3+9+5=10 وعندها تتغير f' من موجبة إلى سالبة فهي قيمة عظمى محلية =10 ، أما عند x=3 فقيمة صغرى f(3)=-22.",
+  "num": 10
+ },
+ {
+  "c": 3,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد القيمة الصغرى المحلية للدالة f(x)=x^4-4x^3.",
+  "a": [
+   "-27"
+  ],
+  "sol": "f'(x)=4x^3-12x^2=4x^2(x-3). x=0 لا تغير إشارة f' (لا نهاية)، وعند x=3 تتغير من سالبة إلى موجبة: f(3)=81-108=-27.",
+  "num": -27
+ },
+ {
+  "c": 3,
+  "l": 4,
+  "t": "why",
+  "q": "علّل: الدالة f(x)=x^3 ليس لها نهاية عظمى أو صغرى محلية رغم أن f'(0)=0.",
+  "a": "لأن f'(x)=3x^2 لا تغيّر إشارتها عند x=0 (موجبة قبلها وبعدها) فالدالة متزايدة دائماً، والنقطة الحرجة وحدها لا تكفي لوجود نهاية.",
+  "k": [
+   "f'(x)=3x^2",
+   "لا تغير",
+   "إشارة",
+   "متزايدة"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد نقطة الانقلاب للدالة f(x)=x^3-6x^2+9x+1.",
+  "a": [
+   "(2,3)",
+   "2,3"
+  ],
+  "sol": "f'(x)=3x^2-12x+9 ، f''(x)=6x-12=0 ومنه x=2 وتتغير إشارة f'' عندها ، f(2)=8-24+18+1=3 فنقطة الانقلاب (2,3)."
+ },
+ {
+  "c": 3,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد فترتي التقعر إلى الأعلى للدالة f(x)=x^4-6x^2.",
+  "a": [
+   "(-inf,-1) و (1,inf)",
+   "(-inf,-1),(1,inf)",
+   "x<-1 , x>1",
+   "|x|>1",
+   "(-inf,-1)U(1,inf)",
+   "x<-1 أو x>1"
+  ],
+  "sol": "f'(x)=4x^3-12x ، f''(x)=12x^2-12=12(x-1)(x+1)>0 عندما x<-1 أو x>1 فالتقعر للأعلى على (-inf,-1) و (1,inf) وللأسفل على (-1,1)."
+ },
+ {
+  "c": 3,
+  "l": 5,
+  "t": "def",
+  "q": "عرّف نقطة الانقلاب لمنحني الدالة.",
+  "a": "هي نقطة على المنحني تكون الدالة عندها مستمرة ويتغير عندها اتجاه التقعر (من تقعر إلى الأعلى إلى تقعر إلى الأسفل أو بالعكس)، أي تتغير إشارة f''(x) عندها.",
+  "k": [
+   "تغير",
+   "التقعر",
+   "f''",
+   "مستمرة"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "باستخدام اختبار المشتقة الثانية جد القيمة الصغرى المحلية للدالة f(x)=x^3-12x.",
+  "a": [
+   "-16"
+  ],
+  "sol": "f'(x)=3x^2-12=0 ومنه x=+-2. f''(x)=6x: f''(2)=12>0 فنهاية صغرى عند x=2 وقيمتها f(2)=8-24=-16 (وعند x=-2 نهاية عظمى =16).",
+  "num": -16
+ },
+ {
+  "c": 3,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد القيمة العظمى المحلية للدالة f(x)=2x^3-9x^2+12x باستخدام اختبار المشتقة الثانية.",
+  "a": [
+   "5"
+  ],
+  "sol": "f'(x)=6x^2-18x+12=6(x-1)(x-2). f''(x)=12x-18: f''(1)=-6<0 نهاية عظمى عند x=1 وقيمتها 2-9+12=5 ، و f''(2)=6>0 نهاية صغرى f(2)=4.",
+  "num": 5
+ },
+ {
+  "c": 3,
+  "l": 7,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد المحاذي (المقارب) المائل للدالة f(x)={x^2/x-1}.",
+  "a": [
+   "y=x+1",
+   "x+1=y"
+  ],
+  "sol": "بالقسمة الطويلة {x^2/x-1}=x+1+{1/x-1} وعندما x→+-inf يؤول الحد الكسري إلى 0 فالمقارب المائل y=x+1 (والمقارب الرأسي x=1)."
+ },
+ {
+  "c": 3,
+  "l": 7,
+  "t": "draw",
+  "q": "ارسم المخطط البياني للدالة f(x)=x^3-3x مع التأشير على النقاط الحرجة ونقطة الانقلاب.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"132.0\" y1=\"234.0\" x2=\"132.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"158.0\" y1=\"234.0\" x2=\"158.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"184.0\" y1=\"234.0\" x2=\"184.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"236.0\" y1=\"234.0\" x2=\"236.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"234.0\" x2=\"262.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"288.0\" y1=\"234.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"234.0\" x2=\"288.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"208.0\" x2=\"288.0\" y2=\"208.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"182.0\" x2=\"288.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"156.0\" x2=\"288.0\" y2=\"156.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"130.0\" x2=\"288.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"104.0\" x2=\"288.0\" y2=\"104.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"78.0\" x2=\"288.0\" y2=\"78.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"52.0\" x2=\"288.0\" y2=\"52.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"26.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"130.0\" x2=\"292.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"298.0,130.0 290.0,126.0 290.0,134.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"294.0\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"132.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"158.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"184.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"236.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"262.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"288.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"205.0\" y=\"211.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"205.0\" y=\"185.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"159.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"107.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"81.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"55.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "المنحني يمر بالنقاط (-sqrt(3),0) و (0,0) و (sqrt(3),0): نهاية عظمى محلية عند (-1,2) ونهاية صغرى محلية عند (1,-2) ونقطة انقلاب عند (0,0). متزايدة على x<-1 و x>1 ومتناقصة على (-1,1).",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"132.0\" y1=\"234.0\" x2=\"132.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"158.0\" y1=\"234.0\" x2=\"158.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"184.0\" y1=\"234.0\" x2=\"184.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"236.0\" y1=\"234.0\" x2=\"236.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"234.0\" x2=\"262.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"288.0\" y1=\"234.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"234.0\" x2=\"288.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"208.0\" x2=\"288.0\" y2=\"208.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"182.0\" x2=\"288.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"156.0\" x2=\"288.0\" y2=\"156.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"130.0\" x2=\"288.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"104.0\" x2=\"288.0\" y2=\"104.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"78.0\" x2=\"288.0\" y2=\"78.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"52.0\" x2=\"288.0\" y2=\"52.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"26.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"130.0\" x2=\"292.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"298.0,130.0 290.0,126.0 290.0,134.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"294.0\" y=\"146.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"132.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"158.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"184.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"236.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"262.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"288.0\" y=\"144.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-4</text><text x=\"205.0\" y=\"211.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"205.0\" y=\"185.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"159.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"107.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"81.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"55.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"143.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"153.2,230.8 154.2,219.8 155.2,209.2 156.2,199.2 157.2,189.6 158.2,180.4 159.2,171.8 160.2,163.6 161.2,155.8 162.2,148.4 163.2,141.5 164.2,135.0 165.2,128.9 166.1,123.2 167.1,117.9 168.1,112.9 169.1,108.3 170.1,104.1 171.1,100.3 172.1,96.7 173.1,93.6 174.1,90.7 175.1,88.1 176.1,85.9 177.1,84.0 178.1,82.3 179.1,80.9 180.1,79.8 181.1,79.0 182.1,78.4 183.1,78.1 184.1,78.0 185.1,78.1 186.1,78.5 187.1,79.0 188.1,79.8 189.1,80.8 190.1,81.9 191.1,83.2 192.1,84.7 193.1,86.4 194.1,88.2 195.1,90.1 196.0,92.2 197.0,94.3 198.0,96.7 199.0,99.1 200.0,101.6 201.0,104.2 202.0,106.8 203.0,109.6 204.0,112.4 205.0,115.2 206.0,118.1 207.0,121.1 208.0,124.0 209.0,127.0 210.0,130.0 211.0,133.0 212.0,136.0 213.0,138.9 214.0,141.9 215.0,144.8 216.0,147.6 217.0,150.4 218.0,153.2 219.0,155.8 220.0,158.4 221.0,160.9 222.0,163.3 223.0,165.7 224.0,167.8 225.0,169.9 225.9,171.8 226.9,173.6 227.9,175.3 228.9,176.8 229.9,178.1 230.9,179.2 231.9,180.2 232.9,181.0 233.9,181.5 234.9,181.9 235.9,182.0 236.9,181.9 237.9,181.6 238.9,181.0 239.9,180.2 240.9,179.1 241.9,177.7 242.9,176.0 243.9,174.1 244.9,171.9 245.9,169.3 246.9,166.4 247.9,163.3 248.9,159.7 249.9,155.9 250.9,151.7 251.9,147.1 252.9,142.1 253.9,136.8 254.8,131.1 255.8,125.0 256.8,118.5 257.8,111.6 258.8,104.2 259.8,96.4 260.8,88.2 261.8,79.6 262.8,70.4 263.8,60.8 264.8,50.8 265.8,40.2 266.8,29.2\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><circle cx=\"184.0\" cy=\"78.0\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"236.0\" cy=\"182.0\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"210.0\" cy=\"130.0\" r=\"4\" fill=\"#e6f1f5\"/><text x=\"136.0\" y=\"70.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">(-1,2) max</text><text x=\"244.0\" y=\"198.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">(1,-2) min</text><text x=\"218.0\" y=\"122.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">(0,0)</text></svg>",
+  "k": [
+   "(-1,2)",
+   "(1,-2)",
+   "(0,0)",
+   "انقلاب",
+   "نهاية عظمى",
+   "نهاية صغرى"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 7,
+  "t": "draw",
+  "q": "ارسم منحني الدالة f(x)=x^2-4x+3 مبيناً رأسه وتقاطعاته مع المحورين.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"279.3\" y1=\"234.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"199.3\" x2=\"314.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"314.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"314.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"95.3\" x2=\"314.0\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"60.7\" x2=\"314.0\" y2=\"60.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"318.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,164.7 316.0,160.7 316.0,168.7\" fill=\"#e6f1f5\"/><polygon points=\"140.7,16.0 136.7,24.0 144.7,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"180.7\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"148.7\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"175.3\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"244.7\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"279.3\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"135.7\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"135.7\" y=\"202.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"135.7\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"135.7\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"135.7\" y=\"64.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"135.7\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"135.7\" y=\"177.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "قطع مكافئ مفتوح للأعلى، نقطة النهاية الصغرى (2,-1)، يقطع المحور x في (1,0) و (3,0) ويقطع المحور y في (0,3).",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"279.3\" y1=\"234.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"234.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"314.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"199.3\" x2=\"314.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"314.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"130.0\" x2=\"314.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"95.3\" x2=\"314.0\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"60.7\" x2=\"314.0\" y2=\"60.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"26.0\" x2=\"314.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"106.0\" y1=\"164.7\" x2=\"318.0\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,164.7 316.0,160.7 316.0,168.7\" fill=\"#e6f1f5\"/><polygon points=\"140.7,16.0 136.7,24.0 144.7,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"180.7\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"148.7\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"106.0\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"175.3\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"244.7\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"279.3\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"314.0\" y=\"178.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"135.7\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"135.7\" y=\"202.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"135.7\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"135.7\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"135.7\" y=\"64.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"135.7\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"135.7\" y=\"177.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"130.3,15.9 132.0,23.8 133.7,31.5 135.5,39.1 137.2,46.5 138.9,53.6 140.7,60.7 142.4,67.5 144.1,74.2 145.9,80.7 147.6,87.0 149.3,93.2 151.1,99.1 152.8,105.0 154.5,110.6 156.3,116.0 158.0,121.3 159.7,126.4 161.5,131.4 163.2,136.2 164.9,140.7 166.7,145.2 168.4,149.4 170.1,153.5 171.9,157.4 173.6,161.1 175.3,164.7 177.1,168.0 178.8,171.3 180.5,174.3 182.3,177.1 184.0,179.8 185.7,182.3 187.5,184.7 189.2,186.9 190.9,188.8 192.7,190.7 194.4,192.3 196.1,193.8 197.9,195.1 199.6,196.2 201.3,197.2 203.1,197.9 204.8,198.6 206.5,199.0 208.3,199.2 210.0,199.3 211.7,199.2 213.5,199.0 215.2,198.6 216.9,197.9 218.7,197.2 220.4,196.2 222.1,195.1 223.9,193.8 225.6,192.3 227.3,190.7 229.1,188.8 230.8,186.9 232.5,184.7 234.3,182.3 236.0,179.8 237.7,177.1 239.5,174.3 241.2,171.3 242.9,168.0 244.7,164.7 246.4,161.1 248.1,157.4 249.9,153.5 251.6,149.4 253.3,145.2 255.1,140.7 256.8,136.2 258.5,131.4 260.3,126.4 262.0,121.3 263.7,116.0 265.5,110.6 267.2,105.0 268.9,99.1 270.7,93.2 272.4,87.0 274.1,80.7 275.9,74.2 277.6,67.5 279.3,60.7 281.1,53.6 282.8,46.5 284.5,39.1 286.3,31.5 288.0,23.8 289.7,15.9\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><circle cx=\"210.0\" cy=\"199.3\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"175.3\" cy=\"164.7\" r=\"3.5\" fill=\"#e6f1f5\"/><circle cx=\"244.7\" cy=\"164.7\" r=\"3.5\" fill=\"#e6f1f5\"/><circle cx=\"140.7\" cy=\"60.7\" r=\"3.5\" fill=\"#e6f1f5\"/><text x=\"218.0\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">(2,-1)</text><text x=\"148.7\" y=\"56.7\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">(0,3)</text></svg>",
+  "k": [
+   "(2,-1)",
+   "(1,0)",
+   "(3,0)",
+   "(0,3)"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 7,
+  "t": "enum",
+  "q": "عدّد خطوات دراسة الدالة ورسم مخططها البياني.",
+  "a": [
+   "إيجاد مجال الدالة والتقاطعات مع المحورين",
+   "فحص التماثل (زوجية أو فردية)",
+   "إيجاد خطوط التقارب (الرأسية والأفقية والمائلة)",
+   "دراسة التزايد والتناقص باستخدام f' وإيجاد النقاط الحرجة",
+   "تحديد النهايات العظمى والصغرى المحلية",
+   "دراسة التقعر ونقط الانقلاب باستخدام f''",
+   "رسم المنحني بعد تنظيم جدول القيم"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "مستطيل محيطه 40 cm. جد أكبر مساحة ممكنة له.",
+  "a": [
+   "100"
+  ],
+  "sol": "x+y=20 ومنه A=x(20-x) ، A'=20-2x=0 فـ x=10 و A''=-2<0 نهاية عظمى. المساحة 10*10=100 cm^2.",
+  "num": 100
+ },
+ {
+  "c": 3,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "يريد مزارع تسييج قطعة مستطيلة تقع أحد أضلاعها على جدار (لا يحتاج لسياج) بطول سياج 100 m. جد أكبر مساحة ممكنة.",
+  "a": [
+   "1250"
+  ],
+  "sol": "x+2y=100 ، A=y(100-2y)=100y-2y^2 ، A'=100-4y=0 ومنه y=25 و x=50 ، A=50*25=1250 m^2.",
+  "num": 1250
+ },
+ {
+  "c": 3,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "تُصنع علبة مفتوحة من قطعة مربعة طول ضلعها 12 cm بقص مربعات متساوية طول ضلع كل منها x من الزوايا الأربع وطيّ الجوانب. جد أكبر حجم للعلبة.",
+  "a": [
+   "128"
+  ],
+  "sol": "V=x(12-2x)^2 ، V'=(12-2x)(12-6x)=0 ومنه x=2 (x=6 مرفوضة). V=2*8^2=128 cm^3.",
+  "num": 128
+ },
+ {
+  "c": 4,
+  "l": 1,
+  "t": "label",
+  "q": "اكتب اسم كل جزء مؤشَّر عليه بالرقم في شكل المنطقة المحددة بمنحنى الدالة y = f(x) والمحور x.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"106.0\" y1=\"199.3\" x2=\"318.0\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"106.0\" y1=\"234.0\" x2=\"106.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"324.0,199.3 316.0,195.3 316.0,203.3\" fill=\"#e6f1f5\"/><polygon points=\"106.0,16.0 102.0,24.0 110.0,24.0\" fill=\"#e6f1f5\"/><text x=\"320.0\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"114.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><polyline points=\"140.7,164.7 142.4,162.4 144.1,160.2 145.9,158.0 147.6,155.9 149.3,153.8 151.1,151.8 152.8,149.9 154.5,148.0 156.3,146.2 158.0,144.4 159.7,142.7 161.5,141.1 163.2,139.5 164.9,138.0 166.7,136.5 168.4,135.1 170.1,133.7 171.9,132.4 173.6,131.2 175.3,130.0 177.1,128.9 178.8,127.8 180.5,126.8 182.3,125.8 184.0,124.9 185.7,124.1 187.5,123.3 189.2,122.6 190.9,121.9 192.7,121.3 194.4,120.8 196.1,120.3 197.9,119.9 199.6,119.5 201.3,119.2 203.1,118.9 204.8,118.7 206.5,118.6 208.3,118.5 210.0,118.4 211.7,118.5 213.5,118.6 215.2,118.7 216.9,118.9 218.7,119.2 220.4,119.5 222.1,119.9 223.9,120.3 225.6,120.8 227.3,121.3 229.1,121.9 230.8,122.6 232.5,123.3 234.3,124.1 236.0,124.9 237.7,125.8 239.5,126.8 241.2,127.8 242.9,128.9 244.7,130.0 246.4,131.2 248.1,132.4 249.9,133.7 251.6,135.1 253.3,136.5 255.1,138.0 256.8,139.5 258.5,141.1 260.3,142.7 262.0,144.4 263.7,146.2 265.5,148.0 267.2,149.9 268.9,151.8 270.7,153.8 272.4,155.9 274.1,158.0 275.9,160.2 277.6,162.4 279.3,164.7\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polygon points=\"140.7,199.3 140.7,164.7 143.0,161.6 145.3,158.7 147.6,155.9 149.9,153.2 152.2,150.5 154.5,148.0 156.8,145.6 159.2,143.3 161.5,141.1 163.8,139.0 166.1,137.0 168.4,135.1 170.7,133.3 173.0,131.6 175.3,130.0 177.6,128.5 180.0,127.1 182.3,125.8 184.6,124.7 186.9,123.6 189.2,122.6 191.5,121.7 193.8,121.0 196.1,120.3 198.4,119.7 200.8,119.3 203.1,118.9 205.4,118.6 207.7,118.5 210.0,118.4 212.3,118.5 214.6,118.6 216.9,118.9 219.2,119.3 221.6,119.7 223.9,120.3 226.2,121.0 228.5,121.7 230.8,122.6 233.1,123.6 235.4,124.7 237.7,125.8 240.0,127.1 242.4,128.5 244.7,130.0 247.0,131.6 249.3,133.3 251.6,135.1 253.9,137.0 256.2,139.0 258.5,141.1 260.8,143.3 263.2,145.6 265.5,148.0 267.8,150.5 270.1,153.2 272.4,155.9 274.7,158.7 277.0,161.6 279.3,164.7 279.3,199.3\" fill=\"#2dd4bf\" fill-opacity=\"0.35\" stroke=\"none\"/><line x1=\"140.7\" y1=\"199.3\" x2=\"140.7\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"279.3\" y1=\"199.3\" x2=\"279.3\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polyline points=\"140.7,164.7 142.4,162.4 144.1,160.2 145.9,158.0 147.6,155.9 149.3,153.8 151.1,151.8 152.8,149.9 154.5,148.0 156.3,146.2 158.0,144.4 159.7,142.7 161.5,141.1 163.2,139.5 164.9,138.0 166.7,136.5 168.4,135.1 170.1,133.7 171.9,132.4 173.6,131.2 175.3,130.0 177.1,128.9 178.8,127.8 180.5,126.8 182.3,125.8 184.0,124.9 185.7,124.1 187.5,123.3 189.2,122.6 190.9,121.9 192.7,121.3 194.4,120.8 196.1,120.3 197.9,119.9 199.6,119.5 201.3,119.2 203.1,118.9 204.8,118.7 206.5,118.6 208.3,118.5 210.0,118.4 211.7,118.5 213.5,118.6 215.2,118.7 216.9,118.9 218.7,119.2 220.4,119.5 222.1,119.9 223.9,120.3 225.6,120.8 227.3,121.3 229.1,121.9 230.8,122.6 232.5,123.3 234.3,124.1 236.0,124.9 237.7,125.8 239.5,126.8 241.2,127.8 242.9,128.9 244.7,130.0 246.4,131.2 248.1,132.4 249.9,133.7 251.6,135.1 253.3,136.5 255.1,138.0 256.8,139.5 258.5,141.1 260.3,142.7 262.0,144.4 263.7,146.2 265.5,148.0 267.2,149.9 268.9,151.8 270.7,153.8 272.4,155.9 274.1,158.0 275.9,160.2 277.6,162.4 279.3,164.7\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><text x=\"136.7\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">a</text><text x=\"275.3\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">b</text><circle cx=\"119.9\" cy=\"188.9\" r=\"9\" fill=\"#f3d97a\"/><text x=\"119.9\" y=\"193.4\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><circle cx=\"300.1\" cy=\"188.9\" r=\"9\" fill=\"#f3d97a\"/><text x=\"300.1\" y=\"193.4\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><circle cx=\"210.0\" cy=\"72.9\" r=\"9\" fill=\"#f3d97a\"/><text x=\"210.0\" y=\"77.4\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><circle cx=\"210.0\" cy=\"175.1\" r=\"9\" fill=\"#f3d97a\"/><text x=\"210.0\" y=\"179.6\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text></svg>",
+  "labels": [
+   {
+    "n": 1,
+    "a": "منحنى الدالة y=f(x)",
+    "k": [
+     "المنحني",
+     "منحنى الدالة",
+     "الدالة",
+     "f(x)"
+    ]
+   },
+   {
+    "n": 2,
+    "a": "المستقيم x=a",
+    "k": [
+     "الحد الأدنى للتكامل",
+     "الحد الأيسر",
+     "x=a",
+     "a"
+    ]
+   },
+   {
+    "n": 3,
+    "a": "المستقيم x=b",
+    "k": [
+     "الحد الأعلى للتكامل",
+     "الحد الأيمن",
+     "x=b",
+     "b"
+    ]
+   },
+   {
+    "n": 4,
+    "a": "المنطقة المحصورة",
+    "k": [
+     "المنطقة المظللة",
+     "المساحة",
+     "المنطقة",
+     "المساحة المطلوبة"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "للدالة f(x)=x على الفترة [0,2] قسّمت الفترة إلى 4 فترات جزئية متساوية الطول. جد المجموع الأدنى (السفلي) L4.",
+  "a": [
+   "1.5",
+   "{3/2}",
+   "3/2"
+  ],
+  "sol": "Δx=0.5 ، النقاط 0,0.5,1,1.5,2 والدالة متزايدة فالقيمة الصغرى في الطرف الأيسر: L4=0.5(0+0.5+1+1.5)=0.5*3=1.5.",
+  "num": 1.5
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "للدالة f(x)=x على [0,2] مع 4 فترات جزئية متساوية الطول جد المجموع الأعلى U4.",
+  "a": [
+   "2.5",
+   "{5/2}",
+   "5/2"
+  ],
+  "sol": "Δx=0.5 والقيمة العظمى في الطرف الأيمن: U4=0.5(0.5+1+1.5+2)=0.5*5=2.5.",
+  "num": 2.5
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "def",
+  "q": "عرّف التكامل المحدد للدالة f على الفترة [a,b] بدلالة المجاميع.",
+  "a": "إذا كانت المجاميع العليا والسفلى لـ f على [a,b] تقترب من العدد نفسه عندما تصغر الفترات الجزئية (n→inf)، فإن هذا العدد يسمى التكامل المحدد لـ f من a إلى b ويرمز له ∫_a^b f(x)dx.",
+  "k": [
+   "المجموع الأعلى",
+   "المجموع الأدنى",
+   "النهاية",
+   "n",
+   "التكامل المحدد"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "إذا كانت F(x)=∫_0^x t^2 dt فجد F'(x).",
+  "a": [
+   "x^2"
+  ],
+  "sol": "حسب النظرية الأساسية في التكامل: {d/dx}∫_a^x f(t)dt = f(x) ومنه F'(x)=x^2."
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمة ∫_0^2 (3x^2+1) dx.",
+  "a": [
+   "10"
+  ],
+  "sol": "التكامل = [x^3+x] من 0 إلى 2 = (8+2)-0 = 10.",
+  "num": 10
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمة ∫_1^4 sqrt(x) dx.",
+  "a": [
+   "{14/3}",
+   "14/3",
+   "4.6667",
+   "4.667"
+  ],
+  "sol": "∫x^{1/2}dx = {2/3}x^{3/2} ومنه {2/3}(8-1) = {14/3} ≈ 4.667.",
+  "num": 4.6667,
+  "tol": 0.002
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمة ∫_0^pi sin x dx.",
+  "a": [
+   "2"
+  ],
+  "sol": "[-cos x] من 0 إلى pi = -cos pi + cos 0 = 1+1 = 2.",
+  "num": 2
+ },
+ {
+  "c": 4,
+  "l": 5,
+  "t": "enum",
+  "q": "عدّد خواص التكامل المحدد.",
+  "a": [
+   "∫_a^a f(x)dx = 0",
+   "∫_a^b f(x)dx = -∫_b^a f(x)dx",
+   "∫_a^b k f(x)dx = k ∫_a^b f(x)dx",
+   "∫_a^b [f(x)+-g(x)]dx = ∫_a^b f(x)dx +- ∫_a^b g(x)dx",
+   "∫_a^b f(x)dx = ∫_a^c f(x)dx + ∫_c^b f(x)dx",
+   "إذا كانت f(x) >= 0 على [a,b] فإن ∫_a^b f(x)dx >= 0"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد ∫(3x^2+2x) dx.",
+  "a": [
+   "x^3+x^2+C",
+   "x^3+x^2+c",
+   "x^2+x^3+C",
+   "x^3+x^2"
+  ],
+  "sol": "∫3x^2dx = x^3 و ∫2x dx = x^2 فالناتج x^3+x^2+C."
+ },
+ {
+  "c": 4,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد ∫(6x^2-4x+1) dx.",
+  "a": [
+   "2x^3-2x^2+x+C",
+   "2x^3-2x^2+x+c",
+   "x-2x^2+2x^3+C",
+   "2x^3-2x^2+x"
+  ],
+  "sol": "∫6x^2dx=2x^3 ، ∫4x dx=2x^2 ، ∫1dx=x فالناتج 2x^3-2x^2+x+C."
+ },
+ {
+  "c": 4,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد ∫ sqrt(x) dx.",
+  "a": [
+   "{2/3}x^{3/2}+C",
+   "2/3 x^{3/2}+C",
+   "{2x sqrt(x)/3}+C",
+   "{2/3}x^{3/2}+c",
+   "2x^{3/2}/3+C",
+   "2/3x^(3/2)+C",
+   "{2/3}x sqrt(x)+C"
+  ],
+  "sol": "∫x^{1/2}dx = {x^{3/2}/3/2}+C = {2/3}x^{3/2}+C."
+ },
+ {
+  "c": 4,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد ∫ sin(2x) dx.",
+  "a": [
+   "-{1/2}cos 2x+C",
+   "-{cos 2x/2}+C",
+   "-cos(2x)/2+C",
+   "-1/2 cos(2x)+C",
+   "-{1/2}cos(2x)+C",
+   "-cos2x/2+C"
+  ],
+  "sol": "نضرب ونقسم على مشتقة الزاوية 2: ∫sin 2x dx = -{1/2}cos 2x + C."
+ },
+ {
+  "c": 4,
+  "l": 6,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد ∫ x(x^2+1)^3 dx.",
+  "a": [
+   "{(x^2+1)^4/8}+C",
+   "(x^2+1)^4/8+C",
+   "{1/8}(x^2+1)^4+C",
+   "(x^2+1)^4/8+c"
+  ],
+  "sol": "نفرض u=x^2+1 ومنه du=2x dx : {1/2}∫u^3du = {u^4/8}+C = {(x^2+1)^4/8}+C."
+ },
+ {
+  "c": 4,
+  "l": 7,
+  "t": "def",
+  "q": "عرّف اللوغارتم الطبيعي ln x.",
+  "a": "هو الدالة المعرّفة لكل x>0 بالتكامل ln x = ∫_1^x {1/t} dt ، وتكون مشتقتها {1/x}.",
+  "k": [
+   "∫_1^x",
+   "{1/t}",
+   "x>0",
+   "مشتقتها"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 7,
+  "t": "enum",
+  "q": "عدّد خواص اللوغارتم الطبيعي (x>0 , y>0).",
+  "a": [
+   "ln 1 = 0",
+   "ln(xy) = ln x + ln y",
+   "ln({x/y}) = ln x - ln y",
+   "ln(x^n) = n ln x",
+   "ln e = 1",
+   "{d/dx} ln x = {1/x}"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 7,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد قيمة x التي تحقق المعادلة ln x + ln(x-1) = ln 6.",
+  "a": [
+   "3",
+   "x=3"
+  ],
+  "sol": "ln[x(x-1)] = ln 6 ومنه x^2-x-6=0 أي (x-3)(x+2)=0 ، x=3 (و x=-2 مرفوض لأن x>1).",
+  "num": 3
+ },
+ {
+  "c": 4,
+  "l": 7,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد ∫ {2x/x^2+1} dx.",
+  "a": [
+   "ln(x^2+1)+C",
+   "ln|x^2+1|+C",
+   "ln(x^2+1)+c"
+  ],
+  "sol": "البسط مشتقة المقام: ∫{f'(x)/f(x)}dx = ln|f(x)|+C ومنه ln(x^2+1)+C."
+ },
+ {
+  "c": 4,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد مساحة المنطقة المحصورة بين المنحنيين y=x^2 و y=x.",
+  "a": [
+   "{1/6}",
+   "1/6",
+   "0.1667",
+   "0.167"
+  ],
+  "sol": "نقطتا التقاطع x=0 و x=1 ، والمستقيم أعلى المنحني: A=∫_0^1 (x-x^2)dx = [{x^2/2}-{x^3/3}] = {1/2}-{1/3} = {1/6}.",
+  "num": 0.16667,
+  "tol": 0.005
+ },
+ {
+  "c": 4,
+  "l": 8,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد مساحة المنطقة المحصورة بين المنحني y=4-x^2 والمحور x.",
+  "a": [
+   "{32/3}",
+   "32/3",
+   "10.667",
+   "10.67"
+  ],
+  "sol": "التقاطع مع المحور x عند x=+-2 : A=∫_{-2}^{2}(4-x^2)dx = [4x-{x^3/3}] = (8-{8/3})-(-8+{8/3}) = {32/3} ≈ 10.67.",
+  "num": 10.667,
+  "tol": 0.002
+ },
+ {
+  "c": 4,
+  "l": 8,
+  "t": "draw",
+  "q": "ارسم المنحنيين y=x^2 و y=x ثم ظلّل المنطقة المحصورة بينهما واكتب نقطتي التقاطع.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"279.3\" y1=\"234.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"279.3\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"199.3\" x2=\"279.3\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"164.7\" x2=\"279.3\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"130.0\" x2=\"279.3\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"95.3\" x2=\"279.3\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"60.7\" x2=\"279.3\" y2=\"60.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"26.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"199.3\" x2=\"283.3\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"289.3,199.3 281.3,195.3 281.3,203.3\" fill=\"#e6f1f5\"/><polygon points=\"175.3,16.0 171.3,24.0 179.3,24.0\" fill=\"#e6f1f5\"/><text x=\"285.3\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"183.3\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"140.7\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"210.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"244.7\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"279.3\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"170.3\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"170.3\" y=\"168.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"170.3\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"170.3\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"170.3\" y=\"64.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"170.3\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"170.3\" y=\"212.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "المنحني y=x^2 والمستقيم y=x يتقاطعان في (0,0) و (1,1)، والمنطقة المظللة بينهما في الفترة 0<=x<=1 (فوق المنحني وتحت المستقيم).",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"140.7\" y1=\"234.0\" x2=\"140.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"244.7\" y1=\"234.0\" x2=\"244.7\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"279.3\" y1=\"234.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"234.0\" x2=\"279.3\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"199.3\" x2=\"279.3\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"164.7\" x2=\"279.3\" y2=\"164.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"130.0\" x2=\"279.3\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"95.3\" x2=\"279.3\" y2=\"95.3\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"60.7\" x2=\"279.3\" y2=\"60.7\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"26.0\" x2=\"279.3\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"140.7\" y1=\"199.3\" x2=\"283.3\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"175.3\" y1=\"234.0\" x2=\"175.3\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"289.3,199.3 281.3,195.3 281.3,203.3\" fill=\"#e6f1f5\"/><polygon points=\"175.3,16.0 171.3,24.0 179.3,24.0\" fill=\"#e6f1f5\"/><text x=\"285.3\" y=\"215.3\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"183.3\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"140.7\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"210.0\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"244.7\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"279.3\" y=\"213.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"170.3\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"170.3\" y=\"168.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"170.3\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"170.3\" y=\"98.8\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"170.3\" y=\"64.2\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"170.3\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"170.3\" y=\"212.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"175.3,199.3 176.3,199.3 177.2,199.2 178.2,199.1 179.1,198.9 180.1,198.7 181.1,198.4 182.0,198.0 183.0,197.7 183.9,197.2 184.9,196.7 185.8,196.2 186.8,195.6 187.7,194.9 188.7,194.2 189.6,193.4 190.6,192.6 191.5,191.8 192.5,190.8 193.4,189.9 194.4,188.8 195.4,187.8 196.3,186.6 197.3,185.5 198.2,184.2 199.2,182.9 200.1,181.6 201.1,180.2 202.0,178.8 203.0,177.3 203.9,175.7 204.9,174.1 205.8,172.5 206.8,170.8 207.7,169.0 208.7,167.2 209.7,165.4 210.6,163.4 211.6,161.5 212.5,159.5 213.5,157.4 214.4,155.3 215.4,153.1 216.3,150.9 217.3,148.6 218.2,146.2 219.2,143.9 220.1,141.4 221.1,138.9 222.0,136.4 223.0,133.8 224.0,131.1 224.9,128.4 225.9,125.7 226.8,122.9 227.8,120.0 228.7,117.1 229.7,114.2 230.6,111.1 231.6,108.1 232.5,105.0 233.5,101.8 234.4,98.6 235.4,95.3 236.3,91.9 237.3,88.6 238.3,85.1 239.2,81.6 240.2,78.1 241.1,74.5 242.1,70.9 243.0,67.2 244.0,63.4 244.9,59.6 245.9,55.8 246.8,51.9 247.8,47.9 248.7,43.9 249.7,39.8 250.6,35.7 251.6,31.5\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><line x1=\"158.0\" y1=\"216.7\" x2=\"258.5\" y2=\"116.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"175.3,199.3 176.2,198.5 177.1,197.6 177.9,196.7 178.8,195.9 179.7,195.0 180.5,194.1 181.4,193.3 182.3,192.4 183.1,191.5 184.0,190.7 184.9,189.8 185.7,188.9 186.6,188.1 187.5,187.2 188.3,186.3 189.2,185.5 190.1,184.6 190.9,183.7 191.8,182.9 192.7,182.0 193.5,181.1 194.4,180.3 195.3,179.4 196.1,178.5 197.0,177.7 197.9,176.8 198.7,175.9 199.6,175.1 200.5,174.2 201.3,173.3 202.2,172.5 203.1,171.6 203.9,170.7 204.8,169.9 205.7,169.0 206.5,168.1 207.4,167.3 208.3,166.4 209.1,165.5 210.0,164.7 210.0,164.7 209.1,166.4 208.3,168.0 207.4,169.7 206.5,171.3 205.7,172.8 204.8,174.3 203.9,175.7 203.1,177.1 202.2,178.5 201.3,179.8 200.5,181.1 199.6,182.3 198.7,183.5 197.9,184.7 197.0,185.8 196.1,186.9 195.3,187.9 194.4,188.8 193.5,189.8 192.7,190.7 191.8,191.5 190.9,192.3 190.1,193.1 189.2,193.8 188.3,194.5 187.5,195.1 186.6,195.7 185.7,196.2 184.9,196.7 184.0,197.2 183.1,197.6 182.3,197.9 181.4,198.3 180.5,198.6 179.7,198.8 178.8,199.0 177.9,199.1 177.1,199.2 176.2,199.3 175.3,199.3\" fill=\"#2dd4bf\" fill-opacity=\"0.35\" stroke=\"none\"/><circle cx=\"175.3\" cy=\"199.3\" r=\"3.5\" fill=\"#e6f1f5\"/><circle cx=\"210.0\" cy=\"164.7\" r=\"4\" fill=\"#f3d97a\"/><text x=\"218.0\" y=\"158.7\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">(1,1)</text></svg>",
+  "k": [
+   "(0,0)",
+   "(1,1)",
+   "تظليل",
+   "y=x"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 9,
+  "t": "draw",
+  "q": "ظلّل المنطقة المحصورة بين منحني y=sqrt(x) والمستقيم x=4 والمحور x، وهي المنطقة التي تدور حول المحور x لتولّد حجماً دورانياً.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"85.2\" y1=\"234.0\" x2=\"85.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"251.6\" y1=\"234.0\" x2=\"251.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"293.2\" y1=\"234.0\" x2=\"293.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"334.8\" y1=\"234.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"234.0\" x2=\"334.8\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"192.4\" x2=\"334.8\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"150.8\" x2=\"334.8\" y2=\"150.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"109.2\" x2=\"334.8\" y2=\"109.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"67.6\" x2=\"334.8\" y2=\"67.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"26.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"192.4\" x2=\"338.8\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"344.8,192.4 336.8,188.4 336.8,196.4\" fill=\"#e6f1f5\"/><polygon points=\"126.8,16.0 122.8,24.0 130.8,24.0\" fill=\"#e6f1f5\"/><text x=\"340.8\" y=\"208.4\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"134.8\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"85.2\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"168.4\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"251.6\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"293.2\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"334.8\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"121.8\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"121.8\" y=\"154.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"121.8\" y=\"112.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"121.8\" y=\"71.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"121.8\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"121.8\" y=\"205.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "المنحني y=sqrt(x) يبدأ من (0,0) ويصل إلى (4,2)، والمنطقة المظللة بينه وبين المحور x من x=0 إلى x=4 (يحدها المستقيم x=4).",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"85.2\" y1=\"234.0\" x2=\"85.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"168.4\" y1=\"234.0\" x2=\"168.4\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"251.6\" y1=\"234.0\" x2=\"251.6\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"293.2\" y1=\"234.0\" x2=\"293.2\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"334.8\" y1=\"234.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"234.0\" x2=\"334.8\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"192.4\" x2=\"334.8\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"150.8\" x2=\"334.8\" y2=\"150.8\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"109.2\" x2=\"334.8\" y2=\"109.2\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"67.6\" x2=\"334.8\" y2=\"67.6\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"26.0\" x2=\"334.8\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"85.2\" y1=\"192.4\" x2=\"338.8\" y2=\"192.4\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"126.8\" y1=\"234.0\" x2=\"126.8\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"344.8,192.4 336.8,188.4 336.8,196.4\" fill=\"#e6f1f5\"/><polygon points=\"126.8,16.0 122.8,24.0 130.8,24.0\" fill=\"#e6f1f5\"/><text x=\"340.8\" y=\"208.4\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"134.8\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"85.2\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"168.4\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"210.0\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"251.6\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"293.2\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><text x=\"334.8\" y=\"206.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><text x=\"121.8\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"121.8\" y=\"154.3\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"121.8\" y=\"112.7\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"121.8\" y=\"71.1\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"121.8\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"121.8\" y=\"205.4\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"126.8,192.4 129.1,182.5 131.5,178.4 133.8,175.3 136.2,172.7 138.5,170.3 140.8,168.2 143.2,166.3 145.5,164.5 147.9,162.8 150.2,161.2 152.5,159.7 154.9,158.2 157.2,156.8 159.6,155.5 161.9,154.2 164.2,152.9 166.6,151.7 168.9,150.5 171.3,149.4 173.6,148.3 175.9,147.2 178.3,146.1 180.6,145.1 183.0,144.1 185.3,143.1 187.6,142.1 190.0,141.1 192.3,140.2 194.7,139.3 197.0,138.4 199.3,137.5 201.7,136.6 204.0,135.7 206.4,134.9 208.7,134.0 211.0,133.2 213.4,132.4 215.7,131.6 218.1,130.8 220.4,130.0 222.7,129.2 225.1,128.5 227.4,127.7 229.8,127.0 232.1,126.2 234.4,125.5 236.8,124.8 239.1,124.0 241.5,123.3 243.8,122.6 246.1,121.9 248.5,121.3 250.8,120.6 253.2,119.9 255.5,119.2 257.8,118.6 260.2,117.9 262.5,117.3 264.9,116.6 267.2,116.0 269.5,115.3 271.9,114.7 274.2,114.1 276.6,113.5 278.9,112.9 281.2,112.2 283.6,111.6 285.9,111.0 288.3,110.4 290.6,109.9 292.9,109.3 295.3,108.7 297.6,108.1 300.0,107.5 302.3,107.0 304.6,106.4 307.0,105.8 309.3,105.3 311.7,104.7 314.0,104.2\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polygon points=\"126.8,192.4 126.8,192.4 129.6,181.7 132.3,177.2 135.1,173.8 137.9,170.9 140.7,168.4 143.4,166.1 146.2,164.0 149.0,162.0 151.8,160.2 154.5,158.4 157.3,156.8 160.1,155.2 162.9,153.7 165.6,152.2 168.4,150.8 171.2,149.4 173.9,148.1 176.7,146.8 179.5,145.6 182.3,144.4 185.0,143.2 187.8,142.0 190.6,140.9 193.4,139.8 196.1,138.7 198.9,137.6 201.7,136.6 204.5,135.6 207.2,134.6 210.0,133.6 212.8,132.6 215.5,131.6 218.3,130.7 221.1,129.8 223.9,128.9 226.6,128.0 229.4,127.1 232.2,126.2 235.0,125.3 237.7,124.5 240.5,123.6 243.3,122.8 246.1,122.0 248.8,121.2 251.6,120.3 254.4,119.6 257.1,118.8 259.9,118.0 262.7,117.2 265.5,116.4 268.2,115.7 271.0,114.9 273.8,114.2 276.6,113.5 279.3,112.7 282.1,112.0 284.9,111.3 287.7,110.6 290.4,109.9 293.2,109.2 293.2,192.4\" fill=\"#2dd4bf\" fill-opacity=\"0.35\" stroke=\"none\"/><line x1=\"293.2\" y1=\"192.4\" x2=\"293.2\" y2=\"109.2\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"293.2\" cy=\"109.2\" r=\"4\" fill=\"#f3d97a\"/><text x=\"301.2\" y=\"103.2\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"start\" font-family=\"Cairo,sans-serif\">(4,2)</text></svg>",
+  "k": [
+   "y=sqrt(x)",
+   "(4,2)",
+   "x=4",
+   "تظليل"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 9,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد حجم المجسم الناتج من دوران المنطقة المحصورة بين y=x والمحور x والمستقيم x=3 حول المحور x.",
+  "a": [
+   "9pi",
+   "9*pi",
+   "28.27",
+   "28.274",
+   "9π"
+  ],
+  "sol": "V=pi∫_0^3 x^2dx = pi[{x^3/3}]_0^3 = pi(9) = 9pi ≈ 28.27 وحدة مكعبة.",
+  "num": 28.274,
+  "tol": 0.002
+ },
+ {
+  "c": 4,
+  "l": 9,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد حجم المجسم الناتج من دوران المنطقة المحصورة بين y=sqrt(x) والمحور x والمستقيم x=4 حول المحور x.",
+  "a": [
+   "8pi",
+   "8*pi",
+   "25.13",
+   "25.133",
+   "8π"
+  ],
+  "sol": "V=pi∫_0^4 x dx = pi[{x^2/2}]_0^4 = 8pi ≈ 25.13 وحدة مكعبة.",
+  "num": 25.133,
+  "tol": 0.002
+ },
+ {
+  "c": 5,
+  "l": 1,
+  "t": "def",
+  "q": "عرّف المعادلة التفاضلية الاعتيادية.",
+  "a": "هي معادلة تحتوي على مشتقة أو أكثر لدالة مجهولة y بدلالة متغير مستقل واحد x (وقد تحتوي على y و x).",
+  "k": [
+   "مشتقة",
+   "دالة مجهولة",
+   "متغير مستقل",
+   "معادلة"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 1,
+  "t": "def",
+  "q": "عرّف رتبة المعادلة التفاضلية ودرجتها.",
+  "a": "الرتبة هي رتبة أعلى مشتقة فيها، والدرجة هي أس (قوة) أعلى مشتقة فيها بعد أن تكون المعادلة خالية من الجذور والكسور بالنسبة للمشتقات.",
+  "k": [
+   "أعلى مشتقة",
+   "رتبة",
+   "درجة",
+   "أس"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 1,
+  "t": "mcq",
+  "q": "رتبة المعادلة التفاضلية y'' + (y')^3 = x ودرجتها على الترتيب:",
+  "o": [
+   "الرتبة 2 والدرجة 1",
+   "الرتبة 1 والدرجة 3",
+   "الرتبة 2 والدرجة 3",
+   "الرتبة 3 والدرجة 2"
+  ],
+  "e": "أعلى مشتقة y'' (رتبة 2) وأسها 1 فالدرجة 1 ، أما (y')^3 فلا تؤثر على الدرجة لأنها ليست أعلى مشتقة."
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة التفاضلية {dy/dx}=2x.",
+  "a": [
+   "y=x^2+C",
+   "y=x^2+c",
+   "x^2+C",
+   "y=x^2+k"
+  ],
+  "sol": "نكامل الطرفين: y=∫2x dx = x^2+C."
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة التفاضلية {dy/dx}=3x^2-2.",
+  "a": [
+   "y=x^3-2x+C",
+   "y=x^3-2x+c",
+   "x^3-2x+C"
+  ],
+  "sol": "y=∫(3x^2-2)dx = x^3-2x+C."
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل الخاص للمعادلة {dy/dx}=6x^2 الذي يحقق y(1)=3.",
+  "a": [
+   "y=2x^3+1",
+   "2x^3+1"
+  ],
+  "sol": "y=2x^3+C ، بتعويض x=1 , y=3 : 3=2+C ومنه C=1 فالحل الخاص y=2x^3+1."
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الثابت C في الحل العام y=x^2+C للمعادلة {dy/dx}=2x إذا كان المنحني يمر بالنقطة (1,5).",
+  "a": [
+   "4",
+   "C=4"
+  ],
+  "sol": "5=1+C ومنه C=4 والحل الخاص y=x^2+4.",
+  "num": 4
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "def",
+  "q": "ما الفرق بين الحل العام والحل الخاص للمعادلة التفاضلية؟",
+  "a": "الحل العام يحتوي على ثوابت اختيارية عددها يساوي رتبة المعادلة ويمثل عائلة من المنحنيات، أما الحل الخاص فنحصل عليه بإعطاء الثوابت قيماً معينة من شروط ابتدائية ويمثل منحنياً واحداً.",
+  "k": [
+   "ثوابت اختيارية",
+   "رتبة",
+   "عائلة",
+   "شروط ابتدائية",
+   "منحنياً واحداً"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "why",
+  "q": "علّل: يحتوي الحل العام للمعادلة التفاضلية على ثابت اختياري.",
+  "a": "لأن حل المعادلة يتطلب التكامل والتكامل غير المحدد ينتج عائلة من الدوال تختلف بثابت، ولا يتعيّن الثابت إلا بمعطيات ابتدائية.",
+  "k": [
+   "التكامل",
+   "ثابت",
+   "عائلة",
+   "شروط"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة {dy/dx}=y.",
+  "a": [
+   "y=Ce^x",
+   "y=Ae^x",
+   "y=ce^x",
+   "y=C e^x"
+  ],
+  "sol": "{dy/y}=dx ومنه ln|y|=x+c1 أي y=Ce^x."
+ },
+ {
+  "c": 5,
+  "l": 4,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل الخاص للمعادلة {dy/dx}=2y الذي يحقق y(0)=3.",
+  "a": [
+   "y=3e^{2x}",
+   "y=3e^(2x)",
+   "3e^{2x}",
+   "y=3 e^{2x}"
+  ],
+  "sol": "{dy/y}=2dx ومنه y=Ce^{2x} ، y(0)=3 يعطي C=3 فالحل y=3e^{2x}."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة y {dy/dx}=x (بفصل المتغيرات).",
+  "a": [
+   "y^2=x^2+C",
+   "y^2-x^2=C",
+   "x^2-y^2=C",
+   "y^2=x^2+c",
+   "{y^2/2}={x^2/2}+C"
+  ],
+  "sol": "y dy = x dx ومنه {y^2/2}={x^2/2}+c1 أي y^2=x^2+C."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة {dy/dx}=xy (y>0).",
+  "a": [
+   "y=Ce^{x^2/2}",
+   "y=Ce^{{x^2/2}}",
+   "y=Ae^{x^2/2}",
+   "y=Ce^(x^2/2)",
+   "ln y={x^2/2}+C"
+  ],
+  "sol": "{dy/y}=x dx ومنه ln y={x^2/2}+c1 أي y=Ce^{{x^2/2}}."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة {dy/dx}={y/x} (x>0 , y>0).",
+  "a": [
+   "y=Cx",
+   "y=cx",
+   "y=kx"
+  ],
+  "sol": "{dy/y}={dx/x} ومنه ln y = ln x + c1 أي y=Cx."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة y^2 {dy/dx}=x^2.",
+  "a": [
+   "y^3=x^3+C",
+   "y^3-x^3=C",
+   "x^3-y^3=C",
+   "y^3=x^3+c",
+   "{y^3/3}={x^3/3}+C"
+  ],
+  "sol": "y^2dy=x^2dx ومنه {y^3/3}={x^3/3}+c1 أي y^3=x^3+C."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة {dy/dx}=e^{x-y}.",
+  "a": [
+   "e^y=e^x+C",
+   "e^y-e^x=C",
+   "e^y=e^x+c",
+   "y=ln(e^x+C)"
+  ],
+  "sol": "{dy/dx}={e^x/e^y} ومنه e^y dy = e^x dx فـ e^y = e^x + C."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "calc",
+  "kind": "math",
+  "q": "جد الحل العام للمعادلة {d^2y/dx^2}=6x.",
+  "a": [
+   "y=x^3+C1x+C2",
+   "y=x^3+Ax+B",
+   "y=x^3+ax+b",
+   "y=x^3+C_1x+C_2",
+   "y=x^3+C_{1}x+C_{2}"
+  ],
+  "sol": "y'=∫6x dx=3x^2+C1 ثم y=∫(3x^2+C1)dx = x^3+C1x+C2."
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "كوّن المعادلة التفاضلية للعائلة y=Ax^2 بحذف الثابت A.",
+  "a": [
+   "xy'=2y",
+   "x{dy/dx}=2y",
+   "y'={2y/x}",
+   "xy'-2y=0",
+   "x dy/dx=2y",
+   "y'=2y/x"
+  ],
+  "sol": "y'=2Ax ومن y=Ax^2 : A={y/x^2} فنعوّض y'={2y/x} أي xy'=2y."
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "كوّن المعادلة التفاضلية للعائلة y=Ae^x+Be^{-x} بحذف الثابتين A و B. اكتب المعادلة بصيغة y'' = ...",
+  "a": [
+   "y''=y",
+   "y''-y=0",
+   "{d^2y/dx^2}=y",
+   "y''=y"
+  ],
+  "sol": "y'=Ae^x-Be^{-x} ، y''=Ae^x+Be^{-x}=y فالمعادلة y''-y=0 وهي من الرتبة 2."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "enum",
+  "q": "عدّد خطوات حل المعادلة التفاضلية القابلة لفصل المتغيرات.",
+  "a": [
+   "كتابة المعادلة بالصيغة {dy/dx}=f(x)g(y)",
+   "فصل المتغيرات بحيث يصبح كل متغير مع تفاضله: {dy/g(y)}=f(x)dx",
+   "تكامل الطرفين كل بالنسبة لمتغيره",
+   "إضافة ثابت التكامل C لأحد الطرفين",
+   "تعيين الثابت من الشرط الابتدائي إن وُجد للحصول على الحل الخاص"
+  ],
+  "rev": 1
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "draw",
+  "q": "ارسم ثلاثة منحنيات من عائلة الحل العام y=x^2+C للمعادلة {dy/dx}=2x وذلك بأخذ C=0 و C=2 و C=-1.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"132.0\" y1=\"234.0\" x2=\"132.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"158.0\" y1=\"234.0\" x2=\"158.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"184.0\" y1=\"234.0\" x2=\"184.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"236.0\" y1=\"234.0\" x2=\"236.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"234.0\" x2=\"262.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"288.0\" y1=\"234.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"234.0\" x2=\"288.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"208.0\" x2=\"288.0\" y2=\"208.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"182.0\" x2=\"288.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"156.0\" x2=\"288.0\" y2=\"156.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"130.0\" x2=\"288.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"104.0\" x2=\"288.0\" y2=\"104.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"78.0\" x2=\"288.0\" y2=\"78.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"52.0\" x2=\"288.0\" y2=\"52.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"26.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"182.0\" x2=\"292.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"298.0,182.0 290.0,178.0 290.0,186.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"294.0\" y=\"198.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"132.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"158.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"184.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"236.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"262.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"288.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"211.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"159.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"107.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"81.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"55.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">6</text><text x=\"205.0\" y=\"195.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text></svg>",
+  "a": "ثلاثة قطوع مكافئة متطابقة مفتوحة للأعلى رؤوسها (0,0) و (0,2) و (0,-1): كل منحنٍ هو انسحاب رأسي للآخر بمقدار الفرق بين قيمتي C.",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><line x1=\"132.0\" y1=\"234.0\" x2=\"132.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"158.0\" y1=\"234.0\" x2=\"158.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"184.0\" y1=\"234.0\" x2=\"184.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"236.0\" y1=\"234.0\" x2=\"236.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"262.0\" y1=\"234.0\" x2=\"262.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"288.0\" y1=\"234.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"234.0\" x2=\"288.0\" y2=\"234.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"208.0\" x2=\"288.0\" y2=\"208.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"182.0\" x2=\"288.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"156.0\" x2=\"288.0\" y2=\"156.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"130.0\" x2=\"288.0\" y2=\"130.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"104.0\" x2=\"288.0\" y2=\"104.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"78.0\" x2=\"288.0\" y2=\"78.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"52.0\" x2=\"288.0\" y2=\"52.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"26.0\" x2=\"288.0\" y2=\"26.0\" stroke=\"#e6f1f5\" stroke-opacity=\"0.13\" stroke-width=\"1\"/><line x1=\"132.0\" y1=\"182.0\" x2=\"292.0\" y2=\"182.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210.0\" y1=\"234.0\" x2=\"210.0\" y2=\"22.0\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"298.0,182.0 290.0,178.0 290.0,186.0\" fill=\"#e6f1f5\"/><polygon points=\"210.0,16.0 206.0,24.0 214.0,24.0\" fill=\"#e6f1f5\"/><text x=\"294.0\" y=\"198.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">x</text><text x=\"218.0\" y=\"30.0\" fill=\"#e6f1f5\" font-size=\"13\" font-family=\"Cairo,sans-serif\" font-style=\"italic\">y</text><text x=\"132.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-3</text><text x=\"158.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"184.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"236.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><text x=\"262.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><text x=\"288.0\" y=\"196.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"237.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-2</text><text x=\"205.0\" y=\"211.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">-1</text><text x=\"205.0\" y=\"159.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">1</text><text x=\"205.0\" y=\"133.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">2</text><text x=\"205.0\" y=\"107.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">3</text><text x=\"205.0\" y=\"81.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">4</text><text x=\"205.0\" y=\"55.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">5</text><text x=\"205.0\" y=\"29.5\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">6</text><text x=\"205.0\" y=\"195.0\" fill=\"#e6f1f5\" fill-opacity=\"0.75\" font-size=\"10\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">0</text><polyline points=\"145.4,21.6 146.8,28.5 148.2,35.2 149.6,41.8 151.0,48.3 152.4,54.6 153.8,60.7 155.2,66.7 156.6,72.5 158.1,78.2 159.5,83.7 160.9,89.1 162.3,94.4 163.7,99.4 165.1,104.4 166.5,109.1 167.9,113.8 169.3,118.2 170.7,122.6 172.1,126.7 173.5,130.7 174.9,134.6 176.3,138.3 177.7,141.9 179.1,145.3 180.5,148.6 181.9,151.7 183.3,154.6 184.7,157.4 186.1,160.1 187.5,162.6 188.9,164.9 190.3,167.1 191.7,169.2 193.2,171.1 194.6,172.8 196.0,174.4 197.4,175.9 198.8,177.1 200.2,178.3 201.6,179.3 203.0,180.1 204.4,180.8 205.8,181.3 207.2,181.7 208.6,181.9 210.0,182.0 211.4,181.9 212.8,181.7 214.2,181.3 215.6,180.8 217.0,180.1 218.4,179.3 219.8,178.3 221.2,177.1 222.6,175.9 224.0,174.4 225.4,172.8 226.8,171.1 228.3,169.2 229.7,167.1 231.1,164.9 232.5,162.6 233.9,160.1 235.3,157.4 236.7,154.6 238.1,151.7 239.5,148.6 240.9,145.3 242.3,141.9 243.7,138.3 245.1,134.6 246.5,130.7 247.9,126.7 249.3,122.6 250.7,118.2 252.1,113.8 253.5,109.1 254.9,104.4 256.3,99.4 257.7,94.4 259.1,89.1 260.5,83.7 261.9,78.2 263.4,72.5 264.8,66.7 266.2,60.7 267.6,54.6 269.0,48.3 270.4,41.8 271.8,35.2 273.2,28.5 274.6,21.6\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"2.5\"/><polyline points=\"156.6,20.5 158.1,26.2 159.5,31.7 160.9,37.1 162.3,42.4 163.7,47.4 165.1,52.4 166.5,57.1 167.9,61.8 169.3,66.2 170.7,70.6 172.1,74.7 173.5,78.7 174.9,82.6 176.3,86.3 177.7,89.9 179.1,93.3 180.5,96.6 181.9,99.7 183.3,102.6 184.7,105.4 186.1,108.1 187.5,110.6 188.9,112.9 190.3,115.1 191.7,117.2 193.2,119.1 194.6,120.8 196.0,122.4 197.4,123.9 198.8,125.1 200.2,126.3 201.6,127.3 203.0,128.1 204.4,128.8 205.8,129.3 207.2,129.7 208.6,129.9 210.0,130.0 211.4,129.9 212.8,129.7 214.2,129.3 215.6,128.8 217.0,128.1 218.4,127.3 219.8,126.3 221.2,125.1 222.6,123.9 224.0,122.4 225.4,120.8 226.8,119.1 228.3,117.2 229.7,115.1 231.1,112.9 232.5,110.6 233.9,108.1 235.3,105.4 236.7,102.6 238.1,99.7 239.5,96.6 240.9,93.3 242.3,89.9 243.7,86.3 245.1,82.6 246.5,78.7 247.9,74.7 249.3,70.6 250.7,66.2 252.1,61.8 253.5,57.1 254.9,52.4 256.3,47.4 257.7,42.4 259.1,37.1 260.5,31.7 261.9,26.2 263.4,20.5\" fill=\"none\" stroke=\"#f3d97a\" stroke-width=\"2.5\"/><polyline points=\"139.8,18.5 141.2,26.0 142.6,33.3 144.0,40.5 145.4,47.6 146.8,54.5 148.2,61.2 149.6,67.8 151.0,74.3 152.4,80.6 153.8,86.7 155.2,92.7 156.6,98.5 158.1,104.2 159.5,109.7 160.9,115.1 162.3,120.4 163.7,125.4 165.1,130.4 166.5,135.1 167.9,139.8 169.3,144.2 170.7,148.6 172.1,152.7 173.5,156.7 174.9,160.6 176.3,164.3 177.7,167.9 179.1,171.3 180.5,174.6 181.9,177.7 183.3,180.6 184.7,183.4 186.1,186.1 187.5,188.6 188.9,190.9 190.3,193.1 191.7,195.2 193.2,197.1 194.6,198.8 196.0,200.4 197.4,201.9 198.8,203.1 200.2,204.3 201.6,205.3 203.0,206.1 204.4,206.8 205.8,207.3 207.2,207.7 208.6,207.9 210.0,208.0 211.4,207.9 212.8,207.7 214.2,207.3 215.6,206.8 217.0,206.1 218.4,205.3 219.8,204.3 221.2,203.1 222.6,201.9 224.0,200.4 225.4,198.8 226.8,197.1 228.3,195.2 229.7,193.1 231.1,190.9 232.5,188.6 233.9,186.1 235.3,183.4 236.7,180.6 238.1,177.7 239.5,174.6 240.9,171.3 242.3,167.9 243.7,164.3 245.1,160.6 246.5,156.7 247.9,152.7 249.3,148.6 250.7,144.2 252.1,139.8 253.5,135.1 254.9,130.4 256.3,125.4 257.7,120.4 259.1,115.1 260.5,109.7 261.9,104.2 263.4,98.5 264.8,92.7 266.2,86.7 267.6,80.6 269.0,74.3 270.4,67.8 271.8,61.2 273.2,54.5 274.6,47.6 276.0,40.5 277.4,33.3 278.8,26.0 280.2,18.5\" fill=\"none\" stroke=\"#e6f1f5\" stroke-width=\"2.5\"/><text x=\"210.0\" y=\"122.0\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">C=2</text><text x=\"210.0\" y=\"174.0\" fill=\"#2dd4bf\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">C=0</text><text x=\"210.0\" y=\"223.0\" fill=\"#e6f1f5\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">C=-1</text></svg>",
+  "k": [
+   "(0,0)",
+   "(0,2)",
+   "(0,-1)",
+   "انسحاب",
+   "قطع مكافئ"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "fill",
+  "q": "إذا كان y=3x^2+C فإن {dy/dx}=____ ، وهذا يمثل ____ للمعادلة التفاضلية {dy/dx}=6x.",
+  "a": [
+   "6x",
+   "حلاً عاماً|الحل العام"
+  ],
+  "e": "y'=6x ، والحل y=3x^2+C هو الحل العام للمعادلة {dy/dx}=6x."
+ },
+ {
+  "c": 6,
+  "l": 1,
+  "t": "enum",
+  "q": "عدّد الحالات التي يتعين بها المستوي في الفراغ.",
+  "a": [
+   "ثلاث نقاط ليست على استقامة واحدة",
+   "مستقيم ونقطة لا تنتمي إليه",
+   "مستقيمان متقاطعان",
+   "مستقيمان متوازيان"
+  ]
+ },
+ {
+  "c": 6,
+  "l": 1,
+  "t": "tf",
+  "q": "يوجد مستوٍ وحيد يمر بنقطة معلومة ويعامد مستقيماً معلوماً.",
+  "a": true,
+  "e": "من نقطة معلومة يمر مستوٍ وحيد عمودي على مستقيم معلوم."
+ },
+ {
+  "c": 6,
+  "l": 1,
+  "t": "why",
+  "q": "علّل: المستقيم العمودي على مستوٍ يكون عمودياً على كل مستقيم واقع في ذلك المستوي.",
+  "a": "لأن تعريف تعامد المستقيم والمستوي أن يكون المستقيم عمودياً على جميع المستقيمات المرسومة في المستوي والمارة بأثره، وأي مستقيم آخر في المستوي يوازي أحد هذه المستقيمات فيكون عمودياً عليه أيضاً.",
+  "k": [
+   "عمودي",
+   "المستقيمات",
+   "أثر",
+   "يوازي"
+  ],
+  "rev": 1
+ },
+ {
+  "c": 6,
+  "l": 1,
+  "t": "fill",
+  "q": "يكون المستقيم عمودياً على مستوٍ إذا كان عمودياً على ____ مستقيمين متقاطعين مرسومين في ذلك المستوي.",
+  "a": [
+   "أي"
+  ],
+  "e": "يكفي أن يعامد أي مستقيمين متقاطعين في المستوي."
+ },
+ {
+  "c": 6,
+  "l": 1,
+  "t": "calc",
+  "kind": "math",
+  "q": "متوازي مستطيلات أبعاده 3 cm و 4 cm و 12 cm. جد طول قطره.",
+  "a": [
+   "13",
+   "13cm"
+  ],
+  "sol": "طول القطر = sqrt(3^2+4^2+12^2) = sqrt(9+16+144) = sqrt(169) = 13 cm.",
+  "num": 13
+ },
+ {
+  "c": 6,
+  "l": 1,
+  "t": "calc",
+  "kind": "math",
+  "q": "مكعب طول حرفه 4 cm. جد طول قطره (القطر المار بمركز المكعب).",
+  "a": [
+   "4sqrt(3)",
+   "4*sqrt(3)",
+   "6.928",
+   "6.93",
+   "sqrt(48)"
+  ],
+  "sol": "قطر المكعب = a sqrt(3) = 4 sqrt(3) ≈ 6.93 cm.",
+  "num": 6.9282,
+  "tol": 0.002
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "def",
+  "q": "عرّف الزاوية الزوجية.",
+  "a": "هي الشكل الهندسي المكوّن من نصفي مستويين يشتركان في مستقيم واحد يسمى حرف الزاوية الزوجية، ويسمى كل نصف مستوٍ وجهاً لها.",
+  "k": [
+   "نصفي مستويين",
+   "حرف",
+   "وجه",
+   "مستقيم مشترك"
+  ]
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "def",
+  "q": "ما المقصود بقياس الزاوية الزوجية؟",
+  "a": "هو قياس الزاوية المستوية لها، وهي الزاوية المحصورة بين شعاعين عموديين على حرف الزاوية الزوجية في نقطة واحدة منه، يقع كل شعاع في وجه من وجهيها.",
+  "k": [
+   "الزاوية المستوية",
+   "عموديين",
+   "الحرف",
+   "نقطة واحدة",
+   "وجه"
+  ]
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "def",
+  "q": "متى يكون المستويان متعامدين؟",
+  "a": "يكون المستويان متعامدين إذا كانت الزاوية الزوجية بينهما قائمة (قياسها 90deg)، أي إذا احتوى أحدهما مستقيماً عمودياً على الآخر.",
+  "k": [
+   "زاوية زوجية",
+   "قائمة",
+   "90",
+   "مستقيماً عمودياً"
+  ]
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "why",
+  "q": "علّل: إذا احتوى مستوٍ على مستقيم عمودي على مستوٍ آخر فإن المستويين متعامدان.",
+  "a": "لأن المستقيم العمودي على المستوي الثاني يعامد المستقيم الناتج من تقاطع المستويين، فتكون الزاوية المستوية للزاوية الزوجية بينهما قائمة.",
+  "k": [
+   "عمودي",
+   "تقاطع",
+   "الزاوية المستوية",
+   "قائمة"
+  ]
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "mcq",
+  "q": "قياس الزاوية الزوجية بين مستويين متعامدين يساوي:",
+  "o": [
+   "90deg",
+   "180deg",
+   "45deg",
+   "0deg"
+  ],
+  "e": "المستويان المتعامدان زاويتهما الزوجية قائمة."
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "نقطة A في أحد وجهي زاوية زوجية بعدها عن حرفها 6 cm، وبعدها عن الوجه الآخر 3 cm. جد قياس الزاوية الزوجية (حادة) بالدرجات.",
+  "a": [
+   "30",
+   "30deg"
+  ],
+  "sol": "sin θ = {بعد A عن الوجه الآخر/بعد A عن الحرف} = {3/6} = {1/2} ومنه θ = 30deg.",
+  "num": 30
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "AH عمودي على المستوي P في النقطة H، و HD عمودي على المستقيم L الواقع في P عند D. إذا كان AH = 4 cm و HD = 3 cm فجد طول AD (بعد A عن L).",
+  "a": [
+   "5",
+   "5cm"
+  ],
+  "sol": "AD ⟂ L (مبرهنة العمود الثلاثي) و AD^2=AH^2+HD^2=16+9=25 ومنه AD=5 cm.",
+  "num": 5
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "calc",
+  "kind": "math",
+  "q": "AH عمودي على المستوي P في H ، و HD ⟂ L حيث L في P و D على L ، AH = 4 cm و HD = 3 cm. جد قياس الزاوية الزوجية بين المستوي P والمستوي الذي يحوي L و A. (أي جد قياس الزاوية الزوجية بين المستويين بالدرجات).",
+  "a": [
+   "53.13",
+   "53.1",
+   "53deg",
+   "arctan(4/3)",
+   "tan^{-1}({4/3})"
+  ],
+  "sol": "الزاوية المستوية هي زاوية ADH ، tan θ = {AH/HD} = {4/3} ومنه θ ≈ 53.13deg.",
+  "num": 53.13,
+  "tol": 0.002
+ },
+ {
+  "c": 6,
+  "l": 3,
+  "t": "def",
+  "q": "عرّف الإسقاط العمودي لنقطة على مستوٍ.",
+  "a": "هو موضع القدم (أثر) العمود المرسوم من النقطة إلى ذلك المستوي، أي نقطة تقاطع المستوي مع المستقيم المار بالنقطة والعمودي على المستوي.",
+  "k": [
+   "العمود",
+   "قدم",
+   "المستوي",
+   "النقطة",
+   "أثر"
+  ]
+ },
+ {
+  "c": 6,
+  "l": 3,
+  "t": "def",
+  "q": "ما هو الإسقاط العمودي لمستقيم غير عمودي على مستوٍ؟",
+  "a": "هو مستقيم يتكوّن من مجموعة الإسقاطات العمودية لجميع نقاط المستقيم على ذلك المستوي، ويقع في المستوي المار بالمستقيم والعمودي على المستوي المعلوم.",
+  "k": [
+   "مجموعة الإسقاطات",
+   "مستقيم",
+   "المستوي العمودي",
+   "نقاط"
+  ],
+  "rev": 1
+ },
+ {
+  "c": 6,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "قطعة مستقيمة طولها 10 cm تصنع زاوية قياسها 60deg مع مستوٍ. جد طول إسقاطها العمودي على المستوي.",
+  "a": [
+   "5",
+   "5cm"
+  ],
+  "sol": "طول الإسقاط = طول القطعة × cos 60deg = 10 × {1/2} = 5 cm.",
+  "num": 5
+ },
+ {
+  "c": 6,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "قطعة مستقيمة طولها 10 cm تصنع زاوية قياسها 30deg مع مستوٍ. جد طول إسقاطها العمودي على المستوي.",
+  "a": [
+   "5sqrt(3)",
+   "5*sqrt(3)",
+   "8.66",
+   "8.660",
+   "sqrt(75)"
+  ],
+  "sol": "طول الإسقاط = 10 cos 30deg = 10 × {sqrt(3)/2} = 5 sqrt(3) ≈ 8.66 cm.",
+  "num": 8.6603,
+  "tol": 0.002
+ },
+ {
+  "c": 6,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "النقطة A تبعد 12 cm عن المستوي P، وإسقاطها العمودي عليه هو H. إذا كانت C نقطة في P حيث HC = 5 cm فجد AC.",
+  "a": [
+   "13",
+   "13cm"
+  ],
+  "sol": "AH ⟂ HC ومنه AC=sqrt(12^2+5^2)=sqrt(169)=13 cm.",
+  "num": 13
+ },
+ {
+  "c": 6,
+  "l": 3,
+  "t": "calc",
+  "kind": "math",
+  "q": "في مكعب طول حرفه a جد قياس الزاوية بين قطر المكعب والقاعدة بالدرجات (اكتب الجواب لأقرب جزء من مئة).",
+  "a": [
+   "35.26",
+   "35.264",
+   "35.3",
+   "arctan(1/sqrt(2))",
+   "35deg"
+  ],
+  "sol": "إسقاط القطر على القاعدة هو قطر القاعدة a sqrt(2): tan θ = {a/a sqrt(2)} = {1/sqrt(2)} ومنه θ ≈ 35.26deg.",
+  "num": 35.264,
+  "tol": 0.005
+ },
+ {
+  "c": 6,
+  "l": 2,
+  "t": "label",
+  "q": "اكتب اسم كل جزء مؤشَّر عليه بالرقم في شكل الزاوية الزوجية.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><polygon points=\"110,190 290,190 330,240 150,240\" fill=\"#2dd4bf\" fill-opacity=\"0.25\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><polygon points=\"110,190 290,190 310,70 130,70\" fill=\"#f3d97a\" fill-opacity=\"0.18\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"110\" y1=\"190\" x2=\"290\" y2=\"190\" stroke=\"#e6f1f5\" stroke-width=\"3\"/><line x1=\"200\" y1=\"190\" x2=\"206\" y2=\"100\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"190\" x2=\"236\" y2=\"232\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><path d=\"M 203 160 A 30 30 0 0 1 222 214\" fill=\"none\" stroke=\"#f3d97a\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"180\" r=\"9\" fill=\"#f3d97a\"/><text x=\"300\" y=\"184.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"293\" y1=\"185\" x2=\"285\" y2=\"190\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"350\" cy=\"215\" r=\"9\" fill=\"#f3d97a\"/><text x=\"350\" y=\"219.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"343\" y1=\"217\" x2=\"320\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"335\" cy=\"90\" r=\"9\" fill=\"#f3d97a\"/><text x=\"335\" y=\"94.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"328\" y1=\"93\" x2=\"300\" y2=\"100\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"250\" cy=\"160\" r=\"9\" fill=\"#f3d97a\"/><text x=\"250\" y=\"164.5\" fill=\"#0b1620\" font-size=\"12\" font-weight=\"bold\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"244\" y1=\"164\" x2=\"224\" y2=\"180\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/></svg>",
+  "labels": [
+   {
+    "n": 1,
+    "a": "حرف الزاوية الزوجية",
+    "k": [
+     "الحرف",
+     "حرف الزاوية",
+     "المستقيم المشترك"
+    ]
+   },
+   {
+    "n": 2,
+    "a": "الوجه الأول",
+    "k": [
+     "أحد الوجهين",
+     "نصف المستوي الأول",
+     "وجه الزاوية الزوجية",
+     "نصف مستوي"
+    ]
+   },
+   {
+    "n": 3,
+    "a": "الوجه الثاني",
+    "k": [
+     "الوجه الآخر",
+     "نصف المستوي الثاني",
+     "وجه الزاوية الزوجية",
+     "نصف مستوي"
+    ]
+   },
+   {
+    "n": 4,
+    "a": "الزاوية المستوية",
+    "k": [
+     "الزاوية المستوية للزاوية الزوجية",
+     "قياس الزاوية الزوجية"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 6,
+  "l": 3,
+  "t": "draw",
+  "q": "في الشكل المجاور قطعة AB فوق المستوي P. ارسم الإسقاط العمودي للقطعة AB على المستوي P، وسمِّ طرفيه A' و B'، ثم ارسم العمودين AA' و BB'.",
+  "fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><polygon points=\"70,170 300,170 360,230 130,230\" fill=\"#2dd4bf\" fill-opacity=\"0.18\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"345\" y=\"222\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">P</text><circle cx=\"150\" cy=\"60\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"260\" cy=\"95\" r=\"4\" fill=\"#f3d97a\"/><line x1=\"150\" y1=\"60\" x2=\"260\" y2=\"95\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"138\" y=\"60\" fill=\"#e6f1f5\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">A</text><text x=\"272\" y=\"92\" fill=\"#e6f1f5\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">B</text></svg>",
+  "a": "يُرسم من A عمود AA' على المستوي P ومن B عمود BB' على المستوي P، ثم يوصل A' بـ B' فتكون القطعة A'B' هي الإسقاط العمودي للقطعة AB على P، ويكون AA' // BB' لأن كليهما عمودي على P.",
+  "figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" width=\"100%\" style=\"max-width:420px\"><polygon points=\"70,170 300,170 360,230 130,230\" fill=\"#2dd4bf\" fill-opacity=\"0.18\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"345\" y=\"222\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">P</text><circle cx=\"150\" cy=\"60\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"260\" cy=\"95\" r=\"4\" fill=\"#f3d97a\"/><line x1=\"150\" y1=\"60\" x2=\"260\" y2=\"95\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"138\" y=\"60\" fill=\"#e6f1f5\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">A</text><text x=\"272\" y=\"92\" fill=\"#e6f1f5\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">B</text><line x1=\"150\" y1=\"60\" x2=\"150\" y2=\"190\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"260\" y1=\"95\" x2=\"260\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"5 4\"/><line x1=\"150\" y1=\"190\" x2=\"260\" y2=\"200\" stroke=\"#2dd4bf\" stroke-width=\"3\"/><circle cx=\"150\" cy=\"190\" r=\"4\" fill=\"#f3d97a\"/><circle cx=\"260\" cy=\"200\" r=\"4\" fill=\"#f3d97a\"/><text x=\"150\" y=\"208\" fill=\"#e6f1f5\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">A'</text><text x=\"266\" y=\"218\" fill=\"#e6f1f5\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">B'</text></svg>",
+  "k": [
+   "AA'",
+   "BB'",
+   "A'B'",
+   "عمود",
+   "متوازيان"
+  ]
+ }
+]

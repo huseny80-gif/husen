@@ -97,6 +97,15 @@ background:#0c1f2d;background-image:linear-gradient(rgba(255,255,255,.05) 1px,tr
 #fab button{display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:99px;border:1px solid rgba(243,217,122,.6);background:linear-gradient(135deg,#d4af37,#f3d97a);color:#1a1400;font-weight:800;cursor:pointer;box-shadow:0 8px 26px rgba(0,0,0,.45);font-family:inherit;font-size:.95rem}
 #fab button:hover{filter:brightness(1.08)}
 #paper{display:none}
+.frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;line-height:1.25;font-size:.95em}
+.frac>span:first-child{border-bottom:1.5px solid currentColor;padding:0 4px}.frac>span:last-child{padding:0 4px}
+.rad{display:inline-flex;align-items:flex-end;direction:ltr}.rad .rs{font-size:1.25em;line-height:1}.rad .rb{border-top:1.5px solid currentColor;padding:0 3px;margin-top:2px}.rad>sup{font-size:.6em;align-self:flex-start;margin-inline-end:-2px}
+.mx{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.fig{margin:10px 0;padding:8px;border:1px solid var(--line);border-radius:.9rem;background:rgba(0,0,0,.18);text-align:center}.fig svg,.figbg svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.padwrap.has{max-width:640px;margin:0 auto;position:relative;border-radius:.7rem;border:1px solid var(--line);background:#0c1f2d}.padwrap.has .figbg{pointer-events:none;padding:6px}
+.padwrap.has canvas.pad{position:absolute;inset:0;width:100%;height:100%;background:transparent;border:0}
+.lrow{display:flex;gap:8px;align-items:center;margin:6px 0}.lrow input{flex:1}
+.revc{border-color:#f59e0b!important;color:#fbbf24!important}
 a.btn{color:var(--tx);text-decoration:none;display:inline-block}
 .gtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
 .gtab{flex:1;min-width:130px;padding:13px;border-radius:.9rem;border:1px solid var(--line);background:var(--glass);color:var(--mut);font-weight:800;cursor:pointer;font-family:inherit;font-size:1rem}
@@ -117,6 +126,7 @@ details.card>summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-i
 .pq{margin:10px 0;line-height:1.9;break-inside:avoid}.po{margin:4px 0;padding-inline-start:26px}
 .pl{border-bottom:1px solid #999;height:26px;margin:4px 0}
 @media print{
+ .fig svg,.figbg svg,.padwrap svg{filter:invert(1) hue-rotate(180deg)}
  :root{--bg1:#fff;--bg2:#fff;--tx:#111;--mut:#444;--glass:#fff;--line:#bbb;--gold2:#7a5c00;--tq2:#0f766e;--tq:#0f766e}
  html,body{background:#fff!important;color:#111!important}
  body{min-height:0}
@@ -164,7 +174,7 @@ const el=(html)=>{const t=document.createElement('template');t.innerHTML=html.tr
 let toastT;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('on'),3200)}
 $('#back').onclick=()=>{if(history.length>1&&document.referrer)history.back();else location.href='platform.html'};
 
-const TYPES={mcq:'اختيار من متعدد',tf:'صح / خطأ',fill:'املأ الفراغ',def:'تعريف',why:'تعليل (لماذا؟)',enum:'تعداد',match:'مطابقة',calc:'مسألة / معادلة',read:'قطعة قراءة'};
+const TYPES={mcq:'اختيار من متعدد',tf:'صح / خطأ',fill:'املأ الفراغ',def:'تعريف',why:'تعليل (لماذا؟)',enum:'تعداد',match:'مطابقة',calc:'مسألة / معادلة',read:'قطعة قراءة',label:'تأشير على الشكل',draw:'ارسم / أكمل الرسم'};
 const GRADES={4:'الرابع الإعدادي',5:'الخامس الإعدادي',6:'السادس الإعدادي'};
 
 /* تطبيع النص العربي/الإنجليزي للمقارنة */
@@ -359,6 +369,60 @@ function fmt(s,kind){
   if(kind==='chem')s=s.replace(/([A-Za-z\)\]])(\d+)/g,(m,a,d)=>a+toSub(d));
   return s;
 }
+
+/* عرض منسّق للصيغ: كسور {a/b} وجذور sqrt() وأسس ^ وأدلّة _ — يعيد HTML آمناً */
+function rich(src,kind){
+  const bal=(t,i,o,c)=>{let d=0;for(let j=i;j<t.length;j++){if(t[j]===o)d++;else if(t[j]===c){d--;if(!d)return j}}return -1};
+  const topSlash=t=>{let d=0;for(let j=0;j<t.length;j++){const c=t[j];if(c==='('||c==='{')d++;else if(c===')'||c==='}')d--;else if(c==='/'&&!d)return j}return -1};
+  const plain=t=>{t=t.replace(/<->|<=>/g,'⇌').replace(/->|=>/g,'→').replace(/<=/g,'≤').replace(/>=/g,'≥').replace(/!=/g,'≠').replace(/\+-/g,'±').replace(/\*/g,'×')
+      .replace(/\bpi\b/gi,'π').replace(/\b[Dd]elta\b/g,'Δ').replace(/\bdeg\b/g,'°').replace(/\binf(inity)?\b/gi,'∞');
+    if(kind==='chem')t=t.replace(/([A-Za-z\)\]])(\d+)/g,(m,a,d)=>a+toSub(d));
+    return esc(t)};
+  function inl(t){let out='',buf='';const fl=()=>{if(buf){out+=plain(buf);buf=''}};
+    for(let i=0;i<t.length;){const ch=t[i];
+      if(ch==='{'){const j=bal(t,i,'{','}');if(j>0){fl();const inner=t.slice(i+1,j),k=topSlash(inner);
+        out+=k>0?`<span class="frac"><span>${inl(inner.slice(0,k))}</span><span>${inl(inner.slice(k+1))}</span></span>`:inl(inner);i=j+1;continue}}
+      if(t.startsWith('sqrt',i)&&(!i||!/[A-Za-z]/.test(t[i-1]))){let j=i+4,idx='';if(t[j]==='['){const e=t.indexOf(']',j);if(e>0){idx=t.slice(j+1,e);j=e+1}}
+        if(t[j]==='('){const e=bal(t,j,'(',')');if(e>0){fl();out+=`<span class="rad">${idx?`<sup>${esc(idx)}</sup>`:''}<span class="rs">√</span><span class="rb">${inl(t.slice(j+1,e))}</span></span>`;i=e+1;continue}}}
+      if((ch==='^'||ch==='_')&&i>0){let j=i+1,tok=null;
+        if(t[j]==='{'){const e=bal(t,j,'{','}');if(e>0){tok=t.slice(j+1,e);j=e+1}}
+        else{const m=t.slice(j).match(ch==='^'?/^([+\-−]?\d+|[A-Za-z])/:/^(\d+|[A-Za-z])/);if(m){tok=m[1];j+=m[1].length}}
+        if(tok!==null){fl();out+=`<${ch==='^'?'sup':'sub'}>${inl(tok)}</${ch==='^'?'sup':'sub'}>`;i=j;continue}}
+      buf+=ch;i++}
+    fl();return out}
+  return inl(String(src??''));
+}
+/* قيمة عددية لتعبير بسيط (كسور، جذور، أسس، π) — بدون eval */
+function evalNum(str){
+  const SUPM={'⁰':0,'¹':1,'²':2,'³':3,'⁴':4,'⁵':5,'⁶':6,'⁷':7,'⁸':8,'⁹':9};
+  let s=String(str).replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g,m=>'^'+[...m].map(c=>SUPM[c]).join('')).replace(/[−–]/g,'-').replace(/[×·]/g,'*').replace(/÷/g,'/').replace(/π/g,'pi')
+    .replace(/\{/g,'(').replace(/\}/g,')').replace(/،/g,'.').replace(/sqrt\[(\d+)\]\(/g,'root$1(').replace(/√\s*\(/g,'sqrt(').replace(/√\s*([\d.]+)/g,'sqrt($1)').replace(/\s+/g,'')
+    .replace(/(\d|\))(?=(sqrt|root|pi|\())/g,'$1*').replace(/(pi)(?=[\d(])/g,'$1*');
+  let i=0;const bad=()=>{throw 0};
+  const num=()=>{const m=s.slice(i).match(/^\d+(\.\d+)?([eE][+-]?\d+)?/);if(!m)bad();i+=m[0].length;return parseFloat(m[0])};
+  function atom(){
+    if(s.startsWith('pi',i)){i+=2;return Math.PI}
+    const f=s.slice(i).match(/^(sqrt|root(\d+))\(/);
+    if(f){i+=f[0].length;const v=expr();if(s[i]!==')')bad();i++;return f[1]==='sqrt'?Math.sqrt(v):Math.pow(v,1/+f[2])}
+    if(s[i]==='('){i++;const v=expr();if(s[i]!==')')bad();i++;return v}
+    return num()}
+  function pw(){const b=atom();if(s[i]==='^'){i++;return Math.pow(b,un())}return b}
+  function un(){if(s[i]==='-'){i++;return -un()}if(s[i]==='+'){i++;return un()}return pw()}
+  function term(){let v=un();while(s[i]==='*'||s[i]==='/'){const o=s[i++],r=un();v=o==='*'?v*r:v/r}return v}
+  function expr(){let v=term();while(s[i]==='+'||s[i]==='-'){const o=s[i++],r=term();v=o==='+'?v+r:v-r}return v}
+  try{if(!s)return null;const v=expr();return i===s.length&&isFinite(v)?v:null}catch(e){return null}
+}
+function numFromText(t,whole){
+  t=String(t).trim().replace(/^[^=\d\-+(√.]{0,14}=\s*/,'').replace(/^[^=]{0,14}=\s*/,'');
+  const w=evalNum(t);if(w!=null||whole)return w;
+  for(let k=t.length-1;k>=1;k--){const v=evalNum(t.slice(0,k));if(v!=null)return v}
+  return null;
+}
+const near=(v,c,tol=.01)=>Math.abs(v-c)<=Math.max(Math.abs(c)*tol,1e-9);
+const figOf=q=>q&&q.fig?String(q.fig):'';
+function svgToImg(svg){return new Promise(res=>{const m=svg.match(/viewBox="0 0 (\d+) (\d+)"/),w=m?+m[1]:420,h=m?+m[2]:260;
+  const im=new Image();im.onload=()=>res(im);im.onerror=()=>res(null);
+  im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg.replace(/<svg\s/,`<svg width="${w*2}" height="${h*2}" `))})}
 const canon=s=>String(s||'').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+/g,m=>'^'+[...m].map(c=>{const k=Object.keys(SUPD).find(x=>SUPD[x]===c);return k}).join(''))
   .replace(/[₀-₉]/g,c=>SUBD.indexOf(c)).replace(/→|=>|->/g,'>').replace(/⇌|<->|<=>/g,'<>').replace(/[×]/g,'*').replace(/[′‘’]/g,"'").replace(/[{}\s]/g,'').replace(/\^\+/g,'^+').toLowerCase();
 const SYM={chem:['→','⇌','↑','↓','₂','₃','⁺','⁻','Δ'],math:['²','³','√','π','×','÷','≤','≥','≠','∞','°'],phys:['²','³','√','π','×','÷','Δ','Ω','°','µ']};
@@ -384,11 +448,12 @@ function submissionBox(q){
        <select data-sz style="width:auto"><option value="2">رفيع</option><option value="4" selected>متوسط</option><option value="8">عريض</option></select>
        <button type="button" class="btn sm dng" data-clr>مسح الكل</button>
        <button type="button" class="btn sm gold" data-save>حفظ الرسم كإجابة</button></div>
-     <canvas class="pad"></canvas><div data-pp></div></div>
+     <div class="padwrap${q.fig?' has':''}">${q.fig?`<div class="figbg">${q.fig}</div>`:''}<canvas class="pad"></canvas></div><div data-pp></div></div>
   </div></div>`);
-  const st={text:'',file:null,pen:null};
+  const st={text:'',file:null,pen:null};let ink=false,dirty=false,figImg=null,doSave=null;
+  if(q.fig)svgToImg(q.fig).then(im=>figImg=im);
   const ta=$('textarea',root),prev=$('.prev',root);
-  ta.addEventListener('input',()=>{st.text=ta.value;if(prev)prev.textContent=fmt(ta.value,kind)});
+  ta.addEventListener('input',()=>{st.text=ta.value;if(prev)prev.innerHTML=rich(ta.value,kind)});
   $$('[data-ins]',root).forEach(b=>b.onclick=()=>{const s=ta.selectionStart??ta.value.length;ta.setRangeText(b.dataset.ins,s,ta.selectionEnd??s,'end');ta.dispatchEvent(new Event('input'));ta.focus()});
   /* تبويبات */
   let padInit=false;
@@ -409,18 +474,20 @@ function submissionBox(q){
     const pos=e=>{const r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top}};
     const size=()=>+$('[data-sz]',root).value*(erase?4:1);
     const style=()=>{ctx.globalCompositeOperation=erase?'destination-out':'source-over';ctx.strokeStyle=color;ctx.fillStyle=color;ctx.lineWidth=size()};
-    cv.addEventListener('pointerdown',e=>{cv.setPointerCapture(e.pointerId);draw=true;pts=[pos(e)];style();ctx.beginPath();ctx.arc(pts[0].x,pts[0].y,ctx.lineWidth/2,0,7);ctx.fill();e.preventDefault()});
+    cv.addEventListener('pointerdown',e=>{cv.setPointerCapture(e.pointerId);draw=true;ink=true;dirty=true;pts=[pos(e)];style();ctx.beginPath();ctx.arc(pts[0].x,pts[0].y,ctx.lineWidth/2,0,7);ctx.fill();e.preventDefault()});
     cv.addEventListener('pointermove',e=>{if(!draw)return;const p=pos(e);pts.push(p);style();
       if(pts.length>=3){const a=pts[pts.length-3],b=pts[pts.length-2],c=p;ctx.beginPath();ctx.moveTo((a.x+b.x)/2,(a.y+b.y)/2);ctx.quadraticCurveTo(b.x,b.y,(b.x+c.x)/2,(b.y+c.y)/2);ctx.stroke()}else{ctx.beginPath();ctx.moveTo(pts[0].x,pts[0].y);ctx.lineTo(p.x,p.y);ctx.stroke()}e.preventDefault()});
     const end=()=>{draw=false;pts=[]};cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);cv.addEventListener('pointerleave',end);
     $$('.sw',root).forEach(b=>b.onclick=()=>{color=b.dataset.c;erase=false;$$('.sw',root).forEach(x=>x.classList.toggle('on',x===b));$('[data-er]',root).classList.remove('pri')});
     $('[data-er]',root).onclick=e=>{erase=!erase;e.target.classList.toggle('pri',erase)};
-    $('[data-clr]',root).onclick=()=>{ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,cv.width,cv.height);ctx.restore();st.pen=null;$('[data-pp]',root).innerHTML=''};
-    $('[data-save]',root).onclick=()=>{const t=document.createElement('canvas');t.width=cv.width;t.height=cv.height;const c=t.getContext('2d');c.fillStyle='#0c1f2d';c.fillRect(0,0,t.width,t.height);c.drawImage(cv,0,0);
+    $('[data-clr]',root).onclick=()=>{ctx.save();ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,cv.width,cv.height);ctx.restore();st.pen=null;ink=false;dirty=false;$('[data-pp]',root).innerHTML=''};
+    $('[data-save]',root).onclick=quiet=>{quiet=quiet===true;const t=document.createElement('canvas');t.width=cv.width;t.height=cv.height;const c=t.getContext('2d');c.fillStyle='#0c1f2d';c.fillRect(0,0,t.width,t.height);if(figImg)c.drawImage(figImg,0,0,t.width,t.height);c.drawImage(cv,0,0);
       /* حفظ كصورة بخلفية داكنة ليبقى الخط الأبيض مقروءاً */
-      st.pen=t.toDataURL('image/png');$('[data-pp]',root).innerHTML=`<img class="thumb" alt="رسمك المحفوظ" src="${st.pen}" style="background:#0c1f2d"><div class="row" style="margin-top:6px"><a class="btn sm" download="answer-pen.png" href="${st.pen}">تنزيل الصورة</a><span class="chip t">أُرفق مع إجابتك</span></div>`;toast('تم حفظ الرسم وإرفاقه بالإجابة')};
+      st.pen=t.toDataURL('image/png');$('[data-pp]',root).innerHTML=`<img class="thumb" alt="رسمك المحفوظ" src="${st.pen}" style="background:#0c1f2d"><div class="row" style="margin-top:6px"><a class="btn sm" download="answer-pen.png" href="${st.pen}">تنزيل الصورة</a><span class="chip t">أُرفق مع إجابتك</span></div>`;dirty=false;if(!quiet)toast('تم حفظ الرسم وإرفاقه بالإجابة')};
+    doSave=()=>$('[data-save]',root).onclick(true);
   }
-  return {el:root,get:()=>st,hasMedia:()=>!!(st.file||st.pen),text:()=>st.text};
+  if(q.startPen)$('[data-m=p]',root).click();
+  return {el:root,get:()=>st,hasMedia:()=>{if(ink&&dirty&&doSave)doSave();return !!(st.file||st.pen)},text:()=>st.text};
 }
 
 /* =====================================================================
@@ -457,9 +524,9 @@ function subjective(q,sci){
 R.def=R.why=(q)=>{
   const b=submissionBox({});
   return {el:b.el,grade(){const t=b.text().trim();
-    if(!t&&b.hasMedia())return {pts:0,max:1,pending:true,html:fbHTML('الإجابة النموذجية:',esc(q.a))+fbHTML('الحالة:','بانتظار مراجعة المدرب لإجابتك المرفقة (ملف/رسم).')};
+    if(!t&&b.hasMedia())return {pts:0,max:1,pending:true,html:fbHTML('الإجابة النموذجية:',`<span class="mx">${rich(q.a)}</span>`)+fbHTML('الحالة:','بانتظار مراجعة المدرب لإجابتك المرفقة (ملف/رسم).')};
     const s=kwScore(t,q.k||[]),pts=s>=.6?1:s>=.3?.5:0;
-    return {pts,max:1,html:fbHTML('الإجابة النموذجية:',esc(q.a))+fbHTML('تقدير تلقائي:',`تطابقت ${Math.round(s*100)}٪ من الكلمات المفتاحية.`+(q.k&&q.k.length?` (${esc(q.k.join(' ، '))})`:''))}}}
+    return {pts,max:1,html:fbHTML('الإجابة النموذجية:',`<span class="mx">${rich(q.a)}</span>`)+fbHTML('تقدير تلقائي:',`تطابقت ${Math.round(s*100)}٪ من الكلمات المفتاحية.`+(q.k&&q.k.length?` (${esc(q.k.join(' ، '))})`:''))}}}
 };
 R.enum=(q)=>{
   const b=submissionBox({});$('textarea',b.el).placeholder='اكتب العناصر، كل عنصر في سطر أو افصل بينها بفاصلة…';
@@ -472,10 +539,12 @@ R.enum=(q)=>{
 R.calc=(q)=>{
   const b=submissionBox({kind:q.kind||'math'});
   return {el:b.el,grade(){const t=b.text().trim();
-    const sol=q.sol?fbHTML('الحل النموذجي:',esc(q.sol)):'';
+    const sol=q.sol?fbHTML('الحل النموذجي:',`<span class="mx">${rich(q.sol,q.kind)}</span>`):'';
     if(!t&&b.hasMedia())return {pts:0,max:1,pending:true,html:fbHTML('الجواب:',esc((q.a||[])[0]||''))+sol+fbHTML('الحالة:','بانتظار مراجعة المدرب لحلّك المرفق (ملف/قلم رقمي).')};
-    const ok=(q.a||[]).some(x=>canon(x)===canon(t));
-    return {pts:ok?1:0,max:1,html:fbHTML('الجواب الصحيح:',`<span dir="ltr">${esc(fmt((q.a||[])[0]||'',q.kind))}</span>`)+sol+(b.hasMedia()&&!ok?fbHTML('ملاحظة:','أُرفق حلّك المكتوب بخط اليد لمراجعة المدرب.'):'')}}}
+    let ok=(q.a||[]).some(x=>canon(x)===canon(t));
+    if(!ok&&t){const v=q.num!=null?numFromText(t):numFromText(t,true),cand=q.num!=null?[q.num]:(q.a||[]).map(x=>numFromText(String(x),true)).filter(x=>x!=null);
+      if(v!=null&&cand.some(c=>near(v,c,q.tol)))ok=true}
+    return {pts:ok?1:0,max:1,html:fbHTML('الجواب الصحيح:',`<span class="mx">${rich((q.a||[])[0]||'',q.kind)}</span>`)+sol+(b.hasMedia()&&!ok?fbHTML('ملاحظة:','أُرفق حلّك المكتوب بخط اليد لمراجعة المدرب.'):'')}}}
 };
 R.match=(q)=>{
   const L=q.pairs.map(p=>p[0]),Rt=shuffle(q.pairs.map((p,i)=>({t:p[1],i}))),place=new Array(L.length).fill(-1);let held=-1;
@@ -491,6 +560,20 @@ R.match=(q)=>{
     return {pts:ok,max:L.length,html:fbHTML('المطابقة الصحيحة:',q.pairs.map(p=>esc(p[0])+' ← '+esc(p[1])).join('<br>'))}}}
 };
 R.short=(q)=>{const g=R.def({...q,a:q.a||''});return g};
+R.label=(q)=>{
+  const root=el(`<div>${q.fig?`<div class="fig">${q.fig}</div>`:''}${(q.labels||[]).map(l=>`<div class="lrow"><span class="chip g">${esc(l.n)}</span><input type="text" data-n="${esc(l.n)}" autocomplete="off" placeholder="اسم الجزء رقم ${esc(l.n)}"></div>`).join('')}</div>`);
+  return {el:root,grade(){let ok=0;const L=q.labels||[];
+    $$('input',root).forEach((inp,i)=>{const v=norm(inp.value),l=L[i];const good=!!v&&[l.a,...(l.k||[])].some(x=>{const nx=norm(x);return v.includes(nx)||(v.length>=3&&nx.includes(v))});if(good)ok++;inp.style.borderColor=good?'var(--ok)':'var(--bad)';inp.disabled=true});
+    return {pts:ok,max:L.length,html:fbHTML('التأشير الصحيح:',L.map(l=>`${esc(l.n)}) ${esc(l.a)}`).join('<br>'))}}}
+};
+R.draw=(q)=>{
+  const b=submissionBox({fig:q.fig,startPen:true});
+  return {el:b.el,grade(){const t=b.text().trim();
+    const model=fbHTML('الرسم / الإجابة النموذجية:',`<span class="mx">${rich(q.a,null)}</span>`)+(q.figA?`<div class="fig">${q.figA}</div>`:'');
+    if(b.hasMedia())return {pts:0,max:1,pending:true,html:model+fbHTML('الحالة:','رسمك محفوظ وبانتظار مراجعة المدرب — قارنه بالنموذج أعلاه.')};
+    if(t&&q.k&&q.k.length){const sc=kwScore(t,q.k);return {pts:sc>=.6?1:sc>=.3?.5:0,max:1,html:model}}
+    return {pts:0,max:1,html:model+fbHTML('ملاحظة:','لم تُسجَّل إجابة. ارسم في اللوح ثم سلّم الاختبار.')}}}
+};
 R.read=(q)=>{
   const root=el(`<div><div class="passage">${esc(q.passage||'').replace(/\n/g,'<br>')}</div><div data-subs></div></div>`);
   const items=[];
@@ -530,13 +613,16 @@ function ansOf(q){
    case 'enum':return (q.a||[]).join('، ');
    case 'match':return (q.pairs||[]).map(p=>p[0]+' ← '+p[1]).join(' ؛ ');
    case 'calc':return [].concat(q.a||[])[0]+(q.sol?' — '+q.sol:'');
+   case 'label':return (q.labels||[]).map(l=>l.n+') '+l.a).join(' ؛ ');
    default:return typeof q.a==='string'?q.a:[].concat(q.a||[]).join(' ')}
 }
 function paperItem(q,n,ans){
-  let h=`<div class="pq"><b>${n}.</b> ${esc(fmt(q.q,q.kind))}`,an='';
+  let h=`<div class="pq"><b>${n}.</b> <span class="mx" style="display:inline">${rich(q.q,q.kind)}</span>${q.fig&&q.type!=='draw'?`<div class="fig" style="max-width:360px">${q.fig}</div>`:''}`,an='';
   if(q.type==='mcq'){const o=shuffle(q.o);h+='<div class="po">'+o.map((x,i)=>`<div>${LET[i]}) ${esc(x)}</div>`).join('')+'</div>';an=LET[o.indexOf(q.o[0])]+') '+q.o[0]}
   else if(q.type==='tf'){h+=' &nbsp; ( &nbsp; ) صح &nbsp; ( &nbsp; ) خطأ';an=ansOf(q)}
   else if(q.type==='match'){const R2=shuffle((q.pairs||[]).map(p=>p[1]));h+='<table style="width:100%;margin-top:4px"><tbody>'+(q.pairs||[]).map((p,i)=>`<tr><td>${i+1}) ${esc(p[0])}</td><td>(&nbsp;&nbsp;) ${esc(R2[i])}</td></tr>`).join('')+'</tbody></table>';an=ansOf(q)}
+  else if(q.type==='label'){h+=(q.labels||[]).map(l=>`<div class="pl" style="height:24px"><b>${esc(l.n)})</b></div>`).join('');an=ansOf(q)}
+  else if(q.type==='draw'){h+=(q.fig?`<div class="fig" style="max-width:360px">${q.fig}</div>`:'')+'<div style="border:1px solid #999;height:180px;margin-top:6px"></div>';an=ansOf(q)}
   else if(q.type==='enum'){h+='<div class="pl"></div>'.repeat(Math.min(q.n||3,8));an=ansOf(q)}
   else if(q.type==='fill'){an=ansOf(q)}
   else{h+='<div class="pl"></div><div class="pl"></div>';an=ansOf(q)}
@@ -590,7 +676,8 @@ function renderExam(host){
     const card=el(`<div class="card q"><div class="qh"><span class="qn">${i+1}</span><span class="chip g">${TYPES[q.type]}</span></div><div class="qt" ${q.type==='read'?'':''}></div><div data-b></div><div data-f></div></div>`);
     const it=R[q.type]({...q,_u:uid()});
     const qt=$('.qt',card);
-    if(q.type==='fill'){qt.replaceWith(it.el)}else if(q.type==='read'){qt.remove()}else{qt.textContent=fmt(q.q,q.type==='calc'?q.kind:null)}
+    if(q.type==='fill'){qt.replaceWith(it.el)}else if(q.type==='read'){qt.remove()}else{qt.innerHTML=rich(q.q,q.type==='calc'?q.kind:null)}
+    if(q.fig&&!['label','draw'].includes(q.type)&&q.type!=='read'&&qt.isConnected)qt.after(el(`<div class="fig">${q.fig}</div>`))
     if(q.type!=='fill')$('[data-b]',card).append(it.el);else it.el.after($('[data-b]',card));
     exam.items.push({q,it,card});qs.append(card)});
   $('#xq').onclick=leaveExam;
@@ -738,6 +825,8 @@ function editQuestion(id,pre){
     enum:v=>`<label class="l">نص السؤال</label><textarea id="a_q">${esc(v.q||'')}</textarea><label class="l">العناصر الصحيحة (سطر لكل عنصر)</label><textarea id="a_a">${esc((v.a||[]).join('\n'))}</textarea>`,
     match:v=>`<label class="l">التعليمة</label><input type="text" id="a_q" value="${esc(v.q||'طابق بين القائمتين:')}"><label class="l">الأزواج (سطر لكل زوج بصيغة: اليمين | اليسار)</label><textarea id="a_p">${esc((v.pairs||[]).map(p=>p.join(' | ')).join('\n'))}</textarea>`,
     calc:v=>`<label class="l">نص المسألة / المعادلة</label><textarea id="a_q">${esc(v.q||'')}</textarea><label class="l">نوع الصيغة</label><select id="a_kind"><option value="math" ${v.kind==='math'?'selected':''}>رياضيات</option><option value="chem" ${v.kind==='chem'?'selected':''}>كيمياء</option><option value="phys" ${v.kind==='phys'?'selected':''}>فيزياء</option></select><label class="l">الجواب المقبول (سطر لكل صيغة مقبولة، بالكتابة العادية مثل H2 + O2 -> H2O)</label><textarea id="a_a">${esc((v.a||[]).join('\n'))}</textarea><label class="l">الحل النموذجي (اختياري)</label><textarea id="a_s">${esc(v.sol||'')}</textarea>`,
+    label:v=>`<label class="l">التعليمة</label><textarea id="a_q">${esc(v.q||'اكتب اسم كل جزء مؤشَّر عليه بالرقم')}</textarea><label class="l">كود الرسم SVG (يبدأ بـ &lt;svg ويحتوي أرقاماً مرسومة)</label><textarea id="a_fig" dir="ltr" style="min-height:140px">${esc(v.fig||'')}</textarea><label class="l">الأجزاء (سطر لكل جزء: الرقم | الاسم | أسماء بديلة مفصولة بـ ;)</label><textarea id="a_lb">${esc((v.labels||[]).map(l=>[l.n,l.a,(l.k||[]).join(';')].join(' | ')).join('\n'))}</textarea>`,
+    draw:v=>`<label class="l">المطلوب رسمه</label><textarea id="a_q">${esc(v.q||'')}</textarea><label class="l">رسم أساسي SVG يرسم فوقه الطالب (اختياري)</label><textarea id="a_fig" dir="ltr" style="min-height:110px">${esc(v.fig||'')}</textarea><label class="l">وصف الرسم النموذجي</label><textarea id="a_a">${esc(v.a||'')}</textarea><label class="l">رسم نموذجي SVG (اختياري)</label><textarea id="a_figA" dir="ltr" style="min-height:90px">${esc(v.figA||'')}</textarea>`,
     read:v=>`<label class="l">القطعة (اتركها فارغة لاستخدام نص الدرس)</label><textarea id="a_ps">${esc(v.passage||'')}</textarea><label class="l">أسئلة الفهم — سطر لكل سؤال:<br>اختياري: السؤال | خيار1 ; خيار2 ; خيار3 | رقم الصحيح<br>مقالي: السؤال || الإجابة النموذجية</label><textarea id="a_sb" style="min-height:150px">${esc((v.subs||[]).map(s=>s.type==='mcq'?`${s.q} | ${s.o.join(' ; ')} | 1`:`${s.q} || ${s.a||''}`).join('\n'))}</textarea>`};
    const showF=()=>{$('#qf',d).innerHTML=F[$('#qy',d).value](m&&m.type===$('#qy',d).value?m:{})};
    $('#qs_',d).onchange=fillL;$('#qc_',d).onchange=fillL;$('#qy',d).onchange=showF;fillL();showF();$('#c',d).onclick=()=>d.close();
@@ -751,6 +840,8 @@ function editQuestion(id,pre){
      if(t==='enum'){o.q=g('#a_q').trim();o.a=lines(g('#a_a'));o.n=o.a.length;if(!o.a.length){toast('أدخل العناصر');return}}
      if(t==='match'){o.q=g('#a_q').trim();o.pairs=lines(g('#a_p')).map(x=>x.split('|').map(y=>y.trim())).filter(p=>p.length>=2&&p[0]&&p[1]);if(o.pairs.length<2){toast('أدخل زوجين على الأقل');return}}
      if(t==='calc'){o.q=g('#a_q').trim();o.kind=g('#a_kind');o.a=lines(g('#a_a'));o.sol=g('#a_s');if(!o.a.length){toast('أدخل الجواب المقبول');return}}
+     if(t==='label'){o.q=g('#a_q').trim();o.fig=g('#a_fig').trim();o.labels=lines(g('#a_lb')).map(x=>{const [n,a,k]=x.split('|').map(y=>y.trim());return {n:isNaN(+n)?n:+n,a,k:(k||'').split(';').map(z=>z.trim()).filter(Boolean)}}).filter(l=>l.n&&l.a);if(!/^<svg/.test(o.fig)||o.labels.length<2){toast('أدخل رسم SVG وجزأين على الأقل');return}}
+     if(t==='draw'){o.q=g('#a_q').trim();o.fig=g('#a_fig').trim()||undefined;o.a=g('#a_a').trim();o.figA=g('#a_figA').trim()||undefined;if(!o.a){toast('اكتب وصف الرسم النموذجي');return}}
      if(t==='read'){o.q='Reading comprehension';o.passage=g('#a_ps').trim()||null;o.subs=lines(g('#a_sb')).map(s=>{if(s.includes('||')){const [q,a]=s.split('||');return {type:'short',q:q.trim(),a:(a||'').trim(),k:wordsOf(a||'').filter(w=>w.length>4).slice(0,5)}}
         const [q,os,c]=s.split('|').map(x=>x.trim());const arr=(os||'').split(';').map(x=>x.trim()).filter(Boolean);const ci=Math.max(0,(+c||1)-1);if(arr.length<2)return null;const ok=arr.splice(ci,1)[0];return {type:'mcq',q,o:[ok,...arr]}}).filter(Boolean);
        if(!o.subs.length){toast('أدخل سؤال فهم واحداً على الأقل');return}}
@@ -962,8 +1053,8 @@ function lessonBank(b,sub,l,c,q){
   const list=q.all.filter(x=>x.lid===l.id||(x.cid===l.cid&&!x.lid));
   b.innerHTML=`<div class="card"><div class="row"><h3 style="margin:0;color:var(--gold2)">🔑 بنك الأسئلة (للمدرس فقط) — ${list.length} سؤالاً</h3><span class="sp"></span><button class="btn pri" id="qa_">+ سؤال لهذا الدرس</button></div>
    <p class="muted" style="margin:6px 0 0">الإجابات الصحيحة ظاهرة هنا لأنك في وضع المدرس.</p></div>
-   ${list.slice(0,200).map(x=>`<div class="card" style="padding:12px"><div class="row"><span class="chip g">${TYPES[x.type]}</span><span class="chip ${x.auto?'t':''}">${x.auto?'تلقائي':'يدوي'}</span>${x.lid===l.id?'':'<span class="chip">على مستوى الفصل</span>'}<span class="sp"></span>${x.auto?'':`<button class="btn sm" data-eq="${x.id}">تعديل</button><button class="btn sm dng" data-dq="${x.id}">حذف</button>`}</div>
-    <div style="margin-top:6px;line-height:1.8">${x.type==='read'?esc((x.passage||'').slice(0,140))+'…':esc(fmt(x.q,x.kind))}</div>
+   ${list.slice(0,200).map(x=>`<div class="card" style="padding:12px"><div class="row"><span class="chip g">${TYPES[x.type]}</span><span class="chip ${x.auto?'t':''}">${x.auto?'تلقائي':'يدوي'}</span>${x.rev?'<span class="chip revc" title="يحتاج مراجعة المدرس">⚠ للمراجعة</span>':''}${x.lid===l.id?'':'<span class="chip">على مستوى الفصل</span>'}<span class="sp"></span>${x.auto?'':`<button class="btn sm" data-eq="${x.id}">تعديل</button><button class="btn sm dng" data-dq="${x.id}">حذف</button>`}</div>
+    <div style="margin-top:6px;line-height:1.8">${x.type==='read'?esc((x.passage||'').slice(0,140))+'…':rich(x.q,x.kind)}${x.fig?'<div class="fig" style="max-width:320px">'+x.fig+'</div>':''}</div>
     ${x.type==='read'?'':`<div style="margin-top:4px;color:var(--ok);font-weight:700">الإجابة: ${esc(ansOf(x))}</div>`}</div>`).join('')||'<div class="card"><div class="empty">لا توجد أسئلة بعد.</div></div>'}`;
   $('#qa_',b).onclick=()=>editQuestion(null,{sid:sub.id,cid:l.cid,lid:l.id});
   $$('[data-eq]',b).forEach(x=>x.onclick=()=>editQuestion(x.dataset.eq));
