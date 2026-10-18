@@ -1,0 +1,162 @@
+{
+ "id": "en",
+ "t": "اللغة الإنجليزية",
+ "sub": "Iraq Opportunities — Activity Book (كتاب النشاط)",
+ "i": "fa-language",
+ "quiz": "quizzes/english-prep.html",
+ "ch": [
+  {
+   "t": "Unit 1",
+   "p": "9 دروس",
+   "l": [
+    [
+     "Lesson 1: My toe is bleeding",
+     4
+    ],
+    [
+     "Lesson 2: I was ice skating, and I fell over",
+     6
+    ],
+    [
+     "Lesson 3: My friends were all watching, so I didn’t want to give up",
+     8
+    ],
+    [
+     "Lesson 4: Most smokers take it up"
+    ],
+    [
+     "Lesson 5: Take some exercise every day"
+    ],
+    [
+     "Lesson 6: Life used to be different"
+    ],
+    [
+     "Lesson 7: Let’s start with diet"
+    ],
+    [
+     "Lesson 8: Using your phone behind"
+    ],
+    [
+     "Lesson 9: Against all odds"
+    ]
+   ]
+  },
+  {
+   "t": "Unit 2",
+   "p": "9 دروس",
+   "l": [
+    [
+     "Lesson 1: Law and order"
+    ],
+    [
+     "Lesson 2: A police officer’s duties"
+    ],
+    [
+     "Lesson 3: Airport security"
+    ],
+    [
+     "Lesson 4: Applying for a job"
+    ],
+    [
+     "Lesson 5: Military jobs"
+    ],
+    [
+     "Lesson 6: A robbery"
+    ],
+    [
+     "Lesson 7: A safety brochure"
+    ],
+    [
+     "Lesson 8: Road safety"
+    ],
+    [
+     "Lesson 9: Security technology"
+    ]
+   ]
+  },
+  {
+   "t": "Unit 3",
+   "p": "9 دروس",
+   "l": [
+    [
+     "Lesson 1: I’d like to work in the …"
+    ],
+    [
+     "Lesson 2: If you come round tomorrow, …"
+    ],
+    [
+     "Lesson 3: If you could choose any job …"
+    ],
+    [
+     "Lesson 4: She asked when she …"
+    ],
+    [
+     "Lesson 5: I wish I’d brought my sunglasses"
+    ],
+    [
+     "Lesson 6: If I’d been fitter"
+    ],
+    [
+     "Lesson 7: Learn English in the UK"
+    ],
+    [
+     "Lesson 8: Summer jobs"
+    ],
+    [
+     "Lesson 9: Focus on careers"
+    ]
+   ]
+  },
+  {
+   "t": "Unit 4",
+   "p": "4 دروس",
+   "l": [
+    [
+     "Lesson 1: Rashid & Rana Designs"
+    ],
+    [
+     "Lesson 2: People didn’t use to work out"
+    ],
+    [
+     "Lesson 3: How to be the best!"
+    ],
+    [
+     "Lesson 4: If only …"
+    ]
+   ]
+  },
+  {
+   "t": "Unit 5",
+   "p": "9 دروس",
+   "l": [
+    [
+     "Lesson 1: Let’s do some sightseeing"
+    ],
+    [
+     "Lesson 2: Have you ever stayed in …"
+    ],
+    [
+     "Lesson 3: I’ve been coming here …"
+    ],
+    [
+     "Lesson 4: I’ve tried it a few times"
+    ],
+    [
+     "Lesson 5: We couldn’t get a room"
+    ],
+    [
+     "Lesson 6: The atmosphere was …"
+    ],
+    [
+     "Lesson 7: Beautiful Kerkennah"
+    ],
+    [
+     "Lesson 8: Tourism and environment"
+    ],
+    [
+     "Lesson 9: Why are holidays so important?"
+    ]
+   ]
+  }
+ ]
+}

@@ -21,5 +21,13 @@
  function gh(){if(!/github\.io$/.test(location.hostname))return;[].forEach.call(document.querySelectorAll('a'),function(a){var h=a.getAttribute('href')||'';if(h==='/login'||h==='/student/progress'||/(^|\/)login$/.test(h))a.setAttribute('href',base+'unavailable.html')})}
  function mount(){document.body.insertBefore(bar,document.body.firstChild);gh();setTimeout(gh,300);var b=document.getElementById('navback');
   if(b)b.onclick=function(){var same=document.referrer&&document.referrer.indexOf(location.origin)===0;if(history.length>1&&same)history.back();else location.href=fallback;};}
- if(document.body)mount();else document.addEventListener('DOMContentLoaded',mount);
+ /* زر عائم للطباعة وحفظ PDF في كل الصفحات (الاستوديو له زره الخاص) */
+ function fab(){if(file==='studio'||document.getElementById('fab'))return;
+  var ps=document.createElement('style');
+  ps.textContent='#pfab{position:fixed;left:16px;bottom:16px;z-index:70;display:flex;align-items:center;gap:8px;padding:11px 16px;border-radius:99px;border:1px solid rgba(243,217,122,.6);background:linear-gradient(135deg,#d4af37,#f3d97a);color:#1a1400;font:800 .92rem Cairo,sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.45)}@media print{#pfab,#sitenav{display:none!important}*{color:#111!important;background:transparent!important;box-shadow:none!important;text-shadow:none!important;backdrop-filter:none!important}body{background:#fff!important}}';
+  document.head.appendChild(ps);
+  var b=document.createElement('button');b.type='button';b.id='pfab';b.setAttribute('aria-label','طباعة أو حفظ PDF');b.title='طباعة الصفحة أو حفظها بصيغة PDF (اختر «حفظ بصيغة PDF» من نافذة الطباعة)';
+  b.innerHTML='<i class="fa-solid fa-print"></i> طباعة / PDF';b.onclick=function(){window.print()};document.body.appendChild(b)}
+ function mount2(){mount();fab()}
+ if(document.body)mount2();else document.addEventListener('DOMContentLoaded',mount2);
 })();
