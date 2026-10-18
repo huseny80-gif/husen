@@ -26,7 +26,11 @@ export default function ProgressPage() {
   if (!studentId) {
     return (
       <div className="min-h-screen flex items-center justify-center" dir="rtl">
-        <p className="text-gray-600">يجب تسجيل الدخول لعرض سجل التقدم</p>
+        <div className="text-center space-y-3">
+          <p className="text-gray-600">يجب تسجيل الدخول لعرض سجل تقدم الحساب</p>
+          <a href="/login" className="inline-block rounded-xl bg-purple-600 px-5 py-2.5 font-semibold text-white hover:bg-purple-700">تسجيل الدخول</a>
+          <p className="text-sm text-gray-500">أو اطّلع على <a className="text-purple-700 underline" href="/progress.html">نتائج هذا الجهاز</a></p>
+        </div>
       </div>
     );
   }

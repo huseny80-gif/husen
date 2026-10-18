@@ -10,10 +10,14 @@
  if(file==='curriculum'&&grade)fallback=base+'grade.html?g='+grade;
  var isHome=file==='platform'||file===''||file==='index';
  var st=document.createElement('style');
- st.textContent='#sitenav{position:sticky;top:0;z-index:60;display:flex;justify-content:space-between;gap:10px;max-width:1000px;margin:0 auto 14px;padding:8px 0;direction:rtl}#sitenav a,#sitenav button{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:#e6f1f5;text-decoration:none;font:700 .9rem Cairo,Tajawal,sans-serif;background:rgba(8,24,38,.78);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:8px 16px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}#sitenav a:hover,#sitenav button:hover{border-color:#14b8a6}';
+ st.textContent='#sitenav{position:sticky;top:0;z-index:60;display:flex;justify-content:space-between;gap:10px;max-width:1000px;margin:0 auto 14px;padding:8px 0;direction:rtl;flex-wrap:wrap}#sitenav .nv-r{display:flex;gap:8px;flex-wrap:wrap}#sitenav a,#sitenav button{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:#e6f1f5;text-decoration:none;font:700 .9rem Cairo,Tajawal,sans-serif;background:rgba(8,24,38,.78);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:8px 16px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}#sitenav a:hover,#sitenav button:hover{border-color:#14b8a6}';
  document.head.appendChild(st);
  var bar=document.createElement('nav');bar.id='sitenav';bar.setAttribute('aria-label','التنقل');
- bar.innerHTML=(isHome?'<span></span>':'<button type="button" id="navback"><i class="fa-solid fa-arrow-right"></i> رجوع</button>')+(isHome?'':'<a href="'+home+'"><i class="fa-solid fa-house"></i> الرئيسية</a>');
+ var root=base;
+ bar.innerHTML=(isHome?'<span></span>':'<button type="button" id="navback"><i class="fa-solid fa-arrow-right"></i> رجوع</button>')+
+  '<span class="nv-r">'+(isHome?'':'<a href="'+home+'"><i class="fa-solid fa-house"></i> الرئيسية</a>')+
+  '<a href="'+root+'progress.html"><i class="fa-solid fa-chart-line"></i> سجل التقدم</a>'+
+  '<a href="'+root+'login"><i class="fa-solid fa-user-shield"></i> دخول المدرب</a></span>';
  function mount(){document.body.insertBefore(bar,document.body.firstChild);var b=document.getElementById('navback');
   if(b)b.onclick=function(){var same=document.referrer&&document.referrer.indexOf(location.origin)===0;if(history.length>1&&same)history.back();else location.href=fallback;};}
  if(document.body)mount();else document.addEventListener('DOMContentLoaded',mount);
