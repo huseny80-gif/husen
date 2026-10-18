@@ -97,6 +97,21 @@ background:#0c1f2d;background-image:linear-gradient(rgba(255,255,255,.05) 1px,tr
 #fab button{display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:99px;border:1px solid rgba(243,217,122,.6);background:linear-gradient(135deg,#d4af37,#f3d97a);color:#1a1400;font-weight:800;cursor:pointer;box-shadow:0 8px 26px rgba(0,0,0,.45);font-family:inherit;font-size:.95rem}
 #fab button:hover{filter:brightness(1.08)}
 #paper{display:none}
+a.btn{color:var(--tx);text-decoration:none;display:inline-block}
+.gtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.gtab{flex:1;min-width:130px;padding:13px;border-radius:.9rem;border:1px solid var(--line);background:var(--glass);color:var(--mut);font-weight:800;cursor:pointer;font-family:inherit;font-size:1rem}
+.gtab[aria-selected=true]{background:linear-gradient(135deg,rgba(20,184,166,.38),rgba(20,184,166,.1));border-color:var(--tq);color:var(--tx)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}
+.stat{padding:12px;border-radius:1rem;border:1px solid var(--line);background:var(--glass);text-align:center}.stat b{display:block;font-size:1.6rem;color:var(--gold2)}.stat span{color:var(--mut);font-size:.82rem}
+.crumb{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:10px;color:var(--mut)}.crumb button{background:none;border:0;color:var(--tq2);cursor:pointer;font-weight:700;font-family:inherit;font-size:1rem;padding:0}
+.folders{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-top:10px}
+.folder{display:flex;flex-direction:column;gap:3px;text-align:start;padding:12px;border-radius:1rem;border:1px solid var(--line);background:rgba(255,255,255,.05);cursor:pointer;color:var(--tx);font-family:inherit}
+.folder:hover{border-color:var(--tq);background:rgba(20,184,166,.1)}.folder small{color:var(--mut)}
+.ltabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}.lt{padding:9px 14px;border-radius:.8rem;border:1px solid var(--line);background:var(--glass);color:var(--mut);cursor:pointer;font-weight:700;font-family:inherit}
+.lt[aria-selected=true]{border-color:var(--tq);color:var(--tx);background:rgba(20,184,166,.18)}.lt.tch{border-color:var(--gold);color:var(--gold2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}.sc{padding:12px 14px;border-radius:1rem;border:1px solid var(--line);background:rgba(255,255,255,.05);line-height:1.9;break-inside:avoid}.sc.g{border-color:var(--gold)}
+#tbtn.on{border-color:var(--gold)!important;color:var(--gold2)}
+details.card>summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-items:center;flex-wrap:wrap}details.card>summary::-webkit-details-marker{display:none}
 .sum h3{margin:0 0 4px;color:var(--gold2)}.sum h4{margin:12px 0 4px;color:var(--tq2)}.sum ul{margin:4px 0;padding-inline-start:22px;line-height:1.9}
 .sum .ls{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
 .pq{margin:10px 0;line-height:1.9;break-inside:avoid}.po{margin:4px 0;padding-inline-start:26px}
@@ -121,6 +136,7 @@ background:#0c1f2d;background-image:linear-gradient(rgba(255,255,255,.05) 1px,tr
 <div class="wrap">
   <div class="top">
     <button type="button" id="back">→ رجوع</button>
+    <button type="button" id="tbtn">🔒 دخول المدرس</button>
     <a href="platform.html">⌂ الرئيسية</a>
   </div>
   <h1>استوديو المواد والاختبارات</h1>
@@ -489,7 +505,11 @@ R.read=(q)=>{
 /* =====================================================================
    7) تبويب الاختبارات
    ===================================================================== */
-let exam=null;
+let exam=null,examPre=null;
+function leaveExam(){const b=exam&&exam.back;exam=null;if(b){nav=b;tab='lib'}render()}
+function startExam(sid,qs,limit){if(!qs.length){toast('لا توجد أسئلة متاحة لهذا النطاق');return}
+  let q=shuffle(qs);if(limit&&isFinite(limit))q=q.slice(0,limit);
+  exam={running:true,sid,qs:q,items:[],back:{...nav}};tab='exam';render();window.scrollTo({top:0})}
 /* منتقي الفصول: فصل واحد أو أكثر أو كل المادة. يعيد دالة تُرجع مجموعة المعرّفات (أو null = كل المادة) */
 function chapterPicker(box,sub,onchange){
   const cs=sub.chapters||[];
@@ -554,6 +574,7 @@ function viewExam(host){
   const take=()=>shuffle(pickQs()).slice(0,limit());
   xs.onchange=fill;$$('#xt input').forEach(i=>i.onchange=upd);
   $('#xall').onchange=e=>{$('#xn').disabled=e.target.checked};
+  if(examPre){xs.value=examPre;examPre=null}
   fill();
   $('#xgo').onclick=()=>{exam={running:true,sid:xs.value,qs:take(),items:[]};renderExam(host)};
   $('#xp1').onclick=()=>printPaper(take(),S.subjects.find(s=>s.id===xs.value),false);
@@ -572,7 +593,7 @@ function renderExam(host){
     if(q.type==='fill'){qt.replaceWith(it.el)}else if(q.type==='read'){qt.remove()}else{qt.textContent=fmt(q.q,q.type==='calc'?q.kind:null)}
     if(q.type!=='fill')$('[data-b]',card).append(it.el);else it.el.after($('[data-b]',card));
     exam.items.push({q,it,card});qs.append(card)});
-  $('#xq').onclick=()=>{exam=null;render()};
+  $('#xq').onclick=leaveExam;
   $('#xsub').onclick=submitExam;
 }
 function submitExam(){
@@ -589,7 +610,7 @@ function submitExam(){
   const top=el(`<div class="card"><div class="score">${pct}٪</div><p style="text-align:center" class="muted">${pts%1?pts.toFixed(1):pts} من ${max}${pend?` — و${pend} سؤال بانتظار مراجعة المدرب`:''}</p>
     <div class="row" style="justify-content:center">${pct>=90?'<span class="badge">★ شارة التفوق</span>':''}<button class="btn pri" id="xnew">اختبار جديد</button></div></div>`);
   $('#view').prepend(top);$('#xsub').closest('.card').remove();$('#xq').remove();
-  $('#xnew').onclick=()=>{exam=null;render()};
+  $('#xnew').onclick=leaveExam;
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function renderResult(host){exam=null;render()}
@@ -630,11 +651,11 @@ function viewCMS(host){
     (l.files||[]).forEach(f=>DB.del(f.id));sub.lessons=sub.lessons.filter(x=>x!==l);S.manual=S.manual.filter(m=>!(m.sid===sub.id&&m.lid===l.id));afterChange(before,'حُذف الدرس')}});
   $$('[data-file]',box).forEach(b=>b.onclick=async()=>{const bl=await DB.get(b.dataset.file);if(!bl){toast('الملف غير متاح على هذا الجهاز');return}window.open(URL.createObjectURL(bl),'_blank')});
 }
-function editSubject(id){
+function editSubject(id,grade){
   const s=id?S.subjects.find(x=>x.id===id):null;
   modal(`<h3 style="margin-top:0;color:var(--gold2)">${s?'تعديل المادة':'مادة جديدة'}</h3>
    <label class="l" for="sn">اسم المادة</label><input type="text" id="sn" value="${esc(s?.name||'')}">
-   <label class="l" for="sg">الصف</label><select id="sg">${Object.entries(GRADES).map(([g,n])=>`<option value="${g}" ${(s?.grade||6)==g?'selected':''}>${n}</option>`).join('')}</select>
+   <label class="l" for="sg">الصف</label><select id="sg">${Object.entries(GRADES).map(([g,n])=>`<option value="${g}" ${(s?.grade||grade||6)==g?'selected':''}>${n}</option>`).join('')}</select>
    <div class="row" style="margin-top:14px"><span class="sp"></span><button class="btn" id="c">إلغاء</button><button class="btn pri" id="ok">حفظ</button></div>`,d=>{
    $('#c',d).onclick=()=>d.close();
    $('#ok',d).onclick=()=>{const name=$('#sn',d).value.trim();if(!name){toast('أدخل اسم المادة');return}
@@ -697,18 +718,18 @@ function viewBank(host){
   $('#fs').onchange=e=>{bf.sid=e.target.value;list()};$('#ft').onchange=e=>{bf.type=e.target.value;list()};$('#fq').oninput=e=>{bf.q=e.target.value;list()};
   $('#addQ').onclick=()=>editQuestion();list();
 }
-function editQuestion(id){
+function editQuestion(id,pre){
   const m=id?S.manual.find(x=>x.id===id):null;const subs=S.subjects;
   modal(`<h3 style="margin-top:0;color:var(--gold2)">${m?'تعديل السؤال':'سؤال جديد'}</h3>
-   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"><div><label class="l" for="qs_">المادة</label><select id="qs_">${subs.map(s=>`<option value="${s.id}" ${(m?.sid||curSub)===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}</select></div>
+   <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"><div><label class="l" for="qs_">المادة</label><select id="qs_">${subs.map(s=>`<option value="${s.id}" ${(m?.sid||pre?.sid||curSub)===s.id?'selected':''}>${esc(s.name)}</option>`).join('')}</select></div>
    <div><label class="l" for="qc_">الفصل</label><select id="qc_"></select></div>
    <div><label class="l" for="ql_">الدرس</label><select id="ql_"></select></div></div>
    <label class="l" for="qy">نوع السؤال</label><select id="qy">${Object.entries(TYPES).map(([k,v])=>`<option value="${k}" ${m?.type===k?'selected':''}>${v}</option>`).join('')}</select>
    <div id="qf"></div><div class="row" style="margin-top:14px"><span class="sp"></span><button class="btn" id="c">إلغاء</button><button class="btn pri" id="ok">حفظ السؤال</button></div>`,d=>{
    const lessons=()=>S.subjects.find(s=>s.id===$('#qs_',d).value).lessons;
    const fillL=()=>{const sb=S.subjects.find(s=>s.id===$('#qs_',d).value);
-     $('#qc_',d).innerHTML=(sb.chapters||[]).map(c=>`<option value="${c.id}" ${m?.cid===c.id?'selected':''}>${esc(c.title)}</option>`).join('')||'<option value="">— لا فصول —</option>';
-     $('#ql_',d).innerHTML='<option value="">— بدون درس —</option>'+lessons().filter(l=>!$('#qc_',d).value||l.cid===$('#qc_',d).value).map(l=>`<option value="${l.id}" ${m?.lid===l.id?'selected':''}>${esc(l.title)}</option>`).join('')};
+     $('#qc_',d).innerHTML=(sb.chapters||[]).map(c=>`<option value="${c.id}" ${(m?.cid||pre?.cid)===c.id?'selected':''}>${esc(c.title)}</option>`).join('')||'<option value="">— لا فصول —</option>';
+     $('#ql_',d).innerHTML='<option value="">— بدون درس —</option>'+lessons().filter(l=>!$('#qc_',d).value||l.cid===$('#qc_',d).value).map(l=>`<option value="${l.id}" ${(m?.lid||pre?.lid)===l.id?'selected':''}>${esc(l.title)}</option>`).join('')};
    const F={
     mcq:v=>`<label class="l">نص السؤال</label><textarea id="a_q">${esc(v.q||'')}</textarea><label class="l">الخيارات (سطر لكل خيار — الأول هو الصحيح)</label><textarea id="a_o">${esc((v.o||[]).join('\n'))}</textarea><label class="l">شرح (اختياري)</label><input type="text" id="a_e" value="${esc(v.e||'')}">`,
     tf:v=>`<label class="l">العبارة</label><textarea id="a_q">${esc(v.q||'')}</textarea><label class="l">الإجابة</label><select id="a_a"><option value="1" ${v.a!==false?'selected':''}>صح</option><option value="0" ${v.a===false?'selected':''}>خطأ</option></select><label class="l">شرح (اختياري)</label><input type="text" id="a_e" value="${esc(v.e||'')}">`,
@@ -809,18 +830,162 @@ function editChapter(sid,cid){
 }
 
 /* =====================================================================
+   10-ج) الصلاحيات: وضع المدرس عبر حساب Supabase (بريد + كلمة مرور)
+   ===================================================================== */
+const SB={url:'https://pkfxotbirtmfrgxcfufj.supabase.co',key:'sb_publishable_MUutLM9-OsmHsSL-8T1Isw_-MxMIcgX',teachers:['huseny80@gmail.com']};
+const TS='studio-teacher';
+let teacher=false,tUser='';
+try{const o=JSON.parse(sessionStorage.getItem(TS)||'null');if(o&&o.exp>Date.now()){teacher=true;tUser=o.email}}catch(e){}
+function paintTeacher(){const b=$('#tbtn');b.textContent=teacher?'🎓 وضع المدرس — خروج':'🔒 دخول المدرس';b.classList.toggle('on',teacher);b.title=teacher?tUser:'تسجيل دخول المدرس لإظهار بنك الأسئلة وإدارة المحتوى'}
+function setTeacher(on,email,exp){teacher=on;tUser=on?email:'';try{on?sessionStorage.setItem(TS,JSON.stringify({email,exp})):sessionStorage.removeItem(TS)}catch(e){}
+  paintTeacher();render();toast(on?'تم تفعيل وضع المدرس':'عدتَ إلى وضع الطالب')}
+async function sbLogin(email,password){
+  let r;try{r=await fetch(SB.url+'/auth/v1/token?grant_type=password',{method:'POST',headers:{apikey:SB.key,'Content-Type':'application/json'},body:JSON.stringify({email,password})})}
+  catch(e){throw new Error('تعذّر الاتصال بالخادم. تحقق من الإنترنت.')}
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok)throw new Error(r.status===400?'البريد أو كلمة المرور غير صحيحة':(j.error_description||j.msg||'تعذّر تسجيل الدخول'));
+  return j}
+function teacherDialog(){
+  modal(`<h3 style="margin-top:0;color:var(--gold2)">دخول المدرس</h3>
+   <p class="muted" style="margin-top:0">استخدم حساب المدرس المسجّل في المنصة. يظهر بنك الأسئلة وإدارة المحتوى في هذا الوضع فقط.</p>
+   <label class="l" for="te">البريد الإلكتروني</label><input type="email" id="te" dir="ltr" autocomplete="username">
+   <label class="l" for="tp">كلمة المرور</label><input type="password" id="tp" dir="ltr" autocomplete="current-password">
+   <div id="terr" style="color:#fca5a5;min-height:1.4em;margin-top:6px" role="alert"></div>
+   <div class="row" style="margin-top:8px"><span class="sp"></span><button class="btn" id="c">إلغاء</button><button class="btn pri" id="ok">دخول</button></div>`,d=>{
+   $('#c',d).onclick=()=>d.close();
+   const go=async()=>{const em=$('#te',d).value.trim().toLowerCase(),pw=$('#tp',d).value;if(!em||!pw){$('#terr',d).textContent='أدخل البريد وكلمة المرور';return}
+     const b=$('#ok',d);b.disabled=true;b.textContent='جارٍ التحقق…';
+     try{const j=await sbLogin(em,pw);const mail=((j.user&&j.user.email)||em).toLowerCase();
+       if(!SB.teachers.includes(mail))throw new Error('هذا الحساب ليس حساب مدرس');
+       d.close();setTeacher(true,mail,Date.now()+Math.min((j.expires_in||3600)*1000,8*3600e3))}
+     catch(e){$('#terr',d).textContent=e.message;b.disabled=false;b.textContent='دخول'}};
+   $('#ok',d).onclick=go;$('#tp',d).onkeydown=e=>{if(e.key==='Enter')go()}});
+}
+$('#tbtn').onclick=()=>teacher?setTeacher(false):teacherDialog();
+
+/* =====================================================================
+   10-د) المواد والدروس: الصفوف ← المواد ← مجلد لكل درس بخمسة تبويبات
+   ===================================================================== */
+let nav={g:6,sid:null,lid:null,lt:'pdf'};
+const BOOKS_AVAIL=['chem','phy','bio','math','ar1','ar2','isl','en'];
+const bookOf=s=>{const m=/^g6-(.+)$/.exec(s.id);return m&&BOOKS_AVAIL.includes(m[1])?m[1]:null};
+const firstNum=v=>{const m=String(v||'').match(/\d+/);return m?+m[0]:0};
+function qStats(sub){const all=bank(sub.id),byC={},byL={};all.forEach(q=>{if(q.cid)byC[q.cid]=(byC[q.cid]||0)+1;if(q.lid)byL[q.lid]=(byL[q.lid]||0)+1});return {total:all.length,byC,byL,all}}
+function viewLibrary(host){
+  if(nav.sid&&nav.lid)return viewLesson(host);
+  if(nav.sid)return viewSubject(host);
+  const G=[4,5,6],subs=S.subjects.filter(x=>x.grade===nav.g);
+  const st=subs.map(x=>({s:x,q:qStats(x)}));
+  const T=(f)=>st.reduce((a,x)=>a+f(x),0);
+  host.innerHTML=`<div class="gtabs" role="tablist" aria-label="المراحل الدراسية">${G.map(g=>`<button class="gtab" role="tab" aria-selected="${g===nav.g}" data-g="${g}">${GRADES[g]}</button>`).join('')}</div>
+   <div class="stats"><div class="stat"><b>${subs.length}</b><span>عدد المواد</span></div><div class="stat"><b>${T(x=>(x.s.chapters||[]).length)}</b><span>الفصول</span></div><div class="stat"><b>${T(x=>x.s.lessons.length)}</b><span>الدروس</span></div><div class="stat"><b>${T(x=>x.q.total)}</b><span>إجمالي الأسئلة</span></div></div>
+   ${subs.length?`<div class="grid">${st.map(({s:x,q})=>`<div class="card" style="margin:0"><h3 style="margin:0 0 6px;color:var(--gold2)">${esc(x.name)}</h3>
+     <div class="row" style="margin-bottom:10px"><span class="chip">${(x.chapters||[]).length} فصول</span><span class="chip">${x.lessons.length} درساً</span><span class="chip t">${q.total} سؤالاً</span>${bookOf(x)?'<span class="chip g">📘 كتاب PDF</span>':''}</div>
+     <button class="btn pri" data-s="${x.id}" style="width:100%">عرض المادة</button></div>`).join('')}</div>`
+    :`<div class="card"><div class="empty">لا توجد مواد لـ${GRADES[nav.g]} بعد.${teacher?'':' سيضيفها المدرس قريباً.'}</div></div>`}
+   ${teacher?`<div class="row" style="margin-top:12px"><button class="btn" id="adds">+ مادة جديدة لـ${GRADES[nav.g]}</button></div>`:''}`;
+  $$('[data-g]',host).forEach(b=>b.onclick=()=>{nav.g=+b.dataset.g;viewLibrary(host)});
+  $$('[data-s]',host).forEach(b=>b.onclick=()=>{nav.sid=b.dataset.s;nav.lid=null;render();window.scrollTo({top:0})});
+  if(teacher)$('#adds').onclick=()=>editSubject(null,nav.g);
+}
+const goLib=(sid,lid)=>{nav.sid=sid||null;nav.lid=lid||null;render();window.scrollTo({top:0})};
+function viewSubject(host){
+  const sub=S.subjects.find(x=>x.id===nav.sid);if(!sub){nav.sid=null;return viewLibrary(host)}
+  const q=qStats(sub),bk=bookOf(sub);
+  host.innerHTML=`<div class="crumb"><button id="b0">${GRADES[sub.grade]||'المراحل'}</button> › <b>${esc(sub.name)}</b></div>
+   <div class="card"><div class="row"><h2 style="margin:0">${esc(sub.name)}</h2><span class="chip">${(sub.chapters||[]).length} فصول</span><span class="chip">${sub.lessons.length} درساً</span><span class="chip t">${q.total} سؤالاً</span><span class="sp"></span>
+    ${bk?`<a class="btn sm" href="books/${bk}.pdf" target="_blank" rel="noopener">📘 الكتاب (PDF)</a>`:''}<button class="btn sm gold" id="xs_all">اختبار شامل للمادة</button>${teacher?'<button class="btn sm" id="xl_add">+ درس</button><button class="btn sm" id="xc_add">+ فصل</button>':''}</div></div>
+   ${(sub.chapters||[]).map((c,i)=>{const ls=sub.lessons.filter(l=>l.cid===c.id);return `<details class="card" ${i===0?'open':''}><summary><h3 style="margin:0;color:var(--gold2)">📂 ${esc(c.title)}</h3>${c.pages?`<span class="chip">ص ${esc(c.pages)}</span>`:''}<span class="chip">${ls.length} دروس</span><span class="chip t">${q.byC[c.id]||0} سؤالاً</span></summary>
+     <div class="row" style="margin-top:10px"><button class="btn sm gold" data-xc="${c.id}">اختبار هذا الفصل</button></div>
+     ${ls.length?`<div class="folders">${ls.map(l=>`<button class="folder" data-l="${l.id}"><span style="font-size:1.4rem">📁</span><b>${esc(l.title)}</b><small>${l.page?`ص ${esc(l.page)} · `:''}${q.byL[l.id]?q.byL[l.id]+' سؤالاً':'أسئلة الفصل'}</small></button>`).join('')}</div>`:'<div class="empty">لا توجد دروس مفصّلة لهذا الفصل. استخدم «اختبار هذا الفصل» أو أضف درساً.</div>'}</details>`}).join('')||'<div class="card"><div class="empty">لا توجد فصول بعد.</div></div>'}`;
+  $('#b0').onclick=()=>goLib(null);
+  $('#xs_all').onclick=()=>{examPre=sub.id;tab='exam';render()};
+  $$('[data-xc]',host).forEach(b=>b.onclick=()=>startExam(sub.id,q.all.filter(x=>x.cid===b.dataset.xc)));
+  $$('[data-l]',host).forEach(b=>b.onclick=()=>{nav.lid=b.dataset.l;nav.lt='pdf';render();window.scrollTo({top:0})});
+  if(teacher){$('#xl_add').onclick=()=>editLesson(sub.id);$('#xc_add').onclick=()=>editChapter(sub.id)}
+}
+function viewLesson(host){
+  const sub=S.subjects.find(x=>x.id===nav.sid),l=sub&&sub.lessons.find(x=>x.id===nav.lid);
+  if(!sub||!l){nav.lid=null;return viewLibrary(host)}
+  const c=(sub.chapters||[]).find(x=>x.id===l.cid)||{title:'',pages:'',points:[]};
+  if(nav.lt==='bank'&&!teacher)nav.lt='pdf';
+  const LT=[['pdf','المنهج (PDF)'],['chap','الفصل'],['sum','الملخص'],['quiz','الاختبار التفاعلي']];if(teacher)LT.push(['bank','بنك الأسئلة للمدرس']);
+  host.innerHTML=`<div class="crumb"><button id="b0">${GRADES[sub.grade]||'المراحل'}</button> › <button id="b1">${esc(sub.name)}</button> › <b>${esc(l.title)}</b></div>
+   <div class="card"><div class="row"><h2 style="margin:0">📁 ${esc(l.title)}</h2>${c.title?`<span class="chip g">${esc(c.title)}</span>`:''}${l.page?`<span class="chip">ص ${esc(l.page)}</span>`:''}<span class="sp"></span>${teacher?'<button class="btn sm" id="le">تعديل الدرس</button>':''}</div></div>
+   <div class="ltabs" role="tablist">${LT.map(([k,n])=>`<button class="lt ${k==='bank'?'tch':''}" role="tab" aria-selected="${k===nav.lt}" data-lt="${k}">${k==='bank'?'🔑 ':''}${n}</button>`).join('')}</div><div id="lbody"></div>`;
+  $('#b0').onclick=()=>goLib(null);$('#b1').onclick=()=>goLib(sub.id);
+  if(teacher)$('#le').onclick=()=>editLesson(sub.id,l.id);
+  $$('[data-lt]',host).forEach(b=>b.onclick=()=>{nav.lt=b.dataset.lt;viewLesson(host)});
+  const body=$('#lbody'),q=qStats(sub),P={pdf:lessonPdf,chap:lessonChap,sum:lessonSum,quiz:lessonQuiz,bank:lessonBank};
+  P[nav.lt](body,sub,l,c,q);
+}
+function lessonPdf(b,sub,l,c){
+  const bk=bookOf(sub),pg=firstNum(l.page)||firstNum(c.pages)||1;
+  b.innerHTML=`<div class="card">${bk?`<p class="muted" style="margin-top:0">كتاب «${esc(sub.name)}» — الدرس يبدأ عند الصفحة ${pg}.</p>
+    <div class="row"><a class="btn pri" target="_blank" rel="noopener" href="books/${bk}.pdf#page=${pg}">📖 فتح الكتاب عند الصفحة ${pg}</a><a class="btn" href="books/${bk}.pdf" download>⬇ تحميل الكتاب</a><button class="btn" id="vw">عرض هنا</button></div><div id="pv" style="margin-top:12px"></div>`
+    :'<div class="empty">لا يوجد كتاب PDF لهذه المادة بعد. أرفق ملفاً من «تعديل الدرس» في وضع المدرس.</div>'}
+   ${l.link?`<div style="margin-top:10px"><a class="chip t" href="${esc(l.link)}" target="_blank" rel="noopener">🔗 رابط خارجي للدرس</a></div>`:''}
+   ${(l.files||[]).length?`<div class="row" style="margin-top:10px">${l.files.map(f=>`<button class="chip t" style="cursor:pointer" data-file="${f.id}">📎 ${esc(f.name)}</button>`).join('')}</div>`:''}</div>`;
+  if(bk)$('#vw',b).onclick=()=>{$('#pv',b).innerHTML=`<iframe title="الكتاب" src="books/${bk}.pdf#page=${pg}" style="width:100%;height:75vh;border:1px solid var(--line);border-radius:12px;background:#fff"></iframe><p class="muted" style="font-size:.8rem">إن لم يظهر الكتاب على هاتفك فاستخدم «فتح الكتاب».</p>`};
+  $$('[data-file]',b).forEach(x=>x.onclick=async()=>{const bl=await DB.get(x.dataset.file);if(!bl){toast('الملف غير متاح على هذا الجهاز');return}window.open(URL.createObjectURL(bl),'_blank')});
+}
+function lessonChap(b,sub,l,c){
+  const lines=(l.text||'').split('\n').map(x=>x.trim()).filter(Boolean);
+  const r=chapterSummary(sub,c);
+  b.innerHTML=`<div class="card">${lines.length?`<div style="line-height:2;font-size:1.02rem">${lines.map(x=>BUL.test(x)?`<div style="padding-inline-start:18px">• ${esc(x.replace(BUL,''))}</div>`:`<p style="margin:6px 0">${esc(x)}</p>`).join('')}</div>`
+    :`<div class="empty">لم يُضف الشرح التفصيلي لهذا الدرس بعد.${teacher?' استخدم «تعديل الدرس» لإضافة النص، فتتولّد له الأسئلة والملخص تلقائياً.':''}</div>`}</div>
+   ${!lines.length&&r.pts.length?`<div class="card"><h3 style="margin-top:0;color:var(--tq2)">من محتوى الفصل: ${esc(c.title)}</h3><ul style="line-height:1.9">${r.pts.slice(0,8).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:''}`;
+}
+function lessonSum(b,sub,l,c){
+  const r=chapterSummary(sub,c),own=(l.summary||'').trim();
+  const cards=[...(own?[`<div class="sc g"><b style="color:var(--gold2)">ملخص الدرس</b><div style="white-space:pre-wrap">${esc(own)}</div></div>`]:[]),
+    ...r.pts.map(x=>`<div class="sc">${esc(x)}</div>`),
+    ...r.enums.map(e=>`<div class="sc"><b style="color:var(--tq2)">${esc(e.h)}</b><ul style="margin:4px 0">${e.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`),
+    ...((c.note||'').trim()?[`<div class="sc g"><b style="color:var(--gold2)">ملاحظات الفصل</b><div style="white-space:pre-wrap">${esc(c.note)}</div></div>`]:[])];
+  b.innerHTML=`<div class="card"><div class="row"><h3 style="margin:0;color:var(--gold2)">ملخص: ${esc(c.title||l.title)}</h3><span class="sp"></span><button class="btn sm noprint" id="sp">🖨 طباعة</button>${teacher?'<button class="btn sm noprint" id="se">تعديل ملخص الفصل</button>':''}</div>
+   <div class="cards" style="margin-top:10px">${cards.join('')||'<div class="empty">لا يوجد ملخص لهذا الفصل بعد.</div>'}</div></div>`;
+  $('#sp',b).onclick=()=>window.print();
+  if(teacher&&c.id)$('#se',b).onclick=()=>editChapter(sub.id,c.id);
+}
+function lessonQuiz(b,sub,l,c,q){
+  const lq=q.all.filter(x=>x.lid===l.id),cq=q.all.filter(x=>x.cid===l.cid);
+  b.innerHTML=`<div class="card"><h3 style="margin-top:0;color:var(--tq2)">اختبار تفاعلي بتغذية راجعة فورية</h3>
+   <div class="row" style="margin:8px 0">${lq.length?`<label class="chip" style="cursor:pointer"><input type="radio" name="sc" value="l" checked> هذا الدرس (${lq.length} سؤالاً)</label>`:''}
+    <label class="chip" style="cursor:pointer"><input type="radio" name="sc" value="c" ${lq.length?'':'checked'}> الفصل كله (${cq.length} سؤالاً)</label></div>
+   ${!lq.length?'<p class="muted" style="margin:4px 0">لا أسئلة خاصة بهذا الدرس، فيُختبر الطالب في أسئلة فصله.</p>':''}
+   <div class="row"><input type="number" id="qn" min="1" value="10" style="max-width:110px" disabled><label class="chip" style="cursor:pointer"><input type="checkbox" id="qa" checked> كل الأسئلة (بلا حدّ)</label><span class="sp"></span><button class="btn pri" id="qgo" ${cq.length?'':'disabled'}>ابدأ الاختبار</button></div></div>`;
+  $('#qa',b).onchange=e=>{$('#qn',b).disabled=e.target.checked};
+  $('#qgo',b).onclick=()=>{const sc=($('input[name=sc]:checked',b)||{}).value;startExam(sub.id,sc==='l'?lq:cq,$('#qa',b).checked?Infinity:Math.max(1,+$('#qn',b).value||10))};
+}
+function lessonBank(b,sub,l,c,q){
+  if(!teacher){b.innerHTML='';return}
+  const list=q.all.filter(x=>x.lid===l.id||(x.cid===l.cid&&!x.lid));
+  b.innerHTML=`<div class="card"><div class="row"><h3 style="margin:0;color:var(--gold2)">🔑 بنك الأسئلة (للمدرس فقط) — ${list.length} سؤالاً</h3><span class="sp"></span><button class="btn pri" id="qa_">+ سؤال لهذا الدرس</button></div>
+   <p class="muted" style="margin:6px 0 0">الإجابات الصحيحة ظاهرة هنا لأنك في وضع المدرس.</p></div>
+   ${list.slice(0,200).map(x=>`<div class="card" style="padding:12px"><div class="row"><span class="chip g">${TYPES[x.type]}</span><span class="chip ${x.auto?'t':''}">${x.auto?'تلقائي':'يدوي'}</span>${x.lid===l.id?'':'<span class="chip">على مستوى الفصل</span>'}<span class="sp"></span>${x.auto?'':`<button class="btn sm" data-eq="${x.id}">تعديل</button><button class="btn sm dng" data-dq="${x.id}">حذف</button>`}</div>
+    <div style="margin-top:6px;line-height:1.8">${x.type==='read'?esc((x.passage||'').slice(0,140))+'…':esc(fmt(x.q,x.kind))}</div>
+    ${x.type==='read'?'':`<div style="margin-top:4px;color:var(--ok);font-weight:700">الإجابة: ${esc(ansOf(x))}</div>`}</div>`).join('')||'<div class="card"><div class="empty">لا توجد أسئلة بعد.</div></div>'}`;
+  $('#qa_',b).onclick=()=>editQuestion(null,{sid:sub.id,cid:l.cid,lid:l.id});
+  $$('[data-eq]',b).forEach(x=>x.onclick=()=>editQuestion(x.dataset.eq));
+  $$('[data-dq]',b).forEach(x=>x.onclick=async()=>{if(await ask('حذف هذا السؤال؟')){const before=bankSize();S.manual=S.manual.filter(m=>m.id!==x.dataset.dq);afterChange(before,'حُذف السؤال')}});
+}
+
+/* =====================================================================
    11) التبويبات والتحديث الفوري
    ===================================================================== */
-const TABS=[['exam','الاختبارات',viewExam],['sum','الملخصات',viewSummaries],['cms','إدارة المواد',viewCMS],['bank','بنك الأسئلة',viewBank],['scores','النتائج',viewScores]];
-let tab='exam';
+function tabsList(){const t=[['lib','المواد والدروس',viewLibrary],['exam','اختبار شامل',viewExam],['sum','الملخصات',viewSummaries],['scores','النتائج',viewScores]];
+  if(teacher)t.push(['cms','إدارة المحتوى',viewCMS],['bank','بنك الأسئلة',viewBank]);return t}
+let tab='lib';
 function render(){
-  $('#tabs').innerHTML=TABS.map(([k,n])=>`<button class="tab" role="tab" aria-selected="${k===tab}" data-t="${k}">${n}${k==='bank'?` <span class="chip t">${bankSize()}</span>`:''}</button>`).join('');
+  if(!tabsList().some(t=>t[0]===tab))tab='lib';
+  $('#tabs').innerHTML=tabsList().map(([k,n])=>`<button class="tab" role="tab" aria-selected="${k===tab}" data-t="${k}">${n}${k==='bank'?` <span class="chip t">${bankSize()}</span>`:''}</button>`).join('');
   $$('.tab').forEach(b=>b.onclick=()=>{if(tab==='exam'&&exam&&exam.running&&b.dataset.t!=='exam'){}tab=b.dataset.t;try{location.hash=tab}catch(e){}render()});
-  const v=$('#view'),f=TABS.find(t=>t[0]===tab)[2];f(v);
+  const v=$('#view'),f=tabsList().find(t=>t[0]===tab)[2];f(v);
 }
 /* تحديث فوري عند التعديل من تبويب/نافذة أخرى */
 window.addEventListener('storage',e=>{if(e.key===LS){S=loadState();if(!(exam&&exam.running)){render();toast('تم تحديث المحتوى وبنك الأسئلة تلقائياً')}}});
-const h=(location.hash||'').replace('#','');if(TABS.some(t=>t[0]===h))tab=h;
+const h=(location.hash||'').replace('#','');if(h!=='cms'&&h!=='bank'&&tabsList().some(t=>t[0]===h))tab=h;
+paintTeacher();
 render();
 $('#fabb').onclick=()=>{toast('في نافذة الطباعة اختر «حفظ بصيغة PDF» لحفظ الصفحة ملفاً');setTimeout(()=>window.print(),350)};
 window.studio={get state(){return S},bank,fmt,canon};
