@@ -45,6 +45,10 @@ export default function HomePage() {
           />
         </div>
 
+        <a href="/platform.html" className="inline-block mt-10 bg-amber-400 text-gray-900 font-bold px-8 py-3 rounded-xl hover:bg-amber-300 transition-colors">
+          تصفّح المواد والاختبارات التفاعلية
+        </a>
+
         {/* Grade Badges */}
         <div className="flex justify-center gap-3 mt-14 flex-wrap">
           {['الرابع الإعدادي','الخامس الإعدادي','السادس الإعدادي'].map(g => (
