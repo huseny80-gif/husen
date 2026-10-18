@@ -28,6 +28,7 @@ body{min-height:100vh;color:#e6f1f5;background:radial-gradient(1200px 600px at 8
 </style>
 </head>
 <body class="p-4 md:p-8">
+<script src="../catalog.js"></script><script src="../nav.js"></script>
 <div id="app" class="max-w-3xl mx-auto"></div>
 <script>
 const DATA = [{"chapter": 1, "title": "الوحدة الأولى: الجبر والمعادلات", "questions": [{"t": "mcq", "q": "حل المعادلة 2س + 6 = 14 هو:", "o": ["س = 4", "س = 10", "س = 3", "س = 7"], "e": "2س = 8 ومنه س = 4.", "p": 0}, {"t": "mcq", "q": "ناتج (س + 3)(س − 3) =", "o": ["س² − 9", "س² + 9", "س² − 6س + 9", "2س − 9"], "e": "فرق مربعين: (أ+ب)(أ−ب) = أ² − ب².", "p": 0}, {"t": "mcq", "q": "تحليل س² − 25 إلى عوامله:", "o": ["(س−5)(س+5)", "(س−25)(س+1)", "(س−5)²", "(س+5)²"], "e": "فرق مربعين: س² − 5² = (س−5)(س+5).", "p": 0}, {"t": "tf", "q": "ناتج (س + 2)² يساوي س² + 4.", "a": false, "e": "الصحيح: س² + 4س + 4 لأن الحد الأوسط = 2 × س × 2.", "p": 0}, {"t": "mcq", "q": "إذا كان 3س − 5 = 7 فإن س =", "o": ["4", "2", "12", "-4"], "e": "3س = 12 ومنه س = 4.", "p": 0}, {"t": "mcq", "q": "قيمة 2³ × 2² تساوي:", "o": ["32", "12", "64", "10"], "e": "عند ضرب القوى بنفس الأساس نجمع الأسس: 2⁵ = 32.", "p": 0}]}, {"chapter": 2, "title": "الوحدة الثانية: النسبة والتناسب والنسب المئوية", "questions": [{"t": "mcq", "q": "25% من العدد 80 تساوي:", "o": ["20", "25", "32", "5"], "e": "80 × 25/100 = 20.", "p": 0}, {"t": "mcq", "q": "إذا كانت النسبة 3 : 5 وكان الحد الأول 12 فالحد الثاني:", "o": ["20", "15", "36", "7.2"], "e": "12 ÷ 3 = 4 ثم 4 × 5 = 20.", "p": 0}, {"t": "tf", "q": "إذا ارتفع سعر سلعة من 100 إلى 120 فنسبة الزيادة 20%.", "a": true, "e": "الزيادة 20 ÷ 100 = 20%.", "p": 0}, {"t": "mcq", "q": "سيارة تقطع 240 km في 3 ساعات بسرعة ثابتة، فكم تقطع في 5 ساعات؟", "o": ["400 km", "300 km", "360 km", "480 km"], "e": "السرعة 80 km/h، 80 × 5 = 400 km.", "p": 0}]}, {"chapter": 3, "title": "الوحدة الثالثة: الهندسة", "questions": [{"t": "mcq", "q": "مساحة مثلث قاعدته 10 cm وارتفاعه 6 cm:", "o": ["30 cm²", "60 cm²", "16 cm²", "15 cm²"], "e": "½ × 10 × 6 = 30 cm².", "p": 0}, {"t": "mcq", "q": "في مثلث قائم طولا ضلعيه القائمين 3 و4 فإن الوتر:", "o": ["5", "7", "6", "12"], "e": "نظرية فيثاغورس: 9 + 16 = 25 والجذر 5.", "p": 0}, {"t": "mcq", "q": "مجموع زوايا المثلث الداخلية:", "o": ["180°", "360°", "90°", "270°"], "e": "مجموع زوايا أي مثلث 180°.", "p": 0}, {"t": "tf", "q": "مساحة الدائرة = π × نق².", "a": true, "e": "قانون مساحة الدائرة π نق².", "p": 0}, {"t": "mcq", "q": "محيط مستطيل طوله 8 وعرضه 5:", "o": ["26", "40", "13", "18"], "e": "المحيط = 2 × (8 + 5) = 26.", "p": 0}]}];
@@ -61,7 +62,7 @@ const fmt=s=>`${String(Math.max(0,s)/60|0).padStart(2,'0')}:${String(Math.max(0,
 function render(){
   const q=st.qs[st.n],tot=st.qs.length;
   app.innerHTML=`<div class="fade">
-  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> الرئيسية</button>
+  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button>
    <span class="glass px-3 py-1"><i class="fa-regular fa-clock text-teal-300"></i> <b id="tm">${fmt(st.left)}</b></span>
    <span class="gold font-bold">${st.n+1} / ${tot}</span></div>
   <div class="bar mb-5"><i style="width:${st.n/tot*100}%"></i></div>
@@ -99,7 +100,7 @@ function finish(){
    <div class="flex flex-wrap gap-3 justify-center mt-4">
     <button class="btn" onclick="start(${st.i})"><i class="fa-solid fa-rotate-right"></i> إعادة الاختبار</button>
     ${st.wrong.length?`<button class="btn btn-gold" onclick="review()"><i class="fa-solid fa-magnifying-glass"></i> مراجعة الأخطاء (${st.wrong.length})</button>`:''}
-    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> الرئيسية</button></div></div>`;
+    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button></div></div>`;
 }
 function review(){
   app.innerHTML=`<div class="fade"><button onclick="finish()" class="text-slate-300 mb-3"><i class="fa-solid fa-arrow-right"></i> رجوع للنتيجة</button>

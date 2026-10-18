@@ -14,41 +14,31 @@ main{max-width:980px;margin:0 auto}
 h1{font-size:clamp(1.7rem,5vw,2.6rem);font-weight:800;margin:.3rem 0;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero{text-align:center;margin-bottom:28px}.hero p{color:#b7c9d1;margin:.3rem 0}
 .hero i.big{font-size:3rem;color:var(--gold)}
-.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:6px 14px;font-size:.9rem}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
-a.card{display:block;text-decoration:none;color:inherit;padding:20px;border-radius:1.25rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,.35);transition:.2s}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+a.card{display:block;text-decoration:none;color:inherit;padding:24px;border-radius:1.25rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,.35);transition:.2s;text-align:center}
 a.card:hover{transform:translateY(-4px);border-color:var(--tq)}
-.ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;color:var(--gold2);background:rgba(20,184,166,.18);margin-bottom:12px}
-.card h2{margin:0 0 6px;font-size:1.15rem}.meta{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:#9fb6bf;margin-top:10px}
-.best{color:var(--gold2);font-weight:700}
+.ic{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;color:var(--gold2);background:rgba(20,184,166,.18);margin:0 auto 12px}
+.card h2{margin:0 0 6px;font-size:1.25rem}.meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:.85rem;color:#9fb6bf;margin-top:10px}
+.chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:4px 12px}
+.soon{opacity:.8}
 footer{text-align:center;color:#7f98a2;font-size:.85rem;margin-top:34px}
 </style>
 </head>
 <body>
+<script src="catalog.js"></script><script src="nav.js"></script>
 <main>
 <div class="hero"><i class="fa-solid fa-graduation-cap big"></i>
 <h1>المنصة التعليمية للمرحلة الإعدادية</h1>
-<p>اختبارات تفاعلية بتغذية راجعة فورية، عدّاد وقت، شارات إنجاز، وحفظ الدرجات على جهازك</p>
-<div class="stats"><span class="chip"><i class="fa-solid fa-book"></i> <b id="nSub"></b> مواد</span><span class="chip"><i class="fa-solid fa-circle-question"></i> <b id="nQ"></b> سؤالاً</span><span class="chip"><i class="fa-solid fa-trophy"></i> أفضل نتائجك محفوظة</span></div></div>
-<div style="text-align:center;margin:0 0 18px"><a href="curriculum.html" class="chip" style="color:inherit;text-decoration:none"><i class="fa-solid fa-book-open-reader"></i> مكتبة المناهج — فهارس كتب السادس الإعدادي</a></div>
+<p>اختر صفّك لتصل إلى مكتبة المناهج والاختبارات التفاعلية</p></div>
 <div class="grid" id="g"></div>
 <footer>إعداد: المهندس حسين ياسين حسن</footer>
 </main>
 <script>
-const SUBJECTS=[
-{f:'chemistry-grade6',t:'الكيمياء — السادس العلمي',i:'fa-flask-vial',n:147,k:'chem6-scores-v1'},
-{f:'physics-prep',t:'الفيزياء',i:'fa-atom',n:18,k:'phys-v1'},
-{f:'math-prep',t:'الرياضيات',i:'fa-square-root-variable',n:15,k:'math-v1'},
-{f:'arabic-prep',t:'اللغة العربية',i:'fa-book-quran',n:14,k:'ar-v1'},
-{f:'biology-prep',t:'الأحياء',i:'fa-dna',n:13,k:'bio-v1'},
-{f:'english-prep',t:'اللغة الإنجليزية',i:'fa-language',n:10,k:'en-v1'},
-{f:'arabic2-prep',t:'اللغة العربية — الجزء الثاني (السادس الإعدادي)',i:'fa-book-open',n:37,k:'ar2-v1'},
-{f:'islamic-prep',t:'القرآن الكريم والتربية الإسلامية (السادس الإعدادي)',i:'fa-book-quran',n:51,k:'isl-v1'}];
-const best=k=>{try{const d=JSON.parse(localStorage.getItem(k))||{};const v=Object.values(d).map(x=>x.pct);return v.length?Math.max(...v):null}catch(e){return null}};
-document.getElementById('nSub').textContent=SUBJECTS.length;
-document.getElementById('nQ').textContent=SUBJECTS.reduce((a,s)=>a+s.n,0);
-document.getElementById('g').innerHTML=SUBJECTS.map(s=>{const b=best(s.k);return `<a class="card" href="quizzes/${s.f}.html"><div class="ic"><i class="fa-solid ${s.i}"></i></div><h2>${s.t}</h2><div class="meta"><span>${s.n} سؤالاً</span>${b!==null?`<span class="best"><i class="fa-solid fa-trophy"></i> ${b}%</span>`:'<span>ابدأ الآن</span>'}</div></a>`}).join('');
+const C=window.CATALOG;
+document.getElementById('g').innerHTML=C.grades.map(x=>{
+ const qs=C.quizzes.filter(q=>q.g===x.g),n=qs.reduce((a,q)=>a+q.n,0),lib=C.libraryGrades.includes(x.g);
+ return `<a class="card ${qs.length||lib?'':'soon'}" href="grade.html?g=${x.g}"><div class="ic"><i class="fa-solid ${x.icon}"></i></div><h2>${x.name}</h2>
+ <div class="meta">${lib?'<span class="chip"><i class="fa-solid fa-book-open-reader"></i> مكتبة المناهج</span>':''}${qs.length?`<span class="chip"><i class="fa-solid fa-circle-question"></i> ${qs.length} مواد · ${n} سؤالاً</span>`:'<span class="chip">قريباً</span>'}</div></a>`}).join('');
 </script>
 </body>
 </html>

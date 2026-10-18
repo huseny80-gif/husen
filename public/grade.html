@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صفحة الصف — المنصة التعليمية</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--tq:#14b8a6;--gold:#d4af37;--gold2:#f3d97a}
+*{box-sizing:border-box;font-family:'Cairo','Tajawal',sans-serif}
+body{margin:0;min-height:100vh;color:#e6f1f5;padding:24px 16px;background:radial-gradient(1200px 600px at 80% -10%,#0f4a52,transparent 60%),radial-gradient(900px 500px at 0 100%,#0b2f4a,transparent 55%),linear-gradient(160deg,#050d1a,#0a2230)}
+main{max-width:980px;margin:0 auto}
+h1{font-size:clamp(1.6rem,5vw,2.4rem);font-weight:800;margin:.3rem 0;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{text-align:center;margin-bottom:22px}.hero p{color:#b7c9d1;margin:.3rem 0}
+.gt{display:flex;gap:8px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+.gt a{text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06);border-radius:99px;padding:7px 16px;font-size:.9rem}
+.gt a.on{background:linear-gradient(135deg,var(--tq),#0f766e);border-color:var(--tq);font-weight:700}
+h2.sec{font-size:1.15rem;margin:26px 0 12px;color:var(--gold2)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+a.card{display:block;text-decoration:none;color:inherit;padding:20px;border-radius:1.25rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,.35);transition:.2s}
+a.card:hover{transform:translateY(-4px);border-color:var(--tq)}
+.ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;color:var(--gold2);background:rgba(20,184,166,.18);margin-bottom:12px}
+.card h3{margin:0 0 6px;font-size:1.1rem}.meta{display:flex;justify-content:space-between;align-items:center;font-size:.85rem;color:#9fb6bf;margin-top:10px}
+.best{color:var(--gold2);font-weight:700}.tag{background:rgba(212,175,55,.16);color:var(--gold2);border-radius:99px;padding:1px 10px;font-size:.75rem;margin-inline-start:6px}
+.empty{text-align:center;color:#9fb6bf;padding:26px;border:1px dashed rgba(255,255,255,.2);border-radius:1rem}
+</style>
+</head>
+<body>
+<script src="catalog.js"></script><script src="nav.js"></script>
+<main>
+<div class="hero"><h1 id="t"></h1><p>مكتبة المناهج والاختبارات التفاعلية لهذا الصف</p></div>
+<div class="gt" id="gt"></div>
+<h2 class="sec"><i class="fa-solid fa-book-open-reader"></i> مكتبة المناهج</h2>
+<div class="grid" id="lib"></div>
+<h2 class="sec"><i class="fa-solid fa-circle-question"></i> الاختبارات التفاعلية</h2>
+<div class="grid" id="qz"></div>
+</main>
+<script>
+const C=window.CATALOG;let g=+(location.search.match(/[?&]g=(\d)/)||[0,6])[1];
+if(!C.grades.some(x=>x.g===g))g=6;const G=C.grades.find(x=>x.g===g);
+document.getElementById('t').textContent=G.name;document.title=G.name+' — المنصة التعليمية';
+document.getElementById('gt').innerHTML=C.grades.map(x=>`<a class="${x.g===g?'on':''}" href="grade.html?g=${x.g}">${x.short}</a>`).join('');
+document.getElementById('lib').innerHTML=C.libraryGrades.includes(g)
+ ?`<a class="card" href="curriculum.html?g=${g}"><div class="ic"><i class="fa-solid fa-book-open-reader"></i></div><h3>مكتبة مناهج ${G.short} الإعدادي</h3><div class="meta"><span>فهارس الكتب ودروسها وتتبّع التقدم</span></div></a>`
+ :`<div class="empty" style="grid-column:1/-1">لم تُضف كتب هذا الصف إلى المكتبة بعد.</div>`;
+const best=k=>{try{const d=JSON.parse(localStorage.getItem(k))||{};const v=Object.values(d).map(x=>x.pct);return v.length?Math.max(...v):null}catch(e){return null}};
+const qs=C.quizzes.filter(q=>q.g===g);
+document.getElementById('qz').innerHTML=qs.length?qs.map(s=>{const b=best(s.k);return `<a class="card" href="quizzes/${s.f}.html"><div class="ic"><i class="fa-solid ${s.i}"></i></div><h3>${s.t}${s.tag?`<span class="tag">${s.tag}</span>`:''}</h3><div class="meta"><span>${s.n} سؤالاً</span>${b!==null?`<span class="best"><i class="fa-solid fa-trophy"></i> ${b}%</span>`:'<span>ابدأ الآن</span>'}</div></a>`}).join(''):`<div class="empty" style="grid-column:1/-1">لا توجد اختبارات لهذا الصف بعد.</div>`;
+</script>
+</body>
+</html>

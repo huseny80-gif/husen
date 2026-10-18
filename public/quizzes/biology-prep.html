@@ -28,6 +28,7 @@ body{min-height:100vh;color:#e6f1f5;background:radial-gradient(1200px 600px at 8
 </style>
 </head>
 <body class="p-4 md:p-8">
+<script src="../catalog.js"></script><script src="../nav.js"></script>
 <div id="app" class="max-w-3xl mx-auto"></div>
 <script>
 const DATA = [{"chapter": 1, "title": "الوحدة الأولى: الخلية", "questions": [{"t": "mcq", "q": "الوحدة الأساسية في بناء الكائنات الحية هي:", "o": ["الخلية", "النسيج", "العضو", "الجهاز"], "e": "الخلية أصغر وحدة بنائية ووظيفية.", "p": 0}, {"t": "mcq", "q": "العضية المسؤولة عن إنتاج الطاقة في الخلية:", "o": ["الميتوكوندريا", "النواة", "الفجوة", "جدار الخلية"], "e": "الميتوكوندريا هي محطة الطاقة.", "p": 0}, {"t": "tf", "q": "جدار الخلية يوجد في الخلية النباتية فقط دون الحيوانية.", "a": true, "e": "الخلية الحيوانية يحيط بها غشاء بلازمي فقط.", "p": 0}, {"t": "mcq", "q": "تحتوي النواة على:", "o": ["المادة الوراثية DNA", "الكلوروفيل", "الليسوسومات فقط", "الماء فقط"], "e": "النواة مركز التحكم وفيها DNA.", "p": 0}, {"t": "mcq", "q": "عملية البناء الضوئي تتم في:", "o": ["البلاستيدات الخضراء", "الميتوكوندريا", "الجسيم المركزي", "الريبوسومات"], "e": "تحتوي البلاستيدات على الكلوروفيل.", "p": 0}]}, {"chapter": 2, "title": "الوحدة الثانية: الوراثة", "questions": [{"t": "mcq", "q": "الجين هو:", "o": ["جزء من DNA يحمل صفة وراثية", "نوع من البروتين فقط", "عضية خلوية", "خلية جنسية"], "e": "الجين جزء من DNA يتحكم في صفة معينة.", "p": 0}, {"t": "mcq", "q": "عدد الكروموسومات الجسمية والجنسية في خلية الإنسان الجسمية:", "o": ["46", "23", "48", "44"], "e": "خلية الإنسان الجسمية فيها 46 كروموسوماً (23 زوجاً).", "p": 0}, {"t": "tf", "q": "الصفة السائدة تظهر حتى لو وُجد معها أليل متنحٍّ.", "a": true, "e": "السائد يُخفي أثر المتنحي في الطراز الهجين.", "p": 0}, {"t": "mcq", "q": "عالم وضع قوانين الوراثة بتجاربه على نبات البازلاء:", "o": ["مندل", "داروين", "باستور", "هوك"], "e": "يُعد غريغور مندل أبا الوراثة.", "p": 0}]}, {"chapter": 3, "title": "الوحدة الثالثة: الدورة الدموية", "questions": [{"t": "mcq", "q": "عدد حجرات القلب البشري:", "o": ["أربع", "اثنتان", "ثلاث", "خمس"], "e": "أذينان وبطينان.", "p": 0}, {"t": "mcq", "q": "الأوعية التي تنقل الدم من القلب إلى الجسم:", "o": ["الشرايين", "الأوردة", "الشعيرات فقط", "القصبات"], "e": "الشرايين تحمل الدم من القلب.", "p": 0}, {"t": "tf", "q": "كريات الدم الحمراء تحتوي على الهيموغلوبين الناقل للأكسجين.", "a": true, "e": "الهيموغلوبين يرتبط بالأكسجين.", "p": 0}, {"t": "mcq", "q": "الدم الغني بالأكسجين يعود من الرئتين إلى:", "o": ["الأذين الأيسر", "الأذين الأيمن", "البطين الأيمن", "الكبد"], "e": "الأوردة الرئوية تفرغ في الأذين الأيسر.", "p": 0}]}];
@@ -61,7 +62,7 @@ const fmt=s=>`${String(Math.max(0,s)/60|0).padStart(2,'0')}:${String(Math.max(0,
 function render(){
   const q=st.qs[st.n],tot=st.qs.length;
   app.innerHTML=`<div class="fade">
-  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> الرئيسية</button>
+  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button>
    <span class="glass px-3 py-1"><i class="fa-regular fa-clock text-teal-300"></i> <b id="tm">${fmt(st.left)}</b></span>
    <span class="gold font-bold">${st.n+1} / ${tot}</span></div>
   <div class="bar mb-5"><i style="width:${st.n/tot*100}%"></i></div>
@@ -99,7 +100,7 @@ function finish(){
    <div class="flex flex-wrap gap-3 justify-center mt-4">
     <button class="btn" onclick="start(${st.i})"><i class="fa-solid fa-rotate-right"></i> إعادة الاختبار</button>
     ${st.wrong.length?`<button class="btn btn-gold" onclick="review()"><i class="fa-solid fa-magnifying-glass"></i> مراجعة الأخطاء (${st.wrong.length})</button>`:''}
-    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> الرئيسية</button></div></div>`;
+    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button></div></div>`;
 }
 function review(){
   app.innerHTML=`<div class="fade"><button onclick="finish()" class="text-slate-300 mb-3"><i class="fa-solid fa-arrow-right"></i> رجوع للنتيجة</button>

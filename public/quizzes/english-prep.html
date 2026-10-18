@@ -28,6 +28,7 @@ body{min-height:100vh;color:#e6f1f5;background:radial-gradient(1200px 600px at 8
 </style>
 </head>
 <body class="p-4 md:p-8">
+<script src="../catalog.js"></script><script src="../nav.js"></script>
 <div id="app" class="max-w-3xl mx-auto"></div>
 <script>
 const DATA = [{"chapter": 1, "title": "Unit 1: Tenses", "questions": [{"t": "mcq", "q": "She ___ to school every day.", "o": ["goes", "go", "going", "gone"], "e": "الفاعل المفرد الغائب مع المضارع البسيط يأخذ s: goes.", "p": 0}, {"t": "mcq", "q": "They ___ football now.", "o": ["are playing", "plays", "played", "play"], "e": "now يدل على المضارع المستمر.", "p": 0}, {"t": "mcq", "q": "I ___ my homework yesterday.", "o": ["finished", "finish", "finishes", "finishing"], "e": "yesterday يدل على الماضي البسيط.", "p": 0}, {"t": "tf", "q": "\"He don't like tea\" is a correct sentence.", "a": false, "e": "الصحيح: He doesn't like tea.", "p": 0}, {"t": "mcq", "q": "We ___ visit Basra next week.", "o": ["will", "did", "are", "was"], "e": "will للمستقبل.", "p": 0}]}, {"chapter": 2, "title": "Unit 2: Vocabulary & Prepositions", "questions": [{"t": "mcq", "q": "The opposite of \"big\" is:", "o": ["small", "tall", "wide", "fast"], "e": "عكس big هو small.", "p": 0}, {"t": "mcq", "q": "The book is ___ the table.", "o": ["on", "at", "under", "between"], "e": "on للسطح.", "p": 0}, {"t": "mcq", "q": "Plural of \"child\" is:", "o": ["children", "childs", "childes", "childen"], "e": "جمع شاذ: children.", "p": 0}, {"t": "tf", "q": "\"An\" is used before a vowel sound like \"apple\".", "a": true, "e": "نستعمل an قبل الصوت المتحرك.", "p": 0}, {"t": "mcq", "q": "He is ___ than his brother.", "o": ["taller", "tallest", "more tall", "tall"], "e": "المقارنة بين اثنين: taller than.", "p": 0}]}];
@@ -61,7 +62,7 @@ const fmt=s=>`${String(Math.max(0,s)/60|0).padStart(2,'0')}:${String(Math.max(0,
 function render(){
   const q=st.qs[st.n],tot=st.qs.length;
   app.innerHTML=`<div class="fade">
-  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> الرئيسية</button>
+  <div class="flex items-center justify-between mb-3 text-sm"><button onclick="home()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button>
    <span class="glass px-3 py-1"><i class="fa-regular fa-clock text-teal-300"></i> <b id="tm">${fmt(st.left)}</b></span>
    <span class="gold font-bold">${st.n+1} / ${tot}</span></div>
   <div class="bar mb-5"><i style="width:${st.n/tot*100}%"></i></div>
@@ -99,7 +100,7 @@ function finish(){
    <div class="flex flex-wrap gap-3 justify-center mt-4">
     <button class="btn" onclick="start(${st.i})"><i class="fa-solid fa-rotate-right"></i> إعادة الاختبار</button>
     ${st.wrong.length?`<button class="btn btn-gold" onclick="review()"><i class="fa-solid fa-magnifying-glass"></i> مراجعة الأخطاء (${st.wrong.length})</button>`:''}
-    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> الرئيسية</button></div></div>`;
+    <button class="btn btn-ghost" onclick="home()"><i class="fa-solid fa-house"></i> قائمة الاختبارات</button></div></div>`;
 }
 function review(){
   app.innerHTML=`<div class="fade"><button onclick="finish()" class="text-slate-300 mb-3"><i class="fa-solid fa-arrow-right"></i> رجوع للنتيجة</button>
