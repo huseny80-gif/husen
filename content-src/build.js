@@ -28,6 +28,17 @@ for(const id of ['chem','phy','bio','math','ar1','ar2','isl','en']){
 }
 const g4=[['phys','الفيزياء','physics-prep'],['math','الرياضيات','math-prep'],['ar','اللغة العربية — النحو والإملاء','arabic-prep'],['bio','الأحياء','biology-prep'],['en','اللغة الإنجليزية — Grammar','english-prep']];
 for(const [id,name,f] of g4){const d=quiz(f);add('g4-'+id,name,4,'',d.map(c=>({title:c.title,lessons:[]})),d)}
-const out={v:2,subjects,manual};
+// أسئلة مولَّدة (content-src/gen/<id>.json)
+let gid=0;const genCount={};
+for(const id of ['chem','phy','bio','math','ar1','ar2','isl','en']){
+  const f='content-src/gen/'+id+'.json';if(!fs.existsSync(f))continue;
+  const sid='g6-'+id;const sub=subjects.find(s=>s.id===sid);
+  for(const g of JSON.parse(rd(f))){
+    const {c,l,t,...rest}=g;const cid=sid+'-c'+c;if(!sub.chapters.some(x=>x.id===cid))continue;
+    const q={id:'n'+(++gid),sid,cid,type:t,...rest};if(l)q.lid=cid+'-l'+l;
+    if(t==='read')q.q='Reading comprehension';
+    manual.push(q);genCount[id]=(genCount[id]||0)+1}}
+console.log('generated',JSON.stringify(genCount));
+const out={v:3,subjects,manual};
 fs.writeFileSync('public/studio-content.js','/* محتوى المنصة: فهارس الكتب + بنوك الأسئلة. يُولَّد بـ content-src/build.js */\nwindow.STUDIO_CONTENT='+JSON.stringify(out)+';\n');
 console.log(subjects.map(s=>s.id+': '+s.chapters.length+' ch, '+s.lessons.length+' lessons').join('\n'),'\nquestions',manual.length,'bytes',fs.statSync('public/studio-content.js').size);

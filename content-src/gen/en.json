@@ -1,0 +1,1936 @@
+[
+ {
+  "c": 1,
+  "l": 1,
+  "t": "def",
+  "q": "Define: \"bleed\" (as in \"My toe is bleeding\").",
+  "a": "To lose blood from the body, usually because of a cut or injury.",
+  "k": [
+   "lose",
+   "blood",
+   "cut",
+   "injury"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 2,
+  "t": "def",
+  "q": "Give the meaning of the verb \"to fall over\".",
+  "a": "To lose your balance and drop to the ground.",
+  "k": [
+   "balance",
+   "ground",
+   "drop",
+   "fall"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 4,
+  "t": "def",
+  "q": "Define: \"to take up\" (a habit or hobby), as in \"Most smokers take it up as teenagers\".",
+  "a": "To start doing a new activity, hobby or habit.",
+  "k": [
+   "start",
+   "activity",
+   "habit",
+   "hobby"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 7,
+  "t": "def",
+  "q": "Give the meaning of \"diet\".",
+  "a": "The food and drink that a person usually eats, or a special selection of food eaten to be healthy or lose weight.",
+  "k": [
+   "food",
+   "eat",
+   "healthy",
+   "weight"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 9,
+  "t": "def",
+  "q": "Define: \"against all odds\".",
+  "a": "Succeeding even though success seemed very unlikely or very difficult.",
+  "k": [
+   "succeed",
+   "unlikely",
+   "difficult",
+   "despite"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 5,
+  "t": "why",
+  "q": "Why is it a good idea to take some exercise every day?",
+  "a": "Because regular exercise keeps the heart and muscles strong, helps control weight and reduces stress.",
+  "k": [
+   "heart",
+   "muscles",
+   "weight",
+   "stress",
+   "healthy"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 4,
+  "t": "why",
+  "q": "Why do doctors advise people not to smoke?",
+  "a": "Because smoking harms the lungs and heart and can cause serious diseases such as cancer.",
+  "k": [
+   "lungs",
+   "heart",
+   "diseases",
+   "cancer",
+   "harm"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 7,
+  "t": "enum",
+  "q": "List three things you can do to have a healthy diet.",
+  "a": [
+   "Eat more fruit and vegetables",
+   "Drink plenty of water",
+   "Eat less sugar and fat",
+   "Avoid too much fast food"
+  ]
+ },
+ {
+  "c": 1,
+  "l": 2,
+  "t": "mcq",
+  "q": "I ____ TV when the phone rang.",
+  "o": [
+   "was watching",
+   "watched",
+   "have watched",
+   "watch"
+  ],
+  "e": "Past continuous for the longer action interrupted by a shorter past simple action."
+ },
+ {
+  "c": 1,
+  "l": 3,
+  "t": "mcq",
+  "q": "While she ____ the piano, her brother came in.",
+  "o": [
+   "was playing",
+   "played",
+   "is playing",
+   "has played"
+  ],
+  "e": "\"While\" is used with the past continuous for the action in progress."
+ },
+ {
+  "c": 1,
+  "l": 6,
+  "t": "mcq",
+  "q": "When I was a child, I ____ play in the street every evening.",
+  "o": [
+   "used to",
+   "use to",
+   "am used to",
+   "was use to"
+  ],
+  "e": "\"Used to\" + infinitive describes past habits that no longer happen."
+ },
+ {
+  "c": 1,
+  "l": 5,
+  "t": "mcq",
+  "q": "You look tired. You ____ go to bed early tonight.",
+  "o": [
+   "should",
+   "shouldn't",
+   "mustn't to",
+   "can't to"
+  ],
+  "e": "\"Should\" gives advice."
+ },
+ {
+  "c": 1,
+  "l": 4,
+  "t": "mcq",
+  "q": "Which phrasal verb means \"stop doing something unhealthy\"?",
+  "o": [
+   "give up",
+   "take up",
+   "put on",
+   "go on"
+  ],
+  "e": "\"Give up\" = stop a habit, e.g. give up smoking."
+ },
+ {
+  "c": 1,
+  "l": 2,
+  "t": "tf",
+  "q": "In \"I was ice skating when I fell over\", the action \"fell over\" is the shorter action that interrupted the longer one.",
+  "a": true,
+  "e": "\"Was skating\" is the longer background action; \"fell\" interrupts it."
+ },
+ {
+  "c": 1,
+  "l": 6,
+  "t": "tf",
+  "q": "\"Life used to be different\" means life is different now.",
+  "a": true,
+  "e": "\"Used to\" talks about past states that are no longer true."
+ },
+ {
+  "c": 1,
+  "l": 7,
+  "t": "tf",
+  "q": "The sentence \"You should to eat more vegetables\" is grammatically correct.",
+  "a": false,
+  "e": "\"Should\" is followed by the base form without \"to\": You should eat more vegetables."
+ },
+ {
+  "c": 1,
+  "l": 2,
+  "t": "fill",
+  "q": "She ____ (cut) her finger while she ____ (cook) dinner.",
+  "a": [
+   "cut",
+   "was cooking"
+  ],
+  "e": "She cut her finger while she was cooking dinner."
+ },
+ {
+  "c": 1,
+  "l": 6,
+  "t": "fill",
+  "q": "My grandfather ____ (live) in a village when he was young, but now he lives in a city.",
+  "a": [
+   "used to live|lived"
+  ],
+  "e": "My grandfather used to live in a village when he was young."
+ },
+ {
+  "c": 1,
+  "l": 5,
+  "t": "fill",
+  "q": "If you want to stay fit, you ____ smoke and you ____ do exercise.",
+  "a": [
+   "shouldn't|should not",
+   "should"
+  ],
+  "e": "You shouldn't smoke and you should do exercise."
+ },
+ {
+  "c": 1,
+  "l": 3,
+  "t": "fill",
+  "q": "We ____ (play) football when it started to rain.",
+  "a": [
+   "were playing"
+  ],
+  "e": "We were playing football when it started to rain."
+ },
+ {
+  "c": 1,
+  "l": 8,
+  "t": "read",
+  "passage": "Last Saturday, Omar went to the park to ride his bike. He was riding along the path when he saw a little girl crying. She had dropped her ice cream and her knee was bleeding because she had fallen over. Omar stopped at once. He gave her a clean tissue and called her mother. While they were waiting, he told her a funny story and soon she was smiling again. Her mother thanked him warmly. \"You should be a doctor,\" she said. Omar laughed. \"Maybe I will!\" he answered.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "Why was the little girl crying?",
+    "o": [
+     "She had fallen over and hurt her knee.",
+     "She had lost her bike.",
+     "She was lost in the park.",
+     "She was hungry."
+    ],
+    "e": "Her knee was bleeding because she fell over."
+   },
+   {
+    "type": "tf",
+    "q": "Omar was walking when he saw the girl.",
+    "a": false,
+    "e": "He was riding his bike."
+   },
+   {
+    "type": "fill",
+    "q": "Omar gave the girl a clean ____.",
+    "a": [
+     "tissue"
+    ],
+    "e": "He gave her a clean tissue."
+   },
+   {
+    "type": "short",
+    "q": "What did Omar do while they were waiting for her mother?",
+    "a": "He told her a funny story.",
+    "k": [
+     "funny",
+     "story"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 1,
+  "l": 9,
+  "t": "read",
+  "passage": "Many people think that a healthy life is difficult, but it does not have to be. Dr. Salma, a family doctor, gives three simple tips. First, walk for at least thirty minutes every day. You do not need any special equipment. Second, drink water instead of sugary drinks, because too much sugar is bad for your teeth and your weight. Third, sleep for seven or eight hours every night. \"Teenagers often stay up late using their phones,\" she says, \"but sleep is as important as food.\" She adds that small changes are easier to keep than big ones.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "What does Dr. Salma advise people to drink?",
+    "o": [
+     "Water",
+     "Sugary drinks",
+     "Coffee",
+     "Milk"
+    ],
+    "e": "She says to drink water instead of sugary drinks."
+   },
+   {
+    "type": "tf",
+    "q": "Dr. Salma says you need special equipment to walk.",
+    "a": false,
+    "e": "She says you do not need any special equipment."
+   },
+   {
+    "type": "mcq",
+    "q": "How many hours of sleep does she recommend?",
+    "o": [
+     "Seven or eight",
+     "Five or six",
+     "Nine or ten",
+     "Four"
+    ],
+    "e": "Seven or eight hours every night."
+   },
+   {
+    "type": "short",
+    "q": "According to the passage, why do teenagers often get too little sleep?",
+    "a": "Because they stay up late using their phones.",
+    "k": [
+     "late",
+     "phones"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 1,
+  "l": 6,
+  "t": "read",
+  "passage": "My grandmother often tells us how life used to be different. When she was young, there were no mobile phones or computers. People used to write letters to each other and the post took many days. Children didn't use to stay at home all day; they played outside until the sun went down. She also says that families used to eat together every evening. \"Today everything is faster,\" she says, \"but I'm not sure it is better.\" We love listening to her stories.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "What did people use to do to contact each other?",
+    "o": [
+     "They wrote letters.",
+     "They sent emails.",
+     "They used mobile phones.",
+     "They sent text messages."
+    ],
+    "e": "People used to write letters."
+   },
+   {
+    "type": "tf",
+    "q": "Children used to play outside until the evening.",
+    "a": true,
+    "e": "They played outside until the sun went down."
+   },
+   {
+    "type": "fill",
+    "q": "Families used to ____ together every evening.",
+    "a": [
+     "eat"
+    ],
+    "e": "Families used to eat together every evening."
+   },
+   {
+    "type": "short",
+    "q": "Does the grandmother think that faster life is better?",
+    "a": "She is not sure it is better.",
+    "k": [
+     "not sure",
+     "better"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 1,
+  "l": 8,
+  "t": "mcq",
+  "q": "Which sentence is correct?",
+  "o": [
+   "I was walking to school when I met my friend.",
+   "I walked to school when I was meeting my friend.",
+   "I was walk to school when I met my friend.",
+   "I am walking to school when I met my friend."
+  ],
+  "e": "Past continuous + when + past simple."
+ },
+ {
+  "c": 1,
+  "l": 3,
+  "t": "why",
+  "q": "Why didn't the writer want to give up in Lesson 3 (\"My friends were all watching\")?",
+  "a": "Because his friends were watching him and he did not want to look weak in front of them.",
+  "k": [
+   "friends",
+   "watching",
+   "weak",
+   "embarrass"
+  ],
+  "rev": 1
+ },
+ {
+  "c": 2,
+  "l": 1,
+  "t": "def",
+  "q": "Define: \"law\".",
+  "a": "A rule made by a government that everyone in a country must obey.",
+  "k": [
+   "rule",
+   "government",
+   "obey",
+   "country"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "def",
+  "q": "Give the meaning of \"duty\" (as in \"a police officer's duties\").",
+  "a": "Something that you must do as part of your job or responsibility.",
+  "k": [
+   "must",
+   "job",
+   "responsibility",
+   "do"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "def",
+  "q": "Define: \"robbery\".",
+  "a": "The crime of stealing money or things from a place or person, often using force or threats.",
+  "k": [
+   "crime",
+   "steal",
+   "money",
+   "force"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 3,
+  "t": "def",
+  "q": "Define: \"security check\" (at an airport).",
+  "a": "An inspection of passengers and their bags to make sure they carry nothing dangerous.",
+  "k": [
+   "inspection",
+   "passengers",
+   "bags",
+   "dangerous"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 5,
+  "t": "def",
+  "q": "Give the meaning of \"the military\".",
+  "a": "The armed forces of a country, such as the army, navy and air force.",
+  "k": [
+   "armed",
+   "forces",
+   "army",
+   "country"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 3,
+  "t": "why",
+  "q": "Why must passengers go through a security check at an airport?",
+  "a": "To make sure nobody carries weapons or dangerous items onto the plane, so that everyone is safe.",
+  "k": [
+   "weapons",
+   "dangerous",
+   "safe",
+   "plane"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 8,
+  "t": "why",
+  "q": "Why should drivers and passengers wear seat belts?",
+  "a": "Because seat belts protect them from serious injuries if there is an accident.",
+  "k": [
+   "protect",
+   "injuries",
+   "accident",
+   "safe"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "enum",
+  "q": "List three duties of a police officer.",
+  "a": [
+   "Keeping law and order",
+   "Catching criminals",
+   "Helping people in an emergency",
+   "Controlling traffic"
+  ]
+ },
+ {
+  "c": 2,
+  "l": 1,
+  "t": "mcq",
+  "q": "The thief ____ by the police yesterday.",
+  "o": [
+   "was arrested",
+   "arrested",
+   "was arrest",
+   "has arrest"
+  ],
+  "e": "Passive voice, past simple: was/were + past participle."
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "mcq",
+  "q": "The bank ____ last night.",
+  "o": [
+   "was robbed",
+   "robbed",
+   "is robbed",
+   "was robbing"
+  ],
+  "e": "Passive past simple."
+ },
+ {
+  "c": 2,
+  "l": 2,
+  "t": "mcq",
+  "q": "Police officers ____ obey the law; it is their duty.",
+  "o": [
+   "have to",
+   "may",
+   "can't",
+   "would"
+  ],
+  "e": "\"Have to\" expresses obligation."
+ },
+ {
+  "c": 2,
+  "l": 8,
+  "t": "mcq",
+  "q": "You ____ cross the road when the light is red. It is dangerous.",
+  "o": [
+   "mustn't",
+   "don't have to",
+   "needn't",
+   "may"
+  ],
+  "e": "\"Mustn't\" expresses prohibition."
+ },
+ {
+  "c": 2,
+  "l": 5,
+  "t": "mcq",
+  "q": "The man ____ works in the army is my uncle.",
+  "o": [
+   "who",
+   "which",
+   "whose",
+   "where"
+  ],
+  "e": "\"Who\" is the relative pronoun for people."
+ },
+ {
+  "c": 2,
+  "l": 9,
+  "t": "tf",
+  "q": "In the sentence \"Passengers are checked by the security staff\", the verb is in the passive voice.",
+  "a": true,
+  "e": "Are + past participle (checked) = passive."
+ },
+ {
+  "c": 2,
+  "l": 8,
+  "t": "tf",
+  "q": "\"You don't have to wear a helmet\" means it is forbidden to wear a helmet.",
+  "a": false,
+  "e": "\"Don't have to\" means it is not necessary; it is not forbidden."
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "tf",
+  "q": "Active: \"The police caught the thief.\" Passive: \"The thief was caught by the police.\"",
+  "a": true,
+  "e": "The object becomes the subject and the verb becomes was + past participle."
+ },
+ {
+  "c": 2,
+  "l": 3,
+  "t": "fill",
+  "q": "Bags ____ (scan) by a machine before passengers board the plane.",
+  "a": [
+   "are scanned"
+  ],
+  "e": "Bags are scanned by a machine."
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "fill",
+  "q": "The job ____ (advertise) in the newspaper last week.",
+  "a": [
+   "was advertised"
+  ],
+  "e": "The job was advertised in the newspaper last week."
+ },
+ {
+  "c": 2,
+  "l": 7,
+  "t": "fill",
+  "q": "This is the officer ____ helped me find my lost bag.",
+  "a": [
+   "who|that"
+  ],
+  "e": "This is the officer who helped me find my lost bag."
+ },
+ {
+  "c": 2,
+  "l": 9,
+  "t": "fill",
+  "q": "The camera ____ is fixed above the door records everything.",
+  "a": [
+   "which|that"
+  ],
+  "e": "The camera which is fixed above the door records everything."
+ },
+ {
+  "c": 2,
+  "l": 6,
+  "t": "read",
+  "passage": "Last Tuesday evening, a small jewellery shop in the city centre was robbed. Two men entered the shop at about six o'clock, just before it closed. One man pointed a toy gun at the shop assistant while the other put the jewellery into a bag. The robbers were seen by a taxi driver, who immediately called the police. Police officers arrived within five minutes and the men were arrested a few streets away. Nobody was hurt, and all the jewellery was returned to the owner the next day.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "When did the robbery happen?",
+    "o": [
+     "In the evening, before the shop closed",
+     "In the morning",
+     "At midnight",
+     "On Sunday"
+    ],
+    "e": "About six o'clock, just before closing."
+   },
+   {
+    "type": "tf",
+    "q": "The robbers had a real gun.",
+    "a": false,
+    "e": "It was a toy gun."
+   },
+   {
+    "type": "fill",
+    "q": "The robbers were seen by a taxi ____.",
+    "a": [
+     "driver"
+    ],
+    "e": "A taxi driver saw them."
+   },
+   {
+    "type": "short",
+    "q": "How quickly did the police arrive?",
+    "a": "Within five minutes.",
+    "k": [
+     "five",
+     "minutes"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 2,
+  "l": 8,
+  "t": "read",
+  "passage": "Every year, thousands of people are injured on the roads. Road safety experts say that most accidents can be avoided. Drivers must obey the speed limit and must never use a phone while driving. Passengers must wear seat belts, even on short journeys. Pedestrians should use the zebra crossing and look both ways before crossing. Children are taught these rules at school, and posters are put up in the streets to remind everybody. \"Safety is everyone's responsibility,\" one expert says.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "What must drivers never do?",
+    "o": [
+     "Use a phone while driving",
+     "Drive at night",
+     "Wear a seat belt",
+     "Use the zebra crossing"
+    ],
+    "e": "The text says drivers must never use a phone while driving."
+   },
+   {
+    "type": "tf",
+    "q": "Seat belts are necessary only on long journeys.",
+    "a": false,
+    "e": "Passengers must wear them even on short journeys."
+   },
+   {
+    "type": "fill",
+    "q": "Pedestrians should use the ____ crossing.",
+    "a": [
+     "zebra"
+    ],
+    "e": "Pedestrians should use the zebra crossing."
+   },
+   {
+    "type": "short",
+    "q": "Where are children taught the road safety rules?",
+    "a": "At school.",
+    "k": [
+     "school"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 2,
+  "l": 9,
+  "t": "read",
+  "passage": "Modern airports use advanced technology to keep passengers safe. Cameras that watch every corner are connected to a control room. Body scanners can show whether a person is hiding something dangerous, and X-ray machines check all the bags. Some airports have systems that recognise faces, so passengers are identified quickly. Although some people worry about their privacy, most travellers agree that these machines make flying safer. The staff say that technology helps them, but people are still needed to make final decisions.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "What do X-ray machines do?",
+    "o": [
+     "Check the bags",
+     "Recognise faces",
+     "Watch the corners",
+     "Control the planes"
+    ],
+    "e": "X-ray machines check all the bags."
+   },
+   {
+    "type": "tf",
+    "q": "Face recognition helps identify passengers quickly.",
+    "a": true,
+    "e": "Some airports have systems that recognise faces."
+   },
+   {
+    "type": "fill",
+    "q": "Some people worry about their ____.",
+    "a": [
+     "privacy"
+    ],
+    "e": "They worry about privacy."
+   },
+   {
+    "type": "short",
+    "q": "Why are people still needed at airports?",
+    "a": "To make the final decisions.",
+    "k": [
+     "final",
+     "decisions"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 2,
+  "l": 4,
+  "t": "mcq",
+  "q": "When you apply for a job, you usually send a ____ with your personal details.",
+  "o": [
+   "CV",
+   "receipt",
+   "ticket",
+   "menu"
+  ],
+  "e": "A CV (curriculum vitae) lists your education and experience."
+ },
+ {
+  "c": 2,
+  "l": 7,
+  "t": "why",
+  "q": "Why are safety brochures useful?",
+  "a": "Because they give people clear information and advice about how to stay safe.",
+  "k": [
+   "information",
+   "advice",
+   "safe",
+   "clear"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 1,
+  "t": "def",
+  "q": "Define: \"career\".",
+  "a": "The series of jobs a person has during their working life, usually in one field.",
+  "k": [
+   "jobs",
+   "working",
+   "life",
+   "field"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 8,
+  "t": "def",
+  "q": "Give the meaning of \"summer job\".",
+  "a": "A temporary job that students do during the summer holiday.",
+  "k": [
+   "temporary",
+   "students",
+   "summer",
+   "holiday"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 4,
+  "t": "def",
+  "q": "Define: \"reported speech\".",
+  "a": "A way of telling someone what another person said without using the exact words, usually changing the tense and pronouns.",
+  "k": [
+   "tell",
+   "said",
+   "tense",
+   "pronouns"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 5,
+  "t": "def",
+  "q": "Give the meaning of \"I wish I had brought my sunglasses\".",
+  "a": "It expresses regret: I did not bring them and I am sorry about it now.",
+  "k": [
+   "regret",
+   "past",
+   "sorry",
+   "not bring"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 7,
+  "t": "def",
+  "q": "Define: \"to apply for a course\".",
+  "a": "To make a formal request to join a course by filling in a form or sending documents.",
+  "k": [
+   "formal",
+   "request",
+   "form",
+   "join"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 9,
+  "t": "why",
+  "q": "Why is it important to choose a career carefully?",
+  "a": "Because you will spend many years in it, and a suitable job gives satisfaction and a good income.",
+  "k": [
+   "years",
+   "satisfaction",
+   "income",
+   "suitable"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 8,
+  "t": "why",
+  "q": "Why do many students do summer jobs?",
+  "a": "To earn money, gain work experience and learn useful skills.",
+  "k": [
+   "money",
+   "experience",
+   "skills",
+   "earn"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 1,
+  "t": "enum",
+  "q": "List three jobs that a person might choose as a career.",
+  "a": [
+   "Teacher",
+   "Doctor",
+   "Engineer",
+   "Pilot"
+  ]
+ },
+ {
+  "c": 3,
+  "l": 2,
+  "t": "mcq",
+  "q": "If you come round tomorrow, we ____ football.",
+  "o": [
+   "will play",
+   "would play",
+   "played",
+   "would have played"
+  ],
+  "e": "First conditional: if + present simple, will + base verb."
+ },
+ {
+  "c": 3,
+  "l": 3,
+  "t": "mcq",
+  "q": "If I ____ any job, I would be a pilot.",
+  "o": [
+   "could choose",
+   "can choose",
+   "will choose",
+   "had chosen"
+  ],
+  "e": "Second conditional: if + past simple, would + base verb."
+ },
+ {
+  "c": 3,
+  "l": 4,
+  "t": "mcq",
+  "q": "He said, \"I am tired.\" Reported: He said that he ____ tired.",
+  "o": [
+   "was",
+   "is",
+   "were",
+   "has been"
+  ],
+  "e": "Present simple backshifts to past simple in reported speech."
+ },
+ {
+  "c": 3,
+  "l": 4,
+  "t": "mcq",
+  "q": "She asked, \"Where do you live?\" Reported: She asked me where I ____.",
+  "o": [
+   "lived",
+   "do live",
+   "live",
+   "did live"
+  ],
+  "e": "In reported questions use statement word order and backshift tense."
+ },
+ {
+  "c": 3,
+  "l": 6,
+  "t": "mcq",
+  "q": "If I had been fitter, I ____ the race.",
+  "o": [
+   "would have won",
+   "would win",
+   "will win",
+   "had won"
+  ],
+  "e": "Third conditional: if + past perfect, would have + past participle."
+ },
+ {
+  "c": 3,
+  "l": 2,
+  "t": "tf",
+  "q": "\"If it rains, we will stay at home\" is a first conditional sentence.",
+  "a": true,
+  "e": "If + present simple, will + base verb."
+ },
+ {
+  "c": 3,
+  "l": 5,
+  "t": "tf",
+  "q": "\"I wish I had more time\" talks about a present situation.",
+  "a": true,
+  "e": "\"Wish + past simple\" expresses a wish about the present."
+ },
+ {
+  "c": 3,
+  "l": 6,
+  "t": "tf",
+  "q": "The sentence \"If I had studied harder, I will pass the exam\" is correct.",
+  "a": false,
+  "e": "It should be: If I had studied harder, I would have passed the exam."
+ },
+ {
+  "c": 3,
+  "l": 2,
+  "t": "fill",
+  "q": "If you ____ (study) hard, you will pass the exam.",
+  "a": [
+   "study"
+  ],
+  "e": "If you study hard, you will pass the exam."
+ },
+ {
+  "c": 3,
+  "l": 3,
+  "t": "fill",
+  "q": "If I ____ (be) you, I would apply for that job.",
+  "a": [
+   "were|was"
+  ],
+  "e": "If I were you, I would apply for that job."
+ },
+ {
+  "c": 3,
+  "l": 6,
+  "t": "fill",
+  "q": "If we ____ (leave) earlier, we would have caught the train.",
+  "a": [
+   "had left"
+  ],
+  "e": "If we had left earlier, we would have caught the train."
+ },
+ {
+  "c": 3,
+  "l": 4,
+  "t": "fill",
+  "q": "Ali said, \"I will call you tomorrow.\" -> Ali said that he ____ call me the next day.",
+  "a": [
+   "would"
+  ],
+  "e": "Ali said that he would call me the next day."
+ },
+ {
+  "c": 3,
+  "l": 7,
+  "t": "read",
+  "passage": "Every summer, thousands of students from the Middle East travel to the UK to learn English. Language schools there offer courses from two weeks to six months. Students usually have lessons in the morning and join trips and activities in the afternoon. Many of them stay with British families, which helps them practise speaking all day. \"At first I was shy,\" says Huda, a student from Basra, \"but after a week I could talk to anybody.\" The schools say that students who live with a host family make the fastest progress.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "When do students usually have lessons?",
+    "o": [
+     "In the morning",
+     "In the evening",
+     "At night",
+     "Only at weekends"
+    ],
+    "e": "Lessons are in the morning; activities in the afternoon."
+   },
+   {
+    "type": "tf",
+    "q": "All students must stay in a hotel.",
+    "a": false,
+    "e": "Many stay with British families."
+   },
+   {
+    "type": "fill",
+    "q": "Huda is a student from ____.",
+    "a": [
+     "Basra"
+    ],
+    "e": "Huda is from Basra."
+   },
+   {
+    "type": "short",
+    "q": "Who makes the fastest progress, according to the schools?",
+    "a": "Students who live with a host family.",
+    "k": [
+     "host",
+     "family"
+    ]
+   }
+  ],
+  "rev": 1
+ },
+ {
+  "c": 3,
+  "l": 8,
+  "t": "read",
+  "passage": "Layla is seventeen and wants to be a vet one day. Last summer she worked in a pet shop for six weeks. She fed the animals, cleaned the cages and talked to customers about caring for their pets. She was paid every Friday and saved most of the money. \"If I hadn't worked there, I wouldn't have known how much I love animals,\" she says. This summer she hopes to volunteer at an animal clinic. If she gets the place, she will learn how real vets work.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "What did Layla do at the pet shop?",
+    "o": [
+     "She fed animals and cleaned cages.",
+     "She sold cars.",
+     "She taught English.",
+     "She drove a van."
+    ],
+    "e": "She fed the animals, cleaned the cages and talked to customers."
+   },
+   {
+    "type": "tf",
+    "q": "Layla worked at the pet shop for six months.",
+    "a": false,
+    "e": "She worked for six weeks."
+   },
+   {
+    "type": "fill",
+    "q": "Layla wants to be a ____.",
+    "a": [
+     "vet"
+    ],
+    "e": "She wants to be a vet."
+   },
+   {
+    "type": "short",
+    "q": "What does Layla hope to do this summer?",
+    "a": "Volunteer at an animal clinic.",
+    "k": [
+     "volunteer",
+     "clinic"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 3,
+  "l": 9,
+  "t": "read",
+  "passage": "Choosing a career is one of the biggest decisions in life. Career advisers suggest that students think about three questions. What am I good at? What do I enjoy? What does the job market need? For example, Sara is good at maths and enjoys solving problems, so she is thinking about becoming an engineer. Her brother Khalid loves helping people, so he said that he wanted to study medicine. Advisers also recommend talking to people who already do the job, because they can describe the good and bad sides honestly.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "How many questions do advisers suggest asking?",
+    "o": [
+     "Three",
+     "Two",
+     "Five",
+     "Ten"
+    ],
+    "e": "Three questions are listed."
+   },
+   {
+    "type": "tf",
+    "q": "Sara is thinking about becoming an engineer.",
+    "a": true,
+    "e": "She is good at maths and enjoys problems."
+   },
+   {
+    "type": "fill",
+    "q": "Khalid said that he ____ to study medicine.",
+    "a": [
+     "wanted"
+    ],
+    "e": "Reported speech: he said that he wanted to study medicine."
+   },
+   {
+    "type": "short",
+    "q": "Why should students talk to people who already do the job?",
+    "a": "Because they can describe the good and bad sides honestly.",
+    "k": [
+     "good",
+     "bad",
+     "honestly"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 3,
+  "l": 5,
+  "t": "mcq",
+  "q": "I wish I ____ my umbrella yesterday. I got wet!",
+  "o": [
+   "had taken",
+   "took",
+   "have taken",
+   "would take"
+  ],
+  "e": "Wish + past perfect expresses regret about the past."
+ },
+ {
+  "c": 3,
+  "l": 1,
+  "t": "mcq",
+  "q": "Which sentence expresses a wish for the future career?",
+  "o": [
+   "I'd like to work in a hospital.",
+   "I worked in a hospital.",
+   "I have worked in a hospital.",
+   "I was working in a hospital."
+  ],
+  "e": "\"I'd like to\" expresses a wish or desire."
+ },
+ {
+  "c": 4,
+  "l": 1,
+  "t": "def",
+  "q": "Define: \"design\" (as a noun).",
+  "a": "A plan or drawing that shows how something will look or work before it is made.",
+  "k": [
+   "plan",
+   "drawing",
+   "look",
+   "made"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 1,
+  "t": "def",
+  "q": "Give the meaning of \"a business partner\".",
+  "a": "A person who owns and runs a business together with someone else.",
+  "k": [
+   "owns",
+   "runs",
+   "business",
+   "together"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "def",
+  "q": "Define: \"to work out\" (as in \"People didn't use to work out\").",
+  "a": "To do physical exercise to keep fit.",
+  "k": [
+   "exercise",
+   "physical",
+   "fit",
+   "keep"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "def",
+  "q": "Give the meaning of \"talent\".",
+  "a": "A natural ability to do something well.",
+  "k": [
+   "natural",
+   "ability",
+   "well",
+   "skill"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "def",
+  "q": "Define: \"regret\".",
+  "a": "A feeling of sadness about something you did or did not do in the past.",
+  "k": [
+   "sadness",
+   "past",
+   "feeling",
+   "did"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "why",
+  "q": "Why didn't people use to work out in the past?",
+  "a": "Because most people did hard physical work every day and did not need extra exercise.",
+  "k": [
+   "physical",
+   "work",
+   "exercise",
+   "hard"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "why",
+  "q": "Why is practice important if you want to be the best?",
+  "a": "Because skills improve only with regular practice and hard work, not just talent.",
+  "k": [
+   "skills",
+   "improve",
+   "regular",
+   "hard work"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "enum",
+  "q": "List three qualities of a successful person.",
+  "a": [
+   "Hard-working",
+   "Determined",
+   "Patient",
+   "Honest"
+  ]
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "mcq",
+  "q": "People ____ use mobile phones thirty years ago.",
+  "o": [
+   "didn't use to",
+   "didn't used to",
+   "not use to",
+   "weren't used to"
+  ],
+  "e": "Negative of \"used to\" is \"didn't use to\"."
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "mcq",
+  "q": "Did you ____ live in Mosul?",
+  "o": [
+   "use to",
+   "used to",
+   "using to",
+   "use"
+  ],
+  "e": "In questions use \"did + use to\"."
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "mcq",
+  "q": "She is ____ student in the class.",
+  "o": [
+   "the most intelligent",
+   "more intelligent",
+   "most intelligent",
+   "the more intelligent"
+  ],
+  "e": "Superlative of a long adjective: the most + adjective."
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "mcq",
+  "q": "If only I ____ more money, I could buy a new laptop.",
+  "o": [
+   "had",
+   "have",
+   "would have",
+   "will have"
+  ],
+  "e": "\"If only + past simple\" expresses a wish about the present."
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "mcq",
+  "q": "If only I ____ the instructions, I wouldn't have broken the machine.",
+  "o": [
+   "had read",
+   "read",
+   "have read",
+   "would read"
+  ],
+  "e": "\"If only + past perfect\" expresses regret about the past."
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "tf",
+  "q": "\"Did people use to travel by plane in the 18th century?\" is a correct question form.",
+  "a": true,
+  "e": "Did + subject + use to + base verb."
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "tf",
+  "q": "\"Ahmed is taller than all the boys in his class\" can be written \"Ahmed is the tallest boy in his class\".",
+  "a": true,
+  "e": "Comparative with \"all\" equals superlative."
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "tf",
+  "q": "\"If only I knew the answer\" means I know the answer.",
+  "a": false,
+  "e": "It means I do not know the answer, and I wish I did."
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "fill",
+  "q": "My father ____ (not / use) to wear glasses, but now he does.",
+  "a": [
+   "didn't use|did not use"
+  ],
+  "e": "My father didn't use to wear glasses."
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "fill",
+  "q": "This is the ____ (good) restaurant in town.",
+  "a": [
+   "best"
+  ],
+  "e": "This is the best restaurant in town."
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "fill",
+  "q": "If only I ____ (not / say) that. Now she is angry.",
+  "a": [
+   "hadn't said|had not said"
+  ],
+  "e": "If only I hadn't said that."
+ },
+ {
+  "c": 4,
+  "l": 1,
+  "t": "fill",
+  "q": "Rashid and Rana ____ (design) clothes together for ten years.",
+  "a": [
+   "have designed|have been designing"
+  ],
+  "e": "They have designed clothes together for ten years.",
+  "rev": 1
+ },
+ {
+  "c": 4,
+  "l": 1,
+  "t": "read",
+  "passage": "Rashid and Rana are a brother and sister who run a small design company. Rashid draws the ideas, and Rana chooses the colours and materials. They started the business in their parents' garage with only two sewing machines. At first, nobody knew their name, so they gave away free bags to attract customers. Now they sell bags and clothes in six shops. \"If we hadn't worked so hard in the beginning, we wouldn't be here today,\" says Rana. Their advice to young designers is simple: believe in your ideas and never give up.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "Who chooses the colours and materials?",
+    "o": [
+     "Rana",
+     "Rashid",
+     "Their parents",
+     "A customer"
+    ],
+    "e": "Rana chooses colours and materials."
+   },
+   {
+    "type": "tf",
+    "q": "The business began in a big factory.",
+    "a": false,
+    "e": "It began in their parents' garage."
+   },
+   {
+    "type": "fill",
+    "q": "They gave away free ____ to attract customers.",
+    "a": [
+     "bags"
+    ],
+    "e": "They gave away free bags."
+   },
+   {
+    "type": "short",
+    "q": "What is their advice to young designers?",
+    "a": "Believe in your ideas and never give up.",
+    "k": [
+     "believe",
+     "never give up"
+    ]
+   }
+  ],
+  "rev": 1
+ },
+ {
+  "c": 4,
+  "l": 2,
+  "t": "read",
+  "passage": "Fifty years ago, people didn't use to go to gyms. Most people walked to work, worked in fields or factories, and had no cars. As a result, they used to be quite fit without trying. Today many people sit at desks all day and drive everywhere, so they need to work out. Doctors say that thirty minutes of exercise a day can protect the heart. Some people use phone apps to count their steps, which would have seemed strange to our grandparents.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "Why did people use to be fit in the past?",
+    "o": [
+     "They walked and did physical work.",
+     "They went to gyms.",
+     "They used phone apps.",
+     "They ate less."
+    ],
+    "e": "Most people walked and worked physically."
+   },
+   {
+    "type": "tf",
+    "q": "Today many people sit at desks all day.",
+    "a": true,
+    "e": "The text says so."
+   },
+   {
+    "type": "fill",
+    "q": "Doctors say thirty minutes of exercise protects the ____.",
+    "a": [
+     "heart"
+    ],
+    "e": "Exercise can protect the heart."
+   },
+   {
+    "type": "short",
+    "q": "Why do people need to work out today?",
+    "a": "Because they sit at desks and drive everywhere.",
+    "k": [
+     "sit",
+     "desks",
+     "drive"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 4,
+  "l": 3,
+  "t": "read",
+  "passage": "Hana wanted to be the best swimmer in her school. She had some talent, but she knew that talent was not enough. She got up at five o'clock every morning to train for two hours before school. At first she was often tired and almost gave up. Her coach told her, \"The most important thing is not to be perfect, but to improve a little every day.\" After one year Hana won her first medal. Now she says, \"If only I had started training earlier!\" because she believes she could have been even faster.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "What time did Hana get up to train?",
+    "o": [
+     "At five o'clock",
+     "At seven o'clock",
+     "At noon",
+     "At midnight"
+    ],
+    "e": "She got up at five."
+   },
+   {
+    "type": "tf",
+    "q": "Hana thought talent was enough.",
+    "a": false,
+    "e": "She knew talent was not enough."
+   },
+   {
+    "type": "fill",
+    "q": "After one year Hana won her first ____.",
+    "a": [
+     "medal"
+    ],
+    "e": "She won her first medal."
+   },
+   {
+    "type": "short",
+    "q": "What does Hana regret?",
+    "a": "That she did not start training earlier.",
+    "k": [
+     "started",
+     "earlier"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 4,
+  "l": 1,
+  "t": "mcq",
+  "q": "Which sentence is correct?",
+  "o": [
+   "Rana is the youngest designer in the company.",
+   "Rana is the most young designer in the company.",
+   "Rana is youngest than the others.",
+   "Rana is the younger designer in all the company."
+  ],
+  "e": "Short adjective: the + adjective-est."
+ },
+ {
+  "c": 4,
+  "l": 4,
+  "t": "why",
+  "q": "Why do people say \"If only…\"?",
+  "a": "To express a strong wish or regret about something that is different from reality.",
+  "k": [
+   "wish",
+   "regret",
+   "reality",
+   "different"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 1,
+  "t": "def",
+  "q": "Define: \"sightseeing\".",
+  "a": "The activity of visiting interesting places in a town or country as a tourist.",
+  "k": [
+   "visiting",
+   "interesting",
+   "places",
+   "tourist"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "def",
+  "q": "Give the meaning of \"accommodation\".",
+  "a": "A place where you can stay, such as a hotel or a flat.",
+  "k": [
+   "stay",
+   "hotel",
+   "place",
+   "live"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 8,
+  "t": "def",
+  "q": "Define: \"tourism\".",
+  "a": "The business of providing services such as hotels, transport and trips for people who travel for pleasure.",
+  "k": [
+   "business",
+   "services",
+   "travel",
+   "pleasure"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 8,
+  "t": "def",
+  "q": "Give the meaning of \"environment\".",
+  "a": "The natural world, including air, water, land, plants and animals, in which people live.",
+  "k": [
+   "natural",
+   "air",
+   "water",
+   "plants"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 6,
+  "t": "def",
+  "q": "Define: \"atmosphere\" (of a place).",
+  "a": "The feeling that a place gives you, for example lively, peaceful or friendly.",
+  "k": [
+   "feeling",
+   "place",
+   "lively",
+   "peaceful"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 8,
+  "t": "why",
+  "q": "Why can tourism damage the environment?",
+  "a": "Because large numbers of visitors create litter and pollution and put pressure on natural places.",
+  "k": [
+   "visitors",
+   "litter",
+   "pollution",
+   "natural"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 9,
+  "t": "why",
+  "q": "Why are holidays important for people?",
+  "a": "Because they help us relax, reduce stress and learn about other cultures.",
+  "k": [
+   "relax",
+   "stress",
+   "cultures",
+   "rest"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 8,
+  "t": "enum",
+  "q": "List three ways tourists can protect the environment.",
+  "a": [
+   "Do not drop litter",
+   "Save water and electricity",
+   "Use public transport",
+   "Respect wildlife"
+  ]
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "mcq",
+  "q": "Have you ever ____ in a five-star hotel?",
+  "o": [
+   "stayed",
+   "stay",
+   "staying",
+   "stays"
+  ],
+  "e": "Present perfect: have + past participle."
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "mcq",
+  "q": "I ____ coming to this beach since I was a child.",
+  "o": [
+   "have been",
+   "am",
+   "was",
+   "had"
+  ],
+  "e": "Present perfect continuous: have been + -ing, with since."
+ },
+ {
+  "c": 5,
+  "l": 4,
+  "t": "mcq",
+  "q": "She ____ the dish a few times, but she doesn't like it.",
+  "o": [
+   "has tried",
+   "tried yesterday",
+   "is trying",
+   "will try"
+  ],
+  "e": "Present perfect for experience up to now."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "mcq",
+  "q": "We ____ get a room because the hotel was full.",
+  "o": [
+   "couldn't",
+   "can't",
+   "mustn't",
+   "don't"
+  ],
+  "e": "\"Couldn't\" is the past of can't (inability)."
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "mcq",
+  "q": "He has lived in Erbil ____ 2015.",
+  "o": [
+   "since",
+   "for",
+   "ago",
+   "during"
+  ],
+  "e": "\"Since\" is used with a point in time; \"for\" with a period."
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "tf",
+  "q": "\"I have visited Petra last year\" is a correct sentence.",
+  "a": false,
+  "e": "With \"last year\" use the past simple: I visited Petra last year."
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "tf",
+  "q": "\"For\" is used with a period of time, such as \"for three days\".",
+  "a": true,
+  "e": "\"For\" + period; \"since\" + starting point."
+ },
+ {
+  "c": 5,
+  "l": 1,
+  "t": "tf",
+  "q": "\"Let's do some sightseeing\" is a suggestion.",
+  "a": true,
+  "e": "\"Let's + base verb\" makes a suggestion."
+ },
+ {
+  "c": 5,
+  "l": 2,
+  "t": "fill",
+  "q": "I ____ (never / ride) a camel.",
+  "a": [
+   "have never ridden"
+  ],
+  "e": "I have never ridden a camel."
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "fill",
+  "q": "They ____ (wait) for the bus for thirty minutes.",
+  "a": [
+   "have been waiting"
+  ],
+  "e": "They have been waiting for the bus for thirty minutes."
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "fill",
+  "q": "We have lived here ____ five years. (for / since)",
+  "a": [
+   "for"
+  ],
+  "e": "We have lived here for five years."
+ },
+ {
+  "c": 5,
+  "l": 4,
+  "t": "fill",
+  "q": "She ____ (be) to Dubai twice.",
+  "a": [
+   "has been"
+  ],
+  "e": "She has been to Dubai twice."
+ },
+ {
+  "c": 5,
+  "l": 7,
+  "t": "read",
+  "passage": "Kerkennah is a group of small islands off the east coast of Tunisia. The islands are flat and quiet, and there are no big hotels. Most visitors travel by ferry and then explore by bicycle. People on the islands have been fishing in the same way for hundreds of years, using traps made of palm leaves. Tourists can watch the fishermen at work or relax on empty beaches. Local people say they want tourism, but they do not want to lose their traditional way of life.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "How do most visitors travel to Kerkennah?",
+    "o": [
+     "By ferry",
+     "By plane",
+     "By train",
+     "By car only"
+    ],
+    "e": "Most visitors travel by ferry."
+   },
+   {
+    "type": "tf",
+    "q": "There are many big hotels on the islands.",
+    "a": false,
+    "e": "There are no big hotels."
+   },
+   {
+    "type": "fill",
+    "q": "Visitors explore the islands by ____.",
+    "a": [
+     "bicycle|bike"
+    ],
+    "e": "They explore by bicycle."
+   },
+   {
+    "type": "short",
+    "q": "What do local people want to protect?",
+    "a": "Their traditional way of life.",
+    "k": [
+     "traditional",
+     "way of life"
+    ]
+   }
+  ],
+  "rev": 1
+ },
+ {
+  "c": 5,
+  "l": 8,
+  "t": "read",
+  "passage": "Every year, millions of tourists visit the world's beautiful beaches and mountains. Tourism brings money and jobs to local people, but it can also cause serious problems. In some places, rubbish has been left on beaches and water has become polluted. Hotels use huge amounts of water, even where it is scarce. Many countries are now promoting eco-tourism, where visitors stay in small, friendly lodges and take part in nature protection. Guides remind tourists to take their litter home and never to pick wild flowers.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "What is a benefit of tourism mentioned in the passage?",
+    "o": [
+     "It brings money and jobs.",
+     "It reduces pollution.",
+     "It saves water.",
+     "It protects wild flowers."
+    ],
+    "e": "Tourism brings money and jobs."
+   },
+   {
+    "type": "tf",
+    "q": "Hotels never use much water.",
+    "a": false,
+    "e": "They use huge amounts, even where water is scarce."
+   },
+   {
+    "type": "fill",
+    "q": "Visitors in eco-tourism stay in small ____.",
+    "a": [
+     "lodges"
+    ],
+    "e": "They stay in small, friendly lodges."
+   },
+   {
+    "type": "short",
+    "q": "What do guides remind tourists to do?",
+    "a": "To take their litter home and not pick wild flowers.",
+    "k": [
+     "litter",
+     "flowers"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 5,
+  "l": 3,
+  "t": "read",
+  "passage": "Nadia has been working as a tour guide in Erbil for six years. She has shown thousands of visitors around the old citadel, one of the oldest inhabited places in the world. \"I've been coming here almost every day since 2019,\" she says, \"and I still learn something new every time.\" She has also learnt four languages to talk to tourists. Last month, she took a group of Japanese visitors to the bazaar, where they tried local bread for the first time. They loved it and asked for the recipe. Nadia says that her job is the best in the world.",
+  "subs": [
+   {
+    "type": "mcq",
+    "q": "How long has Nadia been a tour guide?",
+    "o": [
+     "Six years",
+     "Two years",
+     "Ten years",
+     "Six months"
+    ],
+    "e": "She has been working as a guide for six years."
+   },
+   {
+    "type": "tf",
+    "q": "Nadia has learnt four languages.",
+    "a": true,
+    "e": "The text says so."
+   },
+   {
+    "type": "fill",
+    "q": "Last month she took Japanese visitors to the ____.",
+    "a": [
+     "bazaar"
+    ],
+    "e": "She took them to the bazaar."
+   },
+   {
+    "type": "short",
+    "q": "What did the Japanese visitors do at the bazaar?",
+    "a": "They tried local bread and asked for the recipe.",
+    "k": [
+     "bread",
+     "recipe"
+    ]
+   }
+  ]
+ },
+ {
+  "c": 5,
+  "l": 6,
+  "t": "mcq",
+  "q": "The atmosphere at the festival was wonderful. \"Atmosphere\" here means the ____ of the place.",
+  "o": [
+   "feeling",
+   "price",
+   "size",
+   "distance"
+  ],
+  "e": "Atmosphere is the feeling of a place."
+ },
+ {
+  "c": 5,
+  "l": 5,
+  "t": "why",
+  "q": "Why couldn't the family get a room at the hotel?",
+  "a": "Because the hotel was full during the holiday season.",
+  "k": [
+   "hotel",
+   "full",
+   "season",
+   "booked"
+  ],
+  "rev": 1
+ }
+]

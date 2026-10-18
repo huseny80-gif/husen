@@ -1,0 +1,2315 @@
+[
+{
+"c": 1,
+"l": 2,
+"t": "def",
+"q": "عرّف: نظرية الخلية.",
+"a": "جميع الكائنات الحية تتكون من خلية واحدة أو أكثر، والخلية هي وحدة البناء والوظيفة الأساسية في الكائن الحي، وتنشأ الخلايا الجديدة من خلايا سابقة لها بالانقسام.",
+"k": [
+"وحدة البناء",
+"خلية واحدة أو أكثر",
+"خلايا سابقة",
+"الانقسام"
+]
+},
+{
+"c": 1,
+"l": 2,
+"t": "enum",
+"q": "عدّد مبادئ نظرية الخلية.",
+"a": [
+"تتكون جميع الكائنات الحية من خلية أو أكثر",
+"الخلية وحدة البناء والوظيفة في الكائن الحي",
+"تنشأ الخلايا من خلايا سابقة لها"
+]
+},
+{
+"c": 1,
+"l": 2,
+"t": "why",
+"q": "علّل: تُعدّ الخلية وحدة البناء والوظيفة في الكائن الحي.",
+"a": "لأن جسم الكائن الحي يتكوّن من الخلايا، وتجري داخل كل خلية العمليات الحيوية الأساسية كالتغذية والتنفس والإخراج والنمو.",
+"k": [
+"جسم الكائن",
+"العمليات الحيوية",
+"الخلايا",
+"وظيفة"
+]
+},
+{
+"c": 1,
+"l": 3,
+"t": "calc",
+"kind": "math",
+"q": "كم مرة تزيد نسبة (المساحة السطحية / الحجم) في خلية مكعبة ضلعها 2 μm على نسبتها في خلية مكعبة ضلعها 8 μm؟",
+"a": [
+"4"
+],
+"num": 4,
+"sol": "النسبة = 6 / L؛ للضلع 2: 3، وللضلع 8: 0.75. فالنسبة الأولى = 3 / 0.75 = 4 أمثال."
+},
+{
+"c": 1,
+"l": 3,
+"t": "calc",
+"kind": "math",
+"q": "رُسمت خلية تحت المجهر بطول 30 mm، وكان طولها الحقيقي 0.05 mm. احسب قوة التكبير.",
+"a": [
+"600",
+"×600",
+"600x"
+],
+"num": 600,
+"sol": "قوة التكبير = طول الصورة / الطول الحقيقي = 30 / 0.05 = 600."
+},
+{
+"c": 1,
+"l": 4,
+"t": "def",
+"q": "عرّف: الخلية بدائية النواة.",
+"a": "خلية لا تحتوي نواة حقيقية محاطة بغشاء نووي، وتوجد مادتها الوراثية (DNA) حرة في السيتوبلازم ضمن منطقة تسمى المنطقة النووية، ولا تحتوي عضيات محاطة بأغشية.",
+"k": [
+"لا نواة حقيقية",
+"غشاء نووي",
+"DNA",
+"عضيات"
+]
+},
+{
+"c": 1,
+"l": 4,
+"t": "enum",
+"q": "عدّد أربع خصائص للخلية بدائية النواة.",
+"a": [
+"لا يوجد غشاء نووي يحيط بالمادة الوراثية",
+"DNA حلقي موجود في المنطقة النووية",
+"لا تحتوي عضيات محاطة بغشاء",
+"رايبوسومات أصغر حجماً من رايبوسومات حقيقيات النواة",
+"تحاط غالباً بجدار خلوي"
+]
+},
+{
+"c": 1,
+"l": 5,
+"t": "mcq",
+"q": "العضية التي تتحرر فيها معظم الطاقة على شكل ATP في الخلية حقيقية النواة هي:",
+"o": [
+"المايتوكوندريا",
+"أجسام كولجي",
+"الرايبوسومات",
+"الفجوة العصارية"
+],
+"e": "يحدث التنفس الخلوي الهوائي في المايتوكوندريا فتتحرر معظم الطاقة على شكل ATP."
+},
+{
+"c": 1,
+"l": 5,
+"t": "fill",
+"q": "تحدث عملية البناء الضوئي في الخلية النباتية داخل ____.",
+"a": [
+"البلاستيدات الخضراء|البلاستيدة الخضراء|الكلوروبلاست"
+],
+"e": "تحدث عملية البناء الضوئي في الخلية النباتية داخل البلاستيدات الخضراء."
+},
+{
+"c": 1,
+"l": 5,
+"t": "why",
+"q": "علّل: تسمى المايتوكوندريا (محطات توليد الطاقة) في الخلية.",
+"a": "لأن التنفس الخلوي يحدث فيها، فتتحرر الطاقة الكيميائية المخزونة في الغذاء وتُخزَّن على شكل جزيئات ATP تستعملها الخلية في فعالياتها.",
+"k": [
+"التنفس الخلوي",
+"الطاقة",
+"ATP"
+]
+},
+{
+"c": 1,
+"l": 5,
+"t": "def",
+"q": "عرّف: جهاز كولجي.",
+"a": "عضية تتكون من أكياس غشائية مسطحة متراصة، تعدّل البروتينات والدهون القادمة من الشبكة الإندوبلازمية وتفرزها وتعبئها في حويصلات لتفرز خارج الخلية أو تنقل إلى مواقع أخرى.",
+"k": [
+"أكياس مسطحة",
+"تعديل",
+"تعبئة",
+"إفراز",
+"حويصلات"
+]
+},
+{
+"c": 1,
+"l": 6,
+"t": "mcq",
+"q": "انتقال الماء عبر الغشاء البلازمي من الوسط الأقل تركيزاً بالمذاب إلى الوسط الأعلى تركيزاً يسمى:",
+"o": [
+"الأسموزية",
+"النقل الفعال",
+"البلعمة",
+"الانتشار الميسّر للأيونات"
+],
+"e": "الأسموزية هي انتشار الماء عبر غشاء شبه نفّاذ من الوسط الأكثر ماءً إلى الأقل ماءً."
+},
+{
+"c": 1,
+"l": 6,
+"t": "why",
+"q": "علّل: تنتفخ كريات الدم الحمراء وقد تنفجر عند وضعها في ماء مقطر.",
+"a": "لأن الماء المقطر وسط واطئ التوتر (تركيز المذاب فيه أقل منه داخل الكرية)، فيدخل الماء إلى الكرية بالأسموزية فتنتفخ وقد ينفجر غشاؤها.",
+"k": [
+"ماء مقطر",
+"أسموزية",
+"دخول الماء",
+"واطئ التوتر"
+]
+},
+{
+"c": 1,
+"l": 7,
+"t": "mcq",
+"q": "في أي طور من الانقسام المتساوي تصطف الكروموسومات على خط استواء الخلية؟",
+"o": [
+"الطور الاستوائي",
+"الطور التمهيدي",
+"الطور الانفصالي",
+"الطور النهائي"
+],
+"e": "في الطور الاستوائي تتوضع الكروموسومات في مستوى خط الاستواء وترتبط بخيوط المغزل."
+},
+{
+"c": 1,
+"l": 7,
+"t": "enum",
+"q": "رتّب أطوار الانقسام المتساوي بعد الطور البيني.",
+"a": [
+"الطور التمهيدي",
+"الطور الاستوائي",
+"الطور الانفصالي",
+"الطور النهائي"
+]
+},
+{
+"c": 1,
+"l": 7,
+"t": "fill",
+"q": "ينتج عن الانقسام الاختزالي ____ خلايا بنوية، عدد كروموسومات كل منها ____ عدد كروموسومات الخلية الأم.",
+"a": [
+"أربع|4",
+"نصف"
+],
+"e": "ينتج عن الانقسام الاختزالي أربع خلايا بنوية عدد كروموسومات كل منها نصف عدد كروموسومات الخلية الأم."
+},
+{
+"c": 1,
+"l": 7,
+"t": "why",
+"q": "علّل: يُعدّ الانقسام الاختزالي ضرورياً في الكائنات التي تتكاثر جنسياً.",
+"a": "لأنه يُنتج أمشاجاً أحادية المجموعة الكروموسومية، فيعود العدد الثنائي (2n) عند الإخصاب، ولولاه لتضاعف عدد الكروموسومات في كل جيل.",
+"k": [
+"أمشاج",
+"أحادية",
+"الإخصاب",
+"ثبات عدد الكروموسومات"
+]
+},
+{
+"c": 1,
+"l": 7,
+"t": "calc",
+"kind": "math",
+"q": "عدد الكروموسومات في الخلية الجسمية للإنسان 46. كم كروموسوماً في الحيوان المنوي؟",
+"a": [
+"23"
+],
+"num": 23,
+"sol": "الأمشاج أحادية المجموعة (n)، فهي نصف العدد: 46 / 2 = 23."
+},
+{
+"c": 1,
+"l": 4,
+"t": "label",
+"q": "اكتب اسم كل جزء مؤشَّر عليه بالرقم.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 250\" font-family=\"Cairo,sans-serif\"><rect x=\"100\" y=\"80\" width=\"220\" height=\"110\" rx=\"50\" stroke=\"#e6f1f5\" stroke-width=\"4\" fill=\"none\"/><rect x=\"112\" y=\"92\" width=\"196\" height=\"86\" rx=\"40\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M170 138 q10 -26 25 -6 t25 4 t-18 22 t-30 -6 t-2 -14z\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.25\"/><circle cx=\"145\" cy=\"112\" r=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"255\" cy=\"112\" r=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"265\" cy=\"150\" r=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"150\" cy=\"162\" r=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"225\" cy=\"168\" r=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"185\" cy=\"108\" r=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><path d=\"M320 135 q15 -18 30 0 t30 0 t30 0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"215\" y1=\"80\" x2=\"260\" y2=\"40\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"215\" cy=\"80\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"260\" cy=\"40\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"260\" y=\"45\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"200\" y1=\"178\" x2=\"160\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"178\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"160\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"160\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"280\" y1=\"130\" x2=\"330\" y2=\"215\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"280\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"215\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"220\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"205\" y1=\"135\" x2=\"205\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"205\" cy=\"135\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"205\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"205\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"255\" y1=\"112\" x2=\"300\" y2=\"45\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"255\" cy=\"112\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"300\" cy=\"45\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"300\" y=\"50\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"395\" y1=\"135\" x2=\"395\" y2=\"95\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"395\" cy=\"135\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"95\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"100\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الجدار الخلوي"
+},
+{
+"n": 2,
+"a": "الغشاء البلازمي",
+"k": [
+"الغشاء الخلوي"
+]
+},
+{
+"n": 3,
+"a": "السيتوبلازم",
+"k": [
+"العصارة الخلوية"
+]
+},
+{
+"n": 4,
+"a": "المنطقة النووية",
+"k": [
+"النيوكليود",
+"المادة الوراثية",
+"DNA"
+]
+},
+{
+"n": 5,
+"a": "الرايبوسومات",
+"k": [
+"رايبوسوم"
+]
+},
+{
+"n": 6,
+"a": "السوط"
+}
+]
+},
+{
+"c": 1,
+"l": 5,
+"t": "label",
+"q": "تأمل الخلية الحيوانية في الشكل واكتب اسم كل جزء مؤشَّر عليه بالرقم.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 270\" font-family=\"Cairo,sans-serif\"><ellipse cx=\"230\" cy=\"140\" rx=\"160\" ry=\"105\" stroke=\"#e6f1f5\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"215\" cy=\"135\" r=\"40\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"222\" cy=\"130\" r=\"12\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.4\"/><ellipse cx=\"320\" cy=\"95\" rx=\"26\" ry=\"12\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\" transform=\"rotate(-20 320 95)\"/><path d=\"M300 98 q8 -10 14 0 t14 -6\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M95 168 q28 -9 56 0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><path d=\"M95 177 q28 -9 56 0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><path d=\"M95 186 q28 -9 56 0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><rect x=\"300\" y=\"172\" width=\"22\" height=\"7\" rx=\"2\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"308\" y=\"164\" width=\"7\" height=\"22\" rx=\"2\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"70\" y1=\"140\" x2=\"28\" y2=\"140\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"70\" cy=\"140\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"28\" cy=\"140\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"28\" y=\"145\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"200\" y1=\"118\" x2=\"28\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"118\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"28\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"28\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"222\" y1=\"130\" x2=\"432\" y2=\"150\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"222\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"432\" cy=\"150\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"432\" y=\"155\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"335\" y1=\"88\" x2=\"432\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"335\" cy=\"88\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"432\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"432\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"120\" y1=\"180\" x2=\"28\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"120\" cy=\"180\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"28\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"28\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"311\" y1=\"175\" x2=\"432\" y2=\"215\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"311\" cy=\"175\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"432\" cy=\"215\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"432\" y=\"220\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الغشاء البلازمي",
+"k": [
+"الغشاء الخلوي"
+]
+},
+{
+"n": 2,
+"a": "النواة"
+},
+{
+"n": 3,
+"a": "النوية",
+"k": [
+"النويّة"
+]
+},
+{
+"n": 4,
+"a": "المايتوكوندريا",
+"k": [
+"المتقدرة",
+"الميتوكوندريا"
+]
+},
+{
+"n": 5,
+"a": "جهاز كولجي",
+"k": [
+"جسم كولجي",
+"أجسام كولجي"
+]
+},
+{
+"n": 6,
+"a": "الجسم المركزي",
+"k": [
+"السنتريول",
+"المريكز"
+]
+}
+]
+},
+{
+"c": 1,
+"l": 5,
+"t": "label",
+"q": "تأمل الخلية النباتية في الشكل واكتب اسم كل جزء مؤشَّر عليه بالرقم.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 460 260\" font-family=\"Cairo,sans-serif\"><rect x=\"60\" y=\"40\" width=\"340\" height=\"205\" rx=\"14\" stroke=\"#e6f1f5\" stroke-width=\"5\" fill=\"none\"/><rect x=\"70\" y=\"50\" width=\"320\" height=\"185\" rx=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"160\" y=\"85\" width=\"170\" height=\"115\" rx=\"40\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.15\"/><circle cx=\"112\" cy=\"92\" r=\"24\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"112\" cy=\"92\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.4\"/><ellipse cx=\"352\" cy=\"80\" rx=\"20\" ry=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.35\" transform=\"rotate(-15 352 80)\"/><ellipse cx=\"352\" cy=\"200\" rx=\"20\" ry=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.35\" transform=\"rotate(15 352 200)\"/><ellipse cx=\"112\" cy=\"200\" rx=\"14\" ry=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"230\" y1=\"40\" x2=\"230\" y2=\"15\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"230\" cy=\"40\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"230\" cy=\"15\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"230\" y=\"20\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"70\" y1=\"140\" x2=\"25\" y2=\"140\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"70\" cy=\"140\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"25\" cy=\"140\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"25\" y=\"145\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"245\" y1=\"142\" x2=\"435\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"245\" cy=\"142\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"435\" cy=\"142\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"435\" y=\"147\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"112\" y1=\"92\" x2=\"25\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"112\" cy=\"92\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"25\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"25\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"352\" y1=\"80\" x2=\"435\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"352\" cy=\"80\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"435\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"435\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"112\" y1=\"200\" x2=\"25\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"112\" cy=\"200\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"25\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"25\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الجدار الخلوي"
+},
+{
+"n": 2,
+"a": "الغشاء البلازمي",
+"k": [
+"الغشاء الخلوي"
+]
+},
+{
+"n": 3,
+"a": "الفجوة العصارية",
+"k": [
+"الفجوة المركزية"
+]
+},
+{
+"n": 4,
+"a": "النواة"
+},
+{
+"n": 5,
+"a": "البلاستيدة الخضراء",
+"k": [
+"البلاستيدات الخضراء",
+"الكلوروبلاست"
+]
+},
+{
+"n": 6,
+"a": "المايتوكوندريا",
+"k": [
+"المتقدرة",
+"الميتوكوندريا"
+]
+}
+]
+},
+{
+"c": 1,
+"l": 5,
+"t": "label",
+"q": "الشكل مقطع في المايتوكوندريا؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 260\" font-family=\"Cairo,sans-serif\"><ellipse cx=\"210\" cy=\"130\" rx=\"150\" ry=\"85\" stroke=\"#e6f1f5\" stroke-width=\"3\" fill=\"none\"/><ellipse cx=\"210\" cy=\"130\" rx=\"134\" ry=\"68\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 63 v42 q0 8 7 8 q7 0 7 -8 v-42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M185 63 v42 q0 8 7 8 q7 0 7 -8 v-42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M230 63 v42 q0 8 7 8 q7 0 7 -8 v-42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M275 63 v42 q0 8 7 8 q7 0 7 -8 v-42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M162 197 v-42 q0 -8 7 -8 q7 0 7 8 v42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M207 197 v-42 q0 -8 7 -8 q7 0 7 8 v42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M252 197 v-42 q0 -8 7 -8 q7 0 7 8 v42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"314\" y1=\"75\" x2=\"390\" y2=\"35\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"314\" cy=\"75\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"390\" cy=\"35\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"390\" y=\"40\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"76\" y1=\"135\" x2=\"30\" y2=\"135\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"76\" cy=\"135\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"30\" cy=\"135\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"30\" y=\"140\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"147\" y1=\"95\" x2=\"100\" y2=\"35\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"147\" cy=\"95\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"100\" cy=\"35\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"100\" y=\"40\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"190\" y1=\"135\" x2=\"300\" y2=\"230\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"190\" cy=\"135\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"300\" cy=\"230\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"300\" y=\"235\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الغشاء الخارجي"
+},
+{
+"n": 2,
+"a": "الغشاء الداخلي"
+},
+{
+"n": 3,
+"a": "الأعراف",
+"k": [
+"العرف",
+"الحافات"
+]
+},
+{
+"n": 4,
+"a": "الحشوة",
+"k": [
+"المصفوفة",
+"المادة الأساس"
+]
+}
+]
+},
+{
+"c": 1,
+"l": 5,
+"t": "label",
+"q": "الشكل مقطع في البلاستيدة الخضراء؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 260\" font-family=\"Cairo,sans-serif\"><ellipse cx=\"210\" cy=\"130\" rx=\"150\" ry=\"85\" stroke=\"#e6f1f5\" stroke-width=\"3\" fill=\"none\"/><ellipse cx=\"210\" cy=\"130\" rx=\"138\" ry=\"73\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"112\" y=\"100\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"112\" y=\"110\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"112\" y=\"120\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"112\" y=\"130\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"192\" y=\"130\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"192\" y=\"140\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"192\" y=\"150\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"192\" y=\"160\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"267\" y=\"95\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"267\" y=\"105\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"267\" y=\"115\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"267\" y=\"125\" width=\"36\" height=\"7\" rx=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"148\" y1=\"125\" x2=\"192\" y2=\"150\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"228\" y1=\"150\" x2=\"267\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"330\" y1=\"80\" x2=\"395\" y2=\"35\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"330\" cy=\"80\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"35\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"40\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"76\" y1=\"135\" x2=\"30\" y2=\"135\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"76\" cy=\"135\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"30\" cy=\"135\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"30\" y=\"140\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"285\" y1=\"108\" x2=\"330\" y2=\"40\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"285\" cy=\"108\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"40\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"45\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"212\" y1=\"134\" x2=\"212\" y2=\"35\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"212\" cy=\"134\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"212\" cy=\"35\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"212\" y=\"40\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"170\" y1=\"100\" x2=\"100\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"170\" cy=\"100\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"100\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"100\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الغشاء الخارجي"
+},
+{
+"n": 2,
+"a": "الغشاء الداخلي"
+},
+{
+"n": 3,
+"a": "الكرانة",
+"k": [
+"الجرانا",
+"حزمة الأكياس القرصية"
+]
+},
+{
+"n": 4,
+"a": "الثايلاكويد",
+"k": [
+"الكيس القرصي",
+"الغشاء الثايلاكويدي"
+]
+},
+{
+"n": 5,
+"a": "الستروما",
+"k": [
+"اللحمة",
+"السدى",
+"المادة الأساس"
+]
+}
+]
+},
+{
+"c": 1,
+"l": 6,
+"t": "label",
+"q": "الشكل يمثل تركيب الغشاء البلازمي؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 250\" font-family=\"Cairo,sans-serif\"><circle cx=\"50\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"46\" y1=\"88\" x2=\"46\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"54\" y1=\"88\" x2=\"54\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"50\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"46\" y1=\"162\" x2=\"46\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"54\" y1=\"162\" x2=\"54\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"76\" y1=\"88\" x2=\"76\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"84\" y1=\"88\" x2=\"84\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"80\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"76\" y1=\"162\" x2=\"76\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"84\" y1=\"162\" x2=\"84\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"106\" y1=\"88\" x2=\"106\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"114\" y1=\"88\" x2=\"114\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"110\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"106\" y1=\"162\" x2=\"106\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"114\" y1=\"162\" x2=\"114\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"136\" y1=\"88\" x2=\"136\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"144\" y1=\"88\" x2=\"144\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"140\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"136\" y1=\"162\" x2=\"136\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"144\" y1=\"162\" x2=\"144\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"166\" y1=\"88\" x2=\"166\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"174\" y1=\"88\" x2=\"174\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"170\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"166\" y1=\"162\" x2=\"166\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"174\" y1=\"162\" x2=\"174\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"230\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"226\" y1=\"88\" x2=\"226\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"234\" y1=\"88\" x2=\"234\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"230\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"226\" y1=\"162\" x2=\"226\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"234\" y1=\"162\" x2=\"234\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"256\" y1=\"88\" x2=\"256\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"264\" y1=\"88\" x2=\"264\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"260\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"256\" y1=\"162\" x2=\"256\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"264\" y1=\"162\" x2=\"264\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"290\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"286\" y1=\"88\" x2=\"286\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"294\" y1=\"88\" x2=\"294\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"290\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"286\" y1=\"162\" x2=\"286\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"294\" y1=\"162\" x2=\"294\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"320\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"316\" y1=\"88\" x2=\"316\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"324\" y1=\"88\" x2=\"324\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"320\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"316\" y1=\"162\" x2=\"316\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"324\" y1=\"162\" x2=\"324\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"80\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"346\" y1=\"88\" x2=\"346\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"354\" y1=\"88\" x2=\"354\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"350\" cy=\"170\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"346\" y1=\"162\" x2=\"346\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"354\" y1=\"162\" x2=\"354\" y2=\"132\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><rect x=\"188\" y=\"62\" width=\"34\" height=\"126\" rx=\"12\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.2\"/><path d=\"M200 62 v-18 m0 6 l-8 -8 m8 8 l8 -8 m-8 4 l-6 -4 m6 4 l6 -4\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"110\" y1=\"80\" x2=\"110\" y2=\"28\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"110\" cy=\"80\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"110\" cy=\"28\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"110\" y=\"33\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"146\" y1=\"104\" x2=\"60\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"146\" cy=\"104\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"60\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"60\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"205\" y1=\"125\" x2=\"330\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"205\" cy=\"125\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"200\" y1=\"44\" x2=\"300\" y2=\"28\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"44\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"300\" cy=\"28\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"300\" y=\"33\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الرأس المحب للماء",
+"k": [
+"رأس الفوسفولبيد",
+"الرأس الفسفوري",
+"رأس الدهن الفسفوري"
+]
+},
+{
+"n": 2,
+"a": "الذيل الكاره للماء",
+"k": [
+"ذيول الأحماض الدهنية",
+"الذيول",
+"الذيل"
+]
+},
+{
+"n": 3,
+"a": "بروتين غشائي",
+"k": [
+"بروتين متكامل",
+"بروتين ناقل",
+"قناة بروتينية"
+]
+},
+{
+"n": 4,
+"a": "سلسلة كربوهيدراتية",
+"k": [
+"سلسلة سكرية",
+"كربوهيدرات"
+]
+}
+]
+},
+{
+"c": 1,
+"l": 7,
+"t": "draw",
+"q": "ارسم دورة الخلية ووزّع عليها مراحل الطور البيني (G1 وS وG2) والانقسام (M).",
+"a": "دائرة تُقسَّم إلى أربعة أقواس: G1 (نمو)، ثم S (تضاعف DNA)، ثم G2 (تحضير)، ثم M (الانقسام)، مع سهم يبيّن اتجاه الدورة. تشكّل G1 وS وG2 معاً الطور البيني.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" font-family=\"Cairo,sans-serif\"><circle cx=\"210\" cy=\"128\" r=\"80\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"210\" cy=\"128\" r=\"50\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-dasharray=\"4 4\" fill=\"none\"/></svg>",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" font-family=\"Cairo,sans-serif\"><path d=\"M211.2 58 A70 70 0 0 1 246.1 188\" stroke=\"#2dd4bf\" stroke-width=\"14\" fill=\"none\"/><text x=\"304.7\" y=\"107.6\" fill=\"#2dd4bf\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">G1</text><path d=\"M243.9 189.2 A70 70 0 0 1 144.6 153.1\" stroke=\"#f3d97a\" stroke-width=\"14\" fill=\"none\"/><text x=\"176.5\" y=\"225.1\" fill=\"#f3d97a\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">S</text><path d=\"M143.8 150.8 A70 70 0 0 1 155.6 83.9\" stroke=\"#e6f1f5\" stroke-width=\"14\" fill=\"none\"/><text x=\"113.5\" y=\"116\" fill=\"#e6f1f5\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">G2</text><path d=\"M157.2 82.1 A70 70 0 0 1 208.8 58\" stroke=\"#2dd4bf\" stroke-width=\"14\" fill=\"none\"/><text x=\"168.6\" y=\"44.2\" fill=\"#2dd4bf\" font-size=\"15\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">M</text><text x=\"210\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">الطور البيني</text><text x=\"210\" y=\"142\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">G1 + S + G2</text></svg>",
+"k": [
+"G1",
+"S",
+"G2",
+"M",
+"الطور البيني"
+]
+},
+{
+"c": 1,
+"l": 7,
+"t": "draw",
+"q": "ارسم خلية في الطور الاستوائي من الانقسام المتساوي وأشِّر على الكروموسومات وخيوط المغزل.",
+"a": "خلية دائرية فيها قطبان متقابلان، وتصطف الكروموسومات (كل كروموسوم من كروماتيدين) على خط الاستواء، وتمتد خيوط المغزل من القطبين إلى مراكز الكروموسومات.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" font-family=\"Cairo,sans-serif\"><circle cx=\"210\" cy=\"130\" r=\"95\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"210\" cy=\"40\" r=\"5\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\"/><circle cx=\"210\" cy=\"220\" r=\"5\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\"/></svg>",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 260\" font-family=\"Cairo,sans-serif\"><circle cx=\"210\" cy=\"130\" r=\"95\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"210\" cy=\"40\" r=\"5\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\"/><circle cx=\"210\" cy=\"220\" r=\"5\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\"/><line x1=\"210\" y1=\"45\" x2=\"158\" y2=\"120\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"210\" y1=\"215\" x2=\"158\" y2=\"140\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"150\" y1=\"118\" x2=\"166\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"166\" y1=\"118\" x2=\"150\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"210\" y1=\"45\" x2=\"184\" y2=\"120\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"210\" y1=\"215\" x2=\"184\" y2=\"140\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"176\" y1=\"118\" x2=\"192\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"192\" y1=\"118\" x2=\"176\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"210\" y1=\"45\" x2=\"236\" y2=\"120\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"210\" y1=\"215\" x2=\"236\" y2=\"140\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"228\" y1=\"118\" x2=\"244\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"244\" y1=\"118\" x2=\"228\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"210\" y1=\"45\" x2=\"262\" y2=\"120\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"210\" y1=\"215\" x2=\"262\" y2=\"140\" stroke=\"#2dd4bf\" stroke-width=\"1.2\"/><line x1=\"254\" y1=\"118\" x2=\"270\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"270\" y1=\"118\" x2=\"254\" y2=\"142\" stroke=\"#f3d97a\" stroke-width=\"3\"/><text x=\"380\" y=\"135\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"end\" font-family=\"Cairo,sans-serif\">خط الاستواء</text><line x1=\"300\" y1=\"130\" x2=\"330\" y2=\"130\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-dasharray=\"3 3\"/></svg>",
+"k": [
+"الكروموسومات",
+"خط الاستواء",
+"خيوط المغزل",
+"القطبان"
+]
+},
+{
+"c": 2,
+"l": 1,
+"t": "def",
+"q": "عرّف: النسيج.",
+"a": "مجموعة من الخلايا المتشابهة في الشكل والوظيفة (مع مادة بين خلوية في بعضها) تتعاون لأداء وظيفة معينة.",
+"k": [
+"مجموعة خلايا",
+"متشابهة",
+"وظيفة",
+"مادة بين خلوية"
+]
+},
+{
+"c": 2,
+"l": 1,
+"t": "enum",
+"q": "رتّب مستويات التنظيم في الكائن الحي متعدد الخلايا من الأبسط إلى الأعقد.",
+"a": [
+"خلية",
+"نسيج",
+"عضو",
+"جهاز",
+"كائن حي"
+]
+},
+{
+"c": 2,
+"l": 2,
+"t": "def",
+"q": "عرّف: النسيج المرستيمي.",
+"a": "نسيج نباتي تتكون خلاياه من خلايا صغيرة غير متخصصة، رقيقة الجدر، ذات نوى كبيرة وسيتوبلازم كثيف، تنقسم باستمرار لتزيد من نمو النبات.",
+"k": [
+"غير متخصصة",
+"انقسام",
+"رقيقة الجدر",
+"نمو"
+]
+},
+{
+"c": 2,
+"l": 2,
+"t": "enum",
+"q": "عدّد أنواع الأنسجة المرستيمية بحسب موقعها في النبات.",
+"a": [
+"القمية (في قمم الجذور والسيقان)",
+"الجانبية (الكامبيوم)",
+"البينية (بين العقد)"
+],
+"rev": 1
+},
+{
+"c": 2,
+"l": 2,
+"t": "why",
+"q": "علّل: يزداد سمك جذوع الأشجار مع تقدّم عمرها.",
+"a": "بسبب نشاط الكامبيوم (نسيج مرستيمي جانبي) الذي ينقسم ويكوّن خشباً ولحاءً ثانويين فيزداد قطر الساق.",
+"k": [
+"الكامبيوم",
+"مرستيمي جانبي",
+"خشب ولحاء ثانويان",
+"قطر"
+]
+},
+{
+"c": 2,
+"l": 2,
+"t": "tf",
+"q": "ينقل الخشب الماء والأملاح المعدنية من الجذور إلى بقية أجزاء النبات.",
+"a": true,
+"e": "الخشب نسيج ناقل للماء والأملاح الذائبة من الجذر إلى الساق والأوراق."
+},
+{
+"c": 2,
+"l": 2,
+"t": "mcq",
+"q": "النسيج الذي ينقل الغذاء المصنَّع من الأوراق إلى بقية أجزاء النبات هو:",
+"o": [
+"اللحاء",
+"الخشب",
+"الكامبيوم",
+"البشرة"
+],
+"e": "اللحاء ينقل المواد الغذائية المصنَّعة بالبناء الضوئي عبر الأنابيب الغربالية."
+},
+{
+"c": 2,
+"l": 2,
+"t": "why",
+"q": "علّل: تُعدّ الأوعية الخشبية الناضجة خلايا ميتة.",
+"a": "لأن جدرها تتثخن بمادة اللجنين وتفقد سيتوبلازمها ونواها فتصبح أنابيب مجوّفة سهلة مرور الماء، وتزيد النبات صلابة.",
+"k": [
+"اللجنين",
+"مجوفة",
+"ميتة",
+"نقل الماء"
+]
+},
+{
+"c": 2,
+"l": 2,
+"t": "fill",
+"q": "تتحكم الخلايا ____ في فتح الثغور وإغلاقها.",
+"a": [
+"الحارسة|الحارستان"
+],
+"e": "تتحكم الخلايا الحارسة في فتح الثغور وإغلاقها."
+},
+{
+"c": 2,
+"l": 3,
+"t": "def",
+"q": "عرّف: النسيج الطلائي.",
+"a": "نسيج حيواني خلاياه متراصة قريبة بعضها من بعض مع قليل جداً من المادة بين الخلوية، يغطي سطح الجسم ويبطن تجاويفه وأعضاءه، ويرتكز على غشاء قاعدي.",
+"k": [
+"متراصة",
+"قليل من المادة بين الخلوية",
+"يغطي ويبطن",
+"غشاء قاعدي"
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "enum",
+"q": "عدّد أربع وظائف للنسيج الطلائي.",
+"a": [
+"الحماية",
+"الإفراز",
+"الامتصاص",
+"الإحساس"
+],
+"rev": 1
+},
+{
+"c": 2,
+"l": 3,
+"t": "mcq",
+"q": "يبطّن الأوعية الدموية والحويصلات الهوائية في الرئتين نسيج:",
+"o": [
+"طلائي حرشفي بسيط",
+"طلائي عمودي بسيط",
+"نسيج عضلي أملس",
+"نسيج ضام عظمي"
+],
+"e": "الخلايا الحرشفية الرقيقة المفلطحة تسهّل تبادل الغازات والمواد بالانتشار."
+},
+{
+"c": 2,
+"l": 3,
+"t": "mcq",
+"q": "الأربطة (Ligaments) هي أنسجة ضامة تربط:",
+"o": [
+"عظماً بعظم",
+"عضلة بعظم",
+"عضلة بعضلة",
+"جلداً بعضلة"
+],
+"e": "الأربطة تربط العظام بعضها ببعض عند المفاصل، أما الأوتار فتربط العضلات بالعظام."
+},
+{
+"c": 2,
+"l": 3,
+"t": "why",
+"q": "علّل: تسمى العضلة الهيكلية بالعضلة المخططة.",
+"a": "لأن ألياف العضلة الهيكلية تظهر تحت المجهر بأشرطة متبادلة فاتحة وداكنة تعطيها مظهراً مخططاً.",
+"k": [
+"أشرطة",
+"فاتحة وداكنة",
+"مخططة",
+"ألياف"
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "def",
+"q": "عرّف: العصبون.",
+"a": "وحدة بناء ووظيفة النسيج العصبي، وهو خلية متخصصة في استقبال السيالات العصبية وتوصيلها، ويتكون من جسم خلوي وزوائد شجرية ومحور.",
+"k": [
+"وحدة النسيج العصبي",
+"سيالات عصبية",
+"جسم خلوي",
+"محور"
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "enum",
+"q": "عدّد مكونات الدم.",
+"a": [
+"البلازما",
+"كريات الدم الحمراء",
+"كريات الدم البيض",
+"الصفائح الدموية"
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "why",
+"q": "علّل: تناسب كريات الدم الحمراء وظيفة نقل الأوكسجين.",
+"a": "لاحتوائها على الهيموغلوبين الذي يرتبط بالأوكسجين، وشكلها القرصي ثنائي التقعر يزيد مساحة سطحها، وخلوها من النواة في الثدييات يوفر مساحة أكبر للهيموغلوبين.",
+"k": [
+"الهيموغلوبين",
+"ثنائية التقعر",
+"مساحة السطح",
+"خالية من النواة"
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "calc",
+"kind": "math",
+"q": "إذا كان في كل 1 mm^{3} من الدم نحو 5 000 000 كرية حمراء، فكم كرية حمراء في 2 ml من الدم؟ (1 ml = 1000 mm^{3})",
+"a": [
+"10000000000",
+"10^{10}",
+"1e10"
+],
+"num": 10000000000.0,
+"sol": "حجم الدم = 2 * 1000 = 2000 mm^{3}، فالعدد = 5 000 000 * 2000 = 10 000 000 000 = 10^{10}."
+},
+{
+"c": 2,
+"l": 3,
+"t": "fill",
+"q": "تستقبل ____ الشجرية في العصبون السيالات العصبية وتوصلها إلى جسم الخلية.",
+"a": [
+"الزوائد|الاستطالات|التفرعات"
+],
+"e": "تستقبل الزوائد الشجرية في العصبون السيالات العصبية وتوصلها إلى جسم الخلية."
+},
+{
+"c": 2,
+"l": 2,
+"t": "label",
+"q": "الشكل مقطع عرضي مبسّط في ساق نبات؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 265\" font-family=\"Cairo,sans-serif\"><rect x=\"60\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"90\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"120\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"150\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"180\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"210\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"240\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"270\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"300\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"330\" y=\"20\" width=\"28\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"75\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"108\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"141\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"174\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"207\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"240\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"273\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"306\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"339\" cy=\"58\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"89\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"122\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"155\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"188\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"221\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"254\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"287\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"320\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"353\" cy=\"82\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"75\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"108\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"141\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"174\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"207\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"240\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"273\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"306\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"339\" cy=\"106\" r=\"10\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><rect x=\"140\" y=\"118\" width=\"140\" height=\"90\" rx=\"18\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"165\" cy=\"133\" r=\"6\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.25\"/><circle cx=\"195\" cy=\"133\" r=\"6\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.25\"/><circle cx=\"225\" cy=\"133\" r=\"6\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.25\"/><circle cx=\"255\" cy=\"133\" r=\"6\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.25\"/><line x1=\"145\" y1=\"150\" x2=\"275\" y2=\"150\" stroke=\"#f3d97a\" stroke-width=\"2\" stroke-dasharray=\"5 3\"/><circle cx=\"170\" cy=\"176\" r=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"210\" cy=\"176\" r=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"250\" cy=\"176\" r=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"80\" cy=\"236\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"125\" cy=\"236\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"170\" cy=\"236\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"215\" cy=\"236\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"260\" cy=\"236\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"305\" cy=\"236\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"350\" cy=\"236\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"330\" y1=\"28\" x2=\"395\" y2=\"28\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"330\" cy=\"28\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"28\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"33\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"330\" y1=\"82\" x2=\"395\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"330\" cy=\"82\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"262\" y1=\"133\" x2=\"395\" y2=\"115\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"262\" cy=\"133\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"115\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"120\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"250\" y1=\"176\" x2=\"395\" y2=\"160\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"250\" cy=\"176\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"160\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"165\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"275\" y1=\"150\" x2=\"395\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"275\" cy=\"150\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"330\" y1=\"236\" x2=\"395\" y2=\"250\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"330\" cy=\"236\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"250\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"255\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "البشرة"
+},
+{
+"n": 2,
+"a": "القشرة"
+},
+{
+"n": 3,
+"a": "اللحاء"
+},
+{
+"n": 4,
+"a": "الخشب"
+},
+{
+"n": 5,
+"a": "الكامبيوم"
+},
+{
+"n": 6,
+"a": "النخاع",
+"k": [
+"اللب"
+]
+}
+]
+},
+{
+"c": 2,
+"l": 2,
+"t": "label",
+"q": "الشكل مقطع عرضي مبسّط في ورقة نبات؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 255\" font-family=\"Cairo,sans-serif\"><rect x=\"50\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"80\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"110\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"140\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"170\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"200\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"230\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"260\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"290\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"320\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"350\" y=\"25\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"54\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"84\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"114\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"144\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"174\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"204\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"234\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"264\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"294\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"324\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><rect x=\"354\" y=\"48\" width=\"20\" height=\"52\" rx=\"8\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><ellipse cx=\"80\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"118\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"156\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"194\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"232\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"270\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"308\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"346\" cy=\"122\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"98\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"136\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"174\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"212\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"250\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"288\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"326\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><ellipse cx=\"364\" cy=\"148\" rx=\"15\" ry=\"11\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"215\" cy=\"148\" r=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"215\" cy=\"148\" r=\"6\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.35\"/><rect x=\"50\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"80\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"110\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"140\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"170\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"230\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"260\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"290\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"320\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"350\" y=\"188\" width=\"29\" height=\"16\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M215 188 q-10 8 0 16 M215 188 q10 8 0 16\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100\" y1=\"33\" x2=\"395\" y2=\"28\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"100\" cy=\"33\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"28\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"33\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"64\" y1=\"76\" x2=\"395\" y2=\"75\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"64\" cy=\"76\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"75\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"80\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"300\" y1=\"122\" x2=\"395\" y2=\"125\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"300\" cy=\"122\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"125\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"130\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"230\" y1=\"150\" x2=\"395\" y2=\"170\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"230\" cy=\"150\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"170\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"175\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"330\" y1=\"196\" x2=\"395\" y2=\"215\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"330\" cy=\"196\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"215\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"220\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"215\" y1=\"196\" x2=\"215\" y2=\"240\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"215\" cy=\"196\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"215\" cy=\"240\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"215\" y=\"245\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "البشرة العليا"
+},
+{
+"n": 2,
+"a": "النسيج العمادي",
+"k": [
+"الميزوفيل العمادي",
+"الخلايا العمادية"
+]
+},
+{
+"n": 3,
+"a": "النسيج الإسفنجي",
+"k": [
+"الميزوفيل الإسفنجي",
+"الخلايا الإسفنجية"
+]
+},
+{
+"n": 4,
+"a": "الحزمة الوعائية",
+"k": [
+"العرق",
+"الحزمة الناقلة"
+]
+},
+{
+"n": 5,
+"a": "البشرة السفلى"
+},
+{
+"n": 6,
+"a": "الثغر",
+"k": [
+"الخليتان الحارستان",
+"الخلايا الحارسة"
+]
+}
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "label",
+"q": "الشكل يبيّن ثلاثة أنواع من النسيج الطلائي البسيط؛ سمِّ المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 245\" font-family=\"Cairo,sans-serif\"><rect x=\"30\" y=\"168\" width=\"46\" height=\"12\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"53\" cy=\"174\" rx=\"12\" ry=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"78\" y=\"168\" width=\"46\" height=\"12\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"101\" cy=\"174\" rx=\"12\" ry=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"126\" y=\"168\" width=\"46\" height=\"12\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"149\" cy=\"174\" rx=\"12\" ry=\"3\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"185\" y=\"148\" width=\"32\" height=\"32\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"201\" cy=\"164\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"219\" y=\"148\" width=\"32\" height=\"32\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"235\" cy=\"164\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"253\" y=\"148\" width=\"32\" height=\"32\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"269\" cy=\"164\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"300\" y=\"110\" width=\"26\" height=\"70\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"313\" cy=\"155\" rx=\"6\" ry=\"12\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"328\" y=\"110\" width=\"26\" height=\"70\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"341\" cy=\"155\" rx=\"6\" ry=\"12\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"356\" y=\"110\" width=\"26\" height=\"70\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"369\" cy=\"155\" rx=\"6\" ry=\"12\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"20\" y1=\"184\" x2=\"400\" y2=\"184\" stroke=\"#f3d97a\" stroke-width=\"4\"/><line x1=\"82\" y1=\"168\" x2=\"82\" y2=\"100\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"82\" cy=\"168\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"82\" cy=\"100\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"82\" y=\"105\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"235\" y1=\"148\" x2=\"235\" y2=\"100\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"235\" cy=\"148\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"235\" cy=\"100\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"235\" y=\"105\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"340\" y1=\"110\" x2=\"340\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"340\" cy=\"110\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"340\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"340\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"380\" y1=\"184\" x2=\"380\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"380\" cy=\"184\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "طلائي حرشفي بسيط",
+"k": [
+"نسيج طلائي حرشفي",
+"حرشفي"
+]
+},
+{
+"n": 2,
+"a": "طلائي مكعبي بسيط",
+"k": [
+"نسيج طلائي مكعبي",
+"مكعبي"
+]
+},
+{
+"n": 3,
+"a": "طلائي عمودي بسيط",
+"k": [
+"نسيج طلائي عمودي",
+"عمودي"
+]
+},
+{
+"n": 4,
+"a": "الغشاء القاعدي"
+}
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "label",
+"q": "الشكل يمثل عصبوناً؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 245\" font-family=\"Cairo,sans-serif\"><ellipse cx=\"150\" cy=\"130\" rx=\"40\" ry=\"32\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"150\" cy=\"130\" r=\"13\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.35\"/><line x1=\"115.4\" y1=\"114\" x2=\"54.7\" y2=\"79\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"54.7\" y1=\"79\" x2=\"42.1\" y2=\"61\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"54.7\" y1=\"79\" x2=\"32.8\" y2=\"77.1\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"110\" y1=\"130\" x2=\"35\" y2=\"130\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"35\" y1=\"130\" x2=\"15.1\" y2=\"120.7\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"35\" y1=\"130\" x2=\"15.1\" y2=\"139.3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"115.4\" y1=\"146\" x2=\"54.7\" y2=\"181\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"54.7\" y1=\"181\" x2=\"32.8\" y2=\"182.9\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"54.7\" y1=\"181\" x2=\"42.1\" y2=\"199\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"130\" y1=\"102.3\" x2=\"102.5\" y2=\"54.7\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"102.5\" y1=\"54.7\" x2=\"100.6\" y2=\"32.7\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"102.5\" y1=\"54.7\" x2=\"84.5\" y2=\"42\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"190\" y1=\"130\" x2=\"380\" y2=\"130\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><rect x=\"215\" y=\"118\" width=\"52\" height=\"24\" rx=\"12\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.25\"/><rect x=\"285\" y=\"118\" width=\"52\" height=\"24\" rx=\"12\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.25\"/><rect x=\"355\" y=\"118\" width=\"52\" height=\"24\" rx=\"12\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.25\"/><line x1=\"380\" y1=\"130\" x2=\"405\" y2=\"108\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"380\" y1=\"130\" x2=\"410\" y2=\"130\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"380\" y1=\"130\" x2=\"405\" y2=\"152\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><circle cx=\"405\" cy=\"108\" r=\"3.5\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"#e6f1f5\"/><circle cx=\"410\" cy=\"130\" r=\"3.5\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"#e6f1f5\"/><circle cx=\"405\" cy=\"152\" r=\"3.5\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"#e6f1f5\"/><line x1=\"70\" y1=\"60\" x2=\"70\" y2=\"15\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"70\" cy=\"60\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"70\" cy=\"15\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"70\" y=\"20\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"130\" y1=\"152\" x2=\"110\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"130\" cy=\"152\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"110\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"110\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"150\" y1=\"130\" x2=\"150\" y2=\"30\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"150\" cy=\"30\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"150\" y=\"35\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"200\" y1=\"130\" x2=\"200\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"200\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"200\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"240\" y1=\"118\" x2=\"270\" y2=\"40\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"240\" cy=\"118\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"270\" cy=\"40\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"270\" y=\"45\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"408\" y1=\"108\" x2=\"408\" y2=\"50\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"408\" cy=\"108\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"408\" cy=\"50\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"408\" y=\"55\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text><line x1=\"269\" y1=\"130\" x2=\"300\" y2=\"215\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"269\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"300\" cy=\"215\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"300\" y=\"220\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">7</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الزوائد الشجرية",
+"k": [
+"الاستطالات الشجرية",
+"التفرعات الشجرية"
+]
+},
+{
+"n": 2,
+"a": "جسم الخلية",
+"k": [
+"الجسم الخلوي"
+]
+},
+{
+"n": 3,
+"a": "النواة"
+},
+{
+"n": 4,
+"a": "المحور",
+"k": [
+"المحور العصبي"
+]
+},
+{
+"n": 5,
+"a": "غمد المايلين",
+"k": [
+"الغمد المايليني",
+"المايلين"
+]
+},
+{
+"n": 6,
+"a": "النهايات المحورية",
+"k": [
+"الأزرار المحورية",
+"التفرعات النهائية"
+]
+},
+{
+"n": 7,
+"a": "عقدة رانفييه",
+"k": [
+"عقدة رانفير",
+"اختناق رانفييه"
+]
+}
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "label",
+"q": "الشكل يبيّن مكونات الدم الخلوية؛ سمِّ ما يؤشَّر عليه.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 235\" font-family=\"Cairo,sans-serif\"><circle cx=\"90\" cy=\"90\" r=\"20\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.08\"/><ellipse cx=\"90\" cy=\"90\" rx=\"9\" ry=\"5\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"160\" cy=\"160\" r=\"20\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.08\"/><ellipse cx=\"160\" cy=\"160\" rx=\"9\" ry=\"5\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"250\" cy=\"80\" r=\"20\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.08\"/><ellipse cx=\"250\" cy=\"80\" rx=\"9\" ry=\"5\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"330\" cy=\"150\" r=\"20\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.08\"/><ellipse cx=\"330\" cy=\"150\" rx=\"9\" ry=\"5\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"110\" cy=\"190\" r=\"20\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.08\"/><ellipse cx=\"110\" cy=\"190\" rx=\"9\" ry=\"5\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><circle cx=\"200\" cy=\"120\" r=\"30\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><path d=\"M185 112 q8 -12 16 -2 q10 -8 14 6 q-4 12 -14 8 q-8 8 -16 -4z\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.35\"/><ellipse cx=\"300\" cy=\"100\" rx=\"6\" ry=\"3.5\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><ellipse cx=\"310\" cy=\"115\" rx=\"6\" ry=\"3.5\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><ellipse cx=\"145\" cy=\"115\" rx=\"6\" ry=\"3.5\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><ellipse cx=\"50\" cy=\"150\" rx=\"6\" ry=\"3.5\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><line x1=\"330\" y1=\"150\" x2=\"380\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"330\" cy=\"150\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"225\" y1=\"125\" x2=\"260\" y2=\"215\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"225\" cy=\"125\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"260\" cy=\"215\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"260\" y=\"220\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"310\" y1=\"115\" x2=\"385\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"310\" cy=\"115\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"385\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"385\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "كرية دم حمراء",
+"k": [
+"خلية دم حمراء",
+"كريات الدم الحمراء"
+]
+},
+{
+"n": 2,
+"a": "كرية دم بيضاء",
+"k": [
+"خلية دم بيضاء",
+"كريات الدم البيض"
+]
+},
+{
+"n": 3,
+"a": "الصفائح الدموية",
+"k": [
+"صفيحة دموية"
+]
+}
+]
+},
+{
+"c": 2,
+"l": 3,
+"t": "draw",
+"q": "ارسم جزءاً من نسيج عضلي قلبي بمقطع طولي، وأشِّر على القرص البيني والنواة.",
+"a": "ألياف عضلية مخططة بالطول، لكل خلية نواة واحدة مركزية، وتتصل الخلايا ببعضها بأقراص بينية داكنة مستعرضة، وتتفرع الألياف في العضلة القلبية.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 175\" font-family=\"Cairo,sans-serif\"><rect x=\"30\" y=\"60\" width=\"170\" height=\"50\" rx=\"6\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><rect x=\"215\" y=\"60\" width=\"170\" height=\"50\" rx=\"6\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"40\" y1=\"60\" x2=\"40\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"54\" y1=\"60\" x2=\"54\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"68\" y1=\"60\" x2=\"68\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"82\" y1=\"60\" x2=\"82\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"96\" y1=\"60\" x2=\"96\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"110\" y1=\"60\" x2=\"110\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"124\" y1=\"60\" x2=\"124\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"138\" y1=\"60\" x2=\"138\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"152\" y1=\"60\" x2=\"152\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"166\" y1=\"60\" x2=\"166\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"180\" y1=\"60\" x2=\"180\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"194\" y1=\"60\" x2=\"194\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"225\" y1=\"60\" x2=\"225\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"239\" y1=\"60\" x2=\"239\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"253\" y1=\"60\" x2=\"253\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"267\" y1=\"60\" x2=\"267\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"281\" y1=\"60\" x2=\"281\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"295\" y1=\"60\" x2=\"295\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"309\" y1=\"60\" x2=\"309\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"323\" y1=\"60\" x2=\"323\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"337\" y1=\"60\" x2=\"337\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"351\" y1=\"60\" x2=\"351\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"365\" y1=\"60\" x2=\"365\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"379\" y1=\"60\" x2=\"379\" y2=\"110\" stroke=\"#e6f1f5\" stroke-width=\"1\" stroke-opacity=\"0.5\"/><line x1=\"207\" y1=\"58\" x2=\"207\" y2=\"112\" stroke=\"#f3d97a\" stroke-width=\"5\"/><ellipse cx=\"110\" cy=\"85\" rx=\"14\" ry=\"9\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.35\"/><ellipse cx=\"300\" cy=\"85\" rx=\"14\" ry=\"9\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.35\"/><text x=\"207\" y=\"45\" fill=\"#f3d97a\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">قرص بيني</text><text x=\"110\" y=\"135\" fill=\"#f3d97a\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">نواة مركزية</text><text x=\"300\" y=\"135\" fill=\"#f3d97a\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">تخطيط عرضي وتفرع الألياف</text></svg>",
+"k": [
+"القرص البيني",
+"نواة مركزية",
+"تخطيط",
+"تفرع"
+]
+},
+{
+"c": 2,
+"l": 2,
+"t": "draw",
+"q": "ارسم مقطعاً طولياً في وعاء خشبي وأنبوب غربالي مع خليته المرافقة، مؤشراً على كل منها.",
+"a": "الوعاء الخشبي أنبوب طويل مجوف ميت جدره مثخّنة باللجنين (حلقات أو حلزونات). الأنبوب الغربالي خلايا حية متصلة بنهايات مثقبة (صفائح غربالية) وبجانبه خلية مرافقة ذات نواة واضحة.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 265\" font-family=\"Cairo,sans-serif\"><rect x=\"60\" y=\"20\" width=\"50\" height=\"200\" rx=\"4\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"40\" x2=\"110\" y2=\"40\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"66\" x2=\"110\" y2=\"66\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"92\" x2=\"110\" y2=\"92\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"118\" x2=\"110\" y2=\"118\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"144\" x2=\"110\" y2=\"144\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"170\" x2=\"110\" y2=\"170\" stroke=\"#f3d97a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"196\" x2=\"110\" y2=\"196\" stroke=\"#f3d97a\" stroke-width=\"3\"/><text x=\"85\" y=\"238\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">وعاء خشبي</text><rect x=\"230\" y=\"20\" width=\"44\" height=\"68\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"230\" y1=\"88\" x2=\"274\" y2=\"88\" stroke=\"#f3d97a\" stroke-width=\"3\"/><circle cx=\"240\" cy=\"88\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"252\" cy=\"88\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"264\" cy=\"88\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><rect x=\"284\" y=\"28\" width=\"24\" height=\"52\" rx=\"6\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><ellipse cx=\"296\" cy=\"54\" rx=\"6\" ry=\"10\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"230\" y=\"88\" width=\"44\" height=\"68\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"230\" y1=\"156\" x2=\"274\" y2=\"156\" stroke=\"#f3d97a\" stroke-width=\"3\"/><circle cx=\"240\" cy=\"156\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"252\" cy=\"156\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"264\" cy=\"156\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><rect x=\"284\" y=\"96\" width=\"24\" height=\"52\" rx=\"6\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><ellipse cx=\"296\" cy=\"122\" rx=\"6\" ry=\"10\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"230\" y=\"156\" width=\"44\" height=\"68\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"230\" y1=\"224\" x2=\"274\" y2=\"224\" stroke=\"#f3d97a\" stroke-width=\"3\"/><circle cx=\"240\" cy=\"224\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"252\" cy=\"224\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"264\" cy=\"224\" r=\"1.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><rect x=\"284\" y=\"164\" width=\"24\" height=\"52\" rx=\"6\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><ellipse cx=\"296\" cy=\"190\" rx=\"6\" ry=\"10\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><text x=\"252\" y=\"238\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">أنبوب غربالي</text><text x=\"296\" y=\"252\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">خلية مرافقة</text></svg>",
+"k": [
+"الوعاء الخشبي",
+"اللجنين",
+"الأنبوب الغربالي",
+"الصفيحة الغربالية",
+"الخلية المرافقة"
+],
+"rev": 1
+},
+{
+"c": 3,
+"l": 2,
+"t": "def",
+"q": "عرّف: التكاثر.",
+"a": "عملية حيوية يُنتج بها الكائن الحي أفراداً جديدة من نوعه، فيضمن استمرار نوعه على الأرض.",
+"k": [
+"أفراد جديدة",
+"استمرار النوع",
+"كائن حي"
+]
+},
+{
+"c": 3,
+"l": 2,
+"t": "why",
+"q": "علّل: التكاثر ضروري لاستمرار النوع.",
+"a": "لأن الأفراد تموت بمرور الزمن، فلولا إنتاج أفراد جديدة بالتكاثر لانقرض النوع.",
+"k": [
+"موت الأفراد",
+"أفراد جديدة",
+"انقراض",
+"استمرار النوع"
+]
+},
+{
+"c": 3,
+"l": 3,
+"t": "def",
+"q": "عرّف: التكاثر اللاجنسي.",
+"a": "تكاثر يتم بوجود فرد واحد فقط ودون اندماج أمشاج، وتكون الأفراد الناتجة مطابقة وراثياً للأصل.",
+"k": [
+"فرد واحد",
+"دون أمشاج",
+"مطابقة وراثياً"
+]
+},
+{
+"c": 3,
+"l": 3,
+"t": "tf",
+"q": "تتطابق الأفراد الناتجة عن التكاثر الجنسي وراثياً مع أبويها تماماً.",
+"a": false,
+"e": "في التكاثر الجنسي تمتزج مادة وراثية من الأبوين فتختلف الأفراد عن أبويها وعن بعضها."
+},
+{
+"c": 3,
+"l": 3,
+"t": "why",
+"q": "علّل: يزيد التكاثر الجنسي من التنوع الوراثي بين الأفراد.",
+"a": "لأن الفرد الناتج يحمل مادة وراثية من أبوين مختلفين، ولأن الانقسام الاختزالي يُنتج أمشاجاً متنوعة، والتقاء الأمشاج عشوائي.",
+"k": [
+"أبوين",
+"أمشاج متنوعة",
+"الانقسام الاختزالي",
+"الإخصاب"
+]
+},
+{
+"c": 3,
+"l": 3,
+"t": "enum",
+"q": "عدّد ثلاث طرائق للتكاثر اللاجنسي.",
+"a": [
+"الانشطار الثنائي",
+"التبرعم",
+"تكوين الأبواغ",
+"التجزؤ",
+"التكاثر الخضري"
+]
+},
+{
+"c": 3,
+"l": 5,
+"t": "mcq",
+"q": "تتكاثر البكتريا لاجنسياً بطريقة:",
+"o": [
+"الانشطار الثنائي",
+"التبرعم",
+"الاقتران بين الأمشاج",
+"التجدد"
+],
+"e": "تضاعف الخلية البكتيرية DNA ثم تنقسم إلى خليتين متماثلتين."
+},
+{
+"c": 3,
+"l": 5,
+"t": "calc",
+"kind": "math",
+"q": "تنقسم خلية بكتيرية كل 20 دقيقة. كم خلية تنتج من خلية واحدة بعد ساعتين، علماً أن كل الخلايا تنقسم دون موت؟",
+"a": [
+"64"
+],
+"num": 64,
+"sol": "2 h = 120 min = 6 فترات انقسام، العدد = 2^6 = 64."
+},
+{
+"c": 3,
+"l": 4,
+"t": "mcq",
+"q": "عند إصابة الخلية البكتيرية بالعاثية (آكلة البكتريا) فإن العاثية:",
+"o": [
+"تحقن مادتها الوراثية داخل الخلية البكتيرية",
+"تدخل الخلية كاملة بما فيها الذيل",
+"تتغذى بالبلعمة على الخلية",
+"تنقسم انشطاراً ثنائياً خارج الخلية"
+],
+"e": "تلتصق العاثية بسطح البكتريا وتحقن DNA عبر ذيلها وتبقى القشرة البروتينية خارجاً."
+},
+{
+"c": 3,
+"l": 4,
+"t": "enum",
+"q": "رتّب خطوات تكاثر الفيروس (دورة التحلل) داخل الخلية المضيفة.",
+"a": [
+"الالتصاق بالخلية المضيفة",
+"حقن المادة الوراثية",
+"تضاعف المادة الوراثية وتصنيع البروتينات الفيروسية",
+"تجميع الفيروسات الجديدة",
+"تحلل الخلية وتحرر الفيروسات"
+],
+"rev": 1
+},
+{
+"c": 3,
+"l": 4,
+"t": "why",
+"q": "علّل: تُعدّ الفيروسات متطفلة إجبارية.",
+"a": "لأنها لا تملك جهازاً خلوياً ولا رايبوسومات خاصة بها ولا تستطيع التضاعف إلا داخل خلية حية تستعمل تراكيبها ومواردها.",
+"k": [
+"لا خلايا",
+"رايبوسومات",
+"خلية مضيفة",
+"تضاعف"
+]
+},
+{
+"c": 3,
+"l": 7,
+"t": "mcq",
+"q": "تتكاثر فطريات عفن الخبز (Rhizopus) لاجنسياً بـ:",
+"o": [
+"الأبواغ المتكوّنة في الأكياس البوغية",
+"الانشطار الثنائي",
+"التبرعم فقط",
+"الإخصاب الخارجي"
+],
+"e": "تتكوّن أعداد كبيرة من الأبواغ داخل الأكياس البوغية، فتتحرر وتنبت في وسط مناسب.",
+"rev": 1
+},
+{
+"c": 3,
+"l": 8,
+"t": "def",
+"q": "عرّف: التكاثر الخضري.",
+"a": "تكاثر لاجنسي في النباتات تنشأ فيه نباتات جديدة من أجزاء خضرية (جذر أو ساق أو ورقة) للنبات الأم دون بذور.",
+"k": [
+"أجزاء خضرية",
+"جذر أو ساق أو ورقة",
+"دون بذور",
+"لاجنسي"
+]
+},
+{
+"c": 3,
+"l": 8,
+"t": "mcq",
+"q": "تتكاثر البطاطا خضرياً بواسطة:",
+"o": [
+"الدرنات",
+"الأبصال",
+"الريزومات",
+"البذور فقط"
+],
+"e": "الدرنة ساق تحت أرضية منتفخة تحمل براعم (العيون) تنمو إلى نباتات جديدة."
+},
+{
+"c": 3,
+"l": 8,
+"t": "enum",
+"q": "عدّد الأجزاء الأربعة الرئيسة في الزهرة الكاملة.",
+"a": [
+"الكأس (السبلات)",
+"التويج (البتلات)",
+"الطلع (الأسدية)",
+"المتاع (الكرابل)"
+]
+},
+{
+"c": 3,
+"l": 8,
+"t": "tf",
+"q": "يحدث الإخصاب المزدوج في النباتات الزهرية.",
+"a": true,
+"e": "يخصّب أحد النواتين المنويتين البيضة فينتج الزايكوت، ويندمج الآخر مع النواتين القطبيتين فينتج الأندوسبيرم."
+},
+{
+"c": 3,
+"l": 9,
+"t": "mcq",
+"q": "الإخصاب خارجي في:",
+"o": [
+"الأسماك والضفادع",
+"الطيور",
+"الثدييات",
+"الزواحف"
+],
+"e": "في الأسماك والضفادع تُطلَق الأمشاج في الماء ويلتقي الحيوان المنوي بالبيضة خارج جسم الأنثى."
+},
+{
+"c": 3,
+"l": 9,
+"t": "why",
+"q": "علّل: تضع إناث معظم الأسماك أعداداً كبيرة جداً من البيض.",
+"a": "لأن الإخصاب خارجي ويتعرض البيض في الماء للافتراس وفقد الأمشاج وظروف البيئة، فيزداد احتمال نجاة بعضه.",
+"k": [
+"إخصاب خارجي",
+"افتراس",
+"احتمال النجاة"
+]
+},
+{
+"c": 3,
+"l": 10,
+"t": "def",
+"q": "عرّف: التكاثر العذري.",
+"a": "تكاثر تتطور فيه بيضة غير مخصبة إلى فرد جديد كامل دون اتحاد مع حيوان منوي.",
+"k": [
+"بيضة غير مخصبة",
+"فرد جديد",
+"دون حيوان منوي"
+]
+},
+{
+"c": 3,
+"l": 10,
+"t": "tf",
+"q": "تنشأ ذكور النحل من بيض غير مخصب.",
+"a": true,
+"e": "الذكور في النحل تنشأ عذرياً من بيض غير مخصب فتكون أحادية المجموعة الكروموسومية (n)."
+},
+{
+"c": 3,
+"l": 4,
+"t": "label",
+"q": "الشكل يمثل العاثية (آكلة البكتريا)؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 250\" font-family=\"Cairo,sans-serif\"><polygon points=\"210,25 245,42 245,82 210,100 175,82 175,42\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M195 50 q8 -10 15 0 t15 0 t-15 12 t-15 0 t15 14 t-15 -2\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"none\"/><rect x=\"200\" y=\"100\" width=\"20\" height=\"10\" rx=\"0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><rect x=\"200\" y=\"110\" width=\"20\" height=\"70\" rx=\"0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"200\" y1=\"125\" x2=\"220\" y2=\"125\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"200\" y1=\"140\" x2=\"220\" y2=\"140\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"200\" y1=\"155\" x2=\"220\" y2=\"155\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"200\" y1=\"170\" x2=\"220\" y2=\"170\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><rect x=\"185\" y=\"180\" width=\"50\" height=\"10\" rx=\"2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190\" y1=\"190\" x2=\"150\" y2=\"230\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"200\" y1=\"190\" x2=\"175\" y2=\"238\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"220\" y1=\"190\" x2=\"245\" y2=\"238\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"230\" y1=\"190\" x2=\"270\" y2=\"230\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"245\" y1=\"60\" x2=\"330\" y2=\"35\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"245\" cy=\"60\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"35\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"40\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"218\" y1=\"57\" x2=\"330\" y2=\"85\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"218\" cy=\"57\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"85\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"90\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"220\" y1=\"145\" x2=\"330\" y2=\"140\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"220\" cy=\"145\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"140\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"145\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"235\" y1=\"185\" x2=\"330\" y2=\"190\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"235\" cy=\"185\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"190\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"195\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"265\" y1=\"229\" x2=\"330\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"265\" cy=\"229\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الرأس",
+"k": [
+"القفيصة",
+"غلاف الرأس البروتيني"
+]
+},
+{
+"n": 2,
+"a": "المادة الوراثية",
+"k": [
+"DNA",
+"الحمض النووي"
+]
+},
+{
+"n": 3,
+"a": "غمد الذيل",
+"k": [
+"الذيل",
+"أنبوب الذيل"
+]
+},
+{
+"n": 4,
+"a": "اللوحة القاعدية",
+"k": [
+"القاعدة"
+]
+},
+{
+"n": 5,
+"a": "ألياف الذيل",
+"k": [
+"الألياف الذيلية",
+"الخيوط"
+]
+}
+]
+},
+{
+"c": 3,
+"l": 9,
+"t": "label",
+"q": "الشكل يمثل حيواناً منوياً بشرياً؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 240\" font-family=\"Cairo,sans-serif\"><ellipse cx=\"90\" cy=\"130\" rx=\"26\" ry=\"16\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M70 118 q-14 12 0 24\" stroke=\"#f3d97a\" stroke-width=\"2.5\" fill=\"none\"/><ellipse cx=\"103\" cy=\"130\" rx=\"12\" ry=\"10\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><rect x=\"116\" y=\"125\" width=\"56\" height=\"10\" rx=\"4\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"126\" y1=\"125\" x2=\"126\" y2=\"135\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"138\" y1=\"125\" x2=\"138\" y2=\"135\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"150\" y1=\"125\" x2=\"150\" y2=\"135\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><line x1=\"162\" y1=\"125\" x2=\"162\" y2=\"135\" stroke=\"#e6f1f5\" stroke-width=\"1\"/><path d=\"M172 130 q25 -22 50 0 t50 0 t50 0 t50 0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"66\" y1=\"130\" x2=\"50\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"66\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"50\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"50\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"100\" y1=\"130\" x2=\"100\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"100\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"100\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"100\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"144\" y1=\"125\" x2=\"165\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"144\" cy=\"125\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"165\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"165\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"300\" y1=\"130\" x2=\"330\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"300\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الأكروسوم",
+"k": [
+"الجسيم الطرفي",
+"القلنسوة"
+]
+},
+{
+"n": 2,
+"a": "النواة"
+},
+{
+"n": 3,
+"a": "القطعة الوسطى",
+"k": [
+"المايتوكوندريا"
+]
+},
+{
+"n": 4,
+"a": "الذيل",
+"k": [
+"السوط"
+]
+}
+]
+},
+{
+"c": 3,
+"l": 8,
+"t": "label",
+"q": "الشكل مقطع طولي في زهرة؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 255\" font-family=\"Cairo,sans-serif\"><path d=\"M185 215 Q95 200 100 95 Q165 120 190 200z\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><path d=\"M235 215 Q325 200 320 95 Q255 120 230 200z\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.2\"/><path d=\"M190 222 Q150 222 135 240 Q175 245 200 228z\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><path d=\"M230 222 Q270 222 285 240 Q245 245 220 228z\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><rect x=\"190\" y=\"215\" width=\"40\" height=\"10\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"205\" x2=\"160\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"248\" y1=\"205\" x2=\"260\" y2=\"118\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><ellipse cx=\"158\" cy=\"104\" rx=\"8\" ry=\"15\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><ellipse cx=\"262\" cy=\"104\" rx=\"8\" ry=\"15\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><ellipse cx=\"210\" cy=\"175\" rx=\"25\" ry=\"32\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"210\" cy=\"182\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.35\"/><line x1=\"210\" y1=\"143\" x2=\"210\" y2=\"78\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><ellipse cx=\"210\" cy=\"70\" rx=\"14\" ry=\"8\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><line x1=\"112\" y1=\"120\" x2=\"45\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"112\" cy=\"120\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"45\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"45\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"145\" y1=\"236\" x2=\"45\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"145\" cy=\"236\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"45\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"45\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"158\" y1=\"96\" x2=\"45\" y2=\"25\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"158\" cy=\"96\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"45\" cy=\"25\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"45\" y=\"30\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"166\" y1=\"150\" x2=\"45\" y2=\"170\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"166\" cy=\"150\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"45\" cy=\"170\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"45\" y=\"175\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"210\" y1=\"68\" x2=\"330\" y2=\"25\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"210\" cy=\"68\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"25\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"30\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"210\" y1=\"105\" x2=\"330\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"210\" cy=\"105\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text><line x1=\"225\" y1=\"170\" x2=\"330\" y2=\"150\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"225\" cy=\"170\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"150\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"155\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">7</text><line x1=\"212\" y1=\"184\" x2=\"330\" y2=\"205\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"212\" cy=\"184\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"205\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"210\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">8</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "البتلة",
+"k": [
+"التويج"
+]
+},
+{
+"n": 2,
+"a": "السبلة",
+"k": [
+"الكأس"
+]
+},
+{
+"n": 3,
+"a": "المتك"
+},
+{
+"n": 4,
+"a": "الخيط",
+"k": [
+"خيط السداة"
+]
+},
+{
+"n": 5,
+"a": "الميسم"
+},
+{
+"n": 6,
+"a": "القلم"
+},
+{
+"n": 7,
+"a": "المبيض"
+},
+{
+"n": 8,
+"a": "البويضة",
+"k": [
+"البويضات"
+]
+}
+]
+},
+{
+"c": 3,
+"l": 9,
+"t": "label",
+"q": "الشكل يمثل الجهاز التناسلي الأنثوي في الإنسان؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 255\" font-family=\"Cairo,sans-serif\"><path d=\"M165 70 Q210 50 255 70 L240 160 Q210 185 180 160Z\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"#2dd4bf\" fill-opacity=\"0.15\"/><rect x=\"200\" y=\"170\" width=\"20\" height=\"30\" rx=\"3\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><path d=\"M195 200 L195 245 M225 200 L225 245\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M165 72 Q120 55 90 85\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M255 72 Q300 55 330 85\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M90 85 q-10 6 -8 16 M90 85 q-2 14 6 18\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M330 85 q10 6 8 16 M330 85 q2 14 -6 18\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><ellipse cx=\"78\" cy=\"125\" rx=\"18\" ry=\"26\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><ellipse cx=\"342\" cy=\"125\" rx=\"18\" ry=\"26\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"60\" y1=\"125\" x2=\"30\" y2=\"60\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"60\" cy=\"125\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"30\" cy=\"60\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"30\" y=\"65\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"130\" y1=\"63\" x2=\"130\" y2=\"20\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"130\" cy=\"63\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"130\" cy=\"20\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"130\" y=\"25\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"210\" y1=\"115\" x2=\"350\" y2=\"30\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"210\" cy=\"115\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"350\" cy=\"30\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"350\" y=\"35\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"210\" y1=\"185\" x2=\"350\" y2=\"185\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"210\" cy=\"185\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"350\" cy=\"185\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"350\" y=\"190\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"225\" y1=\"225\" x2=\"350\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"225\" cy=\"225\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"350\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"350\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "المبيض"
+},
+{
+"n": 2,
+"a": "قناة البيض",
+"k": [
+"قناة فالوب",
+"البوق"
+]
+},
+{
+"n": 3,
+"a": "الرحم"
+},
+{
+"n": 4,
+"a": "عنق الرحم"
+},
+{
+"n": 5,
+"a": "المهبل"
+}
+]
+},
+{
+"c": 3,
+"l": 7,
+"t": "label",
+"q": "الشكل يمثل فطر عفن الخبز (Rhizopus)؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 255\" font-family=\"Cairo,sans-serif\"><line x1=\"30\" y1=\"220\" x2=\"400\" y2=\"220\" stroke=\"#e6f1f5\" stroke-width=\"3\"/><path d=\"M150 190 Q210 170 270 190\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"150\" y1=\"190\" x2=\"150\" y2=\"95\" stroke=\"#e6f1f5\" stroke-width=\"2.5\"/><circle cx=\"150\" cy=\"78\" r=\"18\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"144\" cy=\"74\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"156\" cy=\"73\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"150\" cy=\"82\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"142\" cy=\"84\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"158\" cy=\"83\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><path d=\"M150 190 L132 218 M150 190 L150 218 M150 190 L168 218\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"270\" y1=\"190\" x2=\"270\" y2=\"95\" stroke=\"#e6f1f5\" stroke-width=\"2.5\"/><circle cx=\"270\" cy=\"78\" r=\"18\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"264\" cy=\"74\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"276\" cy=\"73\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"270\" cy=\"82\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"262\" cy=\"84\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><circle cx=\"278\" cy=\"83\" r=\"2.5\" stroke=\"#2dd4bf\" stroke-width=\"1\" fill=\"#2dd4bf\"/><path d=\"M270 190 L252 218 M270 190 L270 218 M270 190 L288 218\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M150 190 L120 188 M270 190 L300 188\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"150\" y1=\"62\" x2=\"60\" y2=\"40\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"62\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"60\" cy=\"40\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"60\" y=\"45\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"150\" y1=\"140\" x2=\"60\" y2=\"140\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"150\" cy=\"140\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"60\" cy=\"140\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"60\" y=\"145\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"210\" y1=\"180\" x2=\"210\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"210\" cy=\"180\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"210\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"210\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"132\" y1=\"214\" x2=\"60\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"132\" cy=\"214\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"60\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"60\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"155\" y1=\"73\" x2=\"105\" y2=\"25\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"155\" cy=\"73\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"105\" cy=\"25\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"105\" y=\"30\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الكيس البوغي",
+"k": [
+"الحافظة البوغية"
+]
+},
+{
+"n": 2,
+"a": "الحامل البوغي",
+"k": [
+"حامل الكيس البوغي",
+"الخيط الحامل للأكياس"
+]
+},
+{
+"n": 3,
+"a": "الساق الجارية",
+"k": [
+"الهيفا الجارية",
+"الجري",
+"الستولون"
+]
+},
+{
+"n": 4,
+"a": "الجذيرات",
+"k": [
+"الهيفات الماصة",
+"الخيوط الجذرية"
+]
+},
+{
+"n": 5,
+"a": "الأبواغ",
+"k": [
+"بوغ"
+]
+}
+],
+"rev": 1
+},
+{
+"c": 3,
+"l": 5,
+"t": "draw",
+"q": "ارسم مراحل الانشطار الثنائي في البكتريا بأربع خطوات متتابعة مع تسمية كل خطوة.",
+"a": "(1) خلية بكتيرية فيها DNA واحد، (2) تضاعف DNA وزيادة طول الخلية، (3) تكوّن حاجز عرضي في الوسط، (4) انفصال خليتين بنويتين متماثلتين.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 150\" font-family=\"Cairo,sans-serif\"><rect x=\"160\" y=\"60\" width=\"110\" height=\"30\" rx=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M185 75 q5 -8 10 0 t10 0 t10 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/></svg>",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 150\" font-family=\"Cairo,sans-serif\"><rect x=\"315\" y=\"60\" width=\"60\" height=\"30\" rx=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M335 75 q5 -8 10 0 t10 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/><rect x=\"217\" y=\"60\" width=\"76\" height=\"30\" rx=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M231 75 q4 -7 8 0 t8 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/><path d=\"M265 75 q4 -7 8 0 t8 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/><rect x=\"127\" y=\"60\" width=\"76\" height=\"30\" rx=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"165\" y1=\"60\" x2=\"165\" y2=\"90\" stroke=\"#f3d97a\" stroke-width=\"2.5\"/><path d=\"M139 75 q4 -7 8 0 t8 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/><path d=\"M175 75 q4 -7 8 0 t8 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/><rect x=\"35\" y=\"60\" width=\"38\" height=\"30\" rx=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><rect x=\"77\" y=\"60\" width=\"38\" height=\"30\" rx=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M47 75 q4 -7 8 0 t8 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/><path d=\"M89 75 q4 -7 8 0 t8 0\" stroke=\"#2dd4bf\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"303\" y1=\"75\" x2=\"301\" y2=\"75\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"301\" y1=\"75\" x2=\"309.1\" y2=\"71.1\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"301\" y1=\"75\" x2=\"309.1\" y2=\"78.9\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"213\" y1=\"75\" x2=\"211\" y2=\"75\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"211\" y1=\"75\" x2=\"219.1\" y2=\"71.1\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"211\" y1=\"75\" x2=\"219.1\" y2=\"78.9\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"123\" y1=\"75\" x2=\"121\" y2=\"75\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"121\" y1=\"75\" x2=\"129.1\" y2=\"71.1\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"121\" y1=\"75\" x2=\"129.1\" y2=\"78.9\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><text x=\"345\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">خلية بكتيرية</text><text x=\"255\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">تضاعف DNA</text><text x=\"165\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">تكوّن الحاجز</text><text x=\"75\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">خليتان بنويتان</text></svg>",
+"k": [
+"تضاعف DNA",
+"حاجز",
+"خليتان بنويتان",
+"متماثلتان"
+]
+},
+{
+"c": 3,
+"l": 6,
+"t": "draw",
+"q": "ارسم خلية خميرة تتكاثر بالتبرعم وأشِّر على الخلية الأم والبرعم.",
+"a": "خلية كروية كبيرة (الأم) ينبثق من سطحها برعم صغير متصل بها، وتنتقل إليه نسخة من النواة بعد انقسامها، ثم ينفصل البرعم ويكبر.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 230\" font-family=\"Cairo,sans-serif\"><circle cx=\"190\" cy=\"125\" r=\"50\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"190\" cy=\"125\" r=\"16\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/></svg>",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 230\" font-family=\"Cairo,sans-serif\"><circle cx=\"190\" cy=\"125\" r=\"50\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"190\" cy=\"125\" r=\"16\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><circle cx=\"250\" cy=\"70\" r=\"22\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"252\" cy=\"70\" r=\"8\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"222\" y1=\"102\" x2=\"235\" y2=\"88\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"330\" y=\"60\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">البرعم</text><line x1=\"305\" y1=\"64\" x2=\"275\" y2=\"68\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><line x1=\"275\" y1=\"68\" x2=\"282.5\" y2=\"63\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><line x1=\"275\" y1=\"68\" x2=\"283.6\" y2=\"70.8\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><text x=\"190\" y=\"200\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">الخلية الأم</text></svg>",
+"k": [
+"الخلية الأم",
+"البرعم",
+"النواة"
+]
+},
+{
+"c": 4,
+"l": 2,
+"t": "def",
+"q": "عرّف: النمو.",
+"a": "زيادة دائمة غير عكسية في حجم الكائن الحي وعدد خلاياه، تنتج عن انقسام الخلايا وزيادة حجمها.",
+"k": [
+"زيادة دائمة",
+"الحجم",
+"عدد الخلايا",
+"انقسام الخلايا"
+]
+},
+{
+"c": 4,
+"l": 3,
+"t": "def",
+"q": "عرّف: التمايز الخلوي.",
+"a": "عملية تتحول بها الخلايا غير المتخصصة إلى خلايا متخصصة في تركيبها ووظيفتها، كالخلايا العصبية والعضلية.",
+"k": [
+"خلايا غير متخصصة",
+"تحول",
+"متخصصة",
+"تركيب ووظيفة"
+]
+},
+{
+"c": 4,
+"l": 3,
+"t": "why",
+"q": "علّل: تختلف الخلايا المتخصصة في الجسم الواحد في شكلها ووظيفتها مع أنها تحمل المحتوى الوراثي نفسه.",
+"a": "لأن كل نوع من الخلايا يُفعّل مجموعة مختلفة من الجينات (يعبّر عنها) وتبقى بقية الجينات غير فعالة فيها.",
+"k": [
+"التعبير الجيني",
+"جينات مختلفة",
+"المحتوى الوراثي",
+"تمايز"
+]
+},
+{
+"c": 4,
+"l": 5,
+"t": "enum",
+"q": "رتّب مراحل التكوين الجنيني المبكر.",
+"a": [
+"الزايكوت",
+"التفلج (انقسامات الزايكوت)",
+"التوتية",
+"الأريمة (البلاستولا)",
+"المعيدة (الجاسترولا)"
+],
+"rev": 1
+},
+{
+"c": 4,
+"l": 5,
+"t": "fill",
+"q": "ينقسم الزايكوت انقسامات متتالية فيتكوّن منه كتلة كروية مصمتة من الخلايا تسمى ____.",
+"a": [
+"التوتية|المورولا|مورولا|التوتة"
+],
+"e": "ينقسم الزايكوت انقسامات متتالية فيتكوّن منه كتلة كروية مصمتة من الخلايا تسمى التوتية.",
+"rev": 1
+},
+{
+"c": 4,
+"l": 5,
+"t": "mcq",
+"q": "ينشأ الجهاز العصبي والطبقة الخارجية من الجلد من:",
+"o": [
+"الأديم الظاهر (الخارجي)",
+"الأديم المتوسط",
+"الأديم الباطن",
+"المشيمة"
+],
+"e": "من الأديم الظاهر تنشأ البشرة والجهاز العصبي، ومن المتوسط العضلات والعظام والدورة الدموية، ومن الباطن بطانة القناة الهضمية."
+},
+{
+"c": 4,
+"l": 5,
+"t": "enum",
+"q": "عدّد ثلاثة تراكيب تنشأ من الأديم المتوسط.",
+"a": [
+"العضلات",
+"العظام",
+"الجهاز الدوري (القلب والأوعية)",
+"الكلى",
+"الجهاز التناسلي"
+],
+"rev": 1
+},
+{
+"c": 4,
+"l": 5,
+"t": "def",
+"q": "عرّف: المشيمة.",
+"a": "عضو مؤقت يتكون من أنسجة الجنين والأم، تتبادل عبره المواد الغذائية والأوكسجين والفضلات بين دم الأم والجنين دون أن يختلط الدمان.",
+"k": [
+"عضو مؤقت",
+"تبادل المواد",
+"دم الأم",
+"دم الجنين"
+]
+},
+{
+"c": 4,
+"l": 5,
+"t": "tf",
+"q": "يختلط دم الأم بدم الجنين اختلاطاً مباشراً داخل المشيمة.",
+"a": false,
+"e": "يتم التبادل عبر جدران الشعيرات الدموية بالانتشار والنقل دون اختلاط الدمين."
+},
+{
+"c": 4,
+"l": 5,
+"t": "why",
+"q": "علّل: يحيط السائل الأمنيوني بالجنين داخل الرحم.",
+"a": "لأنه يحميه من الصدمات والضغط، ويحافظ على درجة حرارة ثابتة حوله، ويتيح له حرية الحركة والنمو.",
+"k": [
+"حماية من الصدمات",
+"درجة حرارة ثابتة",
+"حرية الحركة"
+]
+},
+{
+"c": 4,
+"l": 7,
+"t": "why",
+"q": "علّل: التوائم المتطابقة تكون دائماً من جنس واحد.",
+"a": "لأنها تنشأ من زايكوت واحد له تركيب وراثي واحد (الجنس نفسه، XX أو XY).",
+"k": [
+"زايكوت واحد",
+"تركيب وراثي واحد",
+"الجنس"
+]
+},
+{
+"c": 4,
+"l": 7,
+"t": "tf",
+"q": "يشبه التوأمان غير المتطابقين أحدهما الآخر كشقيقين عاديين.",
+"a": true,
+"e": "ينشآن من بيضتين مخصبتين منفصلتين، فتختلف مادتهما الوراثية كالأشقاء."
+},
+{
+"c": 4,
+"l": 9,
+"t": "def",
+"q": "عرّف: الخلايا الجذعية.",
+"a": "خلايا غير متخصصة قادرة على الانقسام والتجدد الذاتي وعلى التمايز إلى أنواع مختلفة من الخلايا المتخصصة.",
+"k": [
+"غير متخصصة",
+"التجدد الذاتي",
+"التمايز",
+"انقسام"
+]
+},
+{
+"c": 4,
+"l": 9,
+"t": "enum",
+"q": "عدّد مصادر الحصول على الخلايا الجذعية.",
+"a": [
+"كتلة الخلايا الداخلية في الأريمة (الجنين المبكر)",
+"دم الحبل السري",
+"نخاع العظم (عند البالغين)"
+],
+"rev": 1
+},
+{
+"c": 4,
+"l": 10,
+"t": "mcq",
+"q": "النعجة دوللي (أول ثديي مستنسخ من خلية جسمية لحيوان بالغ) نشأت من نواة أُخذت من:",
+"o": [
+"خلية ضرع نعجة بالغة",
+"بويضة نعجة",
+"حيوان منوي لكبش",
+"خلية جنين مبكر فقط"
+],
+"e": "نُقلت نواة خلية ضرع إلى بيضة منزوعة النواة ثم زُرع الجنين في رحم نعجة بديلة."
+},
+{
+"c": 4,
+"l": 6,
+"t": "tf",
+"q": "قد تنتج التشوهات الجنينية عن إصابة الأم الحامل ببعض الفيروسات أو تعرضها للإشعاع أو تناولها أدوية معينة.",
+"a": true,
+"e": "من العوامل المسببة للتشوهات: الفيروسات كالحصبة الألمانية، والإشعاع، وبعض الأدوية والمواد الكيميائية وسوء التغذية."
+},
+{
+"c": 4,
+"l": 6,
+"t": "mcq",
+"q": "من الأمراض الفيروسية التي قد تسبب تشوهات للجنين إذا أصيبت بها الأم الحامل:",
+"o": [
+"الحصبة الألمانية",
+"الزكام الاعتيادي",
+"السكري من النوع الأول",
+"فقر الدم المنجلي"
+],
+"e": "الحصبة الألمانية في الأشهر الأولى للحمل قد تسبب تشوهات في القلب والعين والسمع."
+},
+{
+"c": 4,
+"l": 11,
+"t": "def",
+"q": "عرّف: الإخصاب خارج الجسم (أطفال الأنابيب).",
+"a": "تقانة تُجمَع فيها بويضات من المرأة وتُخصَّب بالحيوانات المنوية في وسط مخبري، ثم يُنقل الجنين المبكر الناتج إلى رحم المرأة.",
+"k": [
+"بويضات",
+"وسط مخبري",
+"نقل الجنين",
+"رحم"
+]
+},
+{
+"c": 4,
+"l": 11,
+"t": "enum",
+"q": "عدّد ثلاث تقانات تستعمل في علاج العقم.",
+"a": [
+"التلقيح الاصطناعي داخل الرحم",
+"الإخصاب خارج الجسم (أطفال الأنابيب)",
+"الحقن المجهري للحيوان المنوي في البويضة"
+],
+"rev": 1
+},
+{
+"c": 4,
+"l": 8,
+"t": "mcq",
+"q": "من فوائد المباعدة بين الولادات:",
+"o": [
+"تمنح جسم الأم فرصة للتعافي واستعادة قوته",
+"تمنع الحمل منعاً نهائياً",
+"تزيد احتمال التشوهات",
+"تلغي الحاجة إلى التغذية الجيدة"
+],
+"e": "تحسّن المباعدة صحة الأم والطفل.",
+"rev": 1
+},
+{
+"c": 4,
+"l": 5,
+"t": "label",
+"q": "الشكل يمثل الأريمة الكيسية (البلاستولا البشرية)؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 250\" font-family=\"Cairo,sans-serif\"><circle cx=\"292\" cy=\"130\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"288\" cy=\"155.3\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"276.3\" cy=\"178.2\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"258.2\" cy=\"196.3\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"235.3\" cy=\"208\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"210\" cy=\"212\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"184.7\" cy=\"208\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"161.8\" cy=\"196.3\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"143.7\" cy=\"178.2\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"132\" cy=\"155.3\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"128\" cy=\"130\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"132\" cy=\"104.7\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"143.7\" cy=\"81.8\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"161.8\" cy=\"63.7\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"184.7\" cy=\"52\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"210\" cy=\"48\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"235.3\" cy=\"52\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"258.2\" cy=\"63.7\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"276.3\" cy=\"81.8\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"288\" cy=\"104.7\" r=\"9\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"165\" cy=\"95\" r=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><circle cx=\"185\" cy=\"90\" r=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><circle cx=\"205\" cy=\"100\" r=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><circle cx=\"160\" cy=\"118\" r=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><circle cx=\"182\" cy=\"112\" r=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><circle cx=\"170\" cy=\"138\" r=\"11\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><line x1=\"292\" y1=\"130\" x2=\"380\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"292\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"200\" y1=\"100\" x2=\"380\" y2=\"25\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"200\" cy=\"100\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"25\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"30\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"230\" y1=\"150\" x2=\"380\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"230\" cy=\"150\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الأديم المغذي",
+"k": [
+"الخلايا المغذية",
+"الطبقة الخارجية"
+]
+},
+{
+"n": 2,
+"a": "كتلة الخلايا الداخلية",
+"k": [
+"الكتلة الخلوية الداخلية"
+]
+},
+{
+"n": 3,
+"a": "تجويف الأريمة",
+"k": [
+"التجويف",
+"البلاستوسيل"
+]
+}
+],
+"rev": 1
+},
+{
+"c": 4,
+"l": 5,
+"t": "label",
+"q": "الشكل مقطع مبسّط في المعيدة؛ سمِّ الطبقات والتجويف المؤشَّر عليه.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 260\" font-family=\"Cairo,sans-serif\"><circle cx=\"190\" cy=\"130\" r=\"91\" stroke=\"#2dd4bf\" stroke-opacity=\"0.3\" stroke-width=\"18\" fill=\"none\"/><circle cx=\"190\" cy=\"130\" r=\"73\" stroke=\"#f3d97a\" stroke-opacity=\"0.3\" stroke-width=\"18\" fill=\"none\"/><circle cx=\"190\" cy=\"130\" r=\"55\" stroke=\"#e6f1f5\" stroke-opacity=\"0.25\" stroke-width=\"18\" fill=\"none\"/><circle cx=\"190\" cy=\"130\" r=\"100\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"190\" cy=\"130\" r=\"82\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"190\" cy=\"130\" r=\"64\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"190\" cy=\"130\" r=\"46\" stroke=\"#e6f1f5\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"259.7\" y1=\"71.5\" x2=\"380\" y2=\"35\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"259.7\" cy=\"71.5\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"35\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"40\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"260.5\" y1=\"111.1\" x2=\"380\" y2=\"95\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"260.5\" cy=\"111.1\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"95\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"100\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"243.1\" y1=\"144.2\" x2=\"380\" y2=\"160\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"243.1\" cy=\"144.2\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"160\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"165\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"190\" y1=\"130\" x2=\"380\" y2=\"225\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"190\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"380\" cy=\"225\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"380\" y=\"230\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الأديم الظاهر",
+"k": [
+"الأديم الخارجي",
+"الإكتودرم"
+]
+},
+{
+"n": 2,
+"a": "الأديم المتوسط",
+"k": [
+"الميزودرم"
+]
+},
+{
+"n": 3,
+"a": "الأديم الباطن",
+"k": [
+"الأديم الداخلي",
+"الإندودرم"
+]
+},
+{
+"n": 4,
+"a": "التجويف الهضمي البدائي",
+"k": [
+"المعي البدائي",
+"تجويف المعيدة"
+]
+}
+],
+"rev": 1
+},
+{
+"c": 4,
+"l": 5,
+"t": "label",
+"q": "الشكل يمثل جنيناً داخل الرحم؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 260\" font-family=\"Cairo,sans-serif\"><ellipse cx=\"205\" cy=\"130\" rx=\"125\" ry=\"108\" stroke=\"#e6f1f5\" stroke-width=\"3.5\" fill=\"none\"/><ellipse cx=\"195\" cy=\"138\" rx=\"88\" ry=\"76\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"none\"/><path d=\"M290 55 q42 45 22 108 l-28 -6 q16 -52 -14 -96z\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.3\"/><circle cx=\"175\" cy=\"112\" r=\"19\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><path d=\"M168 130 q-14 40 28 54 q22 -10 14 -38\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><path d=\"M286 108 q-40 -22 -80 30\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"82\" y1=\"130\" x2=\"30\" y2=\"130\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"82\" cy=\"130\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"30\" cy=\"130\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"30\" y=\"135\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"312\" y1=\"110\" x2=\"395\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"312\" cy=\"110\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"250\" y1=\"118\" x2=\"395\" y2=\"130\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"250\" cy=\"118\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"130\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"135\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"271\" y1=\"176\" x2=\"395\" y2=\"190\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"271\" cy=\"176\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"190\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"195\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"230\" y1=\"170\" x2=\"395\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"230\" cy=\"170\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"395\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"395\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text><line x1=\"168\" y1=\"150\" x2=\"30\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"168\" cy=\"150\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"30\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"30\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">6</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "جدار الرحم"
+},
+{
+"n": 2,
+"a": "المشيمة"
+},
+{
+"n": 3,
+"a": "الحبل السري"
+},
+{
+"n": 4,
+"a": "الكيس الأمنيوني",
+"k": [
+"الأمنيون",
+"الغشاء الأمنيوني"
+]
+},
+{
+"n": 5,
+"a": "السائل الأمنيوني"
+},
+{
+"n": 6,
+"a": "الجنين"
+}
+]
+},
+{
+"c": 4,
+"l": 5,
+"t": "draw",
+"q": "ارسم مراحل التفلج من الزايكوت حتى التوتية بتسلسل صحيح مع التسمية.",
+"a": "زايكوت واحد، ثم خليتان، ثم 4 خلايا، ثم 8 خلايا، ثم كتلة كروية من الخلايا (التوتية) دون زيادة في الحجم الكلي.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 150\" font-family=\"Cairo,sans-serif\"><circle cx=\"365\" cy=\"70\" r=\"22\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"276\" cy=\"70\" r=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"304\" cy=\"70\" r=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"204\" cy=\"59\" r=\"11\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"226\" cy=\"59\" r=\"11\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"204\" cy=\"81\" r=\"11\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"226\" cy=\"81\" r=\"11\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"116\" cy=\"62\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"116\" cy=\"78\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"132\" cy=\"62\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"132\" cy=\"78\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"148\" cy=\"62\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"148\" cy=\"78\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"164\" cy=\"62\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"164\" cy=\"78\" r=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"65\" cy=\"70\" r=\"7\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"80\" cy=\"70\" r=\"7\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"50\" cy=\"70\" r=\"7\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"73\" cy=\"83\" r=\"7\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"57\" cy=\"83\" r=\"7\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"73\" cy=\"57\" r=\"7\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"57\" cy=\"57\" r=\"7\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"327\" y=\"76\" fill=\"#e6f1f5\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">←</text><text x=\"252\" y=\"76\" fill=\"#e6f1f5\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">←</text><text x=\"177\" y=\"76\" fill=\"#e6f1f5\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">←</text><text x=\"102\" y=\"76\" fill=\"#e6f1f5\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">←</text><text x=\"365\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">الزايكوت</text><text x=\"290\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">خليتان</text><text x=\"215\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4 خلايا</text><text x=\"140\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">8 خلايا</text><text x=\"65\" y=\"125\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">التوتية</text></svg>",
+"k": [
+"زايكوت",
+"خليتان",
+"4 خلايا",
+"8 خلايا",
+"التوتية"
+]
+},
+{
+"c": 4,
+"l": 7,
+"t": "draw",
+"q": "وضّح بالرسم كيف تنشأ التوائم المتطابقة والتوائم غير المتطابقة.",
+"a": "المتطابقة: زايكوت واحد ينقسم ثم يتفرق إلى جنينين. غير المتطابقة: بيضتان تخصّبهما حيوانان منويان فيتكوّن زايكوتان ثم جنينان.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 270\" font-family=\"Cairo,sans-serif\"><text x=\"210\" y=\"18\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">توأمان متطابقان</text><circle cx=\"350\" cy=\"60\" r=\"20\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"318\" y1=\"60\" x2=\"285\" y2=\"60\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"285\" y1=\"60\" x2=\"293.1\" y2=\"56.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"285\" y1=\"60\" x2=\"293.1\" y2=\"63.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"255\" cy=\"60\" r=\"22\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"255\" y1=\"38\" x2=\"255\" y2=\"82\" stroke=\"#f3d97a\" stroke-width=\"2\"/><line x1=\"220\" y1=\"60\" x2=\"190\" y2=\"60\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"190\" y1=\"60\" x2=\"198.1\" y2=\"56.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"190\" y1=\"60\" x2=\"198.1\" y2=\"63.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"42\" r=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"150\" cy=\"80\" r=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"350\" y=\"98\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">زايكوت</text><text x=\"255\" y=\"108\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">انقسام الخلايا</text><text x=\"150\" y=\"112\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">جنينان</text><text x=\"210\" y=\"150\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">توأمان غير متطابقين</text><circle cx=\"350\" cy=\"185\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"350\" cy=\"225\" r=\"16\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"350\" y=\"255\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">بيضتان + حيوانان</text><line x1=\"325\" y1=\"185\" x2=\"285\" y2=\"185\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"285\" y1=\"185\" x2=\"293.1\" y2=\"181.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"285\" y1=\"185\" x2=\"293.1\" y2=\"188.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"325\" y1=\"225\" x2=\"285\" y2=\"225\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"285\" y1=\"225\" x2=\"293.1\" y2=\"221.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"285\" y1=\"225\" x2=\"293.1\" y2=\"228.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"255\" cy=\"185\" r=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"255\" cy=\"225\" r=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"225\" y1=\"185\" x2=\"190\" y2=\"185\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"190\" y1=\"185\" x2=\"198.1\" y2=\"181.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"190\" y1=\"185\" x2=\"198.1\" y2=\"188.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"225\" y1=\"225\" x2=\"190\" y2=\"225\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"190\" y1=\"225\" x2=\"198.1\" y2=\"221.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"190\" y1=\"225\" x2=\"198.1\" y2=\"228.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"150\" cy=\"185\" r=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"150\" cy=\"225\" r=\"15\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"255\" y=\"255\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">زايكوتان</text><text x=\"150\" y=\"255\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">جنينان</text></svg>",
+"k": [
+"زايكوت واحد",
+"جنينان",
+"بيضتان",
+"حيوانان منويان"
+]
+},
+{
+"c": 4,
+"l": 9,
+"t": "draw",
+"q": "ارسم مخططاً يبيّن تمايز خلية جذعية إلى ثلاثة أنواع من الخلايا المتخصصة.",
+"a": "خلية جذعية في الأعلى تخرج منها أسهم إلى ثلاثة أنواع متخصصة مثل: خلية عضلية، خلية عصبية، كرية دم حمراء.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 240\" font-family=\"Cairo,sans-serif\"><circle cx=\"210\" cy=\"45\" r=\"24\" stroke=\"#2dd4bf\" stroke-width=\"2.5\" fill=\"#2dd4bf\" fill-opacity=\"0.25\"/><text x=\"210\" y=\"50\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">جذعية</text><line x1=\"195\" y1=\"68\" x2=\"95\" y2=\"150\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"95\" y1=\"150\" x2=\"98.8\" y2=\"141.8\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"95\" y1=\"150\" x2=\"103.7\" y2=\"147.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"70\" x2=\"210\" y2=\"150\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"150\" x2=\"206.1\" y2=\"141.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"150\" x2=\"213.9\" y2=\"141.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"225\" y1=\"68\" x2=\"325\" y2=\"150\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"325\" y1=\"150\" x2=\"316.3\" y2=\"147.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"325\" y1=\"150\" x2=\"321.2\" y2=\"141.8\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><ellipse cx=\"80\" cy=\"175\" rx=\"36\" ry=\"12\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><ellipse cx=\"80\" cy=\"175\" rx=\"10\" ry=\"6\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.3\"/><text x=\"80\" y=\"215\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">خلية عضلية</text><circle cx=\"210\" cy=\"175\" r=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"210\" cy=\"175\" r=\"2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"161\" x2=\"210\" y2=\"145\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"223.3\" y1=\"170.7\" x2=\"238.5\" y2=\"165.7\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"218.2\" y1=\"186.3\" x2=\"227.6\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"201.8\" y1=\"186.3\" x2=\"192.4\" y2=\"199.3\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"196.7\" y1=\"170.7\" x2=\"181.5\" y2=\"165.7\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><text x=\"210\" y=\"225\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">خلية عصبية</text><circle cx=\"340\" cy=\"175\" r=\"20\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"#e6f1f5\" fill-opacity=\"0.08\"/><ellipse cx=\"340\" cy=\"175\" rx=\"9\" ry=\"5\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"340\" y=\"215\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">كرية دم حمراء</text></svg>",
+"k": [
+"خلية جذعية",
+"تمايز",
+"خلية عصبية",
+"خلية عضلية"
+]
+},
+{
+"c": 4,
+"l": 10,
+"t": "draw",
+"q": "ارسم مخططاً يبيّن خطوات الاستنساخ بنقل نواة خلية جسمية.",
+"a": "نواة خلية جسمية من الحيوان المانح تُنقل إلى بيضة منزوعة النواة، ثم تُنشَّط وينمو الجنين المبكر، ويُزرع في رحم أم بديلة فيولد فرد مطابق وراثياً للمانح.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 296\" font-family=\"Cairo,sans-serif\"><rect x=\"250\" y=\"10\" width=\"160\" height=\"46\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"30\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">خلية جسمية من الحيوان</text><text x=\"330\" y=\"46\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">المانح (نواتها)</text><rect x=\"10\" y=\"10\" width=\"160\" height=\"46\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"90\" y=\"30\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">بيضة من حيوان آخر</text><text x=\"90\" y=\"46\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">منزوعة النواة</text><line x1=\"330\" y1=\"56\" x2=\"260\" y2=\"96\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"96\" x2=\"265.1\" y2=\"88.6\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"260\" y1=\"96\" x2=\"269\" y2=\"95.4\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"90\" y1=\"56\" x2=\"160\" y2=\"96\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"160\" y1=\"96\" x2=\"151\" y2=\"95.4\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"160\" y1=\"96\" x2=\"154.9\" y2=\"88.6\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><rect x=\"110\" y=\"96\" width=\"200\" height=\"40\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"210\" y=\"120\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">نقل النواة إلى البيضة وتنشيطها</text><line x1=\"210\" y1=\"136\" x2=\"210\" y2=\"166\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"166\" x2=\"206.1\" y2=\"157.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"166\" x2=\"213.9\" y2=\"157.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><rect x=\"110\" y=\"166\" width=\"200\" height=\"40\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"210\" y=\"190\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">نمو الجنين المبكر في المختبر</text><line x1=\"210\" y1=\"206\" x2=\"210\" y2=\"236\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"236\" x2=\"206.1\" y2=\"227.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"236\" x2=\"213.9\" y2=\"227.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><rect x=\"70\" y=\"236\" width=\"280\" height=\"50\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"210\" y=\"258\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">زرعه في رحم أم بديلة، فيولد فرد</text><text x=\"210\" y=\"274\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">مطابق وراثياً للحيوان المانح</text></svg>",
+"k": [
+"خلية جسمية",
+"بيضة منزوعة النواة",
+"نقل النواة",
+"أم بديلة",
+"مطابق وراثياً"
+]
+},
+{
+"c": 5,
+"l": 1,
+"t": "def",
+"q": "عرّف: الوراثة.",
+"a": "انتقال الصفات من الآباء إلى الأبناء عن طريق الجينات (المادة الوراثية) في الأمشاج.",
+"k": [
+"انتقال الصفات",
+"الآباء والأبناء",
+"الجينات"
+]
+},
+{
+"c": 5,
+"l": 3,
+"t": "why",
+"q": "علّل: اختار مندل نبات البازلاء في تجاربه.",
+"a": "لأن له صفات متضادة واضحة، ودورة حياته قصيرة، ويعطي أعداداً كبيرة من النسل، ويمكن التحكم في تلقيحه (ذاتي أو خلطي).",
+"k": [
+"صفات متضادة",
+"دورة حياة قصيرة",
+"نسل كثير",
+"التلقيح"
+]
+},
+{
+"c": 5,
+"l": 3,
+"t": "def",
+"q": "عرّف: الأليل.",
+"a": "الصور البديلة للجين الواحد، توجد في الموقع نفسه على الكروموسومين المتماثلين وتتحكم في الصفة نفسها.",
+"k": [
+"صور بديلة",
+"الجين",
+"الكروموسومات المتماثلة",
+"الموقع نفسه"
+]
+},
+{
+"c": 5,
+"l": 3,
+"t": "def",
+"q": "ما المقصود بالنمط الجيني والنمط المظهري؟",
+"a": "النمط الجيني هو التركيب الوراثي للفرد (الأليلات التي يحملها)، أما النمط المظهري فهو الصفة الظاهرة التي تنتج عن النمط الجيني والبيئة.",
+"k": [
+"التركيب الوراثي",
+"الأليلات",
+"الصفة الظاهرة",
+"البيئة"
+]
+},
+{
+"c": 5,
+"l": 3,
+"t": "def",
+"q": "اذكر نص قانون انعزال الأليلات (قانون مندل الأول).",
+"a": "يوجد لكل صفة أليلان في الفرد، ينفصلان عند تكوين الأمشاج فيحمل كل مشيج أليلاً واحداً فقط من كل زوج.",
+"k": [
+"أليلان",
+"ينفصلان",
+"الأمشاج",
+"أليل واحد"
+]
+},
+{
+"c": 5,
+"l": 3,
+"t": "calc",
+"kind": "math",
+"q": "نبات بازلاء طويل (Tt) لقّح بنبات طويل (Tt)، علماً أن الطول (T) سائد على القصر (t). ما احتمال أن يكون النسل قصيراً؟",
+"a": [
+"1/4",
+"0.25",
+"25%"
+],
+"num": 0.25,
+"sol": "الأمشاج: T وt لكل أب. النسل: TT : Tt : Tt : tt؛ القصير tt فقط، فالاحتمال = {1/4} = 0.25."
+},
+{
+"c": 5,
+"l": 3,
+"t": "calc",
+"kind": "math",
+"q": "من تزاوج Tt × Tt نتج 320 نبتة. كم نبتة طويلة يُتوقع ظهورها؟",
+"a": [
+"240"
+],
+"num": 240,
+"sol": "النسبة المظهرية 3 طويل : 1 قصير، فالطويلة = {3/4} * 320 = 240."
+},
+{
+"c": 5,
+"l": 3,
+"t": "calc",
+"kind": "math",
+"q": "في البازلاء: T طويل سائد، R بذور مستديرة سائدة. من التزاوج TtRr × TtRr، ما احتمال أن يظهر النسل بالصفتين السائدتين معاً؟",
+"a": [
+"9/16",
+"0.5625",
+"56.25%"
+],
+"num": 0.5625,
+"sol": "النسبة المظهرية 9 : 3 : 3 : 1؛ المظهر السائد للصفتين = {9/16} = 0.5625."
+},
+{
+"c": 5,
+"l": 4,
+"t": "mcq",
+"q": "نبات شب الليل: RR أحمر، RW وردي، WW أبيض. ينتج النبات الوردي من تزاوج أحمر × أبيض لأن الوراثة فيه:",
+"o": [
+"سيادة غير تامة",
+"سيادة تامة",
+"وراثة مرتبطة بالجنس",
+"وراثة متعددة الأليلات"
+],
+"e": "في السيادة غير التامة يظهر المظهر الهجين وسطاً بين الأبوين."
+},
+{
+"c": 5,
+"l": 4,
+"t": "calc",
+"kind": "math",
+"q": "في نبات شب الليل (سيادة غير تامة): RR أحمر، RW وردي، WW أبيض. من تزاوج نباتين ورديين، ما احتمال الحصول على نبات وردي؟",
+"a": [
+"1/2",
+"0.5",
+"50%"
+],
+"num": 0.5,
+"sol": "RW × RW ينتج RR : RW : RW : WW، أي 1 أحمر : 2 وردي : 1 أبيض، فالوردي = {2/4} = {1/2}."
+},
+{
+"c": 5,
+"l": 4,
+"t": "calc",
+"kind": "math",
+"q": "في فصائل الدم (ABO): أب فصيلته A وتركيبه الجيني I^{A}i، وأم فصيلتها B وتركيبها الجيني I^{B}i. ما احتمال أن يكون طفلهما من الفصيلة O؟",
+"a": [
+"1/4",
+"0.25",
+"25%"
+],
+"num": 0.25,
+"sol": "الأمشاج: I^{A} وi للأب، I^{B} وi للأم. النسل: AB وA وB وO بنسبة متساوية، فاحتمال O = {1/4}."
+},
+{
+"c": 5,
+"l": 4,
+"t": "mcq",
+"q": "الذي يحدد جنس الجنين في الإنسان هو:",
+"o": [
+"الحيوان المنوي (X أو Y)",
+"البويضة",
+"العمر الأمومي",
+"درجة حرارة الرحم"
+],
+"e": "تنتج الأم أمشاجاً تحمل X فقط، أما الأب فينتج أمشاجاً X أو Y؛ فاتحاد X مع X ينتج أنثى، واتحاد Y مع X ينتج ذكراً."
+},
+{
+"c": 5,
+"l": 4,
+"t": "calc",
+"kind": "math",
+"q": "امرأة حاملة لمرض عمى الألوان (X^{C}X^{c}) تزوجت رجلاً سليماً (X^{C}Y). ما احتمال أن يكون الطفل ذكراً مصاباً بعمى الألوان؟",
+"a": [
+"1/4",
+"0.25",
+"25%"
+],
+"num": 0.25,
+"sol": "النسل: X^{C}X^{C} أنثى سليمة، X^{C}X^{c} أنثى حاملة، X^{C}Y ذكر سليم، X^{c}Y ذكر مصاب. فالاحتمال = {1/4}."
+},
+{
+"c": 5,
+"l": 4,
+"t": "tf",
+"q": "تظهر الصفات المتنحية المرتبطة بالجنس (على X) في الذكور أكثر من الإناث.",
+"a": true,
+"e": "الذكر يملك كروموسوم X واحداً فيظهر عليه الأليل المتنحي، أما الأنثى فتحتاج أليلين متنحيين."
+},
+{
+"c": 5,
+"l": 5,
+"t": "calc",
+"kind": "math",
+"q": "قطعة من DNA ثنائي السلسلة نسبة الأدنين (A) فيها 20% من القواعد النيتروجينية. ما نسبة السايتوسين (C)؟ أجب بالنسبة المئوية.",
+"a": [
+"30",
+"30%"
+],
+"num": 30,
+"sol": "A = T = 20% فمجموعهما 40%، فتبقى 60% لـ G وC معاً، وبما أن G = C فإن C = 30%."
+},
+{
+"c": 5,
+"l": 5,
+"t": "why",
+"q": "علّل: يسمى تضاعف DNA بالتضاعف شبه المحافظ.",
+"a": "لأن كل جزيء DNA ناتج يتكون من شريط قديم من الجزيء الأم وشريط جديد مبني حديثاً.",
+"k": [
+"شريط قديم",
+"شريط جديد",
+"الجزيء الأم"
+]
+},
+{
+"c": 5,
+"l": 5,
+"t": "enum",
+"q": "عدّد ثلاثة فروق بين DNA وRNA.",
+"a": [
+"DNA يحتوي سكر الديوكسي ريبوز وRNA يحتوي سكر الريبوز",
+"DNA يحتوي الثايمين وRNA يحتوي اليوراسيل بدلاً منه",
+"DNA غالباً ثنائي الشريط وRNA غالباً أحادي الشريط"
+]
+},
+{
+"c": 5,
+"l": 5,
+"t": "def",
+"q": "عرّف: الطفرة.",
+"a": "تغيّر مفاجئ ودائم في تتابع القواعد النيتروجينية في DNA أو في تركيب الكروموسومات أو عددها، وقد تورَّث إن حدثت في الأمشاج.",
+"k": [
+"تغير مفاجئ",
+"تتابع القواعد",
+"DNA",
+"تورث"
+]
+},
+{
+"c": 5,
+"l": 4,
+"t": "mcq",
+"q": "عدد الكروموسومات في الخلية الجسمية لمصاب بمتلازمة داون (ثلاثي الكروموسوم 21) هو:",
+"o": [
+"47",
+"46",
+"45",
+"48"
+],
+"e": "يحمل المصاب ثلاث نسخ من الكروموسوم 21 بدلاً من نسختين فيصبح العدد 47."
+},
+{
+"c": 5,
+"l": 5,
+"t": "label",
+"q": "الشكل يمثل جزءاً من جزيء DNA؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 260\" font-family=\"Cairo,sans-serif\"><line x1=\"120\" y1=\"35\" x2=\"120\" y2=\"235\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"300\" y1=\"35\" x2=\"300\" y2=\"235\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"120\" cy=\"40\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"120,51 128.6,57.2 125.3,67.3 114.7,67.3 111.4,57.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130\" y1=\"60\" x2=\"150\" y2=\"60\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"40\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"300,51 308.6,57.2 305.3,67.3 294.7,67.3 291.4,57.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"290\" y1=\"60\" x2=\"270\" y2=\"60\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"160\" y=\"65\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">A</text><text x=\"260\" y=\"65\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">T</text><line x1=\"176\" y1=\"56.5\" x2=\"244\" y2=\"56.5\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"176\" y1=\"63.5\" x2=\"244\" y2=\"63.5\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"120\" cy=\"84\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"120,95 128.6,101.2 125.3,111.3 114.7,111.3 111.4,101.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130\" y1=\"104\" x2=\"150\" y2=\"104\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"84\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"300,95 308.6,101.2 305.3,111.3 294.7,111.3 291.4,101.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"290\" y1=\"104\" x2=\"270\" y2=\"104\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"160\" y=\"109\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">T</text><text x=\"260\" y=\"109\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">A</text><line x1=\"176\" y1=\"100.5\" x2=\"244\" y2=\"100.5\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"176\" y1=\"107.5\" x2=\"244\" y2=\"107.5\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"120\" cy=\"128\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"120,139 128.6,145.2 125.3,155.3 114.7,155.3 111.4,145.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130\" y1=\"148\" x2=\"150\" y2=\"148\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"128\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"300,139 308.6,145.2 305.3,155.3 294.7,155.3 291.4,145.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"290\" y1=\"148\" x2=\"270\" y2=\"148\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"160\" y=\"153\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">G</text><text x=\"260\" y=\"153\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">C</text><line x1=\"176\" y1=\"141\" x2=\"244\" y2=\"141\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"176\" y1=\"148\" x2=\"244\" y2=\"148\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"176\" y1=\"155\" x2=\"244\" y2=\"155\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><circle cx=\"120\" cy=\"172\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"120,183 128.6,189.2 125.3,199.3 114.7,199.3 111.4,189.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130\" y1=\"192\" x2=\"150\" y2=\"192\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><circle cx=\"300\" cy=\"172\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.45\"/><polygon points=\"300,183 308.6,189.2 305.3,199.3 294.7,199.3 291.4,189.2\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"290\" y1=\"192\" x2=\"270\" y2=\"192\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"160\" y=\"197\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">C</text><text x=\"260\" y=\"197\" fill=\"#f3d97a\" font-size=\"16\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">G</text><line x1=\"176\" y1=\"185\" x2=\"244\" y2=\"185\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"176\" y1=\"192\" x2=\"244\" y2=\"192\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"176\" y1=\"199\" x2=\"244\" y2=\"199\" stroke=\"#f3d97a\" stroke-width=\"1.5\" stroke-dasharray=\"4 3\"/><line x1=\"300\" y1=\"40\" x2=\"375\" y2=\"30\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"300\" cy=\"40\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"375\" cy=\"30\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"375\" y=\"35\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"309\" y1=\"104\" x2=\"375\" y2=\"95\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"309\" cy=\"104\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"375\" cy=\"95\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"375\" y=\"100\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"260\" y1=\"148\" x2=\"375\" y2=\"150\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"260\" cy=\"148\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"375\" cy=\"150\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"375\" y=\"155\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"210\" y1=\"192\" x2=\"375\" y2=\"215\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"210\" cy=\"192\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"375\" cy=\"215\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"375\" y=\"220\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"120\" y1=\"226\" x2=\"60\" y2=\"245\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"120\" cy=\"226\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"60\" cy=\"245\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"60\" y=\"250\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "مجموعة الفوسفات",
+"k": [
+"الفوسفات"
+]
+},
+{
+"n": 2,
+"a": "سكر الديوكسي ريبوز",
+"k": [
+"السكر الخماسي",
+"الديوكسي ريبوز"
+]
+},
+{
+"n": 3,
+"a": "القاعدة النيتروجينية",
+"k": [
+"القاعدة"
+]
+},
+{
+"n": 4,
+"a": "الروابط الهيدروجينية",
+"k": [
+"رابطة هيدروجينية"
+]
+},
+{
+"n": 5,
+"a": "الهيكل السكري الفوسفاتي",
+"k": [
+"سلسلة السكر والفوسفات",
+"الشريط",
+"السلسلة"
+]
+}
+]
+},
+{
+"c": 5,
+"l": 5,
+"t": "label",
+"q": "الشكل يمثل كروموسوماً متضاعفاً؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 250\" font-family=\"Cairo,sans-serif\"><rect x=\"185\" y=\"40\" width=\"28\" height=\"170\" rx=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><rect x=\"225\" y=\"40\" width=\"28\" height=\"170\" rx=\"14\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><rect x=\"190\" y=\"90\" width=\"58\" height=\"16\" rx=\"4\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.35\"/><line x1=\"239\" y1=\"170\" x2=\"330\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"239\" cy=\"170\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"219\" y1=\"98\" x2=\"330\" y2=\"98\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"219\" cy=\"98\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"98\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"103\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"199\" y1=\"60\" x2=\"330\" y2=\"40\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"199\" cy=\"60\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"330\" cy=\"40\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"330\" y=\"45\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"199\" y1=\"170\" x2=\"100\" y2=\"200\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"199\" cy=\"170\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"100\" cy=\"200\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"100\" y=\"205\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الكروماتيد",
+"k": [
+"كروماتيد"
+]
+},
+{
+"n": 2,
+"a": "السنترومير",
+"k": [
+"القطعة المركزية",
+"المركز"
+]
+},
+{
+"n": 3,
+"a": "الذراع القصير"
+},
+{
+"n": 4,
+"a": "الذراع الطويل"
+}
+],
+"rev": 1
+},
+{
+"c": 5,
+"l": 5,
+"t": "label",
+"q": "الشكل يمثل عملية الترجمة (بناء البروتين)؛ سمِّ الأجزاء المؤشَّر عليها.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 255\" font-family=\"Cairo,sans-serif\"><ellipse cx=\"210\" cy=\"175\" rx=\"75\" ry=\"18\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><ellipse cx=\"210\" cy=\"125\" rx=\"62\" ry=\"36\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"#2dd4bf\" fill-opacity=\"0.12\"/><path d=\"M50 205 q40 -8 80 0 t80 0 t80 0 t80 0\" stroke=\"#e6f1f5\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"140\" y1=\"200\" x2=\"140\" y2=\"214\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"175\" y1=\"200\" x2=\"175\" y2=\"214\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"210\" y1=\"200\" x2=\"210\" y2=\"214\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"245\" y1=\"200\" x2=\"245\" y2=\"214\" stroke=\"#e6f1f5\" stroke-width=\"1.5\"/><line x1=\"190\" y1=\"150\" x2=\"190\" y2=\"186\" stroke=\"#e6f1f5\" stroke-width=\"2.5\"/><circle cx=\"190\" cy=\"143\" r=\"7\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"#f3d97a\" fill-opacity=\"0.4\"/><path d=\"M182 190 h16\" stroke=\"#f3d97a\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"165\" cy=\"100\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.4\"/><circle cx=\"145\" cy=\"84\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.4\"/><circle cx=\"128\" cy=\"66\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.4\"/><circle cx=\"108\" cy=\"54\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.4\"/><circle cx=\"90\" cy=\"46\" r=\"7\" stroke=\"#2dd4bf\" stroke-width=\"1.5\" fill=\"#2dd4bf\" fill-opacity=\"0.4\"/><line x1=\"165\" y1=\"100\" x2=\"145\" y2=\"84\" stroke=\"#2dd4bf\" stroke-width=\"1.5\"/><line x1=\"145\" y1=\"84\" x2=\"128\" y2=\"66\" stroke=\"#2dd4bf\" stroke-width=\"1.5\"/><line x1=\"128\" y1=\"66\" x2=\"108\" y2=\"54\" stroke=\"#2dd4bf\" stroke-width=\"1.5\"/><line x1=\"108\" y1=\"54\" x2=\"90\" y2=\"46\" stroke=\"#2dd4bf\" stroke-width=\"1.5\"/><line x1=\"255\" y1=\"115\" x2=\"360\" y2=\"70\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"255\" cy=\"115\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"360\" cy=\"70\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"360\" y=\"75\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">1</text><line x1=\"270\" y1=\"175\" x2=\"360\" y2=\"130\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"270\" cy=\"175\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"360\" cy=\"130\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"360\" y=\"135\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">2</text><line x1=\"330\" y1=\"210\" x2=\"390\" y2=\"240\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"330\" cy=\"210\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"390\" cy=\"240\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"390\" y=\"245\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">3</text><line x1=\"192\" y1=\"172\" x2=\"320\" y2=\"235\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"192\" cy=\"172\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"320\" cy=\"235\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"320\" y=\"240\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">4</text><line x1=\"108\" y1=\"54\" x2=\"80\" y2=\"15\" stroke=\"#f3d97a\" stroke-width=\"1.5\"/><circle cx=\"108\" cy=\"54\" r=\"2.5\" stroke=\"#f3d97a\" stroke-width=\"1\" fill=\"#f3d97a\"/><circle cx=\"80\" cy=\"15\" r=\"10\" stroke=\"#f3d97a\" stroke-width=\"2\" fill=\"none\"/><text x=\"80\" y=\"20\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">5</text></svg>",
+"labels": [
+{
+"n": 1,
+"a": "الوحدة الكبيرة للرايبوسوم",
+"k": [
+"الوحدة الرايبوسومية الكبيرة",
+"الجزء الكبير"
+]
+},
+{
+"n": 2,
+"a": "الوحدة الصغيرة للرايبوسوم",
+"k": [
+"الوحدة الرايبوسومية الصغيرة",
+"الجزء الصغير"
+]
+},
+{
+"n": 3,
+"a": "mRNA",
+"k": [
+"الرنا الرسول",
+"الحمض الرسول"
+]
+},
+{
+"n": 4,
+"a": "tRNA",
+"k": [
+"الرنا الناقل",
+"الحمض الناقل"
+]
+},
+{
+"n": 5,
+"a": "السلسلة الببتيدية",
+"k": [
+"سلسلة عديد الببتيد",
+"البروتين النامي"
+]
+}
+],
+"rev": 1
+},
+{
+"c": 5,
+"l": 3,
+"t": "draw",
+"q": "أكمل مربع بانيت لتزاوج Tt × Tt وأشِّر على النسبة المظهرية الناتجة.",
+"a": "الخانات: TT وTt وTt وtt. النسبة الجينية 1 TT : 2 Tt : 1 tt، والنسبة المظهرية 3 طويل : 1 قصير.",
+"fig": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 250\" font-family=\"Cairo,sans-serif\"><rect x=\"140\" y=\"60\" width=\"200\" height=\"170\" rx=\"0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"240\" y1=\"60\" x2=\"240\" y2=\"230\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"145\" x2=\"340\" y2=\"145\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><rect x=\"60\" y=\"60\" width=\"80\" height=\"170\" rx=\"0\" stroke=\"#e6f1f5\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"3 3\"/><text x=\"190\" y=\"40\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">T</text><text x=\"290\" y=\"40\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">t</text><text x=\"100\" y=\"108\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">T</text><text x=\"100\" y=\"195\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">t</text></svg>",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 250\" font-family=\"Cairo,sans-serif\"><rect x=\"140\" y=\"60\" width=\"200\" height=\"170\" rx=\"0\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><line x1=\"240\" y1=\"60\" x2=\"240\" y2=\"230\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"140\" y1=\"145\" x2=\"340\" y2=\"145\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"190\" y=\"40\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">T</text><text x=\"290\" y=\"40\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">t</text><text x=\"100\" y=\"108\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">T</text><text x=\"100\" y=\"195\" fill=\"#f3d97a\" font-size=\"18\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">t</text><text x=\"190\" y=\"110\" fill=\"#2dd4bf\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">TT</text><text x=\"290\" y=\"110\" fill=\"#2dd4bf\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">Tt</text><text x=\"190\" y=\"195\" fill=\"#2dd4bf\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">Tt</text><text x=\"290\" y=\"195\" fill=\"#2dd4bf\" font-size=\"20\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">tt</text></svg>",
+"k": [
+"TT",
+"Tt",
+"tt",
+"3 : 1"
+]
+},
+{
+"c": 5,
+"l": 5,
+"t": "draw",
+"q": "ارسم مخططاً يبيّن التضاعف شبه المحافظ لجزيء DNA.",
+"a": "الجزيء الأم بشريطين قديمين، وينتج منه جزيئان بنويان في كل منهما شريط قديم وشريط جديد.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 230\" font-family=\"Cairo,sans-serif\"><text x=\"210\" y=\"18\" fill=\"#f3d97a\" font-size=\"13\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">الجزيء الأم</text><rect x=\"60\" y=\"28\" width=\"300\" height=\"8\" rx=\"4\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.5\"/><rect x=\"60\" y=\"42\" width=\"300\" height=\"8\" rx=\"4\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.5\"/><line x1=\"210\" y1=\"62\" x2=\"210\" y2=\"92\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"92\" x2=\"206.1\" y2=\"83.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"210\" y1=\"92\" x2=\"213.9\" y2=\"83.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"260\" y=\"82\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">التضاعف</text><rect x=\"60\" y=\"102\" width=\"300\" height=\"8\" rx=\"4\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.5\"/><rect x=\"60\" y=\"116\" width=\"300\" height=\"8\" rx=\"4\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.6\"/><rect x=\"60\" y=\"160\" width=\"300\" height=\"8\" rx=\"4\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"#e6f1f5\" fill-opacity=\"0.5\"/><rect x=\"60\" y=\"174\" width=\"300\" height=\"8\" rx=\"4\" stroke=\"#2dd4bf\" stroke-width=\"2\" fill=\"#2dd4bf\" fill-opacity=\"0.6\"/><text x=\"210\" y=\"212\" fill=\"#e6f1f5\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">جزيئان بنويان: كل منهما فيه شريط قديم (أبيض) وشريط جديد (أخضر)</text></svg>",
+"k": [
+"شريط قديم",
+"شريط جديد",
+"جزيئان بنويان",
+"شبه محافظ"
+]
+},
+{
+"c": 5,
+"l": 5,
+"t": "draw",
+"q": "ارسم مخططاً يبيّن تدفق المعلومات الوراثية من DNA إلى البروتين مع تسمية العمليتين.",
+"a": "DNA ثم (النسخ في النواة) mRNA ثم (الترجمة على الرايبوسوم) بروتين.",
+"figA": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 160\" font-family=\"Cairo,sans-serif\"><rect x=\"300\" y=\"70\" width=\"90\" height=\"44\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"345\" y=\"97\" fill=\"#e6f1f5\" font-size=\"14\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">DNA</text><rect x=\"165\" y=\"70\" width=\"90\" height=\"44\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"210\" y=\"97\" fill=\"#e6f1f5\" font-size=\"14\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">mRNA</text><rect x=\"30\" y=\"70\" width=\"90\" height=\"44\" rx=\"8\" stroke=\"#e6f1f5\" stroke-width=\"2\" fill=\"none\"/><text x=\"75\" y=\"97\" fill=\"#e6f1f5\" font-size=\"14\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">بروتين</text><line x1=\"298\" y1=\"92\" x2=\"257\" y2=\"92\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"257\" y1=\"92\" x2=\"265.1\" y2=\"88.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"257\" y1=\"92\" x2=\"265.1\" y2=\"95.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"163\" y1=\"92\" x2=\"122\" y2=\"92\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"122\" y1=\"92\" x2=\"130.1\" y2=\"88.1\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><line x1=\"122\" y1=\"92\" x2=\"130.1\" y2=\"95.9\" stroke=\"#e6f1f5\" stroke-width=\"2\"/><text x=\"277\" y=\"62\" fill=\"#f3d97a\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">النسخ</text><text x=\"142\" y=\"62\" fill=\"#f3d97a\" font-size=\"12\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">الترجمة</text><text x=\"277\" y=\"135\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">في النواة</text><text x=\"142\" y=\"135\" fill=\"#e6f1f5\" font-size=\"11\" text-anchor=\"middle\" font-family=\"Cairo,sans-serif\">على الرايبوسوم</text></svg>",
+"k": [
+"DNA",
+"النسخ",
+"mRNA",
+"الترجمة",
+"بروتين"
+]
+}
+]
