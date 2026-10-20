@@ -160,6 +160,7 @@ details.card>summary{cursor:pointer;list-style:none;display:flex;gap:8px;align-i
 <div id="fab" class="noprint"><button type="button" id="fabb" title="طباعة الصفحة الحالية أو حفظها بصيغة PDF" aria-label="طباعة أو حفظ PDF"><span aria-hidden="true">🖨</span> طباعة / PDF</button></div>
 
 <script src="studio-content.js"></script>
+<script src="catalog.js"></script><script src="analytics.js"></script>
 <script>
 'use strict';
 /* =====================================================================
@@ -697,6 +698,7 @@ function submitExam(){
   const top=el(`<div class="card"><div class="score">${pct}٪</div><p style="text-align:center" class="muted">${pts%1?pts.toFixed(1):pts} من ${max}${pend?` — و${pend} سؤال بانتظار مراجعة المدرب`:''}</p>
     <div class="row" style="justify-content:center">${pct>=90?'<span class="badge">★ شارة التفوق</span>':''}<button class="btn pri" id="xnew">اختبار جديد</button></div></div>`);
   $('#view').prepend(top);$('#xsub').closest('.card').remove();$('#xq').remove();
+  try{const sj=S.subjects.find(s=>s.id===exam.sid);if(sj&&window.PerfAnalytics)PerfAnalytics.mountBank(top,sj,pct)}catch(e){}
   $('#xnew').onclick=leaveExam;
   window.scrollTo({top:0,behavior:'smooth'});
 }
