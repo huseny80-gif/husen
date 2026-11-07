@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>الفرقة الزلزالية السابعة</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* ═══════════════════════════════════════════════════
+   TOKEN SYSTEM — Petroleum / Desert Cinema (dark-first)
+   Layout: full-width timeline, expandable prompt panels
+   ═══════════════════════════════════════════════════ */
+:root {
+  /* Color — dark */
+  --bg:          #0C0E12;
+  --surface:     #12161C;
+  --surface-2:   #181D24;
+  --surface-3:   #1E2430;
+  --accent:      #C8872A;
+  --accent-low:  #7A5118;
+  --accent-glow: rgba(200,135,42,0.13);
+  --text:        #E2DBD0;
+  --text-mid:    #9C9080;
+  --text-dim:    #52504A;
+  --border:      #22282E;
+  --border-mid:  #2E3540;
+  --success:     #4E9B72;
+  --tag-bg-a:    rgba(42,74,106,0.6);
+  --tag-bd-a:    #3A6A8A;
+  --tag-tx-a:    #A8C8D8;
+  --tag-bg-b:    rgba(61,42,90,0.6);
+  --tag-bd-b:    #5A4A7A;
+  --tag-tx-b:    #C0A8D8;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg:          #F4EEE4;
+    --surface:     #FDFAF6;
+    --surface-2:   #EDE7DC;
+    --surface-3:   #E4DDD2;
+    --accent:      #9A6218;
+    --accent-low:  #C89048;
+    --accent-glow: rgba(154,98,24,0.10);
+    --text:        #18140E;
+    --text-mid:    #5C5448;
+    --text-dim:    #A09888;
+    --border:      #D6CEBC;
+    --border-mid:  #C4BAAA;
+    --success:     #2E7A52;
+    --tag-bg-a:    rgba(180,220,245,0.4);
+    --tag-bd-a:    #6AAAC8;
+    --tag-tx-a:    #1A5070;
+    --tag-bg-b:    rgba(210,185,240,0.4);
+    --tag-bd-b:    #9070B8;
+    --tag-tx-b:    #4A286A;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg:          #F4EEE4;
+  --surface:     #FDFAF6;
+  --surface-2:   #EDE7DC;
+  --surface-3:   #E4DDD2;
+  --accent:      #9A6218;
+  --accent-low:  #C89048;
+  --accent-glow: rgba(154,98,24,0.10);
+  --text:        #18140E;
+  --text-mid:    #5C5448;
+  --text-dim:    #A09888;
+  --border:      #D6CEBC;
+  --border-mid:  #C4BAAA;
+  --success:     #2E7A52;
+  --tag-bg-a:    rgba(180,220,245,0.4);
+  --tag-bd-a:    #6AAAC8;
+  --tag-tx-a:    #1A5070;
+  --tag-bg-b:    rgba(210,185,240,0.4);
+  --tag-bd-b:    #9070B8;
+  --tag-tx-b:    #4A286A;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { min-height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Cairo', 'Noto Sans Arabic', sans-serif;
+  min-height: 100%;
+  padding-left: max(0px, env(safe-area-inset-left,0px));
+  padding-right: max(0px, env(safe-area-inset-right,0px));
+}
+
+/* ── HEADER ──────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: env(safe-area-inset-top,0px);
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 14px max(20px, env(safe-area-inset-right,20px)) 14px max(20px, env(safe-area-inset-left,20px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header-left { display: flex; align-items: center; gap: 12px; }
+
+.brand-mark {
+  width: 34px; height: 34px;
+  border: 1.5px solid var(--accent);
+  border-radius: 3px;
+  display: grid; place-items: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-weight: 700; font-size: 14px; line-height: 1.2;
+  color: var(--text);
+}
+
+.brand-sub {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-dim); margin-top: 2px;
+}
+
+.header-right { display: flex; align-items: center; gap: 8px; }
+
+.meta-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; color: var(--text-dim);
+  background: var(--surface-2); border: 1px solid var(--border);
+  border-radius: 2px; padding: 3px 7px; letter-spacing: 0.05em;
+}
+
+button.theme-toggle {
+  background: var(--surface-2); border: 1px solid var(--border-mid);
+  border-radius: 3px; padding: 5px 9px; cursor: pointer;
+  color: var(--text-mid); font-size: 14px; line-height: 1;
+  transition: color 0.2s, border-color 0.2s;
+}
+button.theme-toggle:hover { color: var(--accent); border-color: var(--accent-low); }
+
+/* ── HERO ────────────────────────────────────────── */
+.hero {
+  padding: 44px max(24px, env(safe-area-inset-right,24px)) 32px max(24px, env(safe-area-inset-left,24px));
+  border-bottom: 1px solid var(--border);
+  position: relative; overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 55% 100% at 85% 50%, var(--accent-glow), transparent 70%);
+  pointer-events: none;
+}
+
+.eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 10px;
+  display: flex; align-items: center; gap: 10px;
+}
+.eyebrow::before {
+  content: '';
+  display: block; width: 20px; height: 1.5px; background: var(--accent);
+}
+
+h1.hero-title {
+  font-weight: 900;
+  font-size: clamp(30px, 5.5vw, 54px);
+  line-height: 1.1; text-wrap: balance;
+  color: var(--text); margin-bottom: 6px;
+}
+h1.hero-title em { font-style: normal; color: var(--accent); }
+
+.hero-en {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(13px, 2vw, 16px); font-weight: 300;
+  letter-spacing: 0.08em; color: var(--text-mid);
+  margin-bottom: 22px;
+}
+
+.hero-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 2px; border: 1px solid;
+}
+.tag-a { background: var(--tag-bg-a); border-color: var(--tag-bd-a); color: var(--tag-tx-a); }
+.tag-b { background: var(--tag-bg-b); border-color: var(--tag-bd-b); color: var(--tag-tx-b); }
+.tag-c { background: var(--surface-3); border-color: var(--border-mid); color: var(--text-mid); }
+
+/* ── PLATFORM BAR ────────────────────────────────── */
+.platform-bar {
+  padding: 16px max(24px, env(safe-area-inset-right,24px));
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+
+.pb-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text-dim); flex-shrink: 0;
+}
+
+.pb-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.07em;
+  padding: 5px 13px; border-radius: 3px;
+  border: 1px solid var(--border-mid);
+  background: transparent; color: var(--text-mid);
+  cursor: pointer; transition: all 0.18s;
+}
+.pb-btn:hover { color: var(--text); border-color: var(--border-mid); }
+.pb-btn.active { background: var(--accent-glow); border-color: var(--accent); color: var(--accent); }
+
+/* ── SECTION LABEL ───────────────────────────────── */
+.section-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 20px max(24px, env(safe-area-inset-right,24px)) 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── TIMELINE ────────────────────────────────────── */
+.timeline { list-style: none; }
+
+.tl-row {
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  transition: background 0.15s;
+}
+.tl-row:hover { background: var(--surface); }
+.tl-row.open  { background: var(--surface-2); }
+.tl-row.open::after {
+  content: '';
+  position: absolute; top: 0; bottom: 0; right: 0;
+  width: 3px; background: var(--accent);
+}
+
+.tl-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px; align-items: center;
+  padding: 15px max(24px, env(safe-area-inset-right,24px));
+}
+
+.tl-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--text-mid);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-width: 56px;
+}
+.tl-time span { font-size: 9px; opacity: 0.55; }
+
+.tl-desc { display: flex; flex-direction: column; gap: 2px; }
+
+.tl-ar {
+  font-weight: 700; font-size: 15px; line-height: 1.3; color: var(--text);
+}
+.tl-en {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.tl-caret {
+  font-size: 11px; color: var(--text-dim);
+  transition: transform 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+.tl-row.open .tl-caret { transform: rotate(90deg); color: var(--accent); }
+
+/* ── PANEL ───────────────────────────────────────── */
+.tl-panel {
+  display: none;
+  padding: 2px max(24px, env(safe-area-inset-right,24px)) 24px;
+}
+.tl-row.open .tl-panel { display: block; }
+
+.panel-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; color: var(--text-dim);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.prompt-tabs {
+  display: flex; gap: 3px; flex-wrap: wrap; margin-bottom: 10px;
+}
+
+.pt-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+  padding: 4px 11px; border-radius: 2px;
+  border: 1px solid var(--border-mid);
+  background: transparent; color: var(--text-dim);
+  cursor: pointer; transition: all 0.15s;
+}
+.pt-btn:hover { color: var(--text-mid); }
+.pt-btn.cur { background: var(--surface-3); border-color: var(--border-mid); color: var(--text); }
+
+.prompt-block { display: none; position: relative; }
+.prompt-block.show { display: block; }
+
+.prompt-pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px; line-height: 1.65;
+  color: #B4C0CC;
+  background: var(--surface);
+  border: 1px solid var(--border-mid);
+  border-radius: 5px;
+  padding: 14px 50px 14px 14px;
+  white-space: pre-wrap; word-break: break-word;
+  direction: ltr; text-align: left;
+}
+
+.copy-btn {
+  position: absolute; top: 8px; right: 8px;
+  background: var(--surface-3); border: 1px solid var(--border-mid);
+  border-radius: 3px; padding: 4px 8px;
+  cursor: pointer; font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--text-mid); transition: all 0.18s;
+  display: flex; align-items: center; gap: 4px;
+}
+.copy-btn:hover { color: var(--accent); border-color: var(--accent-low); }
+.copy-btn.ok   { color: var(--success); border-color: var(--success); }
+
+/* ── MASTER PROMPT ───────────────────────────────── */
+.master {
+  padding: 32px max(24px, env(safe-area-inset-right,24px));
+  border-top: 1px solid var(--border);
+}
+
+.master-hd { margin-bottom: 18px; }
+.master-hd h2 {
+  font-weight: 700; font-size: 19px; color: var(--text); margin-bottom: 3px;
+}
+.master-hd p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--text-mid);
+}
+
+.master-wrap { position: relative; }
+
+.master-pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11.5px; line-height: 1.72;
+  color: #B4C0CC;
+  background: var(--surface);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
+  padding: 18px 18px 18px 18px;
+  white-space: pre-wrap; word-break: break-word;
+  direction: ltr; text-align: left;
+}
+
+.master-copy {
+  display: block; width: 100%; margin-top: 12px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 10px; border-radius: 4px;
+  background: var(--surface-2); border: 1px solid var(--border-mid);
+  color: var(--text-mid); cursor: pointer; transition: all 0.2s;
+}
+.master-copy:hover { border-color: var(--accent); color: var(--accent); }
+.master-copy.ok   { border-color: var(--success); color: var(--success); }
+
+/* ── FOOTER ──────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 18px max(24px, env(safe-area-inset-right,24px));
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px;
+}
+.ft { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; letter-spacing: 0.06em; color: var(--text-dim); }
+
+/* ── RESPONSIVE ──────────────────────────────────── */
+@media (max-width:560px) {
+  .meta-chip { display: none; }
+  .hero { padding: 30px 16px 24px; }
+  .platform-bar, .section-label, .tl-head, .tl-panel, .master { padding-inline: 16px; }
+  .hero-title { font-size: 28px; }
+  .tl-time { min-width: 48px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <div class="brand-mark">SV7</div>
+    <div>
+      <div class="brand-title">الفرقة الزلزالية السابعة</div>
+      <div class="brand-sub">Seventh Seismic Party — Iraq Operations</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="meta-chip">3D CINEMATIC</span>
+    <span class="meta-chip">AI GEN BRIEF</span>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle theme">◑</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Video Generation Brief — محاكاة سينمائية</div>
+  <h1 class="hero-title">يوم عمل <em>قيادي</em> في الميدان</h1>
+  <p class="hero-en">DAY-IN-THE-LIFE · SEISMIC PARTY MANAGER · CINEMATIC 3D SIMULATION</p>
+  <div class="hero-tags">
+    <span class="tag tag-a">Petroleum Exploration · Iraq</span>
+    <span class="tag tag-b">Remote Desert Field Operations</span>
+    <span class="tag tag-c">Runway Gen-3</span>
+    <span class="tag tag-c">Luma Dream Machine</span>
+    <span class="tag tag-c">Sora</span>
+    <span class="tag tag-c">UE5 Aesthetic · 4K</span>
+  </div>
+</div>
+
+<div class="platform-bar">
+  <span class="pb-label">Default Platform:</span>
+  <button class="pb-btn active" data-tool="runway"  onclick="setPlatform(this)">Runway Gen-3</button>
+  <button class="pb-btn"        data-tool="luma"    onclick="setPlatform(this)">Luma Dream Machine</button>
+  <button class="pb-btn"        data-tool="sora"    onclick="setPlatform(this)">Sora</button>
+  <button class="pb-btn"        data-tool="generic" onclick="setPlatform(this)">Universal</button>
+</div>
+
+<div class="section-label">البرنامج الزمني · Daily Schedule — Select any row to reveal the generation prompt</div>
+
+<ul class="timeline" id="tl"></ul>
+
+<div class="master">
+  <div class="master-hd">
+    <h2>البرومبت الشامل</h2>
+    <p>Master Video Prompt — Full 24-hour chronological simulation</p>
+  </div>
+  <div class="master-wrap">
+    <pre class="master-pre" id="masterPre">Comprehensive cinematic 3D documentary video: A seamless, highly detailed 24-hour chronological simulation of a day in the life of a seismic party manager at the Seventh Seismic Crew (SV7) operations base in a remote Iraqi desert field.
+
+MORNING PHASE [06:30–08:00]:
+A realistic male professional waking up inside a neat prefab residential caravan at sunrise, golden desert light through frosted window blinds, dressing in field attire. Walking out into the desert camp, scanning his fingerprint at an outdoor biometric attendance terminal (green confirmation LED), entering a vibrant mess hall for traditional Iraqi field breakfast.
+
+OFFICE & ADMINISTRATIVE WORKFLOW [08:00–10:30]:
+Entering an air-conditioned prefab site office, sitting at an executive desk, powering on a laptop, rapidly answering urgent operational emails, forwarding technical messages to field units. Reviewing and signing official Arabic-language documents with an administrative officer across the desk, applying official organizational stamp.
+
+FIELD & INDUSTRIAL INSPECTION [09:30–10:30]:
+Stepping out into the bright desert industrial zone in full PPE (hard hat, high-visibility vest, steel-toe boots). Inspecting heavy mechanical workshops with drilling and seismic equipment, checking geodetic instrument storage, interacting with field technicians, surveying the vehicle pool.
+
+BREAKS & COORDINATION [10:30–13:00]:
+Brief pause in the shade with a glass of hot Iraqi chai. Office staff interviews and employee request meetings. Reviewing printed production plans and completion charts. Daily coordination meeting with 6–8 department heads in the site conference room — maps, production numbers, corrective assignments.
+
+AFTERNOON CYCLE [13:00–17:00]:
+Afternoon rest in caravan, AC hum, striped light through blinds. Return to desk for afternoon correspondence. Signing movement clearance passes (takhawil) with official stamp.
+
+EVENING CLOSE [17:00–18:30]:
+Evening meal and outdoor prayer on mat at desert sunset — extraordinary amber-to-violet sky. Final daily production report typed on laptop at dusk, submitted. Laptop closed. Office light off. Door locked. Manager walks away from lit office window into the dark desert camp. The day is done.
+
+Cinematography & Style: Unreal Engine 5 hyper-realistic rendering, photorealistic textures, dynamic lighting transitioning naturally from golden-hour sunrise → harsh midday desert sun → warm afternoon glow → blue-hour twilight → night. Smooth professional camera movements: tracking shots, medium close-ups, wide aerial establishing shots. Fluent human micro-expressions and natural body language. 4K resolution. High-end corporate documentary aesthetic.</pre>
+  </div>
+  <button class="master-copy" onclick="copyMaster(this)">⎘ &nbsp; Copy Full Master Prompt</button>
+</div>
+
+<footer>
+  <span class="ft">الاستكشافات النفطية · Oil Exploration Operations · Iraq</span>
+  <span class="ft">SV7 PRODUCTION BRIEF · 2026</span>
+</footer>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────────────
+const SCENES = [
+  {
+    time:"الصباح", timeEn:"DAWN",
+    ar:"النهوض والاستعداد الصباحي", en:"Morning Rise & Field Preparation",
+    p:{
+      runway:`Cinematic 3D scene, 4-second shot. Male seismic field manager waking inside a tidy prefab residential caravan, golden desert sunrise light filtering through frosted window blinds, sitting up slowly on cot, reaching for field jacket and hard hat. Photorealistic UE5, warm amber morning glow, shallow DOF, slow push-in. 16:9, 4K. --motion 5`,
+      luma:`Cinematic 3D, dawn. Male professional waking in prefab desert caravan, warm sunrise light through window blinds, reaching for field gear hanging on wall hook, natural unhurried body language. Photorealistic, desert golden hour ambient. 5 seconds, loopable, 4K.`,
+      sora:`A male seismic party manager wakes inside a tidy prefab residential caravan at a remote Iraqi desert field camp. Warm dawn light filters through the window blinds. He dresses methodically — field jacket, safety vest, boots. The camera begins in a close medium shot then slowly pulls back through the open caravan door to reveal the full desert operations camp at sunrise: low buildings, gravel yard, a sky turning gold. Quiet, grounded, photorealistic. UE5 rendering aesthetic, 4K.`,
+      generic:`Cinematic 3D animation: male seismic party manager waking in prefab desert caravan at sunrise, golden morning light through window blinds, dressing in field attire, gathering hard hat and equipment. Photorealistic UE5 style, warm amber lighting, 4K.`
+    }
+  },
+  {
+    time:"07:00", timeEn:"07:00",
+    ar:"البصمة الصباحية", en:"Morning Fingerprint Check-In",
+    p:{
+      runway:`Cinematic 3D, 4-second shot. Male manager in full field attire walking purposefully across gravel desert operations yard at 07:00, approaching an outdoor biometric fingerprint terminal mounted on a steel post, pressing thumb to scanner, green confirmation LED blinks, turning and walking toward camp buildings. UE5 photorealistic, cool blue-gold morning desert light, tracking shot. 16:9, 4K. --motion 6`,
+      luma:`Cinematic 3D, early morning desert base. Male manager in work gear scanning fingerprint at outdoor biometric attendance station, green LED confirmation flash, turning toward camp. Photorealistic, cool morning desert light, natural movement. 5 seconds, 4K.`,
+      sora:`A seismic party manager approaches an outdoor biometric attendance terminal at the edge of the desert operations base at 7:00 AM. He scans his fingerprint — the device responds with a green indicator light. He continues across the gravel yard. The camp is waking: a distant truck engine, figures moving between buildings. Camera holds in a wide establishing shot then moves to a close-up on the scanner, the thumb, the confirmation light. Cinematic, photorealistic, 4K.`,
+      generic:`Cinematic 3D scene: male seismic field manager in work attire scanning fingerprint at outdoor biometric device at desert operations base, green LED confirmation, early morning desert light, turning to walk toward camp. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"07:15", timeEn:"07:15",
+    ar:"وجبة الإفطار", en:"Breakfast at the Field Mess",
+    p:{
+      runway:`Cinematic 3D interior, 4-second shot. Male manager in work attire at a lively field mess hall, filling tray with traditional Iraqi field breakfast — fried eggs, flatbread, small glasses of tea — sitting with colleagues at metal tables, brief animated conversation. Desert light through windows, warm fluorescent interior. Mid-shot. UE5 photorealistic. 16:9, 4K. --motion 4`,
+      luma:`Cinematic 3D, field mess hall interior. Manager collecting traditional Iraqi breakfast at serving counter, joining colleagues at table, warm social atmosphere, natural conversation. Warm fluorescent + window light mix. 5 seconds, photorealistic, 4K.`,
+      sora:`Inside the mess hall of a remote Iraqi desert oil field base, the seismic party manager joins colleagues for breakfast. Metal tables, strip lighting, a serving counter. He collects a tray: eggs, flatbread, strong tea. The room is busy, functional — conversations overlap across the tables. Brief eye contact, a nod. The camera holds a medium shot on the manager, then widens to show the full mess hall and its dozen occupants. Photorealistic, 4K.`,
+      generic:`Cinematic 3D interior: field mess hall at desert operations base, male manager having breakfast with colleagues, traditional Iraqi field breakfast items on tray, warm lighting, lively background. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"07:45", timeEn:"07:45",
+    ar:"إدارة البريد الإلكتروني", en:"Email & Digital Correspondence",
+    p:{
+      runway:`Cinematic 3D office scene, 4 seconds. Male manager seated at executive desk inside air-conditioned prefab site office, laptop open showing email inbox, rapid focused typing, scrolling messages, forwarding one urgent item. Cool LED office light vs warm desert light from side window. Over-shoulder camera angle. UE5 photorealistic. 16:9, 4K. --motion 5`,
+      luma:`Cinematic 3D, site office interior. Manager at executive desk rapidly typing emails on laptop, air-conditioned prefab office, desert visible through side window, focused expression shifting. Natural + artificial light. 5 seconds, photorealistic, 4K.`,
+      sora:`A seismic party manager works through the morning email inbox at his executive desk. The office is ordered: printed reports pinned to the wall, a radio on a shelf, a window showing the flat desert outside. He reads, types rapidly, leans back briefly to think about one message, forwards it. The laptop screen reflects in his glasses. Camera holds in a medium over-the-shoulder composition. The hum of the AC unit. Photorealistic, UE5 aesthetic, 4K.`,
+      generic:`Cinematic 3D office: male manager at executive desk in site office, working on laptop email inbox, rapid typing, forwarding messages, desert visible through window. UE5 photorealistic, mixed natural/artificial light, 4K.`
+    }
+  },
+  {
+    time:"08:30", timeEn:"08:30",
+    ar:"الاجتماع الإداري والتوقيعات", en:"Administrative Meeting & Signatures",
+    p:{
+      runway:`Cinematic 3D office, 4 seconds. Manager and administrative officer seated across a desk, reviewing Arabic-language official operations documents, manager reading carefully then signing with pen, sliding document across desk, brief professional exchange. Warm natural window light. Two-shot medium. UE5 photorealistic. 16:9, 4K. --motion 4`,
+      luma:`Cinematic 3D office scene. Two male professionals reviewing official documents at site desk, manager signing pages, applying stamp, handing completed stack to officer. Professional demeanor, warm afternoon light. 5 seconds, photorealistic, 4K.`,
+      sora:`A seismic party manager and an administrative officer review official field operations documents together. Stacked files, printed reports, coffee cup on the desk. The manager reads one document carefully, picks up a pen and signs. Applies an organizational stamp. Slides the document across. They discuss two agenda items in a few direct sentences. Close-up on the signed document, then wider two-shot. The texture of real field bureaucracy. Photorealistic, 4K.`,
+      generic:`Cinematic 3D office meeting: manager and administrative officer reviewing official Arabic documents at desk, signing papers, using organizational stamp, brief professional discussion. UE5 photorealistic, warm lighting, 4K.`
+    }
+  },
+  {
+    time:"09:30", timeEn:"09:30",
+    ar:"الجولة الميدانية", en:"Field Inspection Tour",
+    p:{
+      runway:`Cinematic 3D exterior, 4 seconds. Manager in full PPE (hard hat, high-vis vest, steel-toe boots) walking through busy desert industrial yard in harsh midday sun, passing heavy mechanical workshop, stopping to speak with technician, pointing to equipment. Dust particles in air, long shadows on gravel, wide tracking shot. UE5 photorealistic. 16:9, 4K. --motion 8`,
+      luma:`Cinematic 3D exterior, remote desert industrial yard. Manager in hard hat and safety vest inspecting mechanical workshop and seismic equipment storage, speaking with field technicians, mid-morning harsh sunlight, dusty desert environment. 5 seconds, photorealistic, 4K.`,
+      sora:`The seismic party manager moves through the operations base field inspection in hard hat, high-visibility vest, and boots. The industrial yard has scale: heavy mechanical workshop under corrugated awning, stacked drilling equipment, coiled seismic cables, the vehicle pool behind a chain-link fence. He stops at the geodetic equipment warehouse to verify inventory with a technician. Checks the mechanical workshop report. The desert sun is direct and unforgiving. Camera tracks him from a distance, then cuts to close interactions with field staff. Wide establishing, medium follow, close two-shot. Photorealistic, 4K.`,
+      generic:`Cinematic 3D outdoor: manager in full PPE inspecting heavy workshop and seismic equipment at desert operations base, speaking with technicians, dusty industrial environment, harsh midday sun. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"10:30", timeEn:"10:30",
+    ar:"استراحة الشاي", en:"Tea Break",
+    p:{
+      runway:`Cinematic 3D, 4-second contemplative scene. Manager seated in simple chair in shade outside site office, holding small glass of hot Iraqi chai, looking across the sunlit operations yard, a brief quiet moment, steam rising from the glass. Wide still camera, slight slow push-in. UE5 photorealistic, warm filtered light. 16:9, 4K. --motion 2`,
+      luma:`Cinematic 3D quiet exterior. Manager in field attire sitting in shade, holding hot chai tea glass, steam visible, looking out at desert operations yard, contemplative pause. Warm filtered light. 5 seconds, photorealistic, 4K.`,
+      sora:`A quiet moment in the late morning. The manager sits in the shade beside the site office building, holding a small glass of hot Iraqi chai. Steam rises. The operations yard — vehicles, equipment, the shimmer of the desert beyond the perimeter — is still and bright. He takes a slow sip. No conversation. The camera holds completely still for a moment, then begins a very slow, almost imperceptible zoom out. The ordinary dignity of a brief rest. Cinematic, atmospheric, photorealistic, 4K.`,
+      generic:`Cinematic 3D quiet scene: manager taking tea break in shade outside site office, holding hot chai glass with steam rising, contemplative look at desert operations yard. UE5 photorealistic, warm filtered sunlight, 4K.`
+    }
+  },
+  {
+    time:"10:40", timeEn:"10:40",
+    ar:"المقابلات المكتبية", en:"Office Meetings & Staff Requests",
+    p:{
+      runway:`Cinematic 3D office, 4 seconds. Manager behind desk listening attentively as a staff member stands presenting a request, manager nodding, writing a brief note in a ledger, the exchange respectful and professional. Natural window light, medium two-shot. UE5 photorealistic. 16:9, 4K. --motion 4`,
+      luma:`Cinematic 3D office scene. Manager behind desk receiving staff member who presents a request, listening carefully, writing note, professional respectful interaction. Natural office light. 5 seconds, photorealistic, 4K.`,
+      sora:`The office door opens. A field technician enters, greets respectfully, sits across from the manager. He presents a staffing request. The manager listens without interrupting, asks one clarifying question, writes a brief note. The exchange is direct and unhurried. The technician leaves. A second person appears at the door. The camera stays on the manager, tracking the quiet rhythm of these daily exchanges. Medium shot throughout, slight push-ins during the key moments. Photorealistic, 4K.`,
+      generic:`Cinematic 3D office scene: manager conducting staff meetings, listening to employee requests across desk, taking notes, professional respectful exchanges. UE5 photorealistic, natural window light, 4K.`
+    }
+  },
+  {
+    time:"11:30", timeEn:"11:30",
+    ar:"استراحة الغداء", en:"Lunch Break",
+    p:{
+      runway:`Cinematic 3D, 4-second interior. Manager at mess hall table having lunch with one colleague, relaxed midday conversation, returning tray to counter after meal, stepping outside into the flat glare of the desert noon. Warm interior + bright exterior transition. UE5 photorealistic. 16:9, 4K. --motion 3`,
+      luma:`Cinematic 3D mess hall, midday. Manager eating lunch with colleague, relaxed conversation, returning tray, stepping outside. Interior warmth transitioning to bright desert exterior. 5 seconds, photorealistic, 4K.`,
+      sora:`The midday lunch break. The manager eats with a colleague — the conversation is lighter than the morning, a moment of recovery in the working day. The mess hall is quieter now. After eating, he returns his tray, exchanges a few words, and steps outside. The desert at noon is flat and searingly bright. Camera holds on him as he walks across the yard. Interior medium shot fades to wide exterior. Photorealistic, 4K.`,
+      generic:`Cinematic 3D lunch scene: manager having midday meal with colleagues at mess hall, relaxed conversation, returning tray, stepping out into bright desert noon. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"12:30", timeEn:"12:30",
+    ar:"مراجعة خطة العمل", en:"Work Plan & Progress Review",
+    p:{
+      runway:`Cinematic 3D office, 4 seconds. Manager alone at desk reviewing printed operations schedule and progress tables, pen in hand marking completion percentages, cross-checking with laptop data, focused methodical expression. Warm afternoon light from window. Close-up on documents then pull back. UE5 photorealistic. 16:9, 4K. --motion 3`,
+      luma:`Cinematic 3D office. Manager reviewing printed work plan schedules and progress charts, marking completion with pen, referencing laptop screen. Quiet afternoon focus. 5 seconds, photorealistic, 4K.`,
+      sora:`The seismic party manager works alone through the daily plan review. Printed schedules are spread on the desk — progress percentages, field unit positions, task completion tables. He checks numbers against the laptop, draws a tick beside a completed line, circles one that's behind schedule with a question mark. The quiet of the early afternoon. Close-up on his hands moving across the documents. Then a wider shot of him leaning back in his chair, looking at the ceiling for a moment, thinking. Photorealistic, cinematic, 4K.`,
+      generic:`Cinematic 3D office: manager reviewing printed operations work plans and progress tables alone at desk, marking completion percentages, cross-referencing laptop data. UE5 photorealistic, afternoon light, 4K.`
+    }
+  },
+  {
+    time:"13:00", timeEn:"13:00",
+    ar:"استراحة الظهيرة", en:"Afternoon Rest",
+    p:{
+      runway:`Cinematic 3D quiet interior, 4 seconds. Manager lying on cot in his residential caravan, fully clothed, eyes closed, afternoon rest. AC unit hums, desert heat implied, bright striped light from window blinds crossing the wall. Completely still camera hold. UE5 photorealistic, warm-striped interior. 16:9, 4K. --motion 1`,
+      luma:`Cinematic 3D quiet interior. Manager resting on cot in prefab caravan, eyes closed, AC hum, bright desert light through window blinds in parallel stripes across walls. Still and peaceful. 5 seconds, photorealistic, 4K.`,
+      sora:`A rest period. Inside the manager's caravan, he lies on the cot, fully clothed, eyes closed. The air conditioning unit hums steadily. Light from the closed window blinds falls in bright parallel stripes across the wall — the desert at its most intense outside, the caravan holding the cool air carefully. The camera is completely still for several long seconds. Then a very, very slow zoom toward his resting face. Rest as discipline. Cinematic, atmospheric, photorealistic, 4K.`,
+      generic:`Cinematic 3D quiet interior: manager resting on cot in desert field caravan, eyes closed, AC unit hum, bright striped light through window blinds, completely still atmosphere. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"14:00", timeEn:"14:00",
+    ar:"المتابعة المسائية", en:"Afternoon Correspondence",
+    p:{
+      runway:`Cinematic 3D office, 4 seconds. Manager back at desk post-rest, checking afternoon emails from field units, responding to two, flagging one, more relaxed posture than morning, golden afternoon sunlight now lower and warmer through the window. Medium desk shot. UE5 photorealistic. 16:9, 4K. --motion 4`,
+      luma:`Cinematic 3D office. Manager returning to desk for afternoon email session, golden afternoon light from window, responding to field unit queries, more relaxed pace. 5 seconds, photorealistic, 4K.`,
+      sora:`After the afternoon break, the manager returns to his desk. The light through the window has shifted entirely — the brutal midday white has become a warm, low-angle gold. He opens the laptop, scrolls through the afternoon's incoming messages from field units, responds to two, flags one for follow-up at the meeting. The rhythm of the afternoon is slower. The camera stays at a relaxed medium distance. The office is quiet. Cinematic, photorealistic, 4K.`,
+      generic:`Cinematic 3D office: manager at desk handling afternoon email correspondence, golden afternoon window light, relaxed posture, responding to field unit queries. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"15:00", timeEn:"15:00",
+    ar:"اجتماع الخطة اليومية", en:"Daily Operations Meeting",
+    p:{
+      runway:`Cinematic 3D conference room, 4 seconds. Manager at head of site conference table, 6–8 department heads seated around with printed production reports in hand, manager pointing to a map pinned to the wall, animated professional discussion, one person taking notes. Fluorescent + window light. Wide then medium. UE5 photorealistic. 16:9, 4K. --motion 6`,
+      luma:`Cinematic 3D conference room. Manager leading daily operations meeting, department heads around table with reports, production map on wall, professional focused discussion. Fluorescent interior light. 5 seconds, photorealistic, 4K.`,
+      sora:`The daily operations meeting. The seismic party manager stands at the head of the conference table. Around him: the operations supervisor, safety officer, geophysicist, logistics coordinator, two field unit leaders — six people total. Printed production reports, field maps, and seismic progress charts cover the table. The manager works through the numbers: one seismic line is behind schedule. He asks for the cause. Hears it. Assigns corrective action. Asks for equipment repair status. Decisions made directly. Camera moves between the manager during key statements and faces of team members responding. Wide establishing, medium follow, close-up on the map during the production shortfall discussion. Photorealistic, 4K.`,
+      generic:`Cinematic 3D conference room: manager leading daily operations meeting with 6-8 department heads, printed production reports on table, map on wall, professional focused discussion. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"16:00", timeEn:"16:00",
+    ar:"التخاويل والأمور الإدارية", en:"Movement Passes & Admin Affairs",
+    p:{
+      runway:`Cinematic 3D office, 4 seconds. Manager carefully reviewing a stack of movement clearance pass documents (takhawil), reading each one, signing with pen, applying organizational stamp, placing face-down on completed pile, administrative officer watching from opposite chair. Late afternoon warm light, close-up on documents then wider. UE5 photorealistic. 16:9, 4K. --motion 3`,
+      luma:`Cinematic 3D office. Manager working through stack of official movement clearance passes, reading, signing, stamping each one, handing completed stack to officer. Methodical, precise. Late afternoon light. 5 seconds, photorealistic, 4K.`,
+      sora:`A stack of movement clearance passes — takhawil — on the manager's desk in the late afternoon. He works through them with quiet precision: reads each form, checks the name and destination against a printed staff list, signs, applies the organizational stamp, sets it face-down on the completed stack. The administrative officer watches from across the desk. The ritual of field authorization — every departure from the base requiring this physical permission — rendered in unhurried close detail. Camera holds on the documents, the stamp, the pen. Then widens to show both men. The completed stack grows. Photorealistic, 4K.`,
+      generic:`Cinematic 3D office: manager reviewing and signing movement clearance passes (takhawil), applying official organizational stamp, handing completed stack to administrative officer. UE5 photorealistic, late afternoon light, 4K.`
+    }
+  },
+  {
+    time:"17:00", timeEn:"17:00",
+    ar:"استراحة العشاء والصلاة", en:"Dinner Break & Evening Prayer",
+    p:{
+      runway:`Cinematic 3D evening, 4 seconds. Manager stepping outside from mess hall after dinner to prayer area, unrolling mat on gravel, beginning evening prayer at desert sunset — extraordinary amber-to-violet sky behind him, the desert at its most beautiful. Camera holds in wide shot, then slow zoom to medium. UE5 photorealistic. 16:9, 4K. --motion 3`,
+      luma:`Cinematic 3D evening exterior. Manager performing outdoor prayer on mat at desert operations base, stunning sunset sky — deep amber fading to violet, first star visible. Wide spiritual quiet moment. 5 seconds, photorealistic, 4K.`,
+      sora:`The end of the working day approaches. After dinner in the quieter evening mess hall, the manager steps outside to the prayer area: a simple mat laid on the gravel facing west. The desert sky at this hour is extraordinary — deep amber at the horizon fading through layers of orange to violet overhead, one star appearing. He prays, unhurried. After, he stands, rolls the mat, and walks back toward the office. The transition between the sacred pause and the return to work is seamless — just part of the rhythm of this life. Wide shot of the prayer in the dying desert light. Cinematic, photorealistic, 4K.`,
+      generic:`Cinematic 3D evening: manager performing outdoor evening prayer on mat at desert base, extraordinary sunset sky — amber fading to violet, spiritual quiet moment. Wide shot. UE5 photorealistic, 4K.`
+    }
+  },
+  {
+    time:"18:00", timeEn:"18:00+",
+    ar:"التقرير النهائي وإغلاق المكتب", en:"Final Report & Office Close",
+    p:{
+      runway:`Cinematic 3D closing scene, 4 seconds. Manager typing final daily production report at laptop in gathering dusk, reviews document, clicks send, closes laptop, stands, turns off desk lamp, steps out of office, door locks, camera stays outside watching the last office window go dark as he walks away into the night-blue desert camp. UE5 photorealistic, blue-hour twilight, moody final shot. 16:9, 4K. --motion 5`,
+      luma:`Cinematic 3D evening. Manager completing final daily report on laptop at dusk, sending it, closing laptop, locking office door, walking away into the night-blue desert camp. Blue-hour moody closing. 5 seconds, photorealistic, 4K.`,
+      sora:`The last scene. The manager sits at his desk in the gathering dark, the laptop the only light in the room. He types the daily production report with focused deliberation — line counts, crew progress, equipment status, issues and resolutions for the day. Reviews it once. Clicks send. The laptop screen dims. He closes it. Picks up his jacket. Turns off the desk lamp. Steps outside. The lock clicks behind him. The desert is dark now and cold is coming. He walks away from the office building. The camera stays behind, watching from outside. Through the window: the last light goes off. The screen holds for a beat on the dark, locked office. The day is done. Wide shot, slow zoom into the dark window. Cinematic, photorealistic, 4K.`,
+      generic:`Cinematic 3D closing scene: manager typing final production report on laptop at dusk, sending, closing laptop, turning off lights, locking office, walking into dark desert camp. Blue-hour twilight, moody atmosphere. UE5 photorealistic, 4K.`
+    }
+  }
+];
+
+// ── STATE ─────────────────────────────────────────────────────────────
+let activeTool = 'runway';
+
+// ── RENDER ────────────────────────────────────────────────────────────
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function render(){
+  const tl = document.getElementById('tl');
+  tl.innerHTML = '';
+  SCENES.forEach((s,i)=>{
+    const li = document.createElement('li');
+    li.className = 'tl-row';
+    li.dataset.i = i;
+    li.innerHTML = `
+<div class="tl-head">
+  <div class="tl-time">${s.time}<span>${s.timeEn}</span></div>
+  <div class="tl-desc">
+    <div class="tl-ar">${s.ar}</div>
+    <div class="tl-en">${s.en}</div>
+  </div>
+  <div class="tl-caret">▶</div>
+</div>
+<div class="tl-panel">
+  <div class="panel-num">SCENE ${String(i+1).padStart(2,'0')} / ${SCENES.length}</div>
+  <div class="prompt-tabs">
+    <button class="pt-btn cur"  data-t="runway"  onclick="switchTab(event,this,${i})">Runway Gen-3</button>
+    <button class="pt-btn"      data-t="luma"    onclick="switchTab(event,this,${i})">Luma</button>
+    <button class="pt-btn"      data-t="sora"    onclick="switchTab(event,this,${i})">Sora</button>
+    <button class="pt-btn"      data-t="generic" onclick="switchTab(event,this,${i})">Universal</button>
+  </div>
+  ${['runway','luma','sora','generic'].map(t=>`
+  <div class="prompt-block${t==='runway'?' show':''}" data-t="${t}">
+    <button class="copy-btn" onclick="copyPrompt(event,this)">⎘ Copy</button>
+    <pre class="prompt-pre">${esc(s.p[t])}</pre>
+  </div>`).join('')}
+</div>`;
+    li.querySelector('.tl-head').addEventListener('click', ()=>toggle(li,i));
+    tl.appendChild(li);
+  });
+}
+
+function toggle(li,i){
+  const was = li.classList.contains('open');
+  document.querySelectorAll('.tl-row.open').forEach(r=>r.classList.remove('open'));
+  if(!was){
+    li.classList.add('open');
+    syncTabs(li);
+    setTimeout(()=>li.scrollIntoView({behavior:'smooth',block:'nearest'}),60);
+  }
+}
+
+function syncTabs(li){
+  li.querySelectorAll('.pt-btn').forEach(b=>b.classList.toggle('cur', b.dataset.t===activeTool));
+  li.querySelectorAll('.prompt-block').forEach(b=>b.classList.toggle('show', b.dataset.t===activeTool));
+}
+
+function switchTab(e,btn,i){
+  e.stopPropagation();
+  activeTool = btn.dataset.t;
+  const li = btn.closest('.tl-row');
+  syncTabs(li);
+  document.querySelectorAll('.pb-btn').forEach(b=>b.classList.toggle('active',b.dataset.tool===activeTool));
+}
+
+function setPlatform(btn){
+  activeTool = btn.dataset.tool;
+  document.querySelectorAll('.pb-btn').forEach(b=>b.classList.toggle('active',b===btn));
+  document.querySelectorAll('.tl-row.open').forEach(li=>syncTabs(li));
+}
+
+function copyPrompt(e,btn){
+  e.stopPropagation();
+  const txt = btn.nextElementSibling.textContent;
+  navigator.clipboard.writeText(txt).then(()=>{
+    btn.textContent='✓ Copied'; btn.classList.add('ok');
+    setTimeout(()=>{ btn.innerHTML='⎘ Copy'; btn.classList.remove('ok'); },2200);
+  }).catch(()=>{ btn.textContent='Error'; });
+}
+
+function copyMaster(btn){
+  navigator.clipboard.writeText(document.getElementById('masterPre').textContent).then(()=>{
+    btn.textContent='✓ Copied'; btn.classList.add('ok');
+    setTimeout(()=>{ btn.textContent='⎘  Copy Full Master Prompt'; btn.classList.remove('ok'); },2500);
+  });
+}
+
+function toggleTheme(){
+  const r=document.documentElement, c=r.getAttribute('data-theme');
+  if(c==='dark') r.setAttribute('data-theme','light');
+  else if(c==='light') r.removeAttribute('data-theme');
+  else r.setAttribute('data-theme','dark');
+}
+
+render();
+// Open first row by default
+const first = document.querySelector('.tl-row');
+if(first){ first.classList.add('open'); syncTabs(first); }
+</script>
+</body>
+</html>
