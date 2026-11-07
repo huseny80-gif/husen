@@ -1,6 +1,8 @@
 import dynamic from "next/dynamic";
 import { SimulationController } from "@/components/ui/SimulationController";
 
+export const dynamic = "force-dynamic";
+
 // R3F Canvas must be client-only — dynamic import with no SSR
 const DelegationScene = dynamic(
   () =>
