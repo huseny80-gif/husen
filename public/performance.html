@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة تحليلات الأداء</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;font-family:'Cairo','Tajawal',sans-serif}
+body{margin:0;min-height:100vh;color:#e6f1f5;padding:24px 16px;background:radial-gradient(1200px 600px at 80% -10%,#0f4a52,transparent 60%),radial-gradient(900px 500px at 0% 100%,#0b2f4a,transparent 55%),linear-gradient(160deg,#050d1a,#0a2230)}
+main{max-width:1000px;margin:0 auto}
+h1{font-size:1.9rem;margin:.3rem 0 4px;background:linear-gradient(90deg,#d4af37,#f3d97a,#d4af37);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:#b7c9d1;margin:0 0 18px}
+.glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-radius:1.2rem;box-shadow:0 10px 40px rgba(0,0,0,.35);padding:18px;margin-bottom:16px}
+h2{margin:0 0 12px;font-size:1.1rem;color:#d4af37}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{cursor:pointer;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#e6f1f5;padding:10px 20px;border-radius:99px;font-weight:700;font-size:1rem;transition:.2s}
+.tab[aria-selected=true]{background:linear-gradient(135deg,#14b8a6,#0f766e);border-color:#5eead4;box-shadow:0 6px 20px rgba(20,184,166,.35)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+.kpi{text-align:center;padding:14px;border-radius:1rem;background:rgba(20,184,166,.12);border:1px solid rgba(20,184,166,.3)}
+.kpi b{display:block;font-size:1.7rem;color:#f3d97a}.kpi span{font-size:.85rem;color:#b7c9d1}
+.tools{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.seg{display:inline-flex;border-radius:99px;overflow:hidden;border:1px solid rgba(255,255,255,.18)}
+.seg button{cursor:pointer;border:0;background:transparent;color:#d8e6ea;padding:8px 16px;font-weight:700}
+.seg button[aria-pressed=true]{background:linear-gradient(135deg,#d4af37,#9a7412);color:#1a1405}
+.legend{display:flex;gap:8px;flex-wrap:wrap}
+.lg{cursor:pointer;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#e6f1f5;padding:5px 12px;border-radius:99px;font-size:.85rem}
+.lg i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.lg.off{opacity:.4;text-decoration:line-through}
+.cv{position:relative;height:340px}
+.cv canvas{width:100%;height:100%;display:block;touch-action:pan-y}
+#tip{position:absolute;display:none;pointer-events:none;background:rgba(5,13,26,.92);border:1px solid rgba(212,175,55,.5);border-radius:.7rem;padding:8px 12px;font-size:.85rem;line-height:1.6;white-space:nowrap;z-index:5}
+.srow{padding:10px 0;border-top:1px solid rgba(255,255,255,.08)}.srow:first-of-type{border-top:0}
+.srow h3{margin:0 0 4px;font-size:1rem;display:flex;align-items:center;gap:8px}.srow h3 i{width:10px;height:10px;border-radius:50%}
+.note{color:#8aa3ad;font-size:.8rem;margin:8px 0 0}
+.empty{color:#b7c9d1;text-align:center;padding:18px}.empty a{color:#5eead4}
+.att{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px solid rgba(255,255,255,.08);font-size:.9rem}
+.att:first-of-type{border-top:0}.att b{color:#f3d97a}
+</style>
+</head>
+<body>
+<script src="catalog.js"></script><script src="nav.js"></script><script src="analytics.js"></script>
+<main>
+<h1><i class="fa-solid fa-chart-column"></i> لوحة تحليلات الأداء</h1>
+<p class="sub">تقدّمك عبر الكورسين والمواد، مبنيّ على نتائج الاختبارات وبنك الأسئلة المحفوظة على هذا الجهاز.</p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="kpis" id="kpis"></div>
+<section class="glass">
+ <div class="tools">
+  <h2 style="margin:0">مخطط الأداء</h2>
+  <div class="seg" role="group" aria-label="نوع المخطط">
+   <button id="mBar" aria-pressed="true"><i class="fa-solid fa-chart-column"></i> أعمدة (الكورسان)</button>
+   <button id="mLine" aria-pressed="false"><i class="fa-solid fa-chart-line"></i> خطوط (الأشهر)</button>
+  </div>
+ </div>
+ <div class="legend" id="legend" style="margin-bottom:10px"></div>
+ <div class="cv"><canvas id="cv" role="img" aria-label="مخطط أداء الطالب حسب المادة والكورس"></canvas><div id="tip"></div></div>
+ <p class="note" id="cnote"></p>
+</section>
+<section class="glass"><h2>الإنجاز والدرجات حسب المادة</h2><div id="subs"></div></section>
+<section class="glass"><h2>آخر المحاولات</h2><div id="recent"></div></section>
+</main>
+<script>
+(function(){
+var PA=window.PerfAnalytics,C=window.CATALOG,$=function(s){return document.querySelector(s)};
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+var m=location.search.match(/[?&]g=([456])/),grade=m?+m[1]:0;
+if(!grade){try{grade=+localStorage.getItem('perf-grade')||0}catch(e){}}
+if([4,5,6].indexOf(grade)<0)grade=4;
+var chart=new PA.Chart($('#cv'),$('#tip'));
+PA.css();
+
+function setGrade(g){grade=g;try{localStorage.setItem('perf-grade',g)}catch(e){}render()}
+function render(){
+ $('#tabs').innerHTML=C.grades.map(function(x){return '<button class="tab" role="tab" aria-selected="'+(x.g===grade)+'" data-g="'+x.g+'">'+x.name+'</button>'}).join('');
+ [].forEach.call(document.querySelectorAll('.tab'),function(b){b.onclick=function(){setGrade(+b.dataset.g)}});
+
+ var sum=PA.summary(grade),all=PA.attempts(grade),withData=sum.filter(function(s){return s.attempts>0});
+ var av=all.length?Math.round(all.reduce(function(a,e){return a+e.pct},0)/all.length):0;
+ var best=withData.slice().sort(function(a,b){return (b.avg||0)-(a.avg||0)})[0];
+ var comp=sum.length?Math.round(sum.reduce(function(a,s){return a+s.completion},0)/sum.length):0;
+ $('#kpis').innerHTML=
+  '<div class="kpi"><b>'+all.length+'</b><span>محاولة مسجّلة</span></div>'+
+  '<div class="kpi"><b>'+av+'%</b><span>متوسط الدرجات</span></div>'+
+  '<div class="kpi"><b>'+comp+'%</b><span>إنجاز المواد</span></div>'+
+  '<div class="kpi"><b style="font-size:1.1rem;line-height:2.6rem">'+(best?esc(best.sub):'—')+'</b><span>أفضل مادة</span></div>';
+
+ var data=PA.chartData(grade);chart.setData(data);
+ var bar=$('#mBar').getAttribute('aria-pressed')==='true';
+ legend(data,bar);
+ $('#cnote').textContent=bar?'الكورس الأول: أكتوبر–يناير، الكورس الثاني: فبراير وما بعده. مرّر المؤشر أو المس العمود لعرض التفاصيل.':'متوسط الدرجات لكل شهر من أشهر السنة الدراسية. اضغط اسم المادة لإخفائها أو إظهارها.';
+
+ $('#subs').innerHTML=sum.length?sum.map(function(s){
+  return '<div class="srow"><h3><i style="background:'+s.color+'"></i>'+esc(s.sub)+'</h3>'+
+   PA.bar('نسبة الإنجاز',s.completion,'tq',s.total?s.done+' من '+s.total+' وحدات':'')+
+   PA.bar('متوسط الدرجات',s.avg==null?0:s.avg,'gd',s.attempts+' محاولة')+'</div>'}).join('')
+  :'<div class="empty">لا توجد اختبارات لهذا الصف بعد. <a href="grade.html?g='+grade+'">فتح صفحة الصف</a> أو <a href="studio.html">بنك الأسئلة</a>.</div>';
+ PA.animate($('#subs'));
+
+ var rec=all.slice().sort(function(a,b){return b.ts-a.ts}).slice(0,8);
+ $('#recent').innerHTML=rec.length?rec.map(function(e){
+  return '<div class="att"><span>'+esc(e.sub)+(e.bank?' <small style="color:#9fb6bf">(بنك الأسئلة)</small>':'')+'</span><span>'+new Date(e.ts).toLocaleDateString('ar-IQ')+'</span><b>'+Math.round(e.pct)+'%</b></div>'}).join('')
+  :'<div class="empty">ستظهر محاولاتك هنا بعد حلّ أول اختبار.</div>';
+}
+function legend(data,bar){
+ var items=bar?PA.TERMS.map(function(t,i){return {n:t,c:i?'#f3d97a':'#5eead4'}}):data.map(function(s){return {n:s.sub,c:s.color}});
+ $('#legend').innerHTML=items.map(function(x){return '<button class="lg'+(chart.hidden[x.n]?' off':'')+'" data-n="'+esc(x.n)+'"><i style="background:'+x.c+'"></i>'+esc(x.n)+'</button>'}).join('');
+ [].forEach.call(document.querySelectorAll('.lg'),function(b){b.onclick=function(){chart.toggle(b.dataset.n);b.classList.toggle('off')}});
+}
+function mode(bar){
+ $('#mBar').setAttribute('aria-pressed',bar);$('#mLine').setAttribute('aria-pressed',!bar);
+ chart.setMode(bar?'bar':'line');legend(chart.data,bar);
+ $('#cnote').textContent=bar?'الكورس الأول: أكتوبر–يناير، الكورس الثاني: فبراير وما بعده. مرّر المؤشر أو المس العمود لعرض التفاصيل.':'متوسط الدرجات لكل شهر من أشهر السنة الدراسية. اضغط اسم المادة لإخفائها أو إظهارها.';
+}
+$('#mBar').onclick=function(){mode(true)};$('#mLine').onclick=function(){mode(false)};
+window.addEventListener('storage',render);
+render();
+})();
+</script>
+</body>
+</html>

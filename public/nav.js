@@ -17,6 +17,7 @@
  bar.innerHTML=(isHome?'<span></span>':'<button type="button" id="navback"><i class="fa-solid fa-arrow-right"></i> رجوع</button>')+
   '<span class="nv-r">'+(isHome?'':'<a href="'+home+'"><i class="fa-solid fa-house"></i> الرئيسية</a>')+
   '<a href="'+root+'progress.html"><i class="fa-solid fa-chart-line"></i> سجل التقدم</a>'+
+  '<a href="'+root+'performance.html"><i class="fa-solid fa-chart-column"></i> تحليلات الأداء</a>'+
   '<a href="'+root+'login"><i class="fa-solid fa-user-shield"></i> دخول المدرب</a></span>';
  function gh(){if(!/github\.io$/.test(location.hostname))return;[].forEach.call(document.querySelectorAll('a'),function(a){var h=a.getAttribute('href')||'';if(h==='/login'||h==='/student/progress'||/(^|\/)login$/.test(h))a.setAttribute('href',base+'unavailable.html')})}
  function mount(){document.body.insertBefore(bar,document.body.firstChild);gh();setTimeout(gh,300);var b=document.getElementById('navback');
