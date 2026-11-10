@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>درس الثقافة القانونية</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Reem+Kufi:wght@500;700&display=swap">
+<style>
+/* Layout: a courtroom stage at night — the question sits on a podium in the centre, the ladder of 12 levels climbs beside it (a drawer on phones). */
+:root{
+  --bg:#0a0f24;
+  --bg-2:#10183a;
+  --panel:#141d44;
+  --panel-2:#1b2759;
+  --line:#2c3b7c;
+  --gold:#e8b74a;
+  --gold-hi:#ffdc85;
+  --text:#eef1fb;
+  --muted:#a2acd6;
+  --cyan:#5cc8e6;
+  --ok:#25b46c;
+  --ok-bg:#0f3d2a;
+  --bad:#e04b56;
+  --bad-bg:#46131c;
+  --sel:#ef8b2c;
+  --shadow:rgba(3,6,20,.55);
+  --f-display:'Reem Kufi','Segoe UI',Tahoma,'Noto Kufi Arabic',sans-serif;
+  --f-body:'IBM Plex Sans Arabic','Segoe UI',Tahoma,'Noto Sans Arabic',Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{min-height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:16px;line-height:1.75;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(900px 520px at 50% -8%, rgba(92,200,230,.16), transparent 70%),
+    radial-gradient(700px 500px at 100% 100%, rgba(232,183,74,.10), transparent 70%),
+    repeating-linear-gradient(0deg, rgba(92,200,230,.045) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(92,200,230,.045) 0 1px, transparent 1px 44px),
+    var(--bg);}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.app{max-width:1200px;margin:0 auto;padding-block:16px 28px;padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);line-height:1.3;text-wrap:balance;margin:0}
+.eyebrow{font-size:.8rem;letter-spacing:.04em;color:var(--cyan)}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 26px;font-weight:700;font-size:1rem;transition:transform .15s, filter .15s, opacity .15s}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(180deg,var(--gold-hi),var(--gold));color:#2a1c00;box-shadow:0 6px 20px rgba(232,183,74,.28)}
+.btn-gold:hover{filter:brightness(1.06)}
+.btn-ghost{background:transparent;border:1.5px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--cyan)}
+.btn[disabled]{opacity:.4;cursor:not-allowed;box-shadow:none}
+
+/* ===== start screen ===== */
+.start{display:grid;gap:22px;max-width:880px;margin:0 auto;padding-top:8px}
+.hero{display:grid;gap:14px;justify-items:center;text-align:center;padding:22px 8px 6px}
+.emblem{width:118px;height:118px;filter:drop-shadow(0 8px 24px rgba(232,183,74,.25))}
+.hero h1{font-size:clamp(1.9rem,5.4vw,3rem);font-weight:700}
+.hero .show{font-family:var(--f-display);font-size:clamp(1.15rem,3.4vw,1.6rem);color:var(--gold-hi)}
+.hero p{max-width:60ch;margin:0;color:var(--muted)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.rule{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:14px;padding:14px 16px;min-width:0}
+.rule b{display:block;font-family:var(--f-display);color:var(--gold-hi);font-size:1.25rem}
+.rule span{color:var(--muted);font-size:.92rem}
+.setup{display:grid;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px}
+.setup label{font-weight:700}
+.field{display:grid;gap:6px}
+.field input{background:var(--bg-2);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+.field input:focus{border-color:var(--gold);outline:none}
+.switch{display:flex;align-items:center;gap:10px;font-weight:500;cursor:pointer;user-select:none}
+.switch input{width:20px;height:20px;accent-color:var(--gold)}
+.setup .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.best{font-size:.92rem;color:var(--muted)}
+.sources h3{font-size:1rem;color:var(--muted);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--bg-2);border-radius:999px;padding:4px 12px;font-size:.85rem;color:var(--text)}
+
+/* ===== game ===== */
+.topbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;justify-content:space-between;padding:8px 0 14px}
+.brand{font-family:var(--f-display);font-size:1.15rem;color:var(--gold-hi)}
+.hud{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.9rem;white-space:nowrap}
+.hearts{letter-spacing:2px;color:var(--bad)}
+.hearts .lost{color:#3b4471}
+.icon-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--panel);display:inline-grid;place-items:center;font-size:1.05rem}
+.ladder-toggle{display:none}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:20px;align-items:start}
+.stage{display:grid;gap:14px;min-width:0}
+.qmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.qmeta .tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.8rem;border-radius:8px;padding:3px 10px;background:var(--bg-2);border:1px solid var(--line)}
+.tag.type{color:var(--gold-hi);border-color:rgba(232,183,74,.5)}
+.tag.src{color:var(--cyan);border-color:rgba(92,200,230,.45)}
+.timer{--p:100;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-variant-numeric:tabular-nums;
+  background:conic-gradient(var(--tcol,var(--cyan)) calc(var(--p)*1%), #26305e 0);position:relative}
+.timer::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--bg)}
+.timer span{position:relative;z-index:1;font-size:1rem}
+.timer.warn{--tcol:var(--bad)}
+.qcard{position:relative;background:linear-gradient(180deg,#1a2660,#111a43);border:2px solid var(--line);border-radius:22px;padding:22px 22px 20px;box-shadow:0 14px 40px var(--shadow)}
+.qcard::before,.qcard::after{content:"";position:absolute;top:50%;width:18px;height:2px;background:var(--line)}
+.qcard::before{right:-18px}.qcard::after{left:-18px}
+.qprog{font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.qtext{font-size:clamp(1.05rem,2.6vw,1.3rem);font-weight:700;line-height:1.8}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ans{position:relative;padding:2px;border:0;background:var(--line);clip-path:polygon(18px 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,18px 100%,0 50%);text-align:right;min-width:0;transition:background .2s, opacity .3s}
+.ans .in{display:flex;align-items:center;gap:10px;min-height:58px;height:100%;padding:10px 28px;background:linear-gradient(180deg,#18235a,#0f173f);clip-path:inherit}
+.ans .lt{font-family:var(--f-display);color:var(--gold-hi);font-weight:700;flex:none}
+.ans .tx{min-width:0;font-weight:500;line-height:1.6}
+.ans:not(.selected):not([disabled]):hover{background:var(--cyan)}
+.ans.selected{background:var(--sel)}
+.ans.selected .in{background:linear-gradient(180deg,#7a3e07,#5a2c03)}
+.ans.pending{animation:blink .45s steps(2) infinite}
+.ans.correct{background:var(--ok)}
+.ans.correct .in{background:linear-gradient(180deg,#1b8a52,#0f5e37)}
+.ans.wrong{background:var(--bad)}
+.ans.wrong .in{background:linear-gradient(180deg,#9a2630,#6a141d)}
+.ans.gone{opacity:.15;pointer-events:none}
+.ans[disabled]{cursor:default}
+.answers.tf{grid-template-columns:1fr 1fr}
+.answers.tf .ans .in{justify-content:center;font-size:1.15rem}
+@keyframes blink{50%{filter:brightness(1.5)}}
+
+/* matching */
+.match{display:grid;gap:14px}
+.match-hint{font-size:.9rem;color:var(--muted)}
+.terms{display:flex;flex-wrap:wrap;gap:8px}
+.term{border:2px solid var(--line);background:var(--panel);border-radius:12px;padding:8px 14px;font-weight:700;text-align:right;display:inline-flex;gap:8px;align-items:center;max-width:100%}
+.term .dot{width:22px;height:22px;border-radius:50%;display:inline-grid;place-items:center;font-size:.75rem;color:#0b1026;flex:none}
+.term.active{border-color:var(--gold);box-shadow:0 0 0 3px rgba(232,183,74,.25)}
+.term.used{opacity:.45}
+.descs{display:grid;gap:10px}
+.desc{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;text-align:right;background:linear-gradient(180deg,#18235a,#0f173f);border:2px solid var(--line);border-radius:14px;padding:12px 14px;min-width:0}
+.desc:hover:not([disabled]){border-color:var(--cyan)}
+.desc .dt{min-width:0;line-height:1.6}
+.slot{font-size:.85rem;border:1.5px dashed var(--line);border-radius:10px;padding:4px 10px;color:var(--muted);white-space:nowrap;max-width:46vw;overflow:hidden;text-overflow:ellipsis}
+.slot.filled{border-style:solid;color:#0b1026;font-weight:700}
+.desc.correct{border-color:var(--ok);background:var(--ok-bg)}
+.desc.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.desc .fix{grid-column:1/-1;font-size:.85rem;color:var(--gold-hi)}
+.desc.locked{border-color:var(--ok)}
+
+.actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.lifelines{display:flex;gap:10px;flex-wrap:wrap}
+.life{display:inline-flex;flex-direction:column;align-items:center;gap:2px;min-width:74px;border:1.5px solid var(--gold);background:var(--panel);border-radius:14px;padding:6px 10px;color:var(--gold-hi)}
+.life b{font-family:var(--f-display);font-size:1.05rem;line-height:1.2}
+.life small{font-size:.72rem;color:var(--muted)}
+.life:disabled{border-color:#39427a;color:#5c6496;cursor:not-allowed;text-decoration:line-through}
+
+.helper{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.helper h4{margin:0 0 8px;font-family:var(--f-display);color:var(--gold-hi);font-size:1rem}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:minmax(0,9rem) 1fr 3rem;gap:10px;align-items:center;font-size:.9rem}
+.bar .lbl{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .track,.bar .fill,.fbar .track,.fbar .fill{display:block}
+.bar .track{height:12px;background:#222c5c;border-radius:6px;overflow:hidden}
+.bar .fill{height:100%;background:linear-gradient(90deg,var(--cyan),var(--gold));border-radius:6px;width:0;transition:width .9s ease}
+
+.feedback{border-radius:18px;padding:16px 18px;border:2px solid var(--line);background:var(--panel)}
+.feedback.ok{border-color:var(--ok);background:linear-gradient(180deg,#0f3d2a,#0c2a20)}
+.feedback.bad{border-color:var(--bad);background:linear-gradient(180deg,#46131c,#2c0d14)}
+.feedback h3{font-size:1.2rem;margin-bottom:6px}
+.feedback .exp{margin:6px 0 0}
+.feedback .src{font-size:.85rem;color:var(--cyan);margin-top:8px}
+.feedback .row{display:flex;justify-content:flex-end;margin-top:12px}
+
+/* ladder */
+.ladder{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:12px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px)}
+.ladder h3{font-size:1rem;color:var(--muted);text-align:center;margin:2px 0 8px}
+.ladder ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column-reverse;gap:4px}
+.ladder li{display:grid;grid-template-columns:2.2rem 1fr auto;gap:8px;align-items:center;border-radius:10px;padding:5px 10px;font-variant-numeric:tabular-nums;font-size:.95rem;color:var(--muted);transition:background .4s,color .4s}
+.ladder li .lv{font-family:var(--f-display);color:var(--text);opacity:.8}
+.ladder li .val{font-weight:700}
+.ladder li .mk{font-size:.75rem}
+.ladder li.safe{color:var(--gold-hi)}
+.ladder li.done{color:#7fd8a8}
+.ladder li.done .mk::before{content:"✓"}
+.ladder li.cur{background:linear-gradient(90deg,var(--gold),var(--gold-hi));color:#2a1c00;box-shadow:0 0 18px rgba(232,183,74,.35)}
+.ladder li.cur .lv{color:#2a1c00}
+.ladder .legend{display:flex;justify-content:space-between;gap:8px;font-size:.75rem;color:var(--muted);margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+.qdots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.qdots i{width:12px;height:12px;border-radius:50%;background:#2a3466;display:block}
+.qdots i.ok{background:var(--ok)}.qdots i.bad{background:var(--bad)}.qdots i.now{background:var(--gold)}
+
+/* overlay + modal */
+.overlay{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:rgba(5,8,22,.78);backdrop-filter:blur(4px);padding:max(16px, env(safe-area-inset-top,0px)) max(16px, env(safe-area-inset-right,0px)) max(16px, env(safe-area-inset-bottom,0px)) max(16px, env(safe-area-inset-left,0px))}
+.modal{width:min(520px,100%);max-height:100%;overflow:auto;background:linear-gradient(180deg,var(--panel-2),var(--panel));border:2px solid var(--gold);border-radius:22px;padding:22px;text-align:center;display:grid;gap:12px;animation:pop .35s ease}
+.modal h2{font-size:1.5rem;color:var(--gold-hi)}
+.modal .big{font-family:var(--f-display);font-size:2rem;color:var(--text)}
+.stars{font-size:1.6rem;letter-spacing:4px;color:var(--gold)}
+.stars .off{color:#38427a}
+@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:none;opacity:1}}
+
+/* end screen */
+.end{display:grid;gap:18px;max-width:900px;margin:0 auto;padding-top:6px}
+.end-hero{display:grid;justify-items:center;text-align:center;gap:10px;padding:18px 8px 4px}
+.trophy{width:150px;height:170px;filter:drop-shadow(0 12px 30px rgba(232,183,74,.35));animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-8px)}}
+.end-hero h1{font-size:clamp(1.6rem,4.6vw,2.4rem);color:var(--gold-hi)}
+.end-hero p{margin:0;max-width:62ch;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 14px;min-width:0}
+.stat small{display:block;color:var(--muted);font-size:.82rem}
+.stat b{font-family:var(--f-display);font-size:1.45rem;font-variant-numeric:tabular-nums}
+.grade{background:linear-gradient(180deg,#2b2408,#1b1706);border:2px solid var(--gold);border-radius:18px;padding:16px;display:grid;gap:6px;text-align:center}
+.grade b{font-family:var(--f-display);font-size:1.6rem;color:var(--gold-hi)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:16px}
+.panel h3{font-size:1.1rem;margin-bottom:10px}
+.fbars{display:grid;gap:10px}
+.fbar{display:grid;grid-template-columns:minmax(0,1fr) 3.4rem;gap:4px 10px;align-items:center;font-size:.92rem}
+.fbar .track{grid-column:1/-1;height:10px;background:#222c5c;border-radius:6px;overflow:hidden}
+.fbar .fill{height:100%;border-radius:6px;background:var(--ok)}
+.fbar .fill.mid{background:var(--gold)}.fbar .fill.low{background:var(--bad)}
+details.review summary{cursor:pointer;font-weight:700;font-family:var(--f-display)}
+.mist{border-top:1px solid var(--line);padding:10px 0;display:grid;gap:4px}
+.mist .q{font-weight:700}
+.mist .ya{color:#f39aa1}.mist .ca{color:#8de0b4}
+.end-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:60}
+
+@media (max-width: 960px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .ladder-toggle{display:inline-flex}
+  .ladder{display:none;position:fixed;top:0;bottom:0;left:0;width:min(300px,86vw);z-index:45;border-radius:0 18px 18px 0;overflow:auto;
+    padding-top:calc(env(safe-area-inset-top,0px) + 14px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 14px);padding-left:calc(env(safe-area-inset-left,0px) + 12px)}
+  .ladder.open{display:block;animation:slide .25s ease}
+  .scrim{position:fixed;inset:0;background:rgba(5,8,22,.6);z-index:44}
+  .qcard::before,.qcard::after{display:none}
+}
+@keyframes slide{from{transform:translateX(-30px);opacity:0}to{transform:none;opacity:1}}
+@media (max-width: 620px){
+  .answers{grid-template-columns:1fr}
+  .answers.tf{grid-template-columns:1fr 1fr}
+  .qcard{padding:18px 16px}
+  .life{min-width:64px;padding:6px 8px}
+  .bar{grid-template-columns:minmax(0,6rem) 1fr 2.6rem}
+  .slot{max-width:38vw}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<canvas id="confetti" aria-hidden="true"></canvas>
+<div class="app" id="app">
+
+  <!-- ===== START ===== -->
+  <section class="start" id="screen-start" aria-labelledby="t-start">
+    <div class="hero">
+      <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true">
+        <defs>
+          <linearGradient id="gEm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffdc85"/><stop offset="1" stop-color="#c8902a"/></linearGradient>
+        </defs>
+        <circle cx="60" cy="60" r="56" fill="#141d44" stroke="url(#gEm)" stroke-width="3"/>
+        <circle cx="60" cy="60" r="47" fill="none" stroke="#2c3b7c" stroke-width="1.5" stroke-dasharray="3 5"/>
+        <path d="M60 26v62M38 88h44M60 34l-26 6M60 34l26 6" stroke="url(#gEm)" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+        <path d="M34 40l-10 22h20zM86 40l-10 22h20z" fill="none" stroke="url(#gEm)" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M22 62a12 6 0 0 0 24 0zM74 62a12 6 0 0 0 24 0z" fill="url(#gEm)"/>
+        <circle cx="60" cy="24" r="4.5" fill="#5cc8e6"/>
+        <path d="M60 88v10M50 98h20" stroke="#5cc8e6" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="50" cy="98" r="2.5" fill="#5cc8e6"/><circle cx="70" cy="98" r="2.5" fill="#5cc8e6"/>
+      </svg>
+      <div class="eyebrow">الدبلوم العالي المهني · الثقافة القانونية والتنظيمية في عصر التحول الرقمي</div>
+      <h1 id="t-start">🐍 درس الثقافة القانونية</h1>
+      <div class="show">من سيربح الامتحان؟</div>
+      <p>اصعد سُلّم المستويات الاثني عشر بالإجابة عن أسئلة صعبة جداً مستخلصة من المحاضرات الثماني. كل مستوى فيه أربعة أسئلة تتنقّل بين المحاضرات، وكل إجابة صحيحة تضيف إلى رصيدك نقاطاً بقيمة مستواها.</p>
+    </div>
+
+    <div class="rules">
+      <div class="rule"><b class="num">١٢ × ٤</b><span>اثنا عشر مستوى، في كل مستوى أربعة أسئلة: اختيار من متعدد، صح أم خطأ، ومطابقة.</span></div>
+      <div class="rule"><b>٣ فرص</b><span>كل إجابة خاطئة أو انتهاء للوقت يُفقدك فرصة، وتظهر لك الإجابة الصحيحة مع شرحها.</span></div>
+      <div class="rule"><b>٣ وسائل مساعدة</b><span>حذف إجابتين، رأي الجمهور، اتصال بصديق. تُستخدم كل واحدة مرة واحدة في اللعبة.</span></div>
+      <div class="rule"><b>مستويات آمنة</b><span>المستويان ٤ و ٨ نقطتا أمان: إذا خسرت فرصك تستطيع الاستئناف منهما.</span></div>
+    </div>
+
+    <form class="setup" id="setup" novalidate>
+      <div class="field">
+        <label for="player-name">اسم الطالب</label>
+        <input id="player-name" name="player-name" type="text" maxlength="40" autocomplete="name" placeholder="اكتب اسمك ليظهر في شهادة الفوز">
+      </div>
+      <div class="row">
+        <label class="switch" for="timer-on"><input type="checkbox" id="timer-on" checked> تفعيل مؤقت السؤال (٣٠–١٠٠ ثانية)</label>
+        <label class="switch" for="sound-on"><input type="checkbox" id="sound-on" checked> المؤثرات الصوتية</label>
+      </div>
+      <div class="row">
+        <span class="best" id="best-score"></span>
+        <button class="btn btn-gold" type="submit" id="btn-start">ابدأ التحدي</button>
+      </div>
+    </form>
+
+    <div class="sources">
+      <h3>الأسئلة مستخلصة من المحاضرات الثماني</h3>
+      <div class="chips" id="src-chips"></div>
+    </div>
+  </section>
+
+  <!-- ===== GAME ===== -->
+  <section id="screen-game" hidden aria-label="اللعبة">
+    <div class="topbar">
+      <div class="brand">🐍 من سيربح الامتحان؟</div>
+      <div class="hud">
+        <span class="pill"><span class="muted">الرصيد</span> <b class="num" id="hud-score">٠</b></span>
+        <span class="pill hearts" id="hud-hearts" aria-label="الفرص المتبقية"></span>
+        <button class="pill ladder-toggle" id="btn-ladder" type="button" aria-controls="ladder" aria-expanded="false"><span id="hud-level">المستوى ١</span></button>
+        <button class="icon-btn" id="btn-sound" type="button" aria-label="تشغيل أو كتم الصوت">🔊</button>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="stage">
+        <div class="qmeta">
+          <div class="tags">
+            <span class="tag type" id="q-type">اختيار من متعدد</span>
+            <span class="tag src" id="q-src">المصدر</span>
+          </div>
+          <div class="timer" id="timer" hidden><span id="timer-num">٤٥</span></div>
+        </div>
+
+        <div class="qcard">
+          <div class="qprog" id="q-prog">المستوى ١ · السؤال ١ من ٤</div>
+          <div class="qtext" id="q-text"></div>
+        </div>
+
+        <div id="q-body"></div>
+
+        <div id="helper" class="helper" hidden></div>
+
+        <div class="actions" id="actions">
+          <div class="lifelines" role="group" aria-label="وسائل المساعدة">
+            <button class="life" id="ll-fifty" type="button"><b>٥٠:٥٠</b><small>حذف إجابتين</small></button>
+            <button class="life" id="ll-aud" type="button"><b>الجمهور</b><small>رأي القاعة</small></button>
+            <button class="life" id="ll-friend" type="button"><b>صديق</b><small>اتصال بزميل</small></button>
+          </div>
+          <button class="btn btn-gold" id="btn-confirm" type="button" disabled>إجابة نهائية</button>
+        </div>
+
+        <div id="feedback" class="feedback" hidden aria-live="polite"></div>
+      </div>
+
+      <aside class="ladder" id="ladder" aria-label="هرم المستويات">
+        <h3>هرم المستويات</h3>
+        <ol id="ladder-list"></ol>
+        <div class="qdots" id="qdots" aria-hidden="true"></div>
+        <div class="legend"><span>بالذهبي: المستوى الحالي</span><span>نقطة أمان: ٤ و ٨</span></div>
+      </aside>
+    </div>
+    <div class="scrim" id="scrim" hidden></div>
+  </section>
+
+  <!-- ===== END ===== -->
+  <section class="end" id="screen-end" hidden aria-live="polite"></section>
+</div>
+
+<div class="overlay" id="overlay" hidden><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+
+<script>
+(function(){
+'use strict';
+document.documentElement.lang='ar';
+document.documentElement.dir='rtl';
+
+var $=function(s){return document.querySelector(s)};
+var AR='٠١٢٣٤٥٦٧٨٩';
+function ad(n){return String(n).replace(/[0-9]/g,function(d){return AR[+d]})}
+function nf(n){var s=String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'٬');return ad(s)}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+
+/* ---------- المصادر: المحاضرات الثماني ---------- */
+var FILES={
+ 1:'التحول الإلكتروني وأثره في الإدارة والوظيفة العامة',
+ 2:'الحكومة الرقمية ومبدأ المشروعية',
+ 3:'المعاملات والوثائق والتوقيع الإلكتروني',
+ 4:'حماية البيانات والخصوصية',
+ 5:'المسؤولية القانونية في البيئة الرقمية',
+ 6:'الجوانب القانونية للذكاء الاصطناعي',
+ 7:'أثر التطور الإلكتروني على قواعد الوظيفة العامة',
+ 8:'الأصول الرقمية والعملات الرقمية في القانون العراقي'
+};
+var VALUES=[100,200,400,1000,2000,4000,8000,16000,32000,64000,250000,1000000];
+var SAFE=[3,7];
+var TYPE_LABEL={mcq:'اختيار من متعدد',tf:'صح أم خطأ',match:'مطابقة'};
+var TIME={mcq:45,tf:30,match:100};
+var LET=['أ','ب','ج','د'];
+var PAIR_COL=['#5cc8e6','#ffdc85','#f59fbf','#9be07a'];
+
+/* ---------- بنك الأسئلة: 12 مستوى × 4 أسئلة (الخيار الأول في o هو الصحيح، ويُخلط عند العرض) ---------- */
+var BANK=[
+/* المستوى 1 */
+[
+ {t:'mcq',f:2,q:'وفق المحاضرة، فإن «الحكومة الإلكترونية» (E-Government) تعني:',
+  o:['الاستخدام التكاملي الفعّال لجميع تقنيات المعلومات والاتصالات لتسهيل وتسريع التعاملات بدقة عالية داخل الجهات الحكومية',
+     'مفهوماً أوسع يتأثر بأبعاد كثيرة كالحكم الراشد والإدارة السليمة، وتُضاف إليه كلمة «إلكترونية»',
+     'إنشاء حكومة جديدة تختلف عن الحكومة التقليدية في طبيعتها القانونية واختصاصاتها',
+     'نقل اختصاصات الإدارة إلى المنصات الإلكترونية بوصفها سلطة إدارية مستقلة'],
+  e:'ميّزت المحاضرة بين الحكومة الإلكترونية (الاستخدام التكاملي لتقنيات المعلومات داخل الجهات الحكومية) والحوكمة الإلكترونية (E-Governance) الأوسع، المرتبطة بالحكم الراشد، والتي تشمل التكامل بين الحكومة والمواطن والشركات والجهات الحكومية بعضها مع بعض.'},
+ {t:'tf',f:8,q:'تُعدّ عملة Bitcoin عملةً رسمية في العراق، لأن لها قيمة سوقية ويمكن تداولها.',a:false,
+  e:'خطأ. القيمة السوقية لا تمنح صفة «العملة القانونية» (Legal Tender). قانون البنك المركزي العراقي رقم (56) لسنة 2004 جعل الدينار وحدة النقد الوطني، ولا تتمتع Bitcoin أو Ethereum بقوة الإبراء القانوني المقررة للدينار.'},
+ {t:'mcq',f:3,q:'صدر قانون التوقيع الإلكتروني والمعاملات الإلكترونية العراقي برقم وسنة:',
+  o:['رقم (78) لسنة 2012','رقم (39) لسنة 2015','رقم (56) لسنة 2004','رقم (14) لسنة 1991'],
+  e:'قانون التوقيع الإلكتروني والمعاملات الإلكترونية رقم (78) لسنة 2012، نُشر في الوقائع العراقية بالعدد (4256) في 5/11/2012. أما (39) لسنة 2015 فهو قانون مكافحة غسل الأموال، و(56) لسنة 2004 قانون البنك المركزي، و(14) لسنة 1991 قانون انضباط موظفي الدولة.'},
+ {t:'match',f:1,q:'طابق كل نوع من معوقات التحول الإلكتروني مع مثاله الصحيح:',
+  p:[['معوقات إدارية وتنظيمية','ضعف التخطيط والتنسيق، وتعقيد الإجراءات، وعدم وضوح استراتيجية التحول'],
+     ['معوقات قانونية','تشريعات وتعليمات غير قادرة على مواكبة التطورات التكنولوجية'],
+     ['معوقات تقنية ومالية','ضعف البنية التحتية التقنية وارتفاع تكاليف إنشاء الأنظمة وصيانتها'],
+     ['معوقات بشرية','ضعف الوعي الإلكتروني ومقاومة بعض الموظفين للانتقال من النظام الورقي']],
+  e:'صنّفت المحاضرة معوقات التحول الإلكتروني إلى أربعة أنواع: إدارية وتنظيمية، قانونية، تقنية ومالية، وبشرية. فالانتقال لا يتحقق بمجرد شراء الأجهزة والبرامج، بل يحتاج بيئة إدارية وقانونية وتقنية وبشرية متكاملة.'}
+],
+/* المستوى 2 */
+[
+ {t:'mcq',f:4,q:'أيّ مما يأتي يُعدّ من «البيانات الحساسة» التي تستوجب مستوى أعلى من الحماية بحسب المحاضرة؟',
+  o:['البيانات الصحية والبيومترية والمالية','البيانات التي أُخفيت هوية أصحابها بحيث يتعذر إعادة تحديدهم','البيانات العامة التي تمتلكها الدولة كالإحصاءات المجمّعة','بيانات استخدام المنصات الحكومية بعد تجهيلها'],
+  e:'البيانات الحساسة تستوجب حماية أعلى لخطورة إساءة استخدامها، ومنها البيانات الصحية والبيومترية والمالية وبعض بيانات الحياة الخاصة. وتزداد خطورتها في قواعد البيانات الحكومية المركزية لأن اختراقاً واحداً قد يكشف معلومات عدد كبير من المواطنين.'},
+ {t:'tf',f:5,q:'رقمنة الخدمة الحكومية تُعفي الإدارة من مسؤوليتها القانونية إذا وقع الخطأ داخل النظام الإلكتروني.',a:false,
+  e:'خطأ. أكدت المحاضرة أن رقمنة الخدمة لا تعفي الإدارة من مسؤوليتها القانونية، فالمنصة الإلكترونية ليست شخصية قانونية مستقلة، وإنما أداة تستخدمها الإدارة لممارسة اختصاصها.'},
+ {t:'mcq',f:6,q:'استُخدم مصطلح الذكاء الاصطناعي لأول مرة عام 1956 من قِبَل:',
+  o:['جون مكارثي في ورشة عمل بكلية دارتموث','آلان تورنغ في جامعة كامبريدج','فريق ألماني صمّم نظاماً لترتيب ألواح ملحمة كلكامش','شركة IBM عند إطلاق نظام التشغيل MS-DOS'],
+  e:'ورد في المحاضرة أن المصطلح استُخدم لأول مرة عام 1956 من جون مكارثي، الذي نظّم ورشة عمل لمدة شهرين في كلية دارتموث جمعت المهتمين بالشبكات العصبية والذكاء، وأسهمت في إرساء أسس بحوث الذكاء الاصطناعي.'},
+ {t:'match',f:3,q:'طابق كل مبدأ من مبادئ تنظيم المعاملات الإلكترونية (أعمال الأونسيترال) مع مضمونه:',
+  p:[['مبدأ عدم التمييز','لا يجوز حرمان المعلومات أو المعاملة من الأثر القانوني لمجرد أنها اتخذت شكلاً إلكترونياً'],
+     ['مبدأ التكافؤ الوظيفي','إذا حققت الوسيلة الإلكترونية الوظيفة التي يؤديها المحرر الورقي أمكن منحها أثراً قانونياً مماثلاً'],
+     ['مبدأ الحياد التكنولوجي','لا ينبغي ربط القانون بتكنولوجيا محددة لأن التكنولوجيا تتغير بسرعة'],
+     ['قانون الأونسيترال النموذجي','أساس قانون التجارة الإلكترونية الحديث الصادر عام 1996']],
+  e:'ردّت المحاضرة التنظيم الحديث للمعاملات الإلكترونية إلى ثلاثة مبادئ اعتمدتها أعمال الأونسيترال: عدم التمييز، والتكافؤ الوظيفي، والحياد التكنولوجي، وهي أساس قانون الأونسيترال النموذجي للتجارة الإلكترونية لعام 1996.'}
+],
+/* المستوى 3 */
+[
+ {t:'tf',f:2,q:'يجوز للمنصة الإلكترونية إصدار قرار يدخل في اختصاص وزير أو مدير عام متى كانت مبرمجة على ذلك، ولو لم يوجد سند قانوني يسمح بالتفويض أو الأتمتة.',a:false,
+  e:'خطأ. لا يجوز للمنصة إصدار قرار يدخل في اختصاص وزير أو مدير عام ما لم يكن هناك سند قانوني يسمح بالتفويض أو الأتمتة. الأصل أن الاختصاص منظم بالقانون، واستخدام النظام الإلكتروني لا يُنشئ اختصاصاً جديداً ولا ينقله خارج الحدود التي رسمها المشرّع.'},
+ {t:'mcq',f:7,q:'اشتُقّت كلمة الحاسوب (Computer) بحسب المحاضرة من الفعل:',
+  o:['Compute بمعنى يحسب','Command بمعنى يأمر','Connect بمعنى يربط','Control بمعنى يتحكم'],
+  e:'تشتق كلمة Computer من الفعل Compute الذي يعني «يحسب»، لذا يُطلق عليه بالعربية «الحاسب الآلي» أو «الحاسوب». ويتكون من مكونات مادية (Hardware) ومكونات منطقية (Software).'},
+ {t:'mcq',f:8,q:'تنص المادة (32) من قانون البنك المركزي العراقي على:',
+  o:['قصر حق إصدار الأوراق النقدية والمسكوكات المعدّة للتداول في العراق على البنك المركزي العراقي حصراً',
+     'تجريم غسل الأموال باستخدام الأصول الرقمية',
+     'تعريف «الأموال» تعريفاً واسعاً يشمل الأصول الإلكترونية والرقمية',
+     'منح المصارف العراقية ترخيصاً عاماً للتعامل بالعملات المشفرة'],
+  e:'المادة (32) تقصر حق إصدار الأوراق النقدية والمسكوكات المعدنية على البنك المركزي العراقي حصراً، وتعدّها الأداة الرسمية للتداول. أما التعريف الواسع للأموال فهو في المادة (1/خامساً) من قانون مكافحة غسل الأموال، والتجريم في المادة (2) منه.'},
+ {t:'match',f:4,q:'طابق كل مبدأ من مبادئ حماية الخصوصية مع معناه:',
+  p:[['مبدأ المشروعية','أن يستند جمع البيانات ومعالجتها واستخدامها إلى أساس قانوني مشروع'],
+     ['مبدأ تحديد الغرض','تحديد الغرض الذي جُمعت البيانات من أجله وعدم استخدامها لأغراض مختلفة بصورة تعسفية'],
+     ['مبدأ تقليل البيانات','ألا تجمع الجهة بيانات أكثر مما تحتاجه فعلياً لإنجاز الخدمة'],
+     ['مبدأ تحديد مدة الاحتفاظ','ألا تحتفظ المؤسسة بالبيانات إلى الأبد دون مبرر قانوني أو إداري']],
+  e:'تقوم حماية البيانات الحكومية على مبادئ: المشروعية، تحديد الغرض، تقليل البيانات، الدقة، تحديد مدة الاحتفاظ، والأمن.'}
+],
+/* المستوى 4 */
+[
+ {t:'mcq',f:5,q:'القاعدة الجوهرية «كل تعدٍّ يصيب الغير بضرر يستوجب التعويض» التي يستند إليها التعويض عن الأضرار الرقمية، تنص عليها في القانون المدني العراقي رقم (40) لسنة 1951 المادة:',
+  o:['(204)','(205)','(219)','(65/1)'],
+  e:'تنص المادة (204) على أن كل تعدٍّ يصيب الغير بضرر يستوجب التعويض. أما المادة (205) فتتعلق بالتعويض عن الضرر الأدبي، والمادة (219) بمسؤولية الحكومة والمؤسسات عن أعمال مستخدميها، والمادة (65/1) بتعريف المال.'},
+ {t:'tf',f:3,q:'كل توقيع إلكتروني يُعدّ توقيعاً رقمياً، لكن ليس كل توقيع رقمي توقيعاً إلكترونياً.',a:false,
+  e:'خطأ، فالعكس هو الصحيح: كل توقيع رقمي يمكن أن يكون توقيعاً إلكترونياً، لكن ليس كل توقيع إلكتروني توقيعاً رقمياً. التوقيع الإلكتروني مفهوم قانوني واسع، أما التوقيع الرقمي (Digital Signature) فمفهوم تقني يعتمد على التشفير بالمفتاح العام (PKI).'},
+ {t:'mcq',f:6,q:'أي مما يأتي يُعدّ مثالاً على «الذكاء الاصطناعي الضعيف» بحسب المحاضرة؟',
+  o:['المساعدات الصوتية مثل Siri و Alexa','نظام يملك ذكاءً ووعياً ذاتياً مساوياً للبشر','ذكاء فائق يتفوق على قدرة الدماغ البشري','روبوت قادر على التخطيط للمستقبل والتعلم كالإنسان تماماً'],
+  e:'الذكاء الاصطناعي الضعيف هو القائم على أداء مهام محددة ويحركه أغلب التطبيقات اليومية مثل Siri و Alexa ومركبات القيادة الحديثة. أما القوي فيفترض ذكاءً مساوياً للبشر، والفائق يفوق قدرة الدماغ البشري.'},
+ {t:'match',f:7,q:'طابق كل نظام إلكتروني مستخدم في الوظيفة العامة مع ما يتضمنه:',
+  p:[['نظام الإقرار والملاك','معلومات تفصيلية عن المعيّنين على الملاك الدائم أو المؤقت والعقود'],
+     ['نظام بنك المعلومات','معلومات إحصائية عن كافة الموظفين تُحدَّث بشكل مستمر'],
+     ['نظام إدارة المكتب','متابعة الكتب الواردة والصادرة من مكتب الرئيس الإداري والمنجز وغير المنجز منها'],
+     ['نظام العقارات والأملاك','معلومات العقارات والأراضي التي تملكها الدوائر الحكومية وحالات توزيعها']],
+  e:'من الأنظمة الإدارية المستخدمة في الوظيفة العامة: نظام الأرشفة والحفظ، نظام الإقرار والملاك، نظام العقارات والأملاك، نظام إدارة المكتب، ونظام بنك المعلومات.'}
+],
+/* المستوى 5 */
+[
+ {t:'mcq',f:1,q:'تقوم الإدارة الإلكترونية بحسب المحاضرة على عنصرين أساسيين هما:',
+  o:['العنصر التقني والعنصر البشري','العنصر المالي والعنصر التشريعي','عنصر السرعة وعنصر الشفافية','العنصر الرقابي والعنصر القضائي'],
+  e:'العنصر التقني: أجهزة الحاسوب والبرامج وقواعد البيانات وشبكات الاتصال. والعنصر البشري: الموظفون والمتخصصون والخبراء القادرون على تشغيل هذه الأنظمة. والتقنية تظل وسيلة لأداء النشاط الإداري وليست بديلاً من القانون.'},
+ {t:'tf',f:4,q:'مجرد امتلاك الجهة الحكومية للبيانات يمنحها حقاً تلقائياً في مشاركتها مع أي جهة حكومية أخرى.',a:false,
+  e:'خطأ. الجواب «ليس بالضرورة». حتى داخل القطاع العام يجب أن يخضع تبادل البيانات لأساس قانوني واضح، وتحديد للغرض، وضوابط للوصول والاستخدام، وتحديد للمسؤوليات.'},
+ {t:'mcq',f:8,q:'بحسب المادة (1/خامساً) من قانون مكافحة غسل الأموال وتمويل الإرهاب رقم (39) لسنة 2015، فإن مفهوم «الأموال»:',
+  o:['يشمل الأصول والممتلكات بمختلف أشكالها بما فيها الإلكترونية أو الرقمية وكل ذي قيمة مالية، دون أن يمنحها صفة العملة الرسمية',
+     'يقتصر على النقود الورقية والمعدنية الصادرة عن البنك المركزي',
+     'يشمل العملات المشفرة بوصفها عملة رسمية معترفاً بها',
+     'يستبعد الأصول الرقمية لأنها أشياء غير مادية'],
+  e:'توسّع القانون في مفهوم الأموال ليشمل الأصول والممتلكات والمحررات بمختلف أشكالها بما فيها الإلكترونية أو الرقمية. وهذا يُخضع القيم الرقمية لمنظومة مكافحة غسل الأموال، لكنه لا يعني أنها أصبحت عملة رسمية.'},
+ {t:'match',f:2,q:'طابق كل وجه من أوجه مشروعية القرار الإداري الإلكتروني مع مضمونه:',
+  p:[['المشروعية من حيث الاختصاص','أن يصدر القرار عن الجهة أو الموظف المختص قانوناً'],
+     ['المشروعية من حيث الشكل والإجراءات','لا يجوز للمنصة أن تُلغي ضمانات التحقيق والاستشارة والتبليغ والتسبيب بحجة السرعة'],
+     ['المشروعية من حيث السبب','أن يقوم القرار على سبب صحيح وموجود فعلاً، فخطأ البيانات قد يتحول إلى خطأ في القرار'],
+     ['المشروعية من حيث الغاية','أن تُستخدم الإدارة التكنولوجيا لتحقيق المصلحة العامة لا لتحقيق غايات غير مشروعة']],
+  e:'يخضع القرار الإلكتروني لأبعاد المشروعية ذاتها: الاختصاص، والشكل والإجراءات، والسبب، والمحل، والغاية. والقاعدة: لا تختلف مشروعية العمل الإداري بسبب الوسيلة التي استخدمتها الإدارة في إصداره.'}
+],
+/* المستوى 6 */
+[
+ {t:'mcq',f:3,q:'تربط المادة (5) من قانون التوقيع الإلكتروني العراقي القوة الإثباتية للتوقيع بمجموعة ضمانات. أيّ مما يأتي ليس منها؟',
+  o:['أن يُطبع التوقيع ورقياً ويُصادَق عليه لدى كاتب العدل','ارتباط التوقيع بالموقِّع وحده','سيطرة الموقِّع على وسيلة إنشاء التوقيع','إمكانية كشف أي تعديل يجري على التوقيع أو البيانات المرتبطة به'],
+  e:'ضمانات المادة (5): ارتباط التوقيع بالموقع وحده، وسيطرة الموقع على وسيلة إنشائه، وإمكانية كشف التغيير، وإنشاء التوقيع وفق الإجراءات المحددة قانوناً. أما الطباعة والمصادقة الورقية فتنقض فكرة التوقيع الإلكتروني أصلاً.'},
+ {t:'tf',f:6,q:'ذهب جانب من الفقه إلى إمكانية تطبيق فكرة «حراسة الأشياء» على الذكاء الاصطناعي، بحيث تُفترض سلطة الرقابة في الحارس.',a:true,
+  e:'صحيح. أشارت المحاضرة إلى أن جانباً من الفقه يرى تطويع نظرية الحراسة لتستجيب لمستجدات الذكاء الاصطناعي، وتعدّ سلطة الرقابة مفترضة في الحارس، مع إمكان دفع المسؤولية بإثبات السبب الأجنبي كخطأ الغير أو القوة القاهرة.'},
+ {t:'mcq',f:7,q:'وصف الفقه الإدارة الإلكترونية، في مقابل الإدارة التقليدية، بأنها إدارة:',
+  o:['بلا أوراق، وبلا مكان، وبلا زمان، وبلا تنظيمات جامدة','مركزية هرمية تقوم على التسلسل العامودي للأوامر','تعتمد المراسلات الورقية مع أرشفة إلكترونية لاحقة','تقتصر على ساعات الدوام الرسمي ومقر الدائرة'],
+  e:'من سمات الإدارة الإلكترونية: إدارة بلا أوراق (الأرشيف والبريد الإلكتروني)، بلا مكان (الهاتف المحمول والمؤتمرات الإلكترونية)، بلا زمان (العمل 24 ساعة)، وبلا تنظيمات جامدة (المؤسسات الشبكية والذكية).'},
+ {t:'match',f:5,q:'طابق كل طبقة من طبقات المسؤولية في البيئة الحكومية الرقمية مع حالتها:',
+  p:[['مسؤولية صاحب القرار','إذا كان الخطأ ناتجاً عن قرار إداري غير مشروع'],
+     ['مسؤولية الموظف','إذا كان الخطأ نتيجة فعل أو إهمال وظيفي'],
+     ['مسؤولية الإدارة','إذا كان الخلل نتيجة سوء تنظيم أو ضعف الرقابة أو عدم اتخاذ الاحتياطات'],
+     ['المسؤولية التقنية','إذا كان الخلل نتيجة عيب في النظام أو البرمجيات أو البنية التحتية أو جهة تقنية متعاقدة']],
+  e:'صنّفت المحاضرة المسؤولية في البيئة الحكومية الرقمية إلى أربع طبقات، وهذه المسؤوليات قد تجتمع ولا يُشترط أن تكون متعارضة.'}
+],
+/* المستوى 7 */
+[
+ {t:'mcq',f:1,q:'بحسب المحاضرة، يخلق الاعتماد على التقنية في رفع كفاءة المرفق العام تحدياً جديداً يتعلق بمبدأ:',
+  o:['استمرار المرفق العام بانتظام واطراد','المساواة أمام الأعباء العامة','مجانية المرفق العام','قابلية المرفق للتغيير والتعديل'],
+  e:'إذا أصبحت الخدمات تعتمد على الأنظمة الإلكترونية، فإن توقف النظام أو فقدان البيانات أو اختراق الشبكة قد يؤدي إلى توقف الخدمة. لذا تصبح صيانة الأنظمة والنسخ الاحتياطية وخطط الطوارئ مسائل مرتبطة مباشرة بضمان استمرار المرفق العام.'},
+ {t:'tf',f:2,q:'صحة العملية التقنية تعني بالضرورة مشروعية النتيجة القانونية للقرار الخوارزمي.',a:false,
+  e:'خطأ. القاعدة الأساسية في المحاضرة: «صحة العملية التقنية لا تعني بالضرورة مشروعية النتيجة القانونية». فقد تكون الخوارزمية صحيحة تقنياً لكنها تمنح الأولوية لفئة معينة بناءً على معيار غير مشروع (الخطأ الخوارزمي).'},
+ {t:'mcq',f:4,q:'مبدأ «Least Privilege» في تخزين البيانات الحكومية يعني:',
+  o:['أن يحصل الموظف على الحد الأدنى من الصلاحيات اللازمة لأداء وظيفته','ألا تُجمع بيانات أكثر مما تحتاجه الخدمة فعلياً','استخدام أكثر من وسيلة للتحقق من هوية المستخدم','الاحتفاظ بالبيانات أقل مدة ممكنة ثم إتلافها'],
+  e:'مبدأ أقل قدر من الصلاحيات: ليس كل موظف بحاجة إلى الوصول إلى جميع البيانات. لا تخلط بينه وبين مبدأ تقليل البيانات (عدم جمع أكثر من الحاجة)، أو المصادقة متعددة العوامل (أكثر من وسيلة تحقق).'},
+ {t:'match',f:8,q:'طابق كل اتجاه في تحديد الطبيعة القانونية للعملة الرقمية مع مضمونه:',
+  p:[['اعتبارها عملة','تؤدي بعض الوظائف الاقتصادية للنقود كوسيلة للتبادل ومخزن للقيمة'],
+     ['اعتبارها أصلاً مالياً','قيمة يمكن تملكها ونقلها وبيعها وشراؤها واستثمارها دون منحها صفة العملة'],
+     ['اعتبارها مالاً رقمياً','قيمة اقتصادية موجودة في بيئة رقمية، وليست نقداً بالضرورة'],
+     ['التكييف المختلط','الاتجاه الأكثر واقعية: تكييف وظيفي لا شكلي بحسب طبيعة كل أصل']],
+  e:'عرضت المحاضرة أربعة اتجاهات، ورجّحت التكييف المختلط، لأن القانون لا ينظر إلى الاسم الذي يطلقه المستخدمون على الأصل وإنما إلى وظيفته وحقوق حامله وطريقة إصداره وتداوله.'}
+],
+/* المستوى 8 */
+[
+ {t:'mcq',f:6,q:'لا يوجد تعريف تشريعي للذكاء الاصطناعي في العراق، غير أن قانون التوقيع والمعاملات الإلكترونية رقم (78) لسنة 2012 استخدم مصطلحاً قريباً منه هو:',
+  o:['الوسيط الإلكتروني','الوكيل الذكي','النظام الخبير','الشخص الافتراضي'],
+  e:'استخدم القانون مصطلح «الوسيط الإلكتروني» بوصفه برنامجاً حاسوبياً أو أداة إلكترونية تُستخدم لتنفيذ إجراء ما أو الاستجابة له، بهدف إنشاء معلومات أو إرسالها أو تسلّمها.'},
+ {t:'tf',f:3,q:'استثنى المشرّع العراقي من نطاق قانون التوقيع الإلكتروني مسائل الأحوال الشخصية والتصرفات المتعلقة بالعقارات، بما فيها عقود إيجارها.',a:false,
+  e:'خطأ في جزئية دقيقة: استُثنيت التصرفات المتعلقة بالعقارات وحقوقها العينية «باستثناء عقود إيجارها»، فالإيجار يبقى خاضعاً للقانون. ومن الاستثناءات أيضاً: الأحوال الشخصية، إنشاء الوقف، إجراءات المحاكم، والوثائق التي يشترط القانون توثيقها لدى الكاتب العدل.'},
+ {t:'mcq',f:1,q:'إذا سجّل النظام الإلكتروني خطأً غياب موظف ثم استُقطع جزء من راتبه، فإن ذلك يدل بحسب المحاضرة على أن:',
+  o:['الخطأ التقني ينعكس مباشرة على المركز المالي للموظف، ما يستلزم آلية قانونية لمراجعة البيانات وتصحيحها وتحديد المسؤولية',
+     'الخطأ يبقى تقنياً محصوراً داخل النظام ولا يرتب أثراً قانونياً',
+     'النظام الإلكتروني هو صاحب القرار ويُسأل وحده عن الخطأ',
+     'على الموظف تحمّل النتيجة لأن السجل الإلكتروني حجة مطلقة لا تقبل إثبات العكس'],
+  e:'دقة البيانات الوظيفية وسلامتها مسألة قانونية وليست تقنية فقط؛ فالخطأ الإلكتروني ينعكس على حقوق الموظف المالية، لذا تظهر أهمية وجود آلية قانونية وإدارية لمراجعة البيانات وتصحيحها وتحديد المسؤولية.'},
+ {t:'match',f:3,q:'طابق كل عنصر فني للوثيقة الإلكترونية مع سؤاله:',
+  p:[['Integrity (سلامة المحتوى)','هل تعرّض محتوى الوثيقة للتغيير بعد إنشائها؟'],
+     ['Authenticity (الأصالة)','هل الوثيقة صادرة فعلاً عن الشخص أو الجهة المنسوبة إليها؟'],
+     ['Verification (إمكانية التحقق)','هل توجد وسائل فنية تسمح بالتحقق من مصدر الوثيقة وتوقيعها؟'],
+     ['Digital Chain of Custody (سلسلة الحيازة)','السجل الدقيق الذي يتتبع الدليل منذ جمعه وتوثيقه حتى عرضه أمام المحكمة']],
+  e:'لكي تكون الوثيقة الإلكترونية قابلة للاعتماد يُنظر إلى: سلامة المحتوى، والأصالة، وإمكانية التحقق، وإمكانية الوصول، وقابلية القراءة والاسترجاع، وسلسلة الحيازة الرقمية.'}
+],
+/* المستوى 9 */
+[
+ {t:'mcq',f:5,q:'تقرّر المادة (219) من القانون المدني العراقي:',
+  o:['مسؤولية الحكومة والبلديات والمؤسسات عن الضرر الذي يحدثه مستخدموها أثناء قيامهم بخدماتهم، مع إمكان التخلص منها بإثبات بذل العناية اللازمة',
+     'التعويض عن الضرر الأدبي كالمساس بالسمعة والاعتبار',
+     'أن الموظف وحده يتحمل الضرر الناشئ عن خطئه الإلكتروني دون الإدارة',
+     'منح التوقيع الإلكتروني الحجية المقررة للتوقيع الخطي'],
+  e:'المادة (219) تقرر مسؤولية الحكومة والبلديات والمؤسسات عن أعمال مستخدميها إذا كان الضرر ناشئاً عن تعدٍّ وقع منهم أثناء الخدمة، مع إمكان التخلص من المسؤولية بإثبات بذل العناية اللازمة لمنع الضرر. ويكتسب هذا النص أهمية كبيرة في البيئة الرقمية.'},
+ {t:'tf',f:8,q:'أشار تقييم مجموعة العمل المالي (FATF) للعراق إلى عدم وجود مقدمي خدمات أصول افتراضية معترف بهم رسمياً، رغم أن التعامل بالأصول الافتراضية لم يُحظر بنص قانوني عام.',a:true,
+  e:'صحيح. وهذا ما يعزز ضرورة عدم استخدام عبارة «العملات الرقمية ممنوعة مطلقاً في العراق» دون تفصيل، إذ يوجد توجيه للبنك المركزي يمنع استخدام البطاقات والمحافظ الإلكترونية للمضاربة والتداول عبر المؤسسات المالية.'},
+ {t:'mcq',f:7,q:'في النظام الوظيفي الإلكتروني، تُمنح صلاحية «القراءة والكتابة والإضافة وتعديل الصلاحيات» عادةً إلى:',
+  o:['الرئيس الإداري الأعلى أو المباشر لضمان حسن سير العمل','عموم الموظفين المعنيين بالعمل الوظيفي','الموظف المعني وحسب اختصاصه','مهندس الشبكات المسؤول عن صيانة الخوادم'],
+  e:'تتدرج الصلاحيات: القراءة فقط لعموم الموظفين، والقراءة والكتابة والإضافة للموظف المعني بحسب اختصاصه، والقراءة والكتابة والإضافة وتعديل الصلاحيات للرئيس الإداري الأعلى أو المباشر.'},
+ {t:'match',f:6,q:'طابق كل ميزة من مميزات أنظمة الذكاء الاصطناعي في الوظيفة العامة مع وصفها:',
+  p:[['الاستدلال','امتلاك القدرة على اكتشاف شيء أو فكرة من خلال مستندات أو معطيات إرشادية'],
+     ['الاستقلال في اتخاذ القرار','اتخاذ القرارات بشكل مستقل دون الحاجة إلى تدخل بشري'],
+     ['التعامل مع البيانات الناقصة والمتعارضة','إيجاد حلول للمسائل غير المكتملة دون اتباع قاعدة الحل المعروف مسبقاً'],
+     ['الطبيعة غير المادية','تتألف من خوارزميات وبرمجيات تشكّل البنية المنطقية لنظام معلوماتي']],
+  e:'ومن مزاياه أيضاً القدرة على التعلم والإدراك. وفي المقابل له عيوب: إحلاله محل الموظفين، والمخاطر الأمنية، وانتهاك سرية المعلومات والخصوصية.'}
+],
+/* المستوى 10 */
+[
+ {t:'mcq',f:2,q:'الإجابة القانونية الأدق عن السؤال: «هل المنصة الإلكترونية نفسها تمارس السلطة الإدارية؟» هي:',
+  o:['لا؛ المنصة أداة تقنية لممارسة السلطة التي يملكها شخص أو جهة إدارية بموجب القانون',
+     'نعم؛ متى كانت مبرمجة لإصدار القرارات تلقائياً',
+     'نعم؛ لأنها تتمتع بشخصية قانونية مستقلة عن الإدارة',
+     'لا؛ لأن القرارات الصادرة إلكترونياً لا تُنتج أي أثر قانوني'],
+  e:'المنصة لا تملك سلطة إدارية بذاتها، وإنما تمثل أداة تقنية: صاحب الاختصاص القانوني ← النظام أو المنصة ← القرار أو الإجراء الإلكتروني. فالمنصة وسيلة، أما السلطة فمصدرها القانون، والقرار الإلكتروني ينتج أثره متى توافرت شروطه.'},
+ {t:'tf',f:4,q:'إذا كانت المؤسسة محمية تقنياً من الاختراق، فهذا يعني بالضرورة أن استخدامها للبيانات مشروع.',a:false,
+  e:'خطأ. قد تكون المؤسسة محمية تقنياً لكنها تستخدم البيانات بطريقة غير مشروعة، والعكس ممكن. لذا تحتاج الحوكمة الرقمية إلى الجمع بين: حماية البيانات + الخصوصية + الأمن السيبراني + الحوكمة + المساءلة القانونية.'},
+ {t:'mcq',f:3,q:'المعايير القضائية الخمسة المقترحة لتقييم الدليل الإلكتروني هي: الأصالة، والسلامة، وإمكانية التحقق، وسلسلة الحيازة، إضافة إلى:',
+  o:['الموثوقية (Reliability): هل النظام الذي أنشأ الدليل نظام موثوق؟','قابلية الوصول (Accessibility): هل يمكن فتح الوثيقة بعد سنوات؟','السرعة (Speed): هل أُنشئ الدليل في وقت قصير؟','السرية (Confidentiality): هل الدليل مشفّر بالكامل؟'],
+  e:'المعايير الخمسة: Authenticity و Integrity و Reliability و Verification و Chain of Custody. أما «قابلية الوصول» فهي من العناصر الفنية لاعتماد الوثيقة الإلكترونية، لا من معايير تقييم الدليل.'},
+ {t:'match',f:5,q:'طابق كل ركن من أركان المسؤولية المدنية الرقمية مع مثاله:',
+  p:[['الخطأ','خطأ الموظف أو الإدارة أو الشركة التقنية أو جهة التصديق، أو الإهمال في حماية النظام'],
+     ['الضرر المادي','خسارة مالية، أو فقدان معاملة، أو تعطيل نشاط تجاري'],
+     ['الضرر المعنوي','المساس بالسمعة، أو كشف معلومات شخصية، أو نشر بيانات غير صحيحة'],
+     ['العلاقة السببية','إثبات أن الخطأ أو النشاط غير المشروع أدى مباشرة أو بصورة مؤثرة إلى الضرر']],
+  e:'تُحلَّل المسؤولية المدنية الرقمية في ثلاثة أركان: الخطأ، والضرر (مادياً أو معنوياً)، والعلاقة السببية بينهما.'}
+],
+/* المستوى 11 */
+[
+ {t:'mcq',f:8,q:'ما الفرق الجوهري الذي شددت عليه المحاضرة بشأن موقف البنك المركزي العراقي من العملات الرقمية؟',
+  o:['حظر استخدام النظام المصرفي والبطاقات والمحافظ الإلكترونية للمضاربة والتداول لا يعني أن مجرد امتلاك أي أصل رقمي جريمة بحد ذاته',
+     'تعميم البنك المركزي جرّم حيازة العملات الرقمية بنص صريح',
+     'سمح البنك المركزي للمصارف بالتداول بالعملات المشفرة بموجب ترخيص عام',
+     'لا فرق؛ فالعملات الرقمية ممنوعة مطلقاً في العراق بكل صورها'],
+  e:'يجب التمييز بين حظر استخدام النظام المصرفي العراقي للمضاربة والتداول بالعملات الرقمية، وبين القول بأن مجرد امتلاك أي أصل رقمي جريمة. فالتقييم القانوني يستند إلى النص القانوني وطبيعة المعاملة والوسيلة المستخدمة والجهة التي تقوم بها.'},
+ {t:'tf',f:7,q:'عرّفت المادة (65/1) من القانون المدني العراقي رقم (40) لسنة 1951 المال بأنه «كل حق له قيمة مادية».',a:true,
+  e:'صحيح. واستند إليه الفقه في بحث مدى عدّ المعلومات والبرامج مالاً؛ فالمعلومات تُعدّ مالاً متى كانت لها قيمة اقتصادية، ولا يحول عدم ماديتها دون دخولها في النظام القانوني للأموال.'},
+ {t:'mcq',f:6,q:'إذا استخدمت الإدارة نظاماً آلياً لاتخاذ القرار، فإن الاتجاه القانوني السليم يوجب بقاء ضمانات معينة. أيّ مما يأتي ليس منها؟',
+  o:['إعفاء الإدارة من المسؤولية متى أثبتت أن القرار صدر آلياً','وجود جهة مسؤولة ورقابة بشرية مناسبة','إمكانية مراجعة القرار واكتشاف الخطأ','إمكانية الطعن وآلية لتصحيح البيانات'],
+  e:'الأتمتة لا تعني انعدام المسؤولية؛ فلا يمكن للإدارة أن تتذرع بأن القرار صدر آلياً. يجب أن تبقى: جهة مسؤولة، ورقابة بشرية مناسبة، وإمكانية مراجعة القرار واكتشاف الخطأ، وإمكانية الطعن، وآلية لتصحيح البيانات.'},
+ {t:'match',f:2,q:'طابق كل مبدأ من المبادئ التي يجب أن تحكم الإدارة الرقمية مع مضمونه:',
+  p:[['مبدأ المشروعية','لا قرار إلكتروني دون سند قانوني'],
+     ['مبدأ الاختصاص','لا يجوز للنظام أن يمارس اختصاصاً غير ممنوح للجهة قانوناً'],
+     ['مبدأ المساءلة','يجب أن يكون هناك شخص أو جهة مسؤولة قانوناً عن القرار'],
+     ['مبدأ المساواة','ألا تؤدي الخوارزميات إلى تمييز غير مشروع بين المواطنين']],
+  e:'المبادئ الثمانية: المشروعية، الاختصاص، الشفافية، المساءلة، حماية البيانات، المساواة، حق الدفاع، والرقابة القضائية. والقاعدة: التكنولوجيا تغيّر وسيلة ممارسة الإدارة لا خضوع الإدارة للقانون.'}
+],
+/* المستوى 12 */
+[
+ {t:'mcq',f:3,q:'أكمل القاعدة التي ختمت بها محاضرة الإثبات الرقمي: «الدليل الإلكتروني لا تثبت قوته من شكله الإلكتروني، وإنما من ...»',
+  o:['درجة موثوقية البيئة التقنية والقانونية التي أنشأته وحفظته','كونه محفوظاً بصيغة PDF وموقّعاً','قناعة القاضي وحدها دون حاجة إلى خبير فني','وجود ختم زمني عليه فحسب'],
+  e:'الدليل الإلكتروني لا تثبت قوته من شكله الإلكتروني، وإنما من درجة موثوقية البيئة التقنية والقانونية التي أنشأته وحفظته. لذلك ينتقل الإثبات من قراءة المستند إلى فحص البيئة الرقمية التي أنشأته.'},
+ {t:'tf',f:4,q:'نبّهت المحاضرة إلى خطأ شائع هو اعتبار حماية البيانات والخصوصية مجرد موضوع من موضوعات الأمن السيبراني؛ فالعلاقة بينهما وثيقة لكنهما ليسا شيئاً واحداً.',a:true,
+  e:'صحيح. الأمن السيبراني يهتم أساساً بحماية الأنظمة والشبكات والمعلومات من التهديدات، أما حماية البيانات والخصوصية فتسأل أيضاً: هل كان جمع البيانات واستخدامها ومعالجتها مشروعاً ومتناسباً ومحدداً بالغرض؟'},
+ {t:'mcq',f:2,q:'ما الترتيب الصحيح لسلسلة صناعة القرار الرقمي التي تُحدَّد المسؤولية في كل مرحلة منها؟',
+  o:['المشرّع ← الجهة الإدارية ← الموظف المختص ← مصمم النظام ← البيانات ← الخوارزمية ← القرار الإلكتروني',
+     'الجهة الإدارية ← المشرّع ← مصمم النظام ← الموظف المختص ← الخوارزمية ← البيانات ← القرار الإلكتروني',
+     'مصمم النظام ← الخوارزمية ← البيانات ← الموظف المختص ← الجهة الإدارية ← المشرّع ← القرار الإلكتروني',
+     'المشرّع ← مصمم النظام ← الجهة الإدارية ← البيانات ← الموظف المختص ← الخوارزمية ← القرار الإلكتروني'],
+  e:'الجواب لا يكون «الخوارزمية مسؤولة» لأنها ليست موظفاً ولا شخصاً قانونياً. يجب البحث عن المسؤول داخل السلسلة: المشرّع ← الجهة الإدارية ← الموظف المختص ← مصمم النظام ← البيانات ← الخوارزمية ← القرار الإلكتروني.'},
+ {t:'match',f:8,q:'السؤال الأخير يجمع المحاضرات: طابق كل قانون عراقي مع موضوعه:',
+  p:[['القانون رقم (56) لسنة 2004','قانون البنك المركزي العراقي: الدينار وحدة النقد الوطني'],
+     ['القانون رقم (39) لسنة 2015','مكافحة غسل الأموال وتمويل الإرهاب'],
+     ['القانون رقم (78) لسنة 2012','التوقيع الإلكتروني والمعاملات الإلكترونية'],
+     ['القانون رقم (14) لسنة 1991','انضباط موظفي الدولة والقطاع العام']],
+  e:'تلتقي هذه القوانين في الثقافة القانونية الرقمية: النقد الرسمي (56/2004)، وملاحقة الأموال بكل أشكالها (39/2015)، وحجية المعاملات والتوقيع الإلكتروني (78/2012)، والمسؤولية التأديبية للموظف في البيئة الرقمية (14/1991).'}
+]
+];
+var TOTAL_Q=BANK.length*4;
+
+/* ---------- الصوت ---------- */
+var SFX={ctx:null,on:true,
+ init:function(){if(this.ctx)return;try{var C=window.AudioContext||window.webkitAudioContext;if(C)this.ctx=new C()}catch(e){}},
+ tone:function(f,d,type,v,delay){if(!this.on||!this.ctx)return;try{var c=this.ctx,t=c.currentTime+(delay||0),o=c.createOscillator(),g=c.createGain();o.type=type||'sine';o.frequency.setValueAtTime(f,t);g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(v||0.08,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+0.05)}catch(e){}},
+ sel:function(){this.tone(520,.08,'triangle',.05)},
+ ok:function(){var s=this;[523,659,784,1047].forEach(function(f,i){s.tone(f,.22,'triangle',.08,i*.09)})},
+ bad:function(){this.tone(220,.35,'sawtooth',.05);this.tone(155,.5,'sawtooth',.05,.15)},
+ tick:function(){this.tone(990,.05,'square',.025)},
+ level:function(){var s=this;[392,523,659,784,1047].forEach(function(f,i){s.tone(f,.25,'triangle',.07,i*.11)})},
+ win:function(){var s=this;[523,659,784,1047,784,1047,1319].forEach(function(f,i){s.tone(f,.32,'triangle',.08,i*.14)})}
+};
+
+/* ---------- الحالة ---------- */
+var S=null, timerH=null, activeTerm=null;
+function freshState(name,timerOn){
+ return {screen:'game',name:name,timerOn:timerOn,level:0,qi:0,hearts:3,score:0,correct:0,answered:0,
+   life:{fifty:true,aud:true,friend:true},perFile:{},mistakes:[],results:[],order:shuffle([0,1,2,3]),cur:null,phase:'ask',checkpoint:null,lifeUsed:0};
+}
+function curQ(){return BANK[S.level][S.order[S.qi]]}
+function snapshotCheckpoint(){
+ return JSON.parse(JSON.stringify({level:S.level+1,score:S.score,correct:S.correct,answered:S.answered,perFile:S.perFile,mistakes:S.mistakes,life:S.life,lifeUsed:S.lifeUsed}));
+}
+
+/* ---------- عناصر ---------- */
+var el={
+ start:$('#screen-start'),game:$('#screen-game'),end:$('#screen-end'),
+ qType:$('#q-type'),qSrc:$('#q-src'),qProg:$('#q-prog'),qText:$('#q-text'),qBody:$('#q-body'),
+ helper:$('#helper'),feedback:$('#feedback'),actions:$('#actions'),confirm:$('#btn-confirm'),
+ fifty:$('#ll-fifty'),aud:$('#ll-aud'),friend:$('#ll-friend'),
+ score:$('#hud-score'),hearts:$('#hud-hearts'),hudLevel:$('#hud-level'),
+ ladder:$('#ladder'),ladderList:$('#ladder-list'),qdots:$('#qdots'),btnLadder:$('#btn-ladder'),scrim:$('#scrim'),
+ timer:$('#timer'),timerNum:$('#timer-num'),overlay:$('#overlay'),modal:$('#modal'),soundBtn:$('#btn-sound')
+};
+
+function show(screen){
+ el.start.hidden=screen!=='start';el.game.hidden=screen!=='game';el.end.hidden=screen!=='end';
+ window.scrollTo(0,0);
+}
+
+/* ---------- البداية ---------- */
+(function initStart(){
+ var chips=$('#src-chips');
+ Object.keys(FILES).forEach(function(k){var s=document.createElement('span');s.className='chip';s.textContent=FILES[k];chips.appendChild(s)});
+ var best=+(store('lcg-best')||0);
+ $('#best-score').textContent=best?('أفضل رصيد على هذا الجهاز: '+nf(best)+' نقطة'):'لم تُسجَّل محاولة سابقة على هذا الجهاز بعد';
+ var nm=store('lcg-name');if(nm)$('#player-name').value=nm;
+ $('#setup').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  SFX.init();SFX.on=$('#sound-on').checked;
+  var name=($('#player-name').value||'').trim()||'الطالب';
+  store('lcg-name',name);
+  S=freshState(name,$('#timer-on').checked);
+  show('game');renderAll();
+ });
+})();
+
+/* ---------- عرض اللعبة ---------- */
+function renderAll(){renderHUD();renderLadder();renderQuestion()}
+function renderHUD(){
+ el.score.textContent=nf(S.score);
+ var h='';for(var i=0;i<3;i++)h+=(i<S.hearts?'<span>♥</span>':'<span class="lost">♥</span>');
+ el.hearts.innerHTML=h;el.hearts.setAttribute('aria-label','الفرص المتبقية: '+ad(S.hearts));
+ el.hudLevel.textContent='المستوى '+ad(S.level+1)+' / ١٢';
+ el.soundBtn.textContent=SFX.on?'🔊':'🔇';
+}
+function renderLadder(){
+ var h='';
+ for(var i=0;i<VALUES.length;i++){
+  var c=[];if(SAFE.indexOf(i)>-1)c.push('safe');if(i<S.level)c.push('done');if(i===S.level)c.push('cur');
+  h+='<li class="'+c.join(' ')+'"><span class="lv">'+ad(i+1)+'</span><span class="val">'+nf(VALUES[i])+'</span><span class="mk">'+(SAFE.indexOf(i)>-1&&i>=S.level?'آمن':'')+'</span></li>';
+ }
+ el.ladderList.innerHTML=h;
+ var d='';for(var j=0;j<4;j++){var r=S.results[j];d+='<i class="'+(r===true?'ok':r===false?'bad':(j===S.qi?'now':''))+'"></i>'}
+ el.qdots.innerHTML=d;
+}
+function setLadderOpen(open){
+ el.ladder.classList.toggle('open',open);el.scrim.hidden=!open;el.btnLadder.setAttribute('aria-expanded',open?'true':'false');
+}
+el.btnLadder.addEventListener('click',function(){setLadderOpen(!el.ladder.classList.contains('open'))});
+el.scrim.addEventListener('click',function(){setLadderOpen(false)});
+el.soundBtn.addEventListener('click',function(){SFX.init();SFX.on=!SFX.on;renderHUD()});
+
+function prepareCur(q){
+ var c={sel:null,removed:[],left:TIME[q.t]};
+ if(q.t==='mcq')c.opts=shuffle([0,1,2,3]);
+ if(q.t==='match'){c.descOrder=shuffle(q.p.map(function(_,i){return i}));c.map={};c.locked=[]}
+ return c;
+}
+function renderQuestion(keep){
+ var q=curQ();
+ if(!keep||!S.cur){S.cur=prepareCur(q)}
+ S.phase='ask';activeTerm=null;
+ el.qType.textContent=TYPE_LABEL[q.t];
+ el.qSrc.textContent='المصدر: '+FILES[q.f];
+ el.qProg.textContent='المستوى '+ad(S.level+1)+' · السؤال '+ad(S.qi+1)+' من ٤ · قيمة الإجابة '+nf(VALUES[S.level]/4)+' نقطة';
+ el.qText.textContent=q.q;
+ el.helper.hidden=true;el.helper.innerHTML='';
+ el.feedback.hidden=true;el.actions.hidden=false;
+ renderBody();renderLifelines();updateConfirm();startTimer();
+}
+function renderBody(){
+ var q=curQ(),c=S.cur,h='';
+ if(q.t==='mcq'){
+  h='<div class="answers" role="group" aria-label="الخيارات">';
+  c.opts.forEach(function(oi,pos){
+   var cls='ans'+(c.sel===oi?' selected':'')+(c.removed.indexOf(oi)>-1?' gone':'');
+   h+='<button type="button" class="'+cls+'" data-i="'+oi+'"><span class="in"><span class="lt">'+LET[pos]+':</span><span class="tx">'+esc(q.o[oi])+'</span></span></button>';
+  });
+  h+='</div>';
+ }else if(q.t==='tf'){
+  h='<div class="answers tf" role="group" aria-label="الخيارات">';
+  [true,false].forEach(function(v){
+   var cls='ans'+(c.sel===v?' selected':'')+(c.removed.indexOf(v)>-1?' gone':'');
+   h+='<button type="button" class="'+cls+'" data-v="'+v+'"><span class="in"><span class="tx">'+(v?'✔ صح':'✘ خطأ')+'</span></span></button>';
+  });
+  h+='</div>';
+ }else{
+  h='<div class="match"><div class="match-hint">اختر مصطلحاً ثم اضغط على الوصف المناسب له. اضغط على المصطلح داخل الوصف لإلغاء الربط.</div><div class="terms">';
+  q.p.forEach(function(p,ti){
+   var used=Object.keys(c.map).some(function(k){return c.map[k]===ti});
+   h+='<button type="button" class="term'+(used?' used':'')+(activeTerm===ti?' active':'')+'" data-t="'+ti+'"><span class="dot" style="background:'+PAIR_COL[ti]+'">'+ad(ti+1)+'</span>'+esc(p[0])+'</button>';
+  });
+  h+='</div><div class="descs">';
+  c.descOrder.forEach(function(di){
+   var ti=c.map[di],locked=c.locked.indexOf(di)>-1;
+   var slot=(ti===undefined)?'<span class="slot">اختر مصطلحاً</span>':'<span class="slot filled" style="background:'+PAIR_COL[ti]+'" data-un="'+di+'">'+ad(ti+1)+' · '+esc(q.p[ti][0])+'</span>';
+   h+='<div class="desc'+(locked?' locked':'')+'" role="button" tabindex="0" data-d="'+di+'"><span class="dt">'+esc(q.p[di][1])+'</span>'+slot+'</div>';
+  });
+  h+='</div></div>';
+ }
+ el.qBody.innerHTML=h;
+}
+el.qBody.addEventListener('click',function(ev){
+ if(!S||S.phase!=='ask')return;
+ var q=curQ(),c=S.cur,t=ev.target;
+ var a=t.closest('.ans');
+ if(a){
+  if(a.classList.contains('gone'))return;
+  c.sel=(q.t==='mcq')?+a.dataset.i:(a.dataset.v==='true');
+  SFX.sel();renderBody();updateConfirm();return;
+ }
+ var un=t.closest('[data-un]');
+ if(un){var di=+un.dataset.un;if(c.locked.indexOf(di)>-1)return;delete c.map[di];SFX.sel();renderBody();updateConfirm();return}
+ var term=t.closest('.term');
+ if(term){var ti=+term.dataset.t;activeTerm=(activeTerm===ti)?null:ti;SFX.sel();renderBody();return}
+ var d=t.closest('.desc');
+ if(d){
+  var di2=+d.dataset.d;if(c.locked.indexOf(di2)>-1)return;
+  if(activeTerm===null){
+   var free=q.p.map(function(_,i){return i}).filter(function(i){return !Object.keys(c.map).some(function(k){return c.map[k]===i})});
+   if(!free.length)return;activeTerm=free[0];
+  }
+  Object.keys(c.map).forEach(function(k){if(c.map[k]===activeTerm&&c.locked.indexOf(+k)<0)delete c.map[k]});
+  c.map[di2]=activeTerm;activeTerm=null;SFX.sel();renderBody();updateConfirm();
+ }
+});
+el.qBody.addEventListener('keydown',function(ev){
+ if((ev.key==='Enter'||ev.key===' ')&&ev.target.classList.contains('desc')){ev.preventDefault();ev.target.click()}
+});
+function updateConfirm(){
+ var q=curQ(),c=S.cur;
+ var ready=q.t==='match'?Object.keys(c.map).length===q.p.length:c.sel!==null;
+ el.confirm.disabled=!ready;
+}
+
+/* ---------- المؤقت ---------- */
+function stopTimer(){if(timerH){clearInterval(timerH);timerH=null}}
+function drawTimer(){
+ var q=curQ(),tot=TIME[q.t],l=Math.max(0,Math.ceil(S.cur.left));
+ el.timerNum.textContent=ad(l);
+ el.timer.style.setProperty('--p',Math.max(0,S.cur.left/tot*100));
+ el.timer.classList.toggle('warn',l<=10);
+}
+function startTimer(){
+ stopTimer();el.timer.hidden=!S.timerOn;if(!S.timerOn)return;
+ drawTimer();
+ timerH=setInterval(function(){
+  if(S.phase!=='ask'){stopTimer();return}
+  S.cur.left-=1;drawTimer();
+  if(S.cur.left<=10&&S.cur.left>0)SFX.tick();
+  if(S.cur.left<=0){stopTimer();submit(true)}
+ },1000);
+}
+
+/* ---------- وسائل المساعدة ---------- */
+function renderLifelines(){
+ var t=curQ().t;
+ el.fifty.disabled=!S.life.fifty||t==='tf';
+ el.aud.disabled=!S.life.aud||t==='match';
+ el.friend.disabled=!S.life.friend;
+ el.fifty.title=t==='tf'?'غير متاحة في أسئلة صح أم خطأ':(t==='match'?'تثبّت لك زوجين صحيحين':'تحذف إجابتين خاطئتين');
+ el.aud.title=t==='match'?'غير متاحة في أسئلة المطابقة':'يصوّت جمهور القاعة';
+}
+function useLife(k){S.life[k]=false;S.lifeUsed++;renderLifelines()}
+el.fifty.addEventListener('click',function(){
+ if(S.phase!=='ask')return;var q=curQ(),c=S.cur;
+ if(q.t==='mcq'){
+  var wrong=shuffle([1,2,3]).slice(0,2);c.removed=wrong;if(wrong.indexOf(c.sel)>-1)c.sel=null;
+ }else if(q.t==='match'){
+  var pick=shuffle(q.p.map(function(_,i){return i})).slice(0,2);
+  pick.forEach(function(i){Object.keys(c.map).forEach(function(k){if(c.map[k]===i)delete c.map[k]});c.map[i]=i;c.locked.push(i)});
+ }else return;
+ useLife('fifty');SFX.sel();renderBody();updateConfirm();
+});
+el.aud.addEventListener('click',function(){
+ if(S.phase!=='ask')return;var q=curQ(),c=S.cur;
+ var base=Math.max(38,74-S.level*3),rows=[];
+ if(q.t==='mcq'){
+  var vis=c.opts.filter(function(i){return c.removed.indexOf(i)<0});
+  var pc=base+Math.floor(Math.random()*14);var rest=100-pc;var others=vis.filter(function(i){return i!==0});
+  var parts=others.map(function(){return Math.random()+.2}),sum=parts.reduce(function(a,b){return a+b},0)||1,acc=0;
+  var shares={};others.forEach(function(i,k){var v=(k===others.length-1)?rest-acc:Math.round(rest*parts[k]/sum);shares[i]=v;acc+=v});shares[0]=pc;
+  c.opts.forEach(function(oi,pos){if(c.removed.indexOf(oi)<0)rows.push([LET[pos]+': '+q.o[oi],shares[oi]])});
+ }else{
+  var p2=base+Math.floor(Math.random()*12);
+  rows.push(['✔ صح',q.a?p2:100-p2]);rows.push(['✘ خطأ',q.a?100-p2:p2]);
+ }
+ var h='<h4>رأي الجمهور في القاعة</h4><div class="bars">';
+ rows.forEach(function(r){h+='<div class="bar"><span class="lbl" title="'+esc(r[0])+'">'+esc(r[0])+'</span><span class="track"><span class="fill" data-w="'+r[1]+'"></span></span><b class="num">'+ad(r[1])+'٪</b></div>'});
+ h+='</div>';
+ el.helper.innerHTML=h;el.helper.hidden=false;
+ requestAnimationFrame(function(){requestAnimationFrame(function(){[].forEach.call(el.helper.querySelectorAll('.fill'),function(f){f.style.width=f.dataset.w+'%'})})});
+ useLife('aud');SFX.sel();
+});
+el.friend.addEventListener('click',function(){
+ if(S.phase!=='ask')return;var q=curQ(),c=S.cur;
+ var right=Math.random()<(0.9-S.level*0.03),conf=right?(70+Math.floor(Math.random()*25)):(45+Math.floor(Math.random()*20));
+ var say;
+ if(q.t==='mcq'){
+  var cand=right?0:shuffle([1,2,3].filter(function(i){return c.removed.indexOf(i)<0}))[0];
+  if(cand===undefined)cand=0;
+  say='أظن أن الإجابة هي: «'+esc(q.o[cand])+'».';
+ }else if(q.t==='tf'){
+  var v=right?q.a:!q.a;say='أظن أن العبارة '+(v?'<b>صحيحة</b>':'<b>خاطئة</b>')+'.';
+ }else{
+  var free=q.p.map(function(_,i){return i}).filter(function(i){return c.locked.indexOf(i)<0});
+  var i=shuffle(free)[0];if(i===undefined)i=0;conf=Math.max(conf,80);
+  say='متأكد من زوج واحد على الأقل: «'+esc(q.p[i][0])+'» يقابله «'+esc(q.p[i][1])+'».';
+ }
+ el.helper.innerHTML='<h4>اتصال بزميل من الدفعة</h4><p style="margin:0">راجعتُ محاضرة «'+esc(FILES[q.f])+'». '+say+' ونسبة تأكدي '+ad(conf)+'٪.</p>';
+ el.helper.hidden=false;useLife('friend');SFX.sel();
+});
+
+/* ---------- الإجابة والتقييم ---------- */
+el.confirm.addEventListener('click',function(){submit(false)});
+function submit(timeout){
+ if(S.phase!=='ask')return;
+ var q=curQ(),c=S.cur;stopTimer();S.phase='judging';
+ el.confirm.disabled=true;[el.fifty,el.aud,el.friend].forEach(function(b){b.disabled=true});
+ var sel=el.qBody.querySelector('.ans.selected');if(sel&&!timeout)sel.classList.add('pending');
+ setTimeout(function(){judge(timeout)},timeout?200:900);
+}
+function judge(timeout){
+ var q=curQ(),c=S.cur,ok=false,yours='',correctTxt='';
+ if(q.t==='mcq'){ok=!timeout&&c.sel===0;yours=c.sel===null?'لم تُجب':q.o[c.sel];correctTxt=q.o[0]}
+ else if(q.t==='tf'){ok=!timeout&&c.sel===q.a;yours=c.sel===null?'لم تُجب':(c.sel?'صح':'خطأ');correctTxt=q.a?'صح':'خطأ'}
+ else{
+  var n=0;q.p.forEach(function(_,i){if(c.map[i]===i)n++});
+  ok=!timeout&&n===q.p.length;yours=ad(n)+' من '+ad(q.p.length)+' أزواج صحيحة';
+  correctTxt=q.p.map(function(p){return p[0]+' ← '+p[1]}).join(' | ');
+ }
+ S.answered++;
+ var pf=S.perFile[q.f]||(S.perFile[q.f]={c:0,t:0});pf.t++;
+ var gain=VALUES[S.level]/4;
+ if(ok){S.correct++;pf.c++;S.score+=gain;SFX.ok()}
+ else{S.hearts--;SFX.bad();S.mistakes.push({q:q.q,y:timeout?'انتهى الوقت':yours,c:correctTxt,f:q.f})}
+ S.results[S.qi]=ok;
+ markAnswers(ok);
+ S.phase='feedback';
+ renderHUD();renderLadder();
+ var h='<h3>'+(ok?'إجابة صحيحة! +'+nf(gain)+' نقطة':(timeout?'انتهى الوقت':'إجابة غير صحيحة'))+'</h3>';
+ if(!ok&&q.t!=='match')h+='<div><b>الإجابة الصحيحة:</b> '+esc(correctTxt)+'</div>';
+ if(!ok&&q.t==='match')h+='<div><b>الربط الصحيح ظاهر أسفل كل وصف باللون الذهبي.</b></div>';
+ h+='<p class="exp">'+esc(q.e)+'</p><div class="src">المصدر: محاضرة «'+esc(FILES[q.f])+'»</div>';
+ var last=S.qi===3,dead=S.hearts<=0;
+ var label=dead?'عرض النتيجة':(last?(S.level===11?'استلم كأس الفوز':'إنهاء المستوى'):'السؤال التالي');
+ h+='<div class="row"><button class="btn btn-gold" type="button" id="btn-next">'+label+'</button></div>';
+ el.feedback.className='feedback '+(ok?'ok':'bad');el.feedback.innerHTML=h;el.feedback.hidden=false;el.actions.hidden=true;
+ var nb=$('#btn-next');nb.addEventListener('click',advance);
+ setTimeout(function(){try{el.feedback.scrollIntoView({behavior:'smooth',block:'nearest'})}catch(e){};nb.focus({preventScroll:true})},60);
+}
+function markAnswers(ok){
+ var q=curQ(),c=S.cur;
+ if(q.t==='mcq'||q.t==='tf'){
+  [].forEach.call(el.qBody.querySelectorAll('.ans'),function(b){
+   b.classList.remove('pending');b.disabled=true;
+   var isC=q.t==='mcq'?(+b.dataset.i===0):((b.dataset.v==='true')===q.a);
+   var isSel=b.classList.contains('selected');
+   if(isC)b.classList.add('correct');else if(isSel)b.classList.add('wrong');
+  });
+ }else{
+  [].forEach.call(el.qBody.querySelectorAll('.desc'),function(d){
+   var di=+d.dataset.d;d.removeAttribute('tabindex');d.setAttribute('aria-disabled','true');
+   if(c.map[di]===di)d.classList.add('correct');
+   else{d.classList.add('wrong');var f=document.createElement('span');f.className='fix';f.textContent='الصحيح: '+q.p[di][0];d.appendChild(f)}
+  });
+  [].forEach.call(el.qBody.querySelectorAll('.term'),function(b){b.disabled=true});
+ }
+}
+function advance(){
+ if(S.hearts<=0){finish(false);return}
+ if(S.qi<3){S.qi++;S.cur=null;renderLadder();renderQuestion();window.scrollTo({top:0,behavior:'smooth'});return}
+ levelComplete();
+}
+function starsHtml(n,max){var h='';for(var i=0;i<max;i++)h+=(i<n?'★':'<span class="off">★</span>');return h}
+function levelComplete(){
+ var lv=S.level,okN=S.results.filter(function(r){return r===true}).length;
+ if(lv===11){finish(true);return}
+ if(SAFE.indexOf(lv)>-1){S.checkpoint=snapshotCheckpoint()}
+ SFX.level();
+ openModal('<div class="eyebrow">أنهيت المستوى '+ad(lv+1)+' من ١٢</div><h2>'+(okN===4?'أداء كامل! ':'أحسنت! ')+'صعدت درجة في الهرم</h2>'+
+  '<div class="stars" aria-label="'+ad(okN)+' من ٤">'+starsHtml(okN,4)+'</div>'+
+  '<div class="big num">'+nf(S.score)+' <small class="muted" style="font-size:1rem">نقطة</small></div>'+
+  (SAFE.indexOf(lv)>-1?'<p style="margin:0;color:var(--gold-hi)">وصلت إلى نقطة أمان: إذا خسرت فرصك لاحقاً تستطيع الاستئناف من المستوى '+ad(lv+2)+'.</p>':'')+
+  '<p class="muted" style="margin:0">المستوى التالي: '+ad(lv+2)+' · قيمته '+nf(VALUES[lv+1])+' نقطة · الفرص المتبقية '+ad(S.hearts)+'</p>'+
+  '<div><button class="btn btn-gold" type="button" id="btn-go">انطلق إلى المستوى '+ad(lv+2)+'</button></div>');
+ $('#btn-go').addEventListener('click',function(){closeModal();S.level++;S.qi=0;S.results=[];S.order=shuffle([0,1,2,3]);S.cur=null;renderAll();window.scrollTo({top:0,behavior:'smooth'})});
+}
+function openModal(h){el.modal.innerHTML=h;el.overlay.hidden=false;var b=el.modal.querySelector('button');if(b)b.focus()}
+function closeModal(){el.overlay.hidden=true;el.modal.innerHTML=''}
+
+/* ---------- النهاية والتقييم ---------- */
+function gradeOf(p){
+ if(p>=90)return ['امتياز','إتقان عالٍ لمفردات الثقافة القانونية الرقمية. أنت جاهز للامتحان.',5];
+ if(p>=80)return ['جيد جداً','فهم متين، مع مراجعة سريعة لأخطائك القليلة ستبلغ الامتياز.',4];
+ if(p>=70)return ['جيد','أساس جيد؛ راجع المحاضرات التي ظهر فيها ضعف في الجدول أدناه.',3];
+ if(p>=60)return ['متوسط','تحتاج إلى مراجعة مركّزة للمفاهيم والأرقام القانونية الدقيقة.',2];
+ if(p>=50)return ['مقبول','راجع المحاضرات الثماني مجدداً ثم أعد التحدي.',1];
+ return ['يحتاج إلى مراجعة','ابدأ بقراءة المحاضرات ذات النسبة الأدنى، ثم أعد المحاولة.',1];
+}
+function finish(win){
+ stopTimer();closeModal();setLadderOpen(false);
+ var pct=S.answered?Math.round(S.correct/S.answered*100):0,g=gradeOf(pct);
+ var best=+(store('lcg-best')||0);if(S.score>best)store('lcg-best',String(S.score));
+ var reached=win?12:S.level+1;
+ var trophy='<svg class="trophy" viewBox="0 0 150 170" aria-hidden="true"><defs><linearGradient id="gT" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0b8"/><stop offset=".45" stop-color="#ffd166"/><stop offset="1" stop-color="#b9821f"/></linearGradient></defs>'+
+  '<path d="M38 18h74v34c0 26-17 44-37 44S38 78 38 52z" fill="url(#gT)"/>'+
+  '<path d="M38 28H18c0 22 10 34 24 36M112 28h20c0 22-10 34-24 36" fill="none" stroke="url(#gT)" stroke-width="8" stroke-linecap="round"/>'+
+  '<rect x="66" y="94" width="18" height="26" fill="url(#gT)"/><path d="M44 120h62l8 20H36z" fill="url(#gT)"/><rect x="30" y="140" width="90" height="16" rx="4" fill="#3a2a07"/>'+
+  '<path d="M75 34l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2z" fill="#fff6d6"/></svg>';
+ var lose='<svg class="trophy" viewBox="0 0 150 170" aria-hidden="true" style="animation:none"><circle cx="75" cy="80" r="62" fill="#141d44" stroke="#2c3b7c" stroke-width="3"/><path d="M75 40v70M50 110h50M75 50l-30 10M75 50l30 2" stroke="#a2acd6" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M45 60l-12 26h24zM105 52l-12 26h24z" fill="none" stroke="#a2acd6" stroke-width="3"/></svg>';
+ var h='<div class="end-hero">'+(win?trophy:lose)+
+  (win?'<div class="eyebrow">تهانينا</div><h1>مبارك يا '+esc(S.name)+'! لقد ربحت الامتحان</h1><p>أهلاً بك في قمة الهرم. صعدت المستويات الاثني عشر كلها وأجبت عن أسئلة المحاضرات الثماني في الثقافة القانونية والتنظيمية في عصر التحول الرقمي.</p>'
+      :'<div class="eyebrow">انتهت الفرص الثلاث</div><h1>محاولة جيدة يا '+esc(S.name)+'</h1><p>توقفت عند المستوى '+ad(reached)+' من ١٢. راجع الأخطاء أدناه مع شرحها ثم حاول مجدداً'+(S.checkpoint?'، أو استأنف من آخر نقطة أمان.':'.')+'</p>')+
+  '</div>'+
+  '<div class="grade"><small class="muted">التقييم النهائي</small><b>'+g[0]+'</b><div class="stars">'+starsHtml(g[2],5)+'</div><span>'+g[1]+'</span></div>'+
+  '<div class="stats">'+
+   '<div class="stat"><small>الرصيد النهائي</small><b>'+nf(S.score)+'</b></div>'+
+   '<div class="stat"><small>الإجابات الصحيحة</small><b>'+ad(S.correct)+' / '+ad(S.answered)+'</b></div>'+
+   '<div class="stat"><small>نسبة الدقة</small><b>'+ad(pct)+'٪</b></div>'+
+   '<div class="stat"><small>أعلى مستوى</small><b>'+ad(reached)+' / ١٢</b></div>'+
+   '<div class="stat"><small>وسائل المساعدة المستخدمة</small><b>'+ad(S.lifeUsed)+' / ٣</b></div>'+
+  '</div>';
+ h+='<div class="panel"><h3>أداؤك في كل محاضرة</h3><div class="fbars">';
+ Object.keys(FILES).forEach(function(k){
+  var p=S.perFile[k];if(!p||!p.t)return;var r=Math.round(p.c/p.t*100);
+  h+='<div class="fbar"><span>'+esc(FILES[k])+'</span><b class="num">'+ad(p.c)+'/'+ad(p.t)+'</b><span class="track"><span class="fill '+(r>=75?'':r>=50?'mid':'low')+'" style="width:'+r+'%"></span></span></div>';
+ });
+ h+='</div></div>';
+ if(S.mistakes.length){
+  h+='<details class="panel review"'+(win?'':' open')+'><summary>مراجعة الأخطاء ('+ad(S.mistakes.length)+')</summary>';
+  S.mistakes.forEach(function(m){h+='<div class="mist"><div class="q">'+esc(m.q)+'</div><div class="ya">إجابتك: '+esc(m.y)+'</div><div class="ca">الصحيح: '+esc(m.c)+'</div><small class="muted">المصدر: '+esc(FILES[m.f])+'</small></div>'});
+  h+='</details>';
+ }
+ h+='<div class="end-actions">'+(!win&&S.checkpoint?'<button class="btn btn-gold" type="button" id="btn-resume">استأنف من المستوى '+ad(S.checkpoint.level+1)+'</button>':'')+
+  '<button class="btn '+(!win&&S.checkpoint?'btn-ghost':'btn-gold')+'" type="button" id="btn-again">ابدأ من جديد</button></div>';
+ S.screen='end';
+ el.end.innerHTML=h;show('end');
+ if(win){SFX.win();confetti()}
+ var r=$('#btn-resume');if(r)r.addEventListener('click',resumeCheckpoint);
+ $('#btn-again').addEventListener('click',function(){var n=S.name,t=S.timerOn;S=freshState(n,t);show('game');renderAll()});
+}
+function resumeCheckpoint(){
+ var cp=S.checkpoint,n=S.name,t=S.timerOn;
+ S=freshState(n,t);
+ S.level=cp.level;S.score=cp.score;S.correct=cp.correct;S.answered=cp.answered;S.perFile=cp.perFile;S.mistakes=cp.mistakes;S.life=cp.life;S.lifeUsed=cp.lifeUsed;S.checkpoint=cp;
+ show('game');renderAll();
+}
+
+/* ---------- قصاصات الاحتفال ---------- */
+function confetti(){
+ if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var cv=$('#confetti'),cx=cv.getContext('2d');if(!cx)return;
+ var W=cv.width=innerWidth,H=cv.height=innerHeight,cols=['#ffdc85','#e8b74a','#5cc8e6','#25b46c','#f59fbf','#ffffff'],ps=[];
+ for(var i=0;i<170;i++)ps.push({x:Math.random()*W,y:-20-Math.random()*H*.6,w:6+Math.random()*7,h:8+Math.random()*10,vx:-1.5+Math.random()*3,vy:2+Math.random()*3.5,r:Math.random()*6,vr:-.2+Math.random()*.4,c:cols[i%cols.length]});
+ var t0=performance.now();
+ (function frame(t){
+  cx.clearRect(0,0,W,H);
+  ps.forEach(function(p){p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.h/2,p.w,p.h);cx.restore()});
+  if(t-t0<6000)requestAnimationFrame(frame);else cx.clearRect(0,0,W,H);
+ })(t0);
+}
+
+/* ---------- لوحة المفاتيح ---------- */
+document.addEventListener('keydown',function(ev){
+ if(!S||el.game.hidden||ev.target.tagName==='INPUT')return;
+ if(!el.overlay.hidden){if(ev.key==='Enter'){var b=el.modal.querySelector('button');if(b){ev.preventDefault();b.click()}}return}
+ if(S.phase==='ask'){
+  var q=curQ();
+  if(/^[1-4]$/.test(ev.key)&&q.t!=='match'){
+   var btns=el.qBody.querySelectorAll('.ans');var b2=btns[+ev.key-1];if(b2){b2.click()}
+  }else if(ev.key==='Enter'&&!el.confirm.disabled&&!(ev.target.closest&&ev.target.closest('button,.desc'))){ev.preventDefault();el.confirm.click()}
+ }else if(S.phase==='feedback'&&ev.key==='Enter'&&ev.target.id!=='btn-next'){var n=$('#btn-next');if(n){ev.preventDefault();n.click()}}
+ if(ev.key==='Escape')setLadderOpen(false);
+});
+
+/* ---------- الحفاظ على الحالة عند تحديث الصفحة المنشورة ---------- */
+try{
+ var hot=window.claude&&window.claude.hot;
+ if(hot&&hot.snapshot)hot.snapshot(function(){return {S:S}});
+ var boot=function(d){
+  if(d&&d.S&&d.S.screen==='game'){
+   S=d.S;show('game');renderHUD();renderLadder();
+   if(S.phase==='feedback'){advance()}
+   else {S.phase='ask';renderQuestion(true)}
+  }
+ };
+ if(hot&&hot.ready)hot.ready(boot);else boot(hot&&hot.data||{});
+}catch(e){}
+})();
+</script>
+</body>
+</html>
