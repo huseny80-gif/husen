@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import SeismicDashboard from '@/components/seismic/SeismicDashboard';
+import { useSeismicLiveSync } from '@/components/seismic/seismicSync';
 
 // WebGL يعمل في المتصفح فقط، لذا يُحمَّل المشهد بدون SSR
 const SeismicOfficeScene = dynamic(() => import('@/components/seismic/SeismicOfficeScene'), {
@@ -14,6 +15,8 @@ const SeismicOfficeScene = dynamic(() => import('@/components/seismic/SeismicOff
 });
 
 export default function SeismicPage() {
+  useSeismicLiveSync();
+
   return (
     <main style={{ maxWidth: 1200, margin: '0 auto', padding: 16, display: 'grid', gap: 16 }}>
       <SeismicOfficeScene />

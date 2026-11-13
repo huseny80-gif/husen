@@ -15,6 +15,12 @@ export type Database = {
       contents: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
       quizzes: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
       questions: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
+      seismic_agents: {
+        Row: { id: string; name: string; department: string; status: string; current_task: string; pos_x: number; pos_z: number; progress: number; task_started_at: string | null; task_duration_ms: number; updated_at: string };
+        Insert: { id: string; name: string; department: string; status?: string; current_task?: string; pos_x?: number; pos_z?: number; progress?: number; task_started_at?: string | null; task_duration_ms?: number };
+        Update: { name?: string; department?: string; status?: string; current_task?: string; pos_x?: number; pos_z?: number; progress?: number; task_started_at?: string | null; task_duration_ms?: number };
+        Relationships: [];
+      };
       student_quiz_attempts: { Row: Record<string, unknown>; Insert: Record<string, unknown>; Update: Record<string, unknown>; Relationships: [] };
     };
     Views: Record<string, never>;
