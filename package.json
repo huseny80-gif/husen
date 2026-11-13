@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.10",
     "@supabase/ssr": "^0.5.0",
     "@supabase/supabase-js": "^2.44.4",
     "clsx": "^2.1.1",
@@ -18,14 +20,17 @@
     "pdf-lib": "^1.17.1",
     "react": "^18",
     "react-dom": "^18",
+    "three": "^0.169.0",
     "tus-js-client": "^4.3.1",
-    "unpdf": "^1.9.0"
+    "unpdf": "^1.9.0",
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "@types/katex": "^0.16.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.169.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
